@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 10:44:22.943" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="41">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 10:44:23.075" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 10:44:23.074" endtime="20240108 10:44:34.363"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 10:44:34.364" endtime="20240108 10:44:34.468"/>
+</kw>
+<status status="PASS" starttime="20240108 10:44:23.074" endtime="20240108 10:44:34.468"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="45">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:44:34.470" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:44:34.470" endtime="20240108 10:44:34.545"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 10:44:37.547" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 10:44:34.546" endtime="20240108 10:44:37.547"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:44:37.551" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:44:37.549" endtime="20240108 10:44:37.604"/>
+</kw>
+<status status="PASS" starttime="20240108 10:44:37.548" endtime="20240108 10:44:37.604"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 10:44:40.606" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 10:44:37.605" endtime="20240108 10:44:40.607"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:44:40.611" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:44:40.609" endtime="20240108 10:44:40.702"/>
+</kw>
+<status status="PASS" starttime="20240108 10:44:40.607" endtime="20240108 10:44:40.703"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 10:44:43.705" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 10:44:40.704" endtime="20240108 10:44:43.705"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:44:43.709" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:44:43.707" endtime="20240108 10:44:43.761"/>
+</kw>
+<status status="PASS" starttime="20240108 10:44:43.706" endtime="20240108 10:44:43.761"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 10:44:46.762" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 10:44:43.761" endtime="20240108 10:44:46.762"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:44:46.767" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:44:46.766" endtime="20240108 10:44:46.808"/>
+</kw>
+<status status="PASS" starttime="20240108 10:44:46.763" endtime="20240108 10:44:46.808"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 10:44:49.811" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 10:44:46.810" endtime="20240108 10:44:49.811"/>
+</kw>
+<kw name="Perform Action for Widgets Progress bar">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:44:49.815" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:44:49.813" endtime="20240108 10:44:49.936"/>
+</kw>
+<status status="PASS" starttime="20240108 10:44:49.812" endtime="20240108 10:44:49.936"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 10:44:54.938" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240108 10:44:49.937" endtime="20240108 10:44:54.939"/>
+</kw>
+<kw name="Perform Action for Widgets Tabs">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-5')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:44:54.941" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-5')[2].click();
+Without any arguments.</msg>
+<msg timestamp="20240108 10:44:55.137" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 10:44:55.137" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x559ba3780f83 &lt;unknown&gt;
+#1 0x559ba3439cf7 &lt;unknown&gt;
+#2 0x559ba34402a3 &lt;unknown&gt;
+#3 0x559ba3442bb4 &lt;unknown&gt;
+#4 0x559ba34d2ba3 &lt;unknown&gt;
+#5 0x559ba34b30b2 &lt;unknown&gt;
+#6 0x559ba34d2006 &lt;unknown&gt;
+#7 0x559ba34b2e53 &lt;unknown&gt;
+#8 0x559ba347add4 &lt;unknown&gt;
+#9 0x559ba347c1de &lt;unknown&gt;
+#10 0x559ba3745531 &lt;unknown&gt;
+#11 0x559ba3749455 &lt;unknown&gt;
+#12 0x559ba3731f55 &lt;unknown&gt;
+#13 0x559ba374a0ef &lt;unknown&gt;
+#14 0x559ba371599f &lt;unknown&gt;
+#15 0x559ba376e008 &lt;unknown&gt;
+#16 0x559ba376e1d7 &lt;unknown&gt;
+#17 0x559ba3780124 &lt;unknown&gt;
+#18 0x7f74402da609 start_thread
+</msg>
+<status status="FAIL" starttime="20240108 10:44:54.940" endtime="20240108 10:44:55.138"/>
+</kw>
+<status status="FAIL" starttime="20240108 10:44:54.939" endtime="20240108 10:44:55.138"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:44:55.138" endtime="20240108 10:44:55.138"/>
+</kw>
+<kw name="Perform Action for Widgets Tool tips">
+<status status="NOT RUN" starttime="20240108 10:44:55.139" endtime="20240108 10:44:55.139"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:44:55.139" endtime="20240108 10:44:55.139"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<status status="NOT RUN" starttime="20240108 10:44:55.139" endtime="20240108 10:44:55.139"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:44:55.139" endtime="20240108 10:44:55.140"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<status status="NOT RUN" starttime="20240108 10:44:55.140" endtime="20240108 10:44:55.140"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:44:55.140" endtime="20240108 10:44:55.140"/>
+</kw>
+<status status="FAIL" starttime="20240108 10:44:34.469" endtime="20240108 10:44:55.140">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x559ba3780f83 &lt;unknown&gt;
+#1 0x559ba3439cf7 &lt;unknown&gt;
+#2 0x559ba34402a3 &lt;unknown&gt;
+#3 0x559ba3442bb4 &lt;unknown&gt;
+#4 0x559ba34d2ba3 &lt;unknown&gt;
+#5 0x559ba34b30b2 &lt;unknown&gt;
+#6 0x559ba34d2006 &lt;unknown&gt;
+#7 0x559ba34b2e53 &lt;unknown&gt;
+#8 0x559ba347add4 &lt;unknown&gt;
+#9 0x559ba347c1de &lt;unknown&gt;
+#10 0x559ba3745531 &lt;unknown&gt;
+#11 0x559ba3749455 &lt;unknown&gt;
+#12 0x559ba3731f55 &lt;unknown&gt;
+#13 0x559ba374a0ef &lt;unknown&gt;
+#14 0x559ba371599f &lt;unknown&gt;
+#15 0x559ba376e008 &lt;unknown&gt;
+#16 0x559ba376e1d7 &lt;unknown&gt;
+#17 0x559ba3780124 &lt;unknown&gt;
+#18 0x7f74402da609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240108 10:44:22.944" endtime="20240108 10:44:55.141"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

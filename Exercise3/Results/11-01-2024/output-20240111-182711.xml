@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 18:27:11.057" rpa="false" schemaversion="4">
+<suite id="s1" name="Alerts" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Alerts.robot">
+<test id="s1-t1" name="Launch Browser" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 18:27:11.183" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg timestamp="20240111 18:27:11.353" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240111 18:27:11.183" endtime="20240111 18:27:18.002"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 18:27:18.003" endtime="20240111 18:27:18.121"/>
+</kw>
+<status status="PASS" starttime="20240111 18:27:11.182" endtime="20240111 18:27:18.123"/>
+</test>
+<test id="s1-t2" name="Open Alerts,Frames Section" line="17">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 18:27:18.129" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 18:27:18.127" endtime="20240111 18:27:18.294"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 18:27:21.296" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 18:27:18.295" endtime="20240111 18:27:21.297"/>
+</kw>
+<kw name="Perform Action for Browser Window">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 18:27:21.303" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 18:27:21.301" endtime="20240111 18:27:21.379"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>tabButtonWrapper</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 18:27:21.381" level="INFO">Clicking button 'tabButtonWrapper'.</msg>
+<msg timestamp="20240111 18:27:21.681" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240111 18:27:21.681" level="FAIL">Button with locator 'tabButtonWrapper' not found.</msg>
+<status status="FAIL" starttime="20240111 18:27:21.380" endtime="20240111 18:27:21.724"/>
+</kw>
+<status status="FAIL" starttime="20240111 18:27:21.299" endtime="20240111 18:27:21.724"/>
+</kw>
+<status status="FAIL" starttime="20240111 18:27:18.125" endtime="20240111 18:27:21.728">Button with locator 'tabButtonWrapper' not found.</status>
+</test>
+<status status="FAIL" starttime="20240111 18:27:11.058" endtime="20240111 18:27:21.734"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Alerts">Alerts</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 18:27:11.353" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 18:37:28.935" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="51">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 18:37:29.114" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 18:37:29.112" endtime="20240105 18:37:34.429"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20240105 18:37:34.443" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</msg>
+<msg timestamp="20240105 18:37:34.444" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</msg>
+<status status="FAIL" starttime="20240105 18:37:34.430" endtime="20240105 18:37:34.482"/>
+</kw>
+<status status="FAIL" starttime="20240105 18:37:29.111" endtime="20240105 18:37:34.484">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</status>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="55">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:37:34.496" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<msg timestamp="20240105 18:37:34.528" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</msg>
+<msg timestamp="20240105 18:37:34.530" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</msg>
+<status status="FAIL" starttime="20240105 18:37:34.494" endtime="20240105 18:37:34.532"/>
+</kw>
+<kw name="Perform Action for Element Textbox">
+<status status="NOT RUN" starttime="20240105 18:37:34.533" endtime="20240105 18:37:34.533"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:37:34.533" endtime="20240105 18:37:34.534"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<status status="NOT RUN" starttime="20240105 18:37:34.534" endtime="20240105 18:37:34.534"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:37:34.535" endtime="20240105 18:37:34.535"/>
+</kw>
+<kw name="Perform Action for Element RadioButton">
+<status status="NOT RUN" starttime="20240105 18:37:34.536" endtime="20240105 18:37:34.536"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:37:34.537" endtime="20240105 18:37:34.537"/>
+</kw>
+<kw name="Perform Action for Element WebTable">
+<status status="NOT RUN" starttime="20240105 18:37:34.539" endtime="20240105 18:37:34.539"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:37:34.539" endtime="20240105 18:37:34.540"/>
+</kw>
+<kw name="Perform Action for Element Brokenlink">
+<status status="NOT RUN" starttime="20240105 18:37:34.540" endtime="20240105 18:37:34.540"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:37:34.541" endtime="20240105 18:37:34.541"/>
+</kw>
+<kw name="Perform Action for Element Download/Upload">
+<status status="NOT RUN" starttime="20240105 18:37:34.541" endtime="20240105 18:37:34.541"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:37:34.541" endtime="20240105 18:37:34.542"/>
+</kw>
+<kw name="Perform Action for Element Dynamic Properties">
+<status status="NOT RUN" starttime="20240105 18:37:34.542" endtime="20240105 18:37:34.542"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:37:34.543" endtime="20240105 18:37:34.543"/>
+</kw>
+<status status="FAIL" starttime="20240105 18:37:34.488" endtime="20240105 18:37:34.543">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240105 18:37:28.936" endtime="20240105 18:37:34.546"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240105 18:37:34.443" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</msg>
+<msg timestamp="20240105 18:37:34.528" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5586d845ff83 &lt;unknown&gt;
+#1 0x5586d8118cf7 &lt;unknown&gt;
+#2 0x5586d80ec728 &lt;unknown&gt;
+#3 0x5586d819969f &lt;unknown&gt;
+#4 0x5586d81b0719 &lt;unknown&gt;
+#5 0x5586d8191e53 &lt;unknown&gt;
+#6 0x5586d8159dd4 &lt;unknown&gt;
+#7 0x5586d815b1de &lt;unknown&gt;
+#8 0x5586d8424531 &lt;unknown&gt;
+#9 0x5586d8428455 &lt;unknown&gt;
+#10 0x5586d8410f55 &lt;unknown&gt;
+#11 0x5586d84290ef &lt;unknown&gt;
+#12 0x5586d83f499f &lt;unknown&gt;
+#13 0x5586d844d008 &lt;unknown&gt;
+#14 0x5586d844d1d7 &lt;unknown&gt;
+#15 0x5586d845f124 &lt;unknown&gt;
+#16 0x7f9d74754609 start_thread
+</msg>
+</errors>
+</robot>

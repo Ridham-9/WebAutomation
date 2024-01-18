@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 18:55:12.903" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="79">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 18:55:13.056" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 18:55:13.055" endtime="20240103 18:55:17.860"/>
+</kw>
+<status status="PASS" starttime="20240103 18:55:13.055" endtime="20240103 18:55:17.860"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:55:17.862" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:55:17.861" endtime="20240103 18:55:17.925"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:55:22.926" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240103 18:55:17.925" endtime="20240103 18:55:22.926"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:55:22.928" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:55:22.927" endtime="20240103 18:55:22.980"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 18:55:22.982" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 18:55:22.980" endtime="20240103 18:55:23.056"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:55:26.057" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:55:23.057" endtime="20240103 18:55:26.057"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:55:26.057" endtime="20240103 18:55:26.072"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:55:26.072" endtime="20240103 18:55:26.100"/>
+</kw>
+<status status="PASS" starttime="20240103 18:55:17.861" endtime="20240103 18:55:26.100"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:55:29.101" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:55:26.100" endtime="20240103 18:55:29.101"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:55:29.104" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:55:29.103" endtime="20240103 18:55:29.169"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:55:34.170" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240103 18:55:29.170" endtime="20240103 18:55:34.171"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:55:34.174" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:55:34.171" endtime="20240103 18:55:34.287"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:55:39.288" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240103 18:55:34.287" endtime="20240103 18:55:39.288"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:55:39.288" endtime="20240103 18:55:39.329"/>
+</kw>
+<status status="PASS" starttime="20240103 18:55:29.102" endtime="20240103 18:55:39.330"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:55:42.331" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:55:39.330" endtime="20240103 18:55:42.332"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:55:42.334" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[2].click();
+Without any arguments.</msg>
+<msg timestamp="20240103 18:55:42.480" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-108.png"&gt;&lt;img src="selenium-screenshot-108.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 18:55:42.480" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5612273b1f83 &lt;unknown&gt;
+#1 0x56122706acf7 &lt;unknown&gt;
+#2 0x5612270712a3 &lt;unknown&gt;
+#3 0x561227073bb4 &lt;unknown&gt;
+#4 0x561227103ba3 &lt;unknown&gt;
+#5 0x5612270e40b2 &lt;unknown&gt;
+#6 0x561227103006 &lt;unknown&gt;
+#7 0x5612270e3e53 &lt;unknown&gt;
+#8 0x5612270abdd4 &lt;unknown&gt;
+#9 0x5612270ad1de &lt;unknown&gt;
+#10 0x561227376531 &lt;unknown&gt;
+#11 0x56122737a455 &lt;unknown&gt;
+#12 0x561227362f55 &lt;unknown&gt;
+#13 0x56122737b0ef &lt;unknown&gt;
+#14 0x56122734699f &lt;unknown&gt;
+#15 0x56122739f008 &lt;unknown&gt;
+#16 0x56122739f1d7 &lt;unknown&gt;
+#17 0x5612273b1124 &lt;unknown&gt;
+#18 0x7fcd020d7609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 18:55:42.333" endtime="20240103 18:55:42.481"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.481" endtime="20240103 18:55:42.481"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.481" endtime="20240103 18:55:42.481"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.481" endtime="20240103 18:55:42.482"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.482" endtime="20240103 18:55:42.482"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.482" endtime="20240103 18:55:42.482"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:55:42.332" endtime="20240103 18:55:42.482"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.482" endtime="20240103 18:55:42.482"/>
+</kw>
+<kw name="Open Widgets">
+<status status="NOT RUN" starttime="20240103 18:55:42.482" endtime="20240103 18:55:42.482"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.482" endtime="20240103 18:55:42.482"/>
+</kw>
+<kw name="Open Interactions">
+<status status="NOT RUN" starttime="20240103 18:55:42.483" endtime="20240103 18:55:42.483"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:55:42.483" endtime="20240103 18:55:42.483"/>
+</kw>
+<kw name="Open Book Store">
+<status status="NOT RUN" starttime="20240103 18:55:42.483" endtime="20240103 18:55:42.483"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:55:13.054" endtime="20240103 18:55:42.483">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5612273b1f83 &lt;unknown&gt;
+#1 0x56122706acf7 &lt;unknown&gt;
+#2 0x5612270712a3 &lt;unknown&gt;
+#3 0x561227073bb4 &lt;unknown&gt;
+#4 0x561227103ba3 &lt;unknown&gt;
+#5 0x5612270e40b2 &lt;unknown&gt;
+#6 0x561227103006 &lt;unknown&gt;
+#7 0x5612270e3e53 &lt;unknown&gt;
+#8 0x5612270abdd4 &lt;unknown&gt;
+#9 0x5612270ad1de &lt;unknown&gt;
+#10 0x561227376531 &lt;unknown&gt;
+#11 0x56122737a455 &lt;unknown&gt;
+#12 0x561227362f55 &lt;unknown&gt;
+#13 0x56122737b0ef &lt;unknown&gt;
+#14 0x56122734699f &lt;unknown&gt;
+#15 0x56122739f008 &lt;unknown&gt;
+#16 0x56122739f1d7 &lt;unknown&gt;
+#17 0x5612273b1124 &lt;unknown&gt;
+#18 0x7fcd020d7609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 18:55:12.904" endtime="20240103 18:55:42.484"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

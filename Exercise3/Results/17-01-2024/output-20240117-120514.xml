@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 12:05:14.383" rpa="false" schemaversion="4">
+<suite id="s1" name="Abc" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/abc.robot">
+<test id="s1-t1" name="Launch Browser" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 12:05:14.505" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg timestamp="20240117 12:05:17.599" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240117 12:05:17.600" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55931fc29f83 &lt;unknown&gt;
+#1 0x55931f8e2cf7 &lt;unknown&gt;
+#2 0x55931f8da6ea &lt;unknown&gt;
+#3 0x55931f8c95a1 &lt;unknown&gt;
+#4 0x55931f8cad40 &lt;unknown&gt;
+#5 0x55931f8c9854 &lt;unknown&gt;
+#6 0x55931f8c8586 &lt;unknown&gt;
+#7 0x55931f8c844a &lt;unknown&gt;
+#8 0x55931f8c67e1 &lt;unknown&gt;
+#9 0x55931f8c701a &lt;unknown&gt;
+#10 0x55931f8e5bbe &lt;unknown&gt;
+#11 0x55931f97b7a5 &lt;unknown&gt;
+#12 0x55931f95c0b2 &lt;unknown&gt;
+#13 0x55931f97b006 &lt;unknown&gt;
+#14 0x55931f95be53 &lt;unknown&gt;
+#15 0x55931f923dd4 &lt;unknown&gt;
+#16 0x55931f9251de &lt;unknown&gt;
+#17 0x55931fbee531 &lt;unknown&gt;
+#18 0x55931fbf2455 &lt;unknown&gt;
+#19 0x55931fbdaf55 &lt;unknown&gt;
+#20 0x55931fbf30ef &lt;unknown&gt;
+#21 0x55931fbbe99f &lt;unknown&gt;
+#22 0x55931fc17008 &lt;unknown&gt;
+#23 0x55931fc171d7 &lt;unknown&gt;
+#24 0x55931fc29124 &lt;unknown&gt;
+#25 0x7fe6fd951609 start_thread
+</msg>
+<status status="FAIL" starttime="20240117 12:05:14.505" endtime="20240117 12:05:17.655"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20240117 12:05:17.657" endtime="20240117 12:05:17.657"/>
+</kw>
+<status status="FAIL" starttime="20240117 12:05:14.504" endtime="20240117 12:05:17.658">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55931fc29f83 &lt;unknown&gt;
+#1 0x55931f8e2cf7 &lt;unknown&gt;
+#2 0x55931f8da6ea &lt;unknown&gt;
+#3 0x55931f8c95a1 &lt;unknown&gt;
+#4 0x55931f8cad40 &lt;unknown&gt;
+#5 0x55931f8c9854 &lt;unknown&gt;
+#6 0x55931f8c8586 &lt;unknown&gt;
+#7 0x55931f8c844a &lt;unknown&gt;
+#8 0x55931f8c67e1 &lt;unknown&gt;
+#9 0x55931f8c701a &lt;unknown&gt;
+#10 0x55931f8e5bbe &lt;unknown&gt;
+#11 0x55931f97b7a5 &lt;unknown&gt;
+#12 0x55931f95c0b2 &lt;unknown&gt;
+#13 0x55931f97b006 &lt;unknown&gt;
+#14 0x55931f95be53 &lt;unknown&gt;
+#15 0x55931f923dd4 &lt;unknown&gt;
+#16 0x55931f9251de &lt;unknown&gt;
+#17 0x55931fbee531 &lt;unknown&gt;
+#18 0x55931fbf2455 &lt;unknown&gt;
+#19 0x55931fbdaf55 &lt;unknown&gt;
+#20 0x55931fbf30ef &lt;unknown&gt;
+#21 0x55931fbbe99f &lt;unknown&gt;
+#22 0x55931fc17008 &lt;unknown&gt;
+#23 0x55931fc171d7 &lt;unknown&gt;
+#24 0x55931fc29124 &lt;unknown&gt;
+#25 0x7fe6fd951609 start_thread
+</status>
+</test>
+<test id="s1-t2" name="Perform Action for Element Brokenlink" line="14">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-6').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 12:05:17.665" level="INFO">Executing JavaScript:
+document.querySelector('#item-6').click()
+Without any arguments.</msg>
+<msg timestamp="20240117 12:05:17.817" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240117 12:05:17.817" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55931fc29f83 &lt;unknown&gt;
+#1 0x55931f8e2cf7 &lt;unknown&gt;
+#2 0x55931f8e92a3 &lt;unknown&gt;
+#3 0x55931f8ebbb4 &lt;unknown&gt;
+#4 0x55931f97bba3 &lt;unknown&gt;
+#5 0x55931f95c0b2 &lt;unknown&gt;
+#6 0x55931f97b006 &lt;unknown&gt;
+#7 0x55931f95be53 &lt;unknown&gt;
+#8 0x55931f923dd4 &lt;unknown&gt;
+#9 0x55931f9251de &lt;unknown&gt;
+#10 0x55931fbee531 &lt;unknown&gt;
+#11 0x55931fbf2455 &lt;unknown&gt;
+#12 0x55931fbdaf55 &lt;unknown&gt;
+#13 0x55931fbf30ef &lt;unknown&gt;
+#14 0x55931fbbe99f &lt;unknown&gt;
+#15 0x55931fc17008 &lt;unknown&gt;
+#16 0x55931fc171d7 &lt;unknown&gt;
+#17 0x55931fc29124 &lt;unknown&gt;
+#18 0x7fe6fd951609 start_thread
+</msg>
+<status status="FAIL" starttime="20240117 12:05:17.663" endtime="20240117 12:05:17.817"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240117 12:05:17.818" endtime="20240117 12:05:17.818"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240117 12:05:17.818" endtime="20240117 12:05:17.818"/>
+</kw>
+<status status="FAIL" starttime="20240117 12:05:17.660" endtime="20240117 12:05:17.818">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55931fc29f83 &lt;unknown&gt;
+#1 0x55931f8e2cf7 &lt;unknown&gt;
+#2 0x55931f8e92a3 &lt;unknown&gt;
+#3 0x55931f8ebbb4 &lt;unknown&gt;
+#4 0x55931f97bba3 &lt;unknown&gt;
+#5 0x55931f95c0b2 &lt;unknown&gt;
+#6 0x55931f97b006 &lt;unknown&gt;
+#7 0x55931f95be53 &lt;unknown&gt;
+#8 0x55931f923dd4 &lt;unknown&gt;
+#9 0x55931f9251de &lt;unknown&gt;
+#10 0x55931fbee531 &lt;unknown&gt;
+#11 0x55931fbf2455 &lt;unknown&gt;
+#12 0x55931fbdaf55 &lt;unknown&gt;
+#13 0x55931fbf30ef &lt;unknown&gt;
+#14 0x55931fbbe99f &lt;unknown&gt;
+#15 0x55931fc17008 &lt;unknown&gt;
+#16 0x55931fc171d7 &lt;unknown&gt;
+#17 0x55931fc29124 &lt;unknown&gt;
+#18 0x7fe6fd951609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240117 12:05:14.384" endtime="20240117 12:05:17.819"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Abc">Abc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

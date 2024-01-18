@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 17:29:15.959" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Exercise1/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Ivalid Login" line="29">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 17:29:16.084" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg timestamp="20240111 17:29:16.183" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240111 17:29:16.083" endtime="20240111 17:29:26.824"/>
+</kw>
+<status status="PASS" starttime="20240111 17:29:16.083" endtime="20240111 17:29:26.824"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:29:26.826" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<msg timestamp="20240111 17:29:27.017" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240111 17:29:27.019" level="FAIL">Element with locator 'user-name' not found.</msg>
+<status status="FAIL" starttime="20240111 17:29:26.824" endtime="20240111 17:29:27.020"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>wejf</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:29:27.020" endtime="20240111 17:29:27.020"/>
+</kw>
+<kw name="Element Should Be Selected">
+<var>${elePresent}</var>
+<arg>${ERROR}</arg>
+<status status="NOT RUN" starttime="20240111 17:29:27.024" endtime="20240111 17:29:27.024"/>
+</kw>
+<status status="FAIL" starttime="20240111 17:29:16.082" endtime="20240111 17:29:27.024">Element with locator 'user-name' not found.</status>
+</test>
+<status status="FAIL" starttime="20240111 17:29:15.960" endtime="20240111 17:29:27.025"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 17:29:16.183" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

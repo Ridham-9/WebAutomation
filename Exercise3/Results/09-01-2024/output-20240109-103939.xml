@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 10:39:39.848" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="22">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 10:39:39.974" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240109 10:39:39.973" endtime="20240109 10:39:47.954"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 10:39:47.955" endtime="20240109 10:39:48.074"/>
+</kw>
+<status status="PASS" starttime="20240109 10:39:39.972" endtime="20240109 10:39:48.075"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="26">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 10:39:48.077" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 10:39:48.077" endtime="20240109 10:39:48.157"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 10:39:51.158" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 10:39:48.158" endtime="20240109 10:39:51.159"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 10:39:51.166" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 10:39:51.165" endtime="20240109 10:39:51.290"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${list1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 10:39:51.293" level="INFO">Clicking element 'Xpath://*[@class="vertical-list-container mt-4"]/div[1]'.</msg>
+<status status="PASS" starttime="20240109 10:39:51.290" endtime="20240109 10:39:51.370"/>
+</kw>
+<status status="PASS" starttime="20240109 10:39:51.162" endtime="20240109 10:39:51.370"/>
+</kw>
+<kw name="Perform Action for Resizable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 10:39:51.371" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 10:39:51.370" endtime="20240109 10:39:51.390"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${css}</var>
+<arg>${RESIZE1}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240109 10:39:51.440" level="INFO">${css} = width: 200px; height: 200px;</msg>
+<status status="PASS" starttime="20240109 10:39:51.391" endtime="20240109 10:39:51.440"/>
+</kw>
+<status status="PASS" starttime="20240109 10:39:51.370" endtime="20240109 10:39:51.440"/>
+</kw>
+<status status="PASS" starttime="20240109 10:39:48.076" endtime="20240109 10:39:51.441"/>
+</test>
+<status status="PASS" starttime="20240109 10:39:39.849" endtime="20240109 10:39:51.442"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

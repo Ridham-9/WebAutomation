@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231227 10:34:14.648" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Valid Login" line="12">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231227 10:34:14.776" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231227 10:34:14.775" endtime="20231227 10:34:21.434"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:21.436" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231227 10:34:21.434" endtime="20231227 10:34:21.563"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:21.564" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231227 10:34:21.597" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231227 10:34:21.659" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231227 10:34:21.563" endtime="20231227 10:34:21.659"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:21.660" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231227 10:34:21.659" endtime="20231227 10:34:21.742"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:21.743" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231227 10:34:21.742" endtime="20231227 10:34:22.635"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:22.638" level="INFO">Clicking button 'add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20231227 10:34:22.636" endtime="20231227 10:34:22.780"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:22.782" level="INFO">Clicking element 'css=.shopping_cart_link'.</msg>
+<status status="PASS" starttime="20231227 10:34:22.781" endtime="20231227 10:34:22.896"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>continue-shopping</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:22.897" level="INFO">Clicking button 'continue-shopping'.</msg>
+<status status="PASS" starttime="20231227 10:34:22.896" endtime="20231227 10:34:22.980"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>remove-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:22.981" level="INFO">Clicking button 'remove-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231227 10:34:22.981" endtime="20231227 10:34:23.078"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:23.080" level="INFO">Clicking element 'react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20231227 10:34:23.079" endtime="20231227 10:34:23.156"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231227 10:34:23.156" endtime="20231227 10:34:23.209"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 10:34:23.210" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
+<status status="PASS" starttime="20231227 10:34:23.209" endtime="20231227 10:34:23.272"/>
+</kw>
+<status status="PASS" starttime="20231227 10:34:14.775" endtime="20231227 10:34:23.272"/>
+</test>
+<status status="PASS" starttime="20231227 10:34:14.649" endtime="20231227 10:34:23.274"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

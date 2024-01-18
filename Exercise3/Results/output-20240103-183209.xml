@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 18:32:09.718" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="52">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 18:32:09.847" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 18:32:09.846" endtime="20240103 18:32:14.835"/>
+</kw>
+<status status="PASS" starttime="20240103 18:32:09.846" endtime="20240103 18:32:14.835"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:32:14.837" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:32:14.836" endtime="20240103 18:32:14.921"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:32:14.922" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:32:14.921" endtime="20240103 18:32:14.947"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 18:32:14.949" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]]'.</msg>
+<msg timestamp="20240103 18:32:15.168" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-102.png"&gt;&lt;img src="selenium-screenshot-102.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 18:32:15.169" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@id="downloadButton"]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id="downloadButton"]]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55b1d0c26f83 &lt;unknown&gt;
+#1 0x55b1d08dfcf7 &lt;unknown&gt;
+#2 0x55b1d08e62a3 &lt;unknown&gt;
+#3 0x55b1d08e8798 &lt;unknown&gt;
+#4 0x55b1d08e88ec &lt;unknown&gt;
+#5 0x55b1d092f6c7 &lt;unknown&gt;
+#6 0x55b1d092faa1 &lt;unknown&gt;
+#7 0x55b1d097ada1 &lt;unknown&gt;
+#8 0x55b1d09590dd &lt;unknown&gt;
+#9 0x55b1d0978006 &lt;unknown&gt;
+#10 0x55b1d0958e53 &lt;unknown&gt;
+#11 0x55b1d0920dd4 &lt;unknown&gt;
+#12 0x55b1d09221de &lt;unknown&gt;
+#13 0x55b1d0beb531 &lt;unknown&gt;
+#14 0x55b1d0bef455 &lt;unknown&gt;
+#15 0x55b1d0bd7f55 &lt;unknown&gt;
+#16 0x55b1d0bf00ef &lt;unknown&gt;
+#17 0x55b1d0bbb99f &lt;unknown&gt;
+#18 0x55b1d0c14008 &lt;unknown&gt;
+#19 0x55b1d0c141d7 &lt;unknown&gt;
+#20 0x55b1d0c26124 &lt;unknown&gt;
+#21 0x7fc9ca98c609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 18:32:14.947" endtime="20240103 18:32:15.186"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:32:15.186" endtime="20240103 18:32:15.186"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FORM}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240103 18:32:15.186" endtime="20240103 18:32:15.186"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:32:14.836" endtime="20240103 18:32:15.186"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Open Form Section">
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Open Widgets">
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Open Interactions">
+<status status="NOT RUN" starttime="20240103 18:32:15.187" endtime="20240103 18:32:15.187"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:32:15.188" endtime="20240103 18:32:15.188"/>
+</kw>
+<kw name="Open Book Store">
+<status status="NOT RUN" starttime="20240103 18:32:15.188" endtime="20240103 18:32:15.188"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:32:09.845" endtime="20240103 18:32:15.188">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@id="downloadButton"]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id="downloadButton"]]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55b1d0c26f83 &lt;unknown&gt;
+#1 0x55b1d08dfcf7 &lt;unknown&gt;
+#2 0x55b1d08e62a3 &lt;unknown&gt;
+#3 0x55b1d08e8798 &lt;unknown&gt;
+#4 0x55b1d08e88ec &lt;unknown&gt;
+#5 0x55b1d092f6c7 &lt;unknown&gt;
+#6 0x55b1d092faa1 &lt;unknown&gt;
+#7 0x55b1d097ada1 &lt;unknown&gt;
+#8 0x55b1d09590dd &lt;unknown&gt;
+#9 0x55b1d0978006 &lt;unknown&gt;
+#10 0x55b1d0958e53 &lt;unknown&gt;
+#11 0x55b1d0920dd4 &lt;unknown&gt;
+#12 0x55b1d09221de &lt;unknown&gt;
+#13 0x55b1d0beb531 &lt;unknown&gt;
+#14 0x55b1d0bef455 &lt;unknown&gt;
+#15 0x55b1d0bd7f55 &lt;unknown&gt;
+#16 0x55b1d0bf00ef &lt;unknown&gt;
+#17 0x55b1d0bbb99f &lt;unknown&gt;
+#18 0x55b1d0c14008 &lt;unknown&gt;
+#19 0x55b1d0c141d7 &lt;unknown&gt;
+#20 0x55b1d0c26124 &lt;unknown&gt;
+#21 0x7fc9ca98c609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 18:32:09.719" endtime="20240103 18:32:15.189"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

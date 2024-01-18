@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 15:39:12.695" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="29">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 15:39:13.203" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231228 15:39:13.203" endtime="20231228 15:39:23.513"/>
+</kw>
+<status status="PASS" starttime="20231228 15:39:13.202" endtime="20231228 15:39:23.514"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:39:23.516" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231228 15:39:23.514" endtime="20231228 15:39:23.580"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231228 15:39:23.580" endtime="20231228 15:39:23.802"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:39:23.804" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231228 15:39:23.803" endtime="20231228 15:39:23.868"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231228 15:39:23.869" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231228 15:39:23.869" endtime="20231228 15:39:24.006"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231228 15:39:24.029" level="INFO">${handles} = ['33EAD5B9691D4360D8759531436525F5', '295BD9F45887552BC43A6D66C7FB7612']</msg>
+<status status="PASS" starttime="20231228 15:39:24.006" endtime="20231228 15:39:24.029"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231228 15:39:24.030" endtime="20231228 15:39:24.171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231228 15:39:25.117" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5620d3b7ff83 &lt;unknown&gt;
+#1 0x5620d3838cf7 &lt;unknown&gt;
+#2 0x5620d380c728 &lt;unknown&gt;
+#3 0x5620d38b969f &lt;unknown&gt;
+#4 0x5620d38d0719 &lt;unknown&gt;
+#5 0x5620d38b1e53 &lt;unknown&gt;
+#6 0x5620d3879dd4 &lt;unknown&gt;
+#7 0x5620d387b1de &lt;unknown&gt;
+#8 0x5620d3b44531 &lt;unknown&gt;
+#9 0x5620d3b48455 &lt;unknown&gt;
+#10 0x5620d3b30f55 &lt;unknown&gt;
+#11 0x5620d3b490ef &lt;unknown&gt;
+#12 0x5620d3b1499f &lt;unknown&gt;
+#13 0x5620d3b6d008 &lt;unknown&gt;
+#14 0x5620d3b6d1d7 &lt;unknown&gt;
+#15 0x5620d3b7f124 &lt;unknown&gt;
+#16 0x7f6a3b399609 start_thread
+</msg>
+<msg timestamp="20231228 15:39:25.118" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5620d3b7ff83 &lt;unknown&gt;
+#1 0x5620d3838cf7 &lt;unknown&gt;
+#2 0x5620d380c728 &lt;unknown&gt;
+#3 0x5620d38b969f &lt;unknown&gt;
+#4 0x5620d38d0719 &lt;unknown&gt;
+#5 0x5620d38b1e53 &lt;unknown&gt;
+#6 0x5620d3879dd4 &lt;unknown&gt;
+#7 0x5620d387b1de &lt;unknown&gt;
+#8 0x5620d3b44531 &lt;unknown&gt;
+#9 0x5620d3b48455 &lt;unknown&gt;
+#10 0x5620d3b30f55 &lt;unknown&gt;
+#11 0x5620d3b490ef &lt;unknown&gt;
+#12 0x5620d3b1499f &lt;unknown&gt;
+#13 0x5620d3b6d008 &lt;unknown&gt;
+#14 0x5620d3b6d1d7 &lt;unknown&gt;
+#15 0x5620d3b7f124 &lt;unknown&gt;
+#16 0x7f6a3b399609 start_thread
+</msg>
+<status status="FAIL" starttime="20231228 15:39:24.172" endtime="20231228 15:39:25.393"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>${QA_DATA1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231228 15:39:25.394" endtime="20231228 15:39:25.395"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231228 15:39:25.396" endtime="20231228 15:39:25.396"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${DATA_LIST}</var>
+<arg>${DATA of Automation tools/frameworks}.split(${SPACE})</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231228 15:39:25.397" endtime="20231228 15:39:25.397"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA_LIST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231228 15:39:25.398" endtime="20231228 15:39:25.398"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${NAME}</arg>
+<arg>${CSV_file}</arg>
+<arg>${header}</arg>
+<status status="NOT RUN" starttime="20231228 15:39:25.399" endtime="20231228 15:39:25.399"/>
+</kw>
+<kw name="Append To CSV File">
+<arg>${NAME}</arg>
+<arg>${CSV_file}</arg>
+<arg>${DATA_LIST}</arg>
+<arg>${header}</arg>
+<status status="NOT RUN" starttime="20231228 15:39:25.400" endtime="20231228 15:39:25.400"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:39:13.201" endtime="20231228 15:39:25.402">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5620d3b7ff83 &lt;unknown&gt;
+#1 0x5620d3838cf7 &lt;unknown&gt;
+#2 0x5620d380c728 &lt;unknown&gt;
+#3 0x5620d38b969f &lt;unknown&gt;
+#4 0x5620d38d0719 &lt;unknown&gt;
+#5 0x5620d38b1e53 &lt;unknown&gt;
+#6 0x5620d3879dd4 &lt;unknown&gt;
+#7 0x5620d387b1de &lt;unknown&gt;
+#8 0x5620d3b44531 &lt;unknown&gt;
+#9 0x5620d3b48455 &lt;unknown&gt;
+#10 0x5620d3b30f55 &lt;unknown&gt;
+#11 0x5620d3b490ef &lt;unknown&gt;
+#12 0x5620d3b1499f &lt;unknown&gt;
+#13 0x5620d3b6d008 &lt;unknown&gt;
+#14 0x5620d3b6d1d7 &lt;unknown&gt;
+#15 0x5620d3b7f124 &lt;unknown&gt;
+#16 0x7f6a3b399609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20231228 15:39:12.696" endtime="20231228 15:39:25.406"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231228 15:39:25.117" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5620d3b7ff83 &lt;unknown&gt;
+#1 0x5620d3838cf7 &lt;unknown&gt;
+#2 0x5620d380c728 &lt;unknown&gt;
+#3 0x5620d38b969f &lt;unknown&gt;
+#4 0x5620d38d0719 &lt;unknown&gt;
+#5 0x5620d38b1e53 &lt;unknown&gt;
+#6 0x5620d3879dd4 &lt;unknown&gt;
+#7 0x5620d387b1de &lt;unknown&gt;
+#8 0x5620d3b44531 &lt;unknown&gt;
+#9 0x5620d3b48455 &lt;unknown&gt;
+#10 0x5620d3b30f55 &lt;unknown&gt;
+#11 0x5620d3b490ef &lt;unknown&gt;
+#12 0x5620d3b1499f &lt;unknown&gt;
+#13 0x5620d3b6d008 &lt;unknown&gt;
+#14 0x5620d3b6d1d7 &lt;unknown&gt;
+#15 0x5620d3b7f124 &lt;unknown&gt;
+#16 0x7f6a3b399609 start_thread
+</msg>
+</errors>
+</robot>

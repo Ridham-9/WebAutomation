@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 16:04:02.296" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="74">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 16:04:02.419" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 16:04:02.418" endtime="20240116 16:04:14.139"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 16:04:14.140" endtime="20240116 16:04:14.244"/>
+</kw>
+<status status="PASS" starttime="20240116 16:04:02.417" endtime="20240116 16:04:14.245"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="78">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 16:04:14.247" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 16:04:14.247" endtime="20240116 16:04:14.322"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 16:04:17.323" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 16:04:14.322" endtime="20240116 16:04:17.323"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-8')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 16:04:17.325" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-8')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 16:04:17.324" endtime="20240116 16:04:17.409"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${SELECTVALUE}</arg>
+<arg>A root option</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20240116 16:04:17.410" level="INFO">Selecting options from selection list 'Xpath://*[@id="withOptGroup"]/div/div[1]' by value A root option.</msg>
+<msg timestamp="20240116 16:04:17.665" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 16:04:17.665" level="FAIL">List with locator 'Xpath://*[@id="withOptGroup"]/div/div[1]' not found.</msg>
+<status status="FAIL" starttime="20240116 16:04:17.410" endtime="20240116 16:04:17.666"/>
+</kw>
+<status status="FAIL" starttime="20240116 16:04:17.323" endtime="20240116 16:04:17.666"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 16:04:17.666" endtime="20240116 16:04:17.666"/>
+</kw>
+<status status="FAIL" starttime="20240116 16:04:14.246" endtime="20240116 16:04:17.666">List with locator 'Xpath://*[@id="withOptGroup"]/div/div[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240116 16:04:02.297" endtime="20240116 16:04:17.667"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

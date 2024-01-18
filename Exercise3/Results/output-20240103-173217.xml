@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 17:32:17.892" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="57">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 17:32:18.019" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 17:32:18.018" endtime="20240103 17:32:23.844"/>
+</kw>
+<status status="PASS" starttime="20240103 17:32:18.018" endtime="20240103 17:32:23.844"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 17:32:23.845" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 17:32:23.845" endtime="20240103 17:32:23.914"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 17:32:23.915" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 17:32:23.914" endtime="20240103 17:32:23.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 17:32:23.938" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 17:32:23.936" endtime="20240103 17:32:24.015"/>
+</kw>
+<status status="PASS" starttime="20240103 17:32:23.844" endtime="20240103 17:32:24.016"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 17:32:34.017" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 17:32:24.016" endtime="20240103 17:32:34.017"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 17:32:34.022" level="INFO">Clicking element 'class=(element-group)[1]'.</msg>
+<msg timestamp="20240103 17:32:34.283" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-91.png"&gt;&lt;img src="selenium-screenshot-91.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 17:32:34.283" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x56478eeb6f83 &lt;unknown&gt;
+#1 0x56478eb6fcf7 &lt;unknown&gt;
+#2 0x56478eb762a3 &lt;unknown&gt;
+#3 0x56478eb78798 &lt;unknown&gt;
+#4 0x56478eb788ec &lt;unknown&gt;
+#5 0x56478ebbf6c7 &lt;unknown&gt;
+#6 0x56478ebbfaa1 &lt;unknown&gt;
+#7 0x56478ec0ada1 &lt;unknown&gt;
+#8 0x56478ebe90dd &lt;unknown&gt;
+#9 0x56478ec08006 &lt;unknown&gt;
+#10 0x56478ebe8e53 &lt;unknown&gt;
+#11 0x56478ebb0dd4 &lt;unknown&gt;
+#12 0x56478ebb21de &lt;unknown&gt;
+#13 0x56478ee7b531 &lt;unknown&gt;
+#14 0x56478ee7f455 &lt;unknown&gt;
+#15 0x56478ee67f55 &lt;unknown&gt;
+#16 0x56478ee800ef &lt;unknown&gt;
+#17 0x56478ee4b99f &lt;unknown&gt;
+#18 0x56478eea4008 &lt;unknown&gt;
+#19 0x56478eea41d7 &lt;unknown&gt;
+#20 0x56478eeb6124 &lt;unknown&gt;
+#21 0x7f51d11fb609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 17:32:34.019" endtime="20240103 17:32:34.284"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240103 17:32:34.285" endtime="20240103 17:32:34.285"/>
+</kw>
+<status status="FAIL" starttime="20240103 17:32:34.018" endtime="20240103 17:32:34.285"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:32:34.285" endtime="20240103 17:32:34.285"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<status status="NOT RUN" starttime="20240103 17:32:34.285" endtime="20240103 17:32:34.285"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:32:34.285" endtime="20240103 17:32:34.285"/>
+</kw>
+<kw name="Open Widgets">
+<status status="NOT RUN" starttime="20240103 17:32:34.285" endtime="20240103 17:32:34.285"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:32:34.285" endtime="20240103 17:32:34.285"/>
+</kw>
+<kw name="Open Interactions">
+<status status="NOT RUN" starttime="20240103 17:32:34.286" endtime="20240103 17:32:34.286"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:32:34.286" endtime="20240103 17:32:34.286"/>
+</kw>
+<kw name="Open Book Store">
+<status status="NOT RUN" starttime="20240103 17:32:34.286" endtime="20240103 17:32:34.286"/>
+</kw>
+<status status="FAIL" starttime="20240103 17:32:18.017" endtime="20240103 17:32:34.286">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x56478eeb6f83 &lt;unknown&gt;
+#1 0x56478eb6fcf7 &lt;unknown&gt;
+#2 0x56478eb762a3 &lt;unknown&gt;
+#3 0x56478eb78798 &lt;unknown&gt;
+#4 0x56478eb788ec &lt;unknown&gt;
+#5 0x56478ebbf6c7 &lt;unknown&gt;
+#6 0x56478ebbfaa1 &lt;unknown&gt;
+#7 0x56478ec0ada1 &lt;unknown&gt;
+#8 0x56478ebe90dd &lt;unknown&gt;
+#9 0x56478ec08006 &lt;unknown&gt;
+#10 0x56478ebe8e53 &lt;unknown&gt;
+#11 0x56478ebb0dd4 &lt;unknown&gt;
+#12 0x56478ebb21de &lt;unknown&gt;
+#13 0x56478ee7b531 &lt;unknown&gt;
+#14 0x56478ee7f455 &lt;unknown&gt;
+#15 0x56478ee67f55 &lt;unknown&gt;
+#16 0x56478ee800ef &lt;unknown&gt;
+#17 0x56478ee4b99f &lt;unknown&gt;
+#18 0x56478eea4008 &lt;unknown&gt;
+#19 0x56478eea41d7 &lt;unknown&gt;
+#20 0x56478eeb6124 &lt;unknown&gt;
+#21 0x7f51d11fb609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 17:32:17.893" endtime="20240103 17:32:34.287"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

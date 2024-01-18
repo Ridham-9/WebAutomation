@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 12:25:30.716" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="56">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 12:25:30.840" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 12:25:30.839" endtime="20240108 12:25:37.049"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 12:25:37.052" endtime="20240108 12:25:37.211"/>
+</kw>
+<status status="PASS" starttime="20240108 12:25:30.838" endtime="20240108 12:25:37.213"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="60">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:25:37.225" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:25:37.222" endtime="20240108 12:25:37.757"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:25:40.760" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:25:37.758" endtime="20240108 12:25:40.760"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:25:40.764" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:25:40.763" endtime="20240108 12:25:40.816"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:25:40.817" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240108 12:25:40.816" endtime="20240108 12:25:40.891"/>
+</kw>
+<status status="PASS" starttime="20240108 12:25:40.761" endtime="20240108 12:25:40.891"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:25:43.892" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:25:40.892" endtime="20240108 12:25:43.893"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:25:43.896" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:25:43.895" endtime="20240108 12:25:43.953"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:25:43.955" level="INFO">Clicking element '//*[@class="auto-complete__value-container auto-complete__value-container--is-multi css-1hwfws3"]'.</msg>
+<status status="PASS" starttime="20240108 12:25:43.954" endtime="20240108 12:25:44.013"/>
+</kw>
+<status status="PASS" starttime="20240108 12:25:43.893" endtime="20240108 12:25:44.013"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:25:47.014" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:25:44.014" endtime="20240108 12:25:47.015"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:25:47.018" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:25:47.016" endtime="20240108 12:25:47.059"/>
+</kw>
+<status status="PASS" starttime="20240108 12:25:47.015" endtime="20240108 12:25:47.059"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:25:50.060" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:25:47.059" endtime="20240108 12:25:50.060"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:25:50.064" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:25:50.062" endtime="20240108 12:25:50.103"/>
+</kw>
+<kw name="Set Slider">
+<arg>${SLIDER}</arg>
+<arg>66</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${element}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20240108 12:25:50.124" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="19eacbd3f8173f4ca14afe3556be1c8c", element="C86EAE007BBF389A5EFB56DE50AA8B54_element_60")&gt;</msg>
+<status status="PASS" starttime="20240108 12:25:50.104" endtime="20240108 12:25:50.124"/>
+</kw>
+<status status="PASS" starttime="20240108 12:25:50.104" endtime="20240108 12:25:50.124"/>
+</kw>
+<status status="PASS" starttime="20240108 12:25:50.061" endtime="20240108 12:25:50.124"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:25:56.125" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20240108 12:25:50.124" endtime="20240108 12:25:56.125"/>
+</kw>
+<kw name="Perform Action for Widgets Progress bar">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:25:56.126" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:25:56.126" endtime="20240108 12:25:56.161"/>
+</kw>
+<status status="PASS" starttime="20240108 12:25:56.125" endtime="20240108 12:25:56.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:26:01.163" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240108 12:25:56.162" endtime="20240108 12:26:01.163"/>
+</kw>
+<kw name="Perform Action for Widgets Tabs">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-5')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:26:01.168" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-5')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:26:01.166" endtime="20240108 12:26:01.225"/>
+</kw>
+<status status="PASS" starttime="20240108 12:26:01.165" endtime="20240108 12:26:01.225"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:26:04.227" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:26:01.226" endtime="20240108 12:26:04.228"/>
+</kw>
+<kw name="Perform Action for Widgets Tool tips">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-6')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:26:04.231" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-6')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:26:04.230" endtime="20240108 12:26:04.288"/>
+</kw>
+<status status="PASS" starttime="20240108 12:26:04.229" endtime="20240108 12:26:04.288"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:26:07.290" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:26:04.289" endtime="20240108 12:26:07.291"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-7')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:26:07.297" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-7')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:26:07.294" endtime="20240108 12:26:07.368"/>
+</kw>
+<status status="PASS" starttime="20240108 12:26:07.292" endtime="20240108 12:26:07.368"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:26:10.373" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:26:07.371" endtime="20240108 12:26:10.373"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-8')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:26:10.376" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-8')[1].click();
+Without any arguments.</msg>
+<msg timestamp="20240108 12:26:10.402" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d402fbdf83 &lt;unknown&gt;
+#1 0x55d402c76cf7 &lt;unknown&gt;
+#2 0x55d402c4a728 &lt;unknown&gt;
+#3 0x55d402cf769f &lt;unknown&gt;
+#4 0x55d402d0e719 &lt;unknown&gt;
+#5 0x55d402cefe53 &lt;unknown&gt;
+#6 0x55d402cb7dd4 &lt;unknown&gt;
+#7 0x55d402cb91de &lt;unknown&gt;
+#8 0x55d402f82531 &lt;unknown&gt;
+#9 0x55d402f86455 &lt;unknown&gt;
+#10 0x55d402f6ef55 &lt;unknown&gt;
+#11 0x55d402f870ef &lt;unknown&gt;
+#12 0x55d402f5299f &lt;unknown&gt;
+#13 0x55d402fab008 &lt;unknown&gt;
+#14 0x55d402fab1d7 &lt;unknown&gt;
+#15 0x55d402fbd124 &lt;unknown&gt;
+#16 0x7f422265d609 start_thread
+</msg>
+<msg timestamp="20240108 12:26:10.404" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d402fbdf83 &lt;unknown&gt;
+#1 0x55d402c76cf7 &lt;unknown&gt;
+#2 0x55d402c4a728 &lt;unknown&gt;
+#3 0x55d402cf769f &lt;unknown&gt;
+#4 0x55d402d0e719 &lt;unknown&gt;
+#5 0x55d402cefe53 &lt;unknown&gt;
+#6 0x55d402cb7dd4 &lt;unknown&gt;
+#7 0x55d402cb91de &lt;unknown&gt;
+#8 0x55d402f82531 &lt;unknown&gt;
+#9 0x55d402f86455 &lt;unknown&gt;
+#10 0x55d402f6ef55 &lt;unknown&gt;
+#11 0x55d402f870ef &lt;unknown&gt;
+#12 0x55d402f5299f &lt;unknown&gt;
+#13 0x55d402fab008 &lt;unknown&gt;
+#14 0x55d402fab1d7 &lt;unknown&gt;
+#15 0x55d402fbd124 &lt;unknown&gt;
+#16 0x7f422265d609 start_thread
+</msg>
+<status status="FAIL" starttime="20240108 12:26:10.375" endtime="20240108 12:26:10.408"/>
+</kw>
+<status status="FAIL" starttime="20240108 12:26:10.374" endtime="20240108 12:26:10.409"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:26:10.410" endtime="20240108 12:26:10.411"/>
+</kw>
+<status status="FAIL" starttime="20240108 12:25:37.217" endtime="20240108 12:26:10.413">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d402fbdf83 &lt;unknown&gt;
+#1 0x55d402c76cf7 &lt;unknown&gt;
+#2 0x55d402c4a728 &lt;unknown&gt;
+#3 0x55d402cf769f &lt;unknown&gt;
+#4 0x55d402d0e719 &lt;unknown&gt;
+#5 0x55d402cefe53 &lt;unknown&gt;
+#6 0x55d402cb7dd4 &lt;unknown&gt;
+#7 0x55d402cb91de &lt;unknown&gt;
+#8 0x55d402f82531 &lt;unknown&gt;
+#9 0x55d402f86455 &lt;unknown&gt;
+#10 0x55d402f6ef55 &lt;unknown&gt;
+#11 0x55d402f870ef &lt;unknown&gt;
+#12 0x55d402f5299f &lt;unknown&gt;
+#13 0x55d402fab008 &lt;unknown&gt;
+#14 0x55d402fab1d7 &lt;unknown&gt;
+#15 0x55d402fbd124 &lt;unknown&gt;
+#16 0x7f422265d609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240108 12:25:30.717" endtime="20240108 12:26:10.416"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240108 12:26:10.402" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d402fbdf83 &lt;unknown&gt;
+#1 0x55d402c76cf7 &lt;unknown&gt;
+#2 0x55d402c4a728 &lt;unknown&gt;
+#3 0x55d402cf769f &lt;unknown&gt;
+#4 0x55d402d0e719 &lt;unknown&gt;
+#5 0x55d402cefe53 &lt;unknown&gt;
+#6 0x55d402cb7dd4 &lt;unknown&gt;
+#7 0x55d402cb91de &lt;unknown&gt;
+#8 0x55d402f82531 &lt;unknown&gt;
+#9 0x55d402f86455 &lt;unknown&gt;
+#10 0x55d402f6ef55 &lt;unknown&gt;
+#11 0x55d402f870ef &lt;unknown&gt;
+#12 0x55d402f5299f &lt;unknown&gt;
+#13 0x55d402fab008 &lt;unknown&gt;
+#14 0x55d402fab1d7 &lt;unknown&gt;
+#15 0x55d402fbd124 &lt;unknown&gt;
+#16 0x7f422265d609 start_thread
+</msg>
+</errors>
+</robot>

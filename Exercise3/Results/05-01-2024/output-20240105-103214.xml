@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 10:32:14.264" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="35">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 10:32:14.390" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 10:32:14.390" endtime="20240105 10:32:19.145"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 10:32:19.148" endtime="20240105 10:32:19.257"/>
+</kw>
+<status status="PASS" starttime="20240105 10:32:14.389" endtime="20240105 10:32:19.258"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="39">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 10:32:19.260" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 10:32:19.259" endtime="20240105 10:32:19.352"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-0').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 10:32:19.353" level="INFO">Executing JavaScript:
+document.querySelector('#item-0').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 10:32:19.352" endtime="20240105 10:32:19.388"/>
+</kw>
+<kw name="Click Element and Verify">
+<var>${clicked_locator}</var>
+<arg>${TEXTBOX}</arg>
+<kw name="Set Variable" library="BuiltIn">
+<var>${CLICKED}</var>
+<arg>${locator}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240105 10:32:19.391" level="INFO">${CLICKED} = Xpath://*[@id="item-0"][1]</msg>
+<status status="PASS" starttime="20240105 10:32:19.390" endtime="20240105 10:32:19.391"/>
+</kw>
+<msg timestamp="20240105 10:32:19.391" level="INFO">${clicked_locator} = Xpath://*[@id="item-0"][1]</msg>
+<status status="PASS" starttime="20240105 10:32:19.389" endtime="20240105 10:32:19.391"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == '${TEXTBOX}'</arg>
+<arg>Perform Action for Element X</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Perform Action for Element X">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240105 10:32:19.392" endtime="20240105 10:32:19.417"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 10:32:19.419" level="INFO">Typing text 'Ridham' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240105 10:32:19.418" endtime="20240105 10:32:19.663"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>"abc123@gmail.com"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 10:32:19.663" level="INFO">Typing text '"abc123@gmail.com"' into text field 'userEmail'.</msg>
+<status status="PASS" starttime="20240105 10:32:19.663" endtime="20240105 10:32:20.014"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>currentAddress</arg>
+<arg>"Ahmedabad"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 10:32:20.015" level="INFO">Typing text '"Ahmedabad"' into text field 'currentAddress'.</msg>
+<status status="PASS" starttime="20240105 10:32:20.015" endtime="20240105 10:32:20.190"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>permanentAddress</arg>
+<arg>"Bhavnagar"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 10:32:20.191" level="INFO">Typing text '"Bhavnagar"' into text field 'permanentAddress'.</msg>
+<status status="PASS" starttime="20240105 10:32:20.191" endtime="20240105 10:32:20.316"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240105 10:32:20.316" level="INFO">Clicking element 'submit'.</msg>
+<msg timestamp="20240105 10:32:21.617" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240105 10:32:21.617" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="submit" type="button" class="btn btn-primary"&gt;...&lt;/button&gt; is not clickable at point (906, 584). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5652e6e84f83 &lt;unknown&gt;
+#1 0x5652e6b3dcf7 &lt;unknown&gt;
+#2 0x5652e6b95d92 &lt;unknown&gt;
+#3 0x5652e6b937f4 &lt;unknown&gt;
+#4 0x5652e6b90894 &lt;unknown&gt;
+#5 0x5652e6b8f4b9 &lt;unknown&gt;
+#6 0x5652e6b81313 &lt;unknown&gt;
+#7 0x5652e6bb70b2 &lt;unknown&gt;
+#8 0x5652e6b80b49 &lt;unknown&gt;
+#9 0x5652e6bb74ce &lt;unknown&gt;
+#10 0x5652e6bd6006 &lt;unknown&gt;
+#11 0x5652e6bb6e53 &lt;unknown&gt;
+#12 0x5652e6b7edd4 &lt;unknown&gt;
+#13 0x5652e6b801de &lt;unknown&gt;
+#14 0x5652e6e49531 &lt;unknown&gt;
+#15 0x5652e6e4d455 &lt;unknown&gt;
+#16 0x5652e6e35f55 &lt;unknown&gt;
+#17 0x5652e6e4e0ef &lt;unknown&gt;
+#18 0x5652e6e1999f &lt;unknown&gt;
+#19 0x5652e6e72008 &lt;unknown&gt;
+#20 0x5652e6e721d7 &lt;unknown&gt;
+#21 0x5652e6e84124 &lt;unknown&gt;
+#22 0x7fa41cf79609 start_thread
+</msg>
+<status status="FAIL" starttime="20240105 10:32:20.316" endtime="20240105 10:32:21.618"/>
+</kw>
+<status status="FAIL" starttime="20240105 10:32:19.392" endtime="20240105 10:32:21.618"/>
+</kw>
+<status status="FAIL" starttime="20240105 10:32:19.391" endtime="20240105 10:32:21.618"/>
+</kw>
+<kw name="Click Element and Verify">
+<var>${clicked_locator}</var>
+<arg>${CHECKBOX}</arg>
+<status status="NOT RUN" starttime="20240105 10:32:21.618" endtime="20240105 10:32:21.618"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == '${CHECKBOX}'</arg>
+<arg>Perform Action for Element Y</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240105 10:32:21.619" endtime="20240105 10:32:21.619"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 10:32:21.619" endtime="20240105 10:32:21.619"/>
+</kw>
+<status status="FAIL" starttime="20240105 10:32:19.259" endtime="20240105 10:32:21.619">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="submit" type="button" class="btn btn-primary"&gt;...&lt;/button&gt; is not clickable at point (906, 584). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5652e6e84f83 &lt;unknown&gt;
+#1 0x5652e6b3dcf7 &lt;unknown&gt;
+#2 0x5652e6b95d92 &lt;unknown&gt;
+#3 0x5652e6b937f4 &lt;unknown&gt;
+#4 0x5652e6b90894 &lt;unknown&gt;
+#5 0x5652e6b8f4b9 &lt;unknown&gt;
+#6 0x5652e6b81313 &lt;unknown&gt;
+#7 0x5652e6bb70b2 &lt;unknown&gt;
+#8 0x5652e6b80b49 &lt;unknown&gt;
+#9 0x5652e6bb74ce &lt;unknown&gt;
+#10 0x5652e6bd6006 &lt;unknown&gt;
+#11 0x5652e6bb6e53 &lt;unknown&gt;
+#12 0x5652e6b7edd4 &lt;unknown&gt;
+#13 0x5652e6b801de &lt;unknown&gt;
+#14 0x5652e6e49531 &lt;unknown&gt;
+#15 0x5652e6e4d455 &lt;unknown&gt;
+#16 0x5652e6e35f55 &lt;unknown&gt;
+#17 0x5652e6e4e0ef &lt;unknown&gt;
+#18 0x5652e6e1999f &lt;unknown&gt;
+#19 0x5652e6e72008 &lt;unknown&gt;
+#20 0x5652e6e721d7 &lt;unknown&gt;
+#21 0x5652e6e84124 &lt;unknown&gt;
+#22 0x7fa41cf79609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240105 10:32:14.265" endtime="20240105 10:32:21.620"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

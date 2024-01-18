@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 11:17:16.548" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="37">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 11:17:16.672" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 11:17:16.671" endtime="20240105 11:17:23.269"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 11:17:23.271" endtime="20240105 11:17:23.383"/>
+</kw>
+<status status="PASS" starttime="20240105 11:17:16.670" endtime="20240105 11:17:23.384"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="41">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:17:23.396" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:17:23.394" endtime="20240105 11:17:23.523"/>
+</kw>
+<kw name="Perform Action for Element Textbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-0').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:17:23.527" level="INFO">Executing JavaScript:
+document.querySelector('#item-0').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:17:23.526" endtime="20240105 11:17:23.554"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240105 11:17:23.555" endtime="20240105 11:17:23.596"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:17:23.597" level="INFO">Typing text 'Ridham' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240105 11:17:23.596" endtime="20240105 11:17:23.721"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>"abc123@gmail.com"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:17:23.722" level="INFO">Typing text '"abc123@gmail.com"' into text field 'userEmail'.</msg>
+<status status="PASS" starttime="20240105 11:17:23.721" endtime="20240105 11:17:23.870"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>currentAddress</arg>
+<arg>"Ahmedabad"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:17:23.871" level="INFO">Typing text '"Ahmedabad"' into text field 'currentAddress'.</msg>
+<status status="PASS" starttime="20240105 11:17:23.870" endtime="20240105 11:17:23.966"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>permanentAddress</arg>
+<arg>"Bhavnagar"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:17:23.967" level="INFO">Typing text '"Bhavnagar"' into text field 'permanentAddress'.</msg>
+<status status="PASS" starttime="20240105 11:17:23.966" endtime="20240105 11:17:24.260"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#submit').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:17:24.260" level="INFO">Executing JavaScript:
+document.querySelector('#submit').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:17:24.260" endtime="20240105 11:17:24.267"/>
+</kw>
+<status status="PASS" starttime="20240105 11:17:23.523" endtime="20240105 11:17:24.267"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 11:17:27.269" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240105 11:17:24.268" endtime="20240105 11:17:27.269"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="rct-collapse rct-collapse-btn"][1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240105 11:17:27.273" level="INFO">Clicking button '//*[@class="rct-collapse rct-collapse-btn"][1]'.</msg>
+<msg timestamp="20240105 11:17:27.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240105 11:17:27.497" level="FAIL">Button with locator '//*[@class="rct-collapse rct-collapse-btn"][1]' not found.</msg>
+<status status="FAIL" starttime="20240105 11:17:27.271" endtime="20240105 11:17:27.499"/>
+</kw>
+<status status="FAIL" starttime="20240105 11:17:27.270" endtime="20240105 11:17:27.499"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 11:17:27.500" endtime="20240105 11:17:27.500"/>
+</kw>
+<status status="FAIL" starttime="20240105 11:17:23.392" endtime="20240105 11:17:27.500">Button with locator '//*[@class="rct-collapse rct-collapse-btn"][1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240105 11:17:16.549" endtime="20240105 11:17:27.501"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 17:31:25.191" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="74">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 17:31:25.319" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 17:31:25.319" endtime="20240108 17:32:00.856"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 17:32:00.858" endtime="20240108 17:32:00.966"/>
+</kw>
+<status status="PASS" starttime="20240108 17:31:25.318" endtime="20240108 17:32:00.967"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="78">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:32:00.969" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 17:32:00.968" endtime="20240108 17:32:01.079"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 17:32:04.081" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 17:32:01.080" endtime="20240108 17:32:04.082"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-7')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:32:04.088" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-7')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 17:32:04.086" endtime="20240108 17:32:04.183"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU1}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240108 17:32:04.185" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[1]/a'.</msg>
+<status status="PASS" starttime="20240108 17:32:04.183" endtime="20240108 17:32:04.514"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 17:32:05.516" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240108 17:32:04.515" endtime="20240108 17:32:05.516"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU2}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240108 17:32:05.519" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[2]/a'.</msg>
+<status status="PASS" starttime="20240108 17:32:05.517" endtime="20240108 17:32:05.865"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 17:32:07.867" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240108 17:32:05.865" endtime="20240108 17:32:07.867"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU3}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240108 17:32:07.873" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[3]/a'.</msg>
+<status status="PASS" starttime="20240108 17:32:07.868" endtime="20240108 17:32:08.217"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 17:32:09.218" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240108 17:32:08.217" endtime="20240108 17:32:09.219"/>
+</kw>
+<status status="PASS" starttime="20240108 17:32:04.083" endtime="20240108 17:32:09.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 17:32:12.221" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 17:32:09.220" endtime="20240108 17:32:12.221"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-8')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:32:12.224" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-8')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 17:32:12.223" endtime="20240108 17:32:12.318"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('.css-tlfecz-indicatorContainer')click():</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:32:12.319" level="INFO">Executing JavaScript:
+document.querySelectorAll('.css-tlfecz-indicatorContainer')click():
+Without any arguments.</msg>
+<msg timestamp="20240108 17:32:12.486" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 17:32:12.486" level="FAIL">JavascriptException: Message: javascript error: Unexpected identifier 'click'
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5564a3253f83 &lt;unknown&gt;
+#1 0x5564a2f0ccf7 &lt;unknown&gt;
+#2 0x5564a2f132a3 &lt;unknown&gt;
+#3 0x5564a2f15bb4 &lt;unknown&gt;
+#4 0x5564a2fa5ba3 &lt;unknown&gt;
+#5 0x5564a2f860b2 &lt;unknown&gt;
+#6 0x5564a2fa5006 &lt;unknown&gt;
+#7 0x5564a2f85e53 &lt;unknown&gt;
+#8 0x5564a2f4ddd4 &lt;unknown&gt;
+#9 0x5564a2f4f1de &lt;unknown&gt;
+#10 0x5564a3218531 &lt;unknown&gt;
+#11 0x5564a321c455 &lt;unknown&gt;
+#12 0x5564a3204f55 &lt;unknown&gt;
+#13 0x5564a321d0ef &lt;unknown&gt;
+#14 0x5564a31e899f &lt;unknown&gt;
+#15 0x5564a3241008 &lt;unknown&gt;
+#16 0x5564a32411d7 &lt;unknown&gt;
+#17 0x5564a3253124 &lt;unknown&gt;
+#18 0x7fe04c28a609 start_thread
+</msg>
+<status status="FAIL" starttime="20240108 17:32:12.318" endtime="20240108 17:32:12.487"/>
+</kw>
+<status status="FAIL" starttime="20240108 17:32:12.222" endtime="20240108 17:32:12.487"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 17:32:12.487" endtime="20240108 17:32:12.488"/>
+</kw>
+<status status="FAIL" starttime="20240108 17:32:00.968" endtime="20240108 17:32:12.488">JavascriptException: Message: javascript error: Unexpected identifier 'click'
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5564a3253f83 &lt;unknown&gt;
+#1 0x5564a2f0ccf7 &lt;unknown&gt;
+#2 0x5564a2f132a3 &lt;unknown&gt;
+#3 0x5564a2f15bb4 &lt;unknown&gt;
+#4 0x5564a2fa5ba3 &lt;unknown&gt;
+#5 0x5564a2f860b2 &lt;unknown&gt;
+#6 0x5564a2fa5006 &lt;unknown&gt;
+#7 0x5564a2f85e53 &lt;unknown&gt;
+#8 0x5564a2f4ddd4 &lt;unknown&gt;
+#9 0x5564a2f4f1de &lt;unknown&gt;
+#10 0x5564a3218531 &lt;unknown&gt;
+#11 0x5564a321c455 &lt;unknown&gt;
+#12 0x5564a3204f55 &lt;unknown&gt;
+#13 0x5564a321d0ef &lt;unknown&gt;
+#14 0x5564a31e899f &lt;unknown&gt;
+#15 0x5564a3241008 &lt;unknown&gt;
+#16 0x5564a32411d7 &lt;unknown&gt;
+#17 0x5564a3253124 &lt;unknown&gt;
+#18 0x7fe04c28a609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240108 17:31:25.192" endtime="20240108 17:32:12.489"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

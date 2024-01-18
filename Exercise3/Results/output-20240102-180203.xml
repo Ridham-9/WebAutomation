@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240102 18:02:03.449" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="18">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240102 18:02:03.690" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240102 18:02:03.689" endtime="20240102 18:02:17.489"/>
+</kw>
+<status status="PASS" starttime="20240102 18:02:03.689" endtime="20240102 18:02:17.490"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240102 18:02:17.498" level="INFO">Clicking element '//*[@id="app"]/div/div/div[2]/div/div[1]'.</msg>
+<status status="PASS" starttime="20240102 18:02:17.494" endtime="20240102 18:02:17.651"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240102 18:02:17.652" level="INFO">Clicking button '//*[@id="item-7"]'.</msg>
+<msg timestamp="20240102 18:02:17.984" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240102 18:02:17.985" level="FAIL">Button with locator '//*[@id="item-7"]' not found.</msg>
+<status status="FAIL" starttime="20240102 18:02:17.652" endtime="20240102 18:02:18.021"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:02:17.492" endtime="20240102 18:02:18.021"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:02:03.688" endtime="20240102 18:02:18.022">Button with locator '//*[@id="item-7"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240102 18:02:03.450" endtime="20240102 18:02:18.023"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

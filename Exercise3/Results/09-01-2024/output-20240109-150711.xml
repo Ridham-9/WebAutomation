@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 15:07:11.850" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="49">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 15:07:11.991" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240109 15:07:11.990" endtime="20240109 15:07:18.034"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 15:07:18.036" endtime="20240109 15:07:18.161"/>
+</kw>
+<status status="PASS" starttime="20240109 15:07:11.989" endtime="20240109 15:07:18.162"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="53">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 15:07:18.164" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 15:07:18.163" endtime="20240109 15:07:18.253"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 15:07:21.254" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 15:07:18.253" endtime="20240109 15:07:21.255"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 15:07:21.259" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 15:07:21.257" endtime="20240109 15:07:21.319"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW}</var>
+<arg>${list1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 15:07:21.325" level="INFO">${NEW} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 15:07:21.320" endtime="20240109 15:07:21.325"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list1}</var>
+<arg>${list2}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 15:07:21.325" level="INFO">${list1} = Xpath://*[@class="vertical-list-container mt-4"]/div[2]</msg>
+<status status="PASS" starttime="20240109 15:07:21.325" endtime="20240109 15:07:21.325"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list2}</var>
+<arg>${NEW}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 15:07:21.326" level="INFO">${list2} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 15:07:21.326" endtime="20240109 15:07:21.326"/>
+</kw>
+<status status="PASS" starttime="20240109 15:07:21.255" endtime="20240109 15:07:21.326"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 15:07:24.327" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 15:07:21.326" endtime="20240109 15:07:24.327"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 15:07:27.328" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 15:07:24.328" endtime="20240109 15:07:27.329"/>
+</kw>
+<kw name="Perform Action for Droppable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 15:07:27.334" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 15:07:27.332" endtime="20240109 15:07:27.429"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${DRAG1}</arg>
+<arg>${DROP1}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" starttime="20240109 15:07:27.430" endtime="20240109 15:07:28.074"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>droppableExample-tab-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240109 15:07:28.077" level="INFO">Clicking element 'droppableExample-tab-accept'.</msg>
+<status status="PASS" starttime="20240109 15:07:28.074" endtime="20240109 15:07:28.235"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${ACCEPTABLE}</arg>
+<arg>${DROP2}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<msg timestamp="20240109 15:07:28.727" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240109 15:07:28.727" level="FAIL">ElementNotInteractableException: Message: element not interactable: [object HTMLDivElement] has no size and location
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55a74fa3df83 &lt;unknown&gt;
+#1 0x55a74f6f6cf7 &lt;unknown&gt;
+#2 0x55a74f6fd2a3 &lt;unknown&gt;
+#3 0x55a74f6ff798 &lt;unknown&gt;
+#4 0x55a74f6ff8ec &lt;unknown&gt;
+#5 0x55a74f74e05a &lt;unknown&gt;
+#6 0x55a74f74d240 &lt;unknown&gt;
+#7 0x55a74f798ad0 &lt;unknown&gt;
+#8 0x55a74f7700b2 &lt;unknown&gt;
+#9 0x55a74f78f006 &lt;unknown&gt;
+#10 0x55a74f76fe53 &lt;unknown&gt;
+#11 0x55a74f737dd4 &lt;unknown&gt;
+#12 0x55a74f7391de &lt;unknown&gt;
+#13 0x55a74fa02531 &lt;unknown&gt;
+#14 0x55a74fa06455 &lt;unknown&gt;
+#15 0x55a74f9eef55 &lt;unknown&gt;
+#16 0x55a74fa070ef &lt;unknown&gt;
+#17 0x55a74f9d299f &lt;unknown&gt;
+#18 0x55a74fa2b008 &lt;unknown&gt;
+#19 0x55a74fa2b1d7 &lt;unknown&gt;
+#20 0x55a74fa3d124 &lt;unknown&gt;
+#21 0x7f049e8b1609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 15:07:28.236" endtime="20240109 15:07:28.728"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${NACCEPTABLE}</arg>
+<arg>${DROP2}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240109 15:07:28.729" endtime="20240109 15:07:28.729"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>droppableExample-tab-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 15:07:28.729" endtime="20240109 15:07:28.729"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>droppableExample-tab-preventPropogation</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 15:07:28.730" endtime="20240109 15:07:28.730"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${DRAG2}</arg>
+<arg>${DROP3}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240109 15:07:28.730" endtime="20240109 15:07:28.731"/>
+</kw>
+<status status="FAIL" starttime="20240109 15:07:27.330" endtime="20240109 15:07:28.731"/>
+</kw>
+<status status="FAIL" starttime="20240109 15:07:18.162" endtime="20240109 15:07:28.732">ElementNotInteractableException: Message: element not interactable: [object HTMLDivElement] has no size and location
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55a74fa3df83 &lt;unknown&gt;
+#1 0x55a74f6f6cf7 &lt;unknown&gt;
+#2 0x55a74f6fd2a3 &lt;unknown&gt;
+#3 0x55a74f6ff798 &lt;unknown&gt;
+#4 0x55a74f6ff8ec &lt;unknown&gt;
+#5 0x55a74f74e05a &lt;unknown&gt;
+#6 0x55a74f74d240 &lt;unknown&gt;
+#7 0x55a74f798ad0 &lt;unknown&gt;
+#8 0x55a74f7700b2 &lt;unknown&gt;
+#9 0x55a74f78f006 &lt;unknown&gt;
+#10 0x55a74f76fe53 &lt;unknown&gt;
+#11 0x55a74f737dd4 &lt;unknown&gt;
+#12 0x55a74f7391de &lt;unknown&gt;
+#13 0x55a74fa02531 &lt;unknown&gt;
+#14 0x55a74fa06455 &lt;unknown&gt;
+#15 0x55a74f9eef55 &lt;unknown&gt;
+#16 0x55a74fa070ef &lt;unknown&gt;
+#17 0x55a74f9d299f &lt;unknown&gt;
+#18 0x55a74fa2b008 &lt;unknown&gt;
+#19 0x55a74fa2b1d7 &lt;unknown&gt;
+#20 0x55a74fa3d124 &lt;unknown&gt;
+#21 0x7f049e8b1609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240109 15:07:11.850" endtime="20240109 15:07:28.735"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

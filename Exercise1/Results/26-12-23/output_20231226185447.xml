@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 18:54:47.584" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.708" endtime="20231226 18:54:47.709"/>
+</kw>
+<status status="PASS" starttime="20231226 18:54:47.707" endtime="20231226 18:54:47.709"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="12">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.710" endtime="20231226 18:54:47.710"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.710" endtime="20231226 18:54:47.711"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.711" endtime="20231226 18:54:47.711"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.711" endtime="20231226 18:54:47.711"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.712" endtime="20231226 18:54:47.712"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.712" endtime="20231226 18:54:47.713"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>shopping_cart_link</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.713" endtime="20231226 18:54:47.713"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css=.shopping_cart_link</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231226 18:54:47.713" endtime="20231226 18:54:47.714"/>
+</kw>
+<status status="PASS" starttime="20231226 18:54:47.709" endtime="20231226 18:54:47.714"/>
+</test>
+<status status="PASS" starttime="20231226 18:54:47.584" endtime="20231226 18:54:47.715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

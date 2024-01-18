@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 17:30:44.531" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="59">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 17:30:44.659" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 17:30:44.658" endtime="20240116 17:30:54.244"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 17:30:54.245" endtime="20240116 17:30:54.348"/>
+</kw>
+<status status="PASS" starttime="20240116 17:30:44.658" endtime="20240116 17:30:54.348"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="63">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 17:30:54.351" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 17:30:54.350" endtime="20240116 17:30:54.428"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 17:30:57.429" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 17:30:54.428" endtime="20240116 17:30:57.429"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 17:30:57.430" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 17:30:57.430" endtime="20240116 17:30:57.495"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW}</var>
+<arg>${list1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240116 17:30:57.496" level="INFO">${NEW} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240116 17:30:57.495" endtime="20240116 17:30:57.496"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list1}</var>
+<arg>${list2}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240116 17:30:57.497" level="INFO">${list1} = Xpath://*[@class="vertical-list-container mt-4"]/div[2]</msg>
+<status status="PASS" starttime="20240116 17:30:57.496" endtime="20240116 17:30:57.497"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list2}</var>
+<arg>${NEW}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240116 17:30:57.497" level="INFO">${list2} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240116 17:30:57.497" endtime="20240116 17:30:57.497"/>
+</kw>
+<status status="PASS" starttime="20240116 17:30:57.429" endtime="20240116 17:30:57.497"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 17:31:00.501" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 17:30:57.500" endtime="20240116 17:31:00.501"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 17:31:03.503" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 17:31:00.502" endtime="20240116 17:31:03.504"/>
+</kw>
+<kw name="Perform Action for Droppable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 17:31:03.508" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 17:31:03.506" endtime="20240116 17:31:03.613"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${DRAG1}</arg>
+<arg>${DROP1}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" starttime="20240116 17:31:03.614" endtime="20240116 17:31:04.284"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 17:31:07.285" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 17:31:04.284" endtime="20240116 17:31:07.286"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>droppableExample-tab-accept</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 17:31:07.289" level="INFO">Clicking element 'droppableExample-tab-accept'.</msg>
+<status status="PASS" starttime="20240116 17:31:07.287" endtime="20240116 17:31:07.492"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DROP2}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240116 17:31:22.900" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 17:31:22.901" level="FAIL">Element 'Xpath://*[@class="drop-box ui-droppable ui-state-highlight"]' not visible after 15 seconds.</msg>
+<status status="FAIL" starttime="20240116 17:31:07.493" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${ACCEPTABLE}</arg>
+<arg>${DROP2}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.914" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${NACCEPTABLE}</arg>
+<arg>${DROP2}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.914" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.914" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>droppableExample-tab-preventPropogation</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.914" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${DRAG2}</arg>
+<arg>${DROP3}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.914" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.914" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>droppableExample-tab-revertable</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.914" endtime="20240116 17:31:22.914"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${REVERT}</arg>
+<arg>${DROP4}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.915" endtime="20240116 17:31:22.915"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${NREVERT}</arg>
+<arg>${DROP4}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20240116 17:31:22.915" endtime="20240116 17:31:22.915"/>
+</kw>
+<status status="FAIL" starttime="20240116 17:31:03.505" endtime="20240116 17:31:22.915"/>
+</kw>
+<status status="FAIL" starttime="20240116 17:30:54.349" endtime="20240116 17:31:22.915">Element 'Xpath://*[@class="drop-box ui-droppable ui-state-highlight"]' not visible after 15 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240116 17:30:44.532" endtime="20240116 17:31:22.916"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 14:57:57.831" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="36">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 14:57:57.964" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 14:57:57.964" endtime="20240103 14:58:04.810"/>
+</kw>
+<status status="PASS" starttime="20240103 14:57:57.963" endtime="20240103 14:58:04.811"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 14:58:04.818" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 14:58:04.816" endtime="20240103 14:58:04.952"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 14:58:04.953" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 14:58:04.952" endtime="20240103 14:58:04.986"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 14:58:04.988" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 14:58:04.986" endtime="20240103 14:58:05.084"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 14:58:05.085" level="INFO">Clicking element 'Xpath://*[@id="uploadFile"]'.</msg>
+<msg timestamp="20240103 14:58:05.232" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-72.png"&gt;&lt;img src="selenium-screenshot-72.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 14:58:05.232" level="FAIL">InvalidArgumentException: Message: invalid argument
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56300c53ef83 &lt;unknown&gt;
+#1 0x56300c1f7b2b &lt;unknown&gt;
+#2 0x56300c23beef &lt;unknown&gt;
+#3 0x56300c2710b2 &lt;unknown&gt;
+#4 0x56300c23ab49 &lt;unknown&gt;
+#5 0x56300c2714ce &lt;unknown&gt;
+#6 0x56300c290006 &lt;unknown&gt;
+#7 0x56300c270e53 &lt;unknown&gt;
+#8 0x56300c238dd4 &lt;unknown&gt;
+#9 0x56300c23a1de &lt;unknown&gt;
+#10 0x56300c503531 &lt;unknown&gt;
+#11 0x56300c507455 &lt;unknown&gt;
+#12 0x56300c4eff55 &lt;unknown&gt;
+#13 0x56300c5080ef &lt;unknown&gt;
+#14 0x56300c4d399f &lt;unknown&gt;
+#15 0x56300c52c008 &lt;unknown&gt;
+#16 0x56300c52c1d7 &lt;unknown&gt;
+#17 0x56300c53e124 &lt;unknown&gt;
+#18 0x7fe12f03d609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 14:58:05.084" endtime="20240103 14:58:05.234"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:58:04.813" endtime="20240103 14:58:05.234"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:57:57.962" endtime="20240103 14:58:05.234">InvalidArgumentException: Message: invalid argument
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56300c53ef83 &lt;unknown&gt;
+#1 0x56300c1f7b2b &lt;unknown&gt;
+#2 0x56300c23beef &lt;unknown&gt;
+#3 0x56300c2710b2 &lt;unknown&gt;
+#4 0x56300c23ab49 &lt;unknown&gt;
+#5 0x56300c2714ce &lt;unknown&gt;
+#6 0x56300c290006 &lt;unknown&gt;
+#7 0x56300c270e53 &lt;unknown&gt;
+#8 0x56300c238dd4 &lt;unknown&gt;
+#9 0x56300c23a1de &lt;unknown&gt;
+#10 0x56300c503531 &lt;unknown&gt;
+#11 0x56300c507455 &lt;unknown&gt;
+#12 0x56300c4eff55 &lt;unknown&gt;
+#13 0x56300c5080ef &lt;unknown&gt;
+#14 0x56300c4d399f &lt;unknown&gt;
+#15 0x56300c52c008 &lt;unknown&gt;
+#16 0x56300c52c1d7 &lt;unknown&gt;
+#17 0x56300c53e124 &lt;unknown&gt;
+#18 0x7fe12f03d609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 14:57:57.833" endtime="20240103 14:58:05.235"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 18:41:35.747" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 18:41:35.880" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 18:41:35.879" endtime="20240105 18:41:41.255"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 18:41:41.257" endtime="20240105 18:41:41.372"/>
+</kw>
+<status status="PASS" starttime="20240105 18:41:35.878" endtime="20240105 18:41:41.372"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="17">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:41:41.375" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 18:41:41.374" endtime="20240105 18:41:41.461"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 18:41:44.463" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240105 18:41:41.462" endtime="20240105 18:41:44.463"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:41:44.465" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 18:41:44.463" endtime="20240105 18:41:44.520"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 18:41:49.522" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240105 18:41:44.520" endtime="20240105 18:41:49.522"/>
+</kw>
+<status status="PASS" starttime="20240105 18:41:41.373" endtime="20240105 18:41:49.523"/>
+</test>
+<status status="PASS" starttime="20240105 18:41:35.748" endtime="20240105 18:41:49.526"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240105 18:41:35.748" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot' on line 9: Creating keyword 'Open Elements Section' failed: User keyword cannot be empty.</msg>
+</errors>
+</robot>

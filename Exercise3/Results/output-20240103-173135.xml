@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 17:31:35.107" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="57">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 17:31:35.245" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 17:31:35.244" endtime="20240103 17:31:40.674"/>
+</kw>
+<status status="PASS" starttime="20240103 17:31:35.244" endtime="20240103 17:31:40.674"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 17:31:40.675" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 17:31:40.675" endtime="20240103 17:31:40.743"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 17:31:40.743" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 17:31:40.743" endtime="20240103 17:31:40.767"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 17:31:40.768" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 17:31:40.767" endtime="20240103 17:31:40.856"/>
+</kw>
+<status status="PASS" starttime="20240103 17:31:40.674" endtime="20240103 17:31:40.856"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 17:31:50.857" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 17:31:40.857" endtime="20240103 17:31:50.858"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 17:31:50.863" level="INFO">Clicking element 'element-group[1]'.</msg>
+<msg timestamp="20240103 17:31:51.098" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-90.png"&gt;&lt;img src="selenium-screenshot-90.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 17:31:51.098" level="FAIL">Element with locator 'element-group[1]' not found.</msg>
+<status status="FAIL" starttime="20240103 17:31:50.861" endtime="20240103 17:31:51.099"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240103 17:31:51.099" endtime="20240103 17:31:51.099"/>
+</kw>
+<status status="FAIL" starttime="20240103 17:31:50.859" endtime="20240103 17:31:51.099"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:31:51.100" endtime="20240103 17:31:51.100"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<status status="NOT RUN" starttime="20240103 17:31:51.100" endtime="20240103 17:31:51.100"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:31:51.100" endtime="20240103 17:31:51.100"/>
+</kw>
+<kw name="Open Widgets">
+<status status="NOT RUN" starttime="20240103 17:31:51.100" endtime="20240103 17:31:51.100"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:31:51.100" endtime="20240103 17:31:51.100"/>
+</kw>
+<kw name="Open Interactions">
+<status status="NOT RUN" starttime="20240103 17:31:51.100" endtime="20240103 17:31:51.100"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:31:51.101" endtime="20240103 17:31:51.101"/>
+</kw>
+<kw name="Open Book Store">
+<status status="NOT RUN" starttime="20240103 17:31:51.101" endtime="20240103 17:31:51.101"/>
+</kw>
+<status status="FAIL" starttime="20240103 17:31:35.243" endtime="20240103 17:31:51.101">Element with locator 'element-group[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240103 17:31:35.108" endtime="20240103 17:31:51.103"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

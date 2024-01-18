@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 19:12:53.689" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="91">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 19:12:54.133" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 19:12:54.132" endtime="20240116 19:13:00.158"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 19:13:00.161" endtime="20240116 19:13:00.305"/>
+</kw>
+<status status="PASS" starttime="20240116 19:12:54.131" endtime="20240116 19:13:00.306"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="95">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 19:13:00.317" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 19:13:00.315" endtime="20240116 19:13:00.460"/>
+</kw>
+<kw name="Perform Action for Element Link">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-5').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 19:13:00.464" level="INFO">Executing JavaScript:
+document.querySelector('#item-5').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 19:13:00.463" endtime="20240116 19:13:00.520"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>dynamicLink</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240116 19:13:00.523" level="INFO">Clicking link 'dynamicLink'.</msg>
+<status status="PASS" starttime="20240116 19:13:00.520" endtime="20240116 19:13:00.687"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240116 19:13:00.702" level="INFO">${title} = DEMOQA</msg>
+<status status="PASS" starttime="20240116 19:13:00.687" endtime="20240116 19:13:00.702"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${title}</arg>
+<arg>DEMOQA</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240116 19:13:00.702" endtime="20240116 19:13:00.703"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 19:13:05.703" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 19:13:00.703" endtime="20240116 19:13:05.704"/>
+</kw>
+<kw name="Wait Until Element Is Clickable">
+<arg>id:moved</arg>
+<msg timestamp="20240116 19:13:05.719" level="FAIL">No keyword with name 'Wait Until Element Is Clickable' found.</msg>
+<status status="FAIL" starttime="20240116 19:13:05.718" endtime="20240116 19:13:05.719"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>moved</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 19:13:05.719" endtime="20240116 19:13:05.720"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>linkResponse</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240116 19:13:05.720" endtime="20240116 19:13:05.720"/>
+</kw>
+<status status="FAIL" starttime="20240116 19:13:00.461" endtime="20240116 19:13:05.720"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 19:13:05.721" endtime="20240116 19:13:05.721"/>
+</kw>
+<status status="FAIL" starttime="20240116 19:13:00.311" endtime="20240116 19:13:05.722">No keyword with name 'Wait Until Element Is Clickable' found.</status>
+</test>
+<status status="FAIL" starttime="20240116 19:12:53.690" endtime="20240116 19:13:05.724"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

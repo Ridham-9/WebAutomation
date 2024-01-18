@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 11:01:13.513" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="37">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 11:01:13.640" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 11:01:13.639" endtime="20240105 11:01:18.837"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 11:01:18.839" endtime="20240105 11:01:18.949"/>
+</kw>
+<status status="PASS" starttime="20240105 11:01:13.638" endtime="20240105 11:01:18.949"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="41">
+<kw name="Input">
+<var>${clicked_locator}</var>
+<arg>Please enter the element to click (e.g., TEXTBOX, CHECKBOX):</arg>
+<msg timestamp="20240105 11:01:18.957" level="FAIL">No keyword with name 'Input' found. Did you mean:
+    SeleniumLibrary.Input Text</msg>
+<status status="FAIL" starttime="20240105 11:01:18.957" endtime="20240105 11:01:18.957"/>
+</kw>
+<kw name="Click Element and Verify">
+<arg>${clicked_locator}</arg>
+<status status="NOT RUN" starttime="20240105 11:01:18.958" endtime="20240105 11:01:18.959"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == 'TEXTBOX'</arg>
+<arg>Perform Action for Element X</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240105 11:01:18.959" endtime="20240105 11:01:18.960"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == 'CHECKBOX'</arg>
+<arg>Perform Action for Element Y</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240105 11:01:18.960" endtime="20240105 11:01:18.961"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 11:01:18.961" endtime="20240105 11:01:18.961"/>
+</kw>
+<status status="FAIL" starttime="20240105 11:01:18.950" endtime="20240105 11:01:18.961">No keyword with name 'Input' found. Did you mean:
+    SeleniumLibrary.Input Text</status>
+</test>
+<status status="FAIL" starttime="20240105 11:01:13.514" endtime="20240105 11:01:18.963"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

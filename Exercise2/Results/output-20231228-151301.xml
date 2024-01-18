@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 15:13:01.866" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="28">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 15:13:02.005" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231228 15:13:02.003" endtime="20231228 15:13:10.961"/>
+</kw>
+<status status="PASS" starttime="20231228 15:13:02.002" endtime="20231228 15:13:10.962"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:13:10.968" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231228 15:13:10.963" endtime="20231228 15:13:11.163"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231228 15:13:11.163" endtime="20231228 15:13:11.225"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:13:11.227" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231228 15:13:11.226" endtime="20231228 15:13:11.296"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231228 15:13:11.298" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231228 15:13:11.296" endtime="20231228 15:13:11.407"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231228 15:13:11.429" level="INFO">${handles} = ['3C744ECED77155CDAFEAC81DB8B93463', 'BD045D294F4A8E4E69B79C2414DD614B']</msg>
+<status status="PASS" starttime="20231228 15:13:11.408" endtime="20231228 15:13:11.429"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231228 15:13:11.429" endtime="20231228 15:13:11.554"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 15:13:11.555" endtime="20231228 15:13:14.704"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>${QA_DATA1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:13:14.777" level="INFO">${DATA of Automation tools/frameworks} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 15:13:14.704" endtime="20231228 15:13:14.777"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 15:13:14.778" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 15:13:14.777" endtime="20231228 15:13:14.778"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${DATA_LIST}</var>
+<arg>${DATA of Automation tools/frameworks}.split(${SPACE})</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231228 15:13:14.779" level="INFO">${DATA_LIST} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG.split( )</msg>
+<status status="PASS" starttime="20231228 15:13:14.779" endtime="20231228 15:13:14.779"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA_LIST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 15:13:14.780" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG.split( )</msg>
+<status status="PASS" starttime="20231228 15:13:14.780" endtime="20231228 15:13:14.780"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${CSV_file}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.782" level="INFO">${header} = ['div']</msg>
+<status status="PASS" starttime="20231228 15:13:14.781" endtime="20231228 15:13:14.782"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.784" level="INFO">${header} = [['div']]</msg>
+<status status="PASS" starttime="20231228 15:13:14.784" endtime="20231228 15:13:14.784"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.785" level="INFO">${header} = [[['div']]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.785" endtime="20231228 15:13:14.785"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.786" level="INFO">${header} = [[[['div']]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.786" endtime="20231228 15:13:14.786"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.787" level="INFO">${header} = [[[[['div']]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.787" endtime="20231228 15:13:14.787"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.788" level="INFO">${header} = [[[[[['div']]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.788" endtime="20231228 15:13:14.788"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.789" level="INFO">${header} = [[[[[[['div']]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.789" endtime="20231228 15:13:14.789"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.790" level="INFO">${header} = [[[[[[[['div']]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.790" endtime="20231228 15:13:14.790"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.791" level="INFO">${header} = [[[[[[[[['div']]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.791" endtime="20231228 15:13:14.791"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.792" level="INFO">${header} = [[[[[[[[[['div']]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.792" endtime="20231228 15:13:14.792"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.793" level="INFO">${header} = [[[[[[[[[[['div']]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.792" endtime="20231228 15:13:14.793"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.794" level="INFO">${header} = [[[[[[[[[[[['div']]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.793" endtime="20231228 15:13:14.794"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.795" level="INFO">${header} = [[[[[[[[[[[[['div']]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.794" endtime="20231228 15:13:14.795"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.796" level="INFO">${header} = [[[[[[[[[[[[[['div']]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.796" endtime="20231228 15:13:14.796"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.798" level="INFO">${header} = [[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.797" endtime="20231228 15:13:14.798"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.800" level="INFO">${header} = [[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.799" endtime="20231228 15:13:14.800"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.802" level="INFO">${header} = [[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.801" endtime="20231228 15:13:14.802"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.803" level="INFO">${header} = [[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.802" endtime="20231228 15:13:14.803"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.804" level="INFO">${header} = [[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.803" endtime="20231228 15:13:14.804"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.805" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.805" endtime="20231228 15:13:14.805"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.807" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.806" endtime="20231228 15:13:14.807"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.809" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.808" endtime="20231228 15:13:14.809"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.810" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.809" endtime="20231228 15:13:14.810"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.812" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.811" endtime="20231228 15:13:14.812"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.814" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.813" endtime="20231228 15:13:14.814"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.815" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.815" endtime="20231228 15:13:14.815"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.817" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.817" endtime="20231228 15:13:14.817"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.818" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.817" endtime="20231228 15:13:14.818"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.818" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.818" endtime="20231228 15:13:14.818"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.819" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.819" endtime="20231228 15:13:14.819"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.820" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.820" endtime="20231228 15:13:14.820"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.821" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.820" endtime="20231228 15:13:14.821"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.821" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.821" endtime="20231228 15:13:14.821"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.822" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.822" endtime="20231228 15:13:14.822"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.823" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.823" endtime="20231228 15:13:14.824"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.825" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.824" endtime="20231228 15:13:14.825"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.826" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.826" endtime="20231228 15:13:14.826"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.827" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.827" endtime="20231228 15:13:14.827"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.828" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.827" endtime="20231228 15:13:14.828"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.829" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.829" endtime="20231228 15:13:14.829"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.830" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.830" endtime="20231228 15:13:14.830"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.832" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.832" endtime="20231228 15:13:14.832"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.835" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.834" endtime="20231228 15:13:14.835"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.836" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.835" endtime="20231228 15:13:14.836"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.837" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.837" endtime="20231228 15:13:14.837"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.838" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.838" endtime="20231228 15:13:14.838"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.839" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.838" endtime="20231228 15:13:14.839"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.839" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.839" endtime="20231228 15:13:14.839"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.840" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.840" endtime="20231228 15:13:14.840"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.841" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.841" endtime="20231228 15:13:14.841"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.842" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.841" endtime="20231228 15:13:14.842"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.842" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.842" endtime="20231228 15:13:14.842"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.844" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.843" endtime="20231228 15:13:14.844"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.846" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.845" endtime="20231228 15:13:14.846"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.848" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.847" endtime="20231228 15:13:14.848"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.852" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.849" endtime="20231228 15:13:14.853"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.853" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.853" endtime="20231228 15:13:14.854"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.854" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.854" endtime="20231228 15:13:14.854"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.855" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.855" endtime="20231228 15:13:14.855"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.856" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.855" endtime="20231228 15:13:14.856"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.856" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.856" endtime="20231228 15:13:14.856"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.857" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.856" endtime="20231228 15:13:14.857"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.857" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.857" endtime="20231228 15:13:14.857"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.858" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.858" endtime="20231228 15:13:14.858"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.858" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.858" endtime="20231228 15:13:14.858"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.859" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.859" endtime="20231228 15:13:14.859"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.860" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.860" endtime="20231228 15:13:14.860"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.861" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.860" endtime="20231228 15:13:14.861"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.862" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.861" endtime="20231228 15:13:14.862"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.863" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.863" endtime="20231228 15:13:14.863"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.864" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.864" endtime="20231228 15:13:14.864"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.866" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.865" endtime="20231228 15:13:14.866"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.868" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.868" endtime="20231228 15:13:14.869"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.870" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.869" endtime="20231228 15:13:14.870"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.871" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.870" endtime="20231228 15:13:14.871"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.872" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.871" endtime="20231228 15:13:14.872"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.872" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.872" endtime="20231228 15:13:14.872"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.873" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.873" endtime="20231228 15:13:14.873"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.874" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.873" endtime="20231228 15:13:14.874"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.875" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.874" endtime="20231228 15:13:14.875"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.875" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.875" endtime="20231228 15:13:14.875"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.877" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.876" endtime="20231228 15:13:14.877"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.878" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.878" endtime="20231228 15:13:14.878"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.880" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.879" endtime="20231228 15:13:14.880"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.881" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.881" endtime="20231228 15:13:14.881"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.882" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.882" endtime="20231228 15:13:14.882"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.884" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.884" endtime="20231228 15:13:14.884"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.886" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.885" endtime="20231228 15:13:14.886"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.887" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.887" endtime="20231228 15:13:14.887"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.888" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.888" endtime="20231228 15:13:14.888"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.907" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.906" endtime="20231228 15:13:14.907"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.907" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.907" endtime="20231228 15:13:14.907"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.908" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.908" endtime="20231228 15:13:14.908"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.908" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.908" endtime="20231228 15:13:14.908"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.909" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.909" endtime="20231228 15:13:14.909"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.909" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.909" endtime="20231228 15:13:14.910"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.910" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231228 15:13:14.910" endtime="20231228 15:13:14.910"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.911" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]...</msg>
+<status status="PASS" starttime="20231228 15:13:14.910" endtime="20231228 15:13:14.911"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:13:14.911" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]...</msg>
+<status status="PASS" starttime="20231228 15:13:14.911" endtime="20231228 15:13:14.911"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<msg timestamp="20231228 15:13:14.912" level="FAIL">Maximum limit of started keywords and control structures exceeded.</msg>
+<status status="FAIL" starttime="20231228 15:13:14.911" endtime="20231228 15:13:14.912"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.911" endtime="20231228 15:13:14.912"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.910" endtime="20231228 15:13:14.912"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.910" endtime="20231228 15:13:14.912"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.909" endtime="20231228 15:13:14.913"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.909" endtime="20231228 15:13:14.913"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.908" endtime="20231228 15:13:14.913"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.907" endtime="20231228 15:13:14.913"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.907" endtime="20231228 15:13:14.913"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.888" endtime="20231228 15:13:14.913"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.887" endtime="20231228 15:13:14.913"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.886" endtime="20231228 15:13:14.914"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.884" endtime="20231228 15:13:14.914"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.883" endtime="20231228 15:13:14.914"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.881" endtime="20231228 15:13:14.914"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.880" endtime="20231228 15:13:14.914"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.879" endtime="20231228 15:13:14.914"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.877" endtime="20231228 15:13:14.914"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.875" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.875" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.874" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.873" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.872" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.872" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.871" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.870" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.869" endtime="20231228 15:13:14.915"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.867" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.864" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.863" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.862" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.861" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.860" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.859" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.859" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.858" endtime="20231228 15:13:14.916"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.857" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.857" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.856" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.856" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.855" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.854" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.854" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.853" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.849" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.846" endtime="20231228 15:13:14.917"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.844" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.843" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.842" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.841" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.840" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.839" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.839" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.838" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.837" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.836" endtime="20231228 15:13:14.918"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.835" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.833" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.831" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.829" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.828" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.827" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.826" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.825" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.824" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.822" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.822" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.821" endtime="20231228 15:13:14.919"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.820" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.819" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.819" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.818" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.817" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.816" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.814" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.812" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.810" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.809" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.807" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.805" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.804" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.803" endtime="20231228 15:13:14.920"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.802" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.801" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.798" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.796" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.795" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.794" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.793" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.792" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.791" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.790" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.789" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.788" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.787" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.786" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.786" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.784" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.783" endtime="20231228 15:13:14.921"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:14.781" endtime="20231228 15:13:14.922"/>
+</kw>
+<kw name="Append To CSV File">
+<arg>${CSV_file}</arg>
+<arg>${DATA_LIST}</arg>
+<arg>fieldnames=${header}</arg>
+<status status="NOT RUN" starttime="20231228 15:13:14.922" endtime="20231228 15:13:14.922"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:13:02.001" endtime="20231228 15:13:14.922">Maximum limit of started keywords and control structures exceeded.</status>
+</test>
+<status status="FAIL" starttime="20231228 15:13:01.867" endtime="20231228 15:13:14.923"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

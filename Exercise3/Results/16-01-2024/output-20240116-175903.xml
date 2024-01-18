@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 17:59:03.462" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="72">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 17:59:03.590" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 17:59:03.589" endtime="20240116 17:59:10.482"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 17:59:10.483" endtime="20240116 17:59:10.588"/>
+</kw>
+<status status="PASS" starttime="20240116 17:59:03.589" endtime="20240116 17:59:10.588"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="76">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 17:59:10.591" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 17:59:10.590" endtime="20240116 17:59:10.715"/>
+</kw>
+<kw name="Perform Action for Element Dynamic Properties">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-8').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 17:59:10.718" level="INFO">Executing JavaScript:
+document.querySelector('#item-8').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 17:59:10.717" endtime="20240116 17:59:10.779"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 17:59:15.780" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 17:59:10.779" endtime="20240116 17:59:15.781"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>enableAfter</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240116 17:59:15.782" endtime="20240116 17:59:15.905"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>visibleAfter</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240116 17:59:15.948" level="INFO">Element 'visibleAfter' is displayed.</msg>
+<status status="PASS" starttime="20240116 17:59:15.905" endtime="20240116 17:59:15.948"/>
+</kw>
+<status status="PASS" starttime="20240116 17:59:10.716" endtime="20240116 17:59:15.948"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 17:59:22.949" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20240116 17:59:15.948" endtime="20240116 17:59:22.949"/>
+</kw>
+<status status="PASS" starttime="20240116 17:59:10.589" endtime="20240116 17:59:22.950"/>
+</test>
+<status status="PASS" starttime="20240116 17:59:03.462" endtime="20240116 17:59:22.954"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

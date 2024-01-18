@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 11:03:59.942" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="43">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 11:04:00.075" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 11:04:00.075" endtime="20240108 11:04:06.788"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 11:04:06.789" endtime="20240108 11:04:06.898"/>
+</kw>
+<status status="PASS" starttime="20240108 11:04:00.074" endtime="20240108 11:04:06.899"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="47">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 11:04:06.910" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 11:04:06.907" endtime="20240108 11:04:07.049"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 11:04:10.050" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 11:04:07.049" endtime="20240108 11:04:10.051"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 11:04:10.058" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 11:04:10.055" endtime="20240108 11:04:10.159"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 11:04:10.161" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240108 11:04:10.159" endtime="20240108 11:04:10.219"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section2Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 11:04:10.221" level="INFO">Clicking element 'Xpath://*[@id="section2Heading"]'.</msg>
+<msg timestamp="20240108 11:04:11.505" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 11:04:11.506" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card-header" id="section2Heading"&gt;...&lt;/div&gt; is not clickable at point (643, 578). Other element would receive the click: &lt;iframe frameborder="0" src="https://125a0d99c67f85c7d0be4a378ce0ddf9.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x555b4e640f83 &lt;unknown&gt;
+#1 0x555b4e2f9cf7 &lt;unknown&gt;
+#2 0x555b4e351d92 &lt;unknown&gt;
+#3 0x555b4e34f7f4 &lt;unknown&gt;
+#4 0x555b4e34c894 &lt;unknown&gt;
+#5 0x555b4e34b4b9 &lt;unknown&gt;
+#6 0x555b4e33d313 &lt;unknown&gt;
+#7 0x555b4e3730b2 &lt;unknown&gt;
+#8 0x555b4e33cb49 &lt;unknown&gt;
+#9 0x555b4e3734ce &lt;unknown&gt;
+#10 0x555b4e392006 &lt;unknown&gt;
+#11 0x555b4e372e53 &lt;unknown&gt;
+#12 0x555b4e33add4 &lt;unknown&gt;
+#13 0x555b4e33c1de &lt;unknown&gt;
+#14 0x555b4e605531 &lt;unknown&gt;
+#15 0x555b4e609455 &lt;unknown&gt;
+#16 0x555b4e5f1f55 &lt;unknown&gt;
+#17 0x555b4e60a0ef &lt;unknown&gt;
+#18 0x555b4e5d599f &lt;unknown&gt;
+#19 0x555b4e62e008 &lt;unknown&gt;
+#20 0x555b4e62e1d7 &lt;unknown&gt;
+#21 0x555b4e640124 &lt;unknown&gt;
+#22 0x7fec5c273609 start_thread
+</msg>
+<status status="FAIL" starttime="20240108 11:04:10.220" endtime="20240108 11:04:11.524"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section3Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.524" endtime="20240108 11:04:11.524"/>
+</kw>
+<status status="FAIL" starttime="20240108 11:04:10.052" endtime="20240108 11:04:11.524"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.525" endtime="20240108 11:04:11.525"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<status status="NOT RUN" starttime="20240108 11:04:11.525" endtime="20240108 11:04:11.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.525" endtime="20240108 11:04:11.525"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<status status="NOT RUN" starttime="20240108 11:04:11.525" endtime="20240108 11:04:11.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.525" endtime="20240108 11:04:11.525"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<status status="NOT RUN" starttime="20240108 11:04:11.525" endtime="20240108 11:04:11.525"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.526" endtime="20240108 11:04:11.526"/>
+</kw>
+<kw name="Perform Action for Widgets Progress bar">
+<status status="NOT RUN" starttime="20240108 11:04:11.526" endtime="20240108 11:04:11.526"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.526" endtime="20240108 11:04:11.526"/>
+</kw>
+<kw name="Perform Action for Widgets Tabs">
+<status status="NOT RUN" starttime="20240108 11:04:11.526" endtime="20240108 11:04:11.526"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.526" endtime="20240108 11:04:11.526"/>
+</kw>
+<kw name="Perform Action for Widgets Tool tips">
+<status status="NOT RUN" starttime="20240108 11:04:11.527" endtime="20240108 11:04:11.527"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.527" endtime="20240108 11:04:11.527"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<status status="NOT RUN" starttime="20240108 11:04:11.527" endtime="20240108 11:04:11.527"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.527" endtime="20240108 11:04:11.527"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<status status="NOT RUN" starttime="20240108 11:04:11.528" endtime="20240108 11:04:11.528"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 11:04:11.528" endtime="20240108 11:04:11.528"/>
+</kw>
+<status status="FAIL" starttime="20240108 11:04:06.904" endtime="20240108 11:04:11.528">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card-header" id="section2Heading"&gt;...&lt;/div&gt; is not clickable at point (643, 578). Other element would receive the click: &lt;iframe frameborder="0" src="https://125a0d99c67f85c7d0be4a378ce0ddf9.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x555b4e640f83 &lt;unknown&gt;
+#1 0x555b4e2f9cf7 &lt;unknown&gt;
+#2 0x555b4e351d92 &lt;unknown&gt;
+#3 0x555b4e34f7f4 &lt;unknown&gt;
+#4 0x555b4e34c894 &lt;unknown&gt;
+#5 0x555b4e34b4b9 &lt;unknown&gt;
+#6 0x555b4e33d313 &lt;unknown&gt;
+#7 0x555b4e3730b2 &lt;unknown&gt;
+#8 0x555b4e33cb49 &lt;unknown&gt;
+#9 0x555b4e3734ce &lt;unknown&gt;
+#10 0x555b4e392006 &lt;unknown&gt;
+#11 0x555b4e372e53 &lt;unknown&gt;
+#12 0x555b4e33add4 &lt;unknown&gt;
+#13 0x555b4e33c1de &lt;unknown&gt;
+#14 0x555b4e605531 &lt;unknown&gt;
+#15 0x555b4e609455 &lt;unknown&gt;
+#16 0x555b4e5f1f55 &lt;unknown&gt;
+#17 0x555b4e60a0ef &lt;unknown&gt;
+#18 0x555b4e5d599f &lt;unknown&gt;
+#19 0x555b4e62e008 &lt;unknown&gt;
+#20 0x555b4e62e1d7 &lt;unknown&gt;
+#21 0x555b4e640124 &lt;unknown&gt;
+#22 0x7fec5c273609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240108 11:03:59.943" endtime="20240108 11:04:11.531"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

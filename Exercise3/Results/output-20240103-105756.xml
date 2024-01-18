@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 10:57:56.912" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="19">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 10:57:57.059" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 10:57:57.058" endtime="20240103 10:58:02.667"/>
+</kw>
+<status status="PASS" starttime="20240103 10:57:57.058" endtime="20240103 10:58:02.667"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240103 10:58:02.674" level="INFO">Clicking button 'Xpath:/html/body/div[2]/div/div/div[2]/div/div[1]'.</msg>
+<msg timestamp="20240103 10:58:02.936" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 10:58:02.936" level="FAIL">Button with locator 'Xpath:/html/body/div[2]/div/div/div[2]/div/div[1]' not found.</msg>
+<status status="FAIL" starttime="20240103 10:58:02.671" endtime="20240103 10:58:02.939"/>
+</kw>
+<status status="FAIL" starttime="20240103 10:58:02.669" endtime="20240103 10:58:02.939"/>
+</kw>
+<status status="FAIL" starttime="20240103 10:57:57.057" endtime="20240103 10:58:02.945">Button with locator 'Xpath:/html/body/div[2]/div/div/div[2]/div/div[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240103 10:57:56.914" endtime="20240103 10:58:02.946"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

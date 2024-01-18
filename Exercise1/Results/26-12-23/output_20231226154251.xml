@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 15:42:51.789" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 15:42:51.913" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 15:42:51.912" endtime="20231226 15:42:54.654"/>
+</kw>
+<status status="PASS" starttime="20231226 15:42:51.911" endtime="20231226 15:42:54.655"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="12">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 15:42:54.657" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg timestamp="20231226 15:43:24.870" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231226 15:43:24.871" level="FAIL">WebDriverException: Message: Failed to decode response from marionette
+</msg>
+<status status="FAIL" starttime="20231226 15:42:54.657" endtime="20231226 15:43:24.930"/>
+</kw>
+<kw name="input text">
+<arg>${USERNAME}</arg>
+<status status="NOT RUN" starttime="20231226 15:43:24.932" endtime="20231226 15:43:24.932"/>
+</kw>
+<kw name="Input Password">
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" starttime="20231226 15:43:24.932" endtime="20231226 15:43:24.933"/>
+</kw>
+<kw name="Click Button">
+<arg>login_button</arg>
+<status status="NOT RUN" starttime="20231226 15:43:24.933" endtime="20231226 15:43:24.933"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>next_page_element</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20231226 15:43:24.934" endtime="20231226 15:43:24.934"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231226 15:43:24.934" endtime="20231226 15:43:24.935"/>
+</kw>
+<tag>Iteration-3</tag>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20231226 15:42:54.656" endtime="20231226 15:43:24.936">WebDriverException: Message: Failed to decode response from marionette
+</status>
+</test>
+<status status="FAIL" starttime="20231226 15:42:51.789" endtime="20231226 15:43:24.938"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Iteration-3</stat>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

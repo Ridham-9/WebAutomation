@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231227 11:57:11.770" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231227 11:57:11.899" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231227 11:57:11.898" endtime="20231227 11:57:15.020"/>
+</kw>
+<status status="PASS" starttime="20231227 11:57:11.897" endtime="20231227 11:57:15.020"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="13">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.022" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.021" endtime="20231227 11:57:15.144"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.145" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231227 11:57:15.184" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231227 11:57:15.243" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231227 11:57:15.144" endtime="20231227 11:57:15.243"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.244" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.243" endtime="20231227 11:57:15.333"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.334" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.334" endtime="20231227 11:57:15.418"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.419" level="INFO">Clicking button 'add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.418" endtime="20231227 11:57:15.488"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>logout_sidebar_link</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231227 11:57:15.489" endtime="20231227 11:57:15.524"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.525" level="INFO">Clicking element 'css=.shopping_cart_link'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.524" endtime="20231227 11:57:15.574"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>continue-shopping</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.575" level="INFO">Clicking button 'continue-shopping'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.575" endtime="20231227 11:57:15.646"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>remove-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.647" level="INFO">Clicking button 'remove-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.647" endtime="20231227 11:57:15.708"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.709" level="INFO">Clicking element 'react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20231227 11:57:15.708" endtime="20231227 11:57:15.757"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>logout_sidebar_link</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231227 11:57:15.757" endtime="20231227 11:57:15.788"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 11:57:15.789" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
+<msg timestamp="20231227 11:57:15.990" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231227 11:57:15.991" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56213582bf83 &lt;unknown&gt;
+#1 0x5621354e4b2b &lt;unknown&gt;
+#2 0x562135536171 &lt;unknown&gt;
+#3 0x562135528313 &lt;unknown&gt;
+#4 0x56213555e0b2 &lt;unknown&gt;
+#5 0x562135527b49 &lt;unknown&gt;
+#6 0x56213555e4ce &lt;unknown&gt;
+#7 0x56213557d006 &lt;unknown&gt;
+#8 0x56213555de53 &lt;unknown&gt;
+#9 0x562135525dd4 &lt;unknown&gt;
+#10 0x5621355271de &lt;unknown&gt;
+#11 0x5621357f0531 &lt;unknown&gt;
+#12 0x5621357f4455 &lt;unknown&gt;
+#13 0x5621357dcf55 &lt;unknown&gt;
+#14 0x5621357f50ef &lt;unknown&gt;
+#15 0x5621357c099f &lt;unknown&gt;
+#16 0x562135819008 &lt;unknown&gt;
+#17 0x5621358191d7 &lt;unknown&gt;
+#18 0x56213582b124 &lt;unknown&gt;
+#19 0x7f2fb9584609 start_thread
+</msg>
+<status status="FAIL" starttime="20231227 11:57:15.789" endtime="20231227 11:57:15.993"/>
+</kw>
+<status status="FAIL" starttime="20231227 11:57:15.021" endtime="20231227 11:57:15.993">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56213582bf83 &lt;unknown&gt;
+#1 0x5621354e4b2b &lt;unknown&gt;
+#2 0x562135536171 &lt;unknown&gt;
+#3 0x562135528313 &lt;unknown&gt;
+#4 0x56213555e0b2 &lt;unknown&gt;
+#5 0x562135527b49 &lt;unknown&gt;
+#6 0x56213555e4ce &lt;unknown&gt;
+#7 0x56213557d006 &lt;unknown&gt;
+#8 0x56213555de53 &lt;unknown&gt;
+#9 0x562135525dd4 &lt;unknown&gt;
+#10 0x5621355271de &lt;unknown&gt;
+#11 0x5621357f0531 &lt;unknown&gt;
+#12 0x5621357f4455 &lt;unknown&gt;
+#13 0x5621357dcf55 &lt;unknown&gt;
+#14 0x5621357f50ef &lt;unknown&gt;
+#15 0x5621357c099f &lt;unknown&gt;
+#16 0x562135819008 &lt;unknown&gt;
+#17 0x5621358191d7 &lt;unknown&gt;
+#18 0x56213582b124 &lt;unknown&gt;
+#19 0x7f2fb9584609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20231227 11:57:11.771" endtime="20231227 11:57:15.994"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

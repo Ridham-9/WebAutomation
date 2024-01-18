@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 11:24:53.454" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="25">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 11:24:53.577" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 11:24:53.576" endtime="20240103 11:24:59.577"/>
+</kw>
+<status status="PASS" starttime="20240103 11:24:53.576" endtime="20240103 11:24:59.579"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${ELEMENT}}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20240103 11:24:59.825" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 11:24:59.825" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression /html/body/div[2]/div/div/div[2]/div/div[1]} because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '/html/body/div[2]/div/div/div[2]/div/div[1]}' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x555dddf29f83 &lt;unknown&gt;
+#1 0x555dddbe2cf7 &lt;unknown&gt;
+#2 0x555dddbe92a3 &lt;unknown&gt;
+#3 0x555dddbeb798 &lt;unknown&gt;
+#4 0x555dddbeb8ec &lt;unknown&gt;
+#5 0x555dddc326c7 &lt;unknown&gt;
+#6 0x555dddc32aa1 &lt;unknown&gt;
+#7 0x555dddc7dda1 &lt;unknown&gt;
+#8 0x555dddc5c0dd &lt;unknown&gt;
+#9 0x555dddc7b006 &lt;unknown&gt;
+#10 0x555dddc5be53 &lt;unknown&gt;
+#11 0x555dddc23dd4 &lt;unknown&gt;
+#12 0x555dddc251de &lt;unknown&gt;
+#13 0x555dddeee531 &lt;unknown&gt;
+#14 0x555dddef2455 &lt;unknown&gt;
+#15 0x555dddedaf55 &lt;unknown&gt;
+#16 0x555dddef30ef &lt;unknown&gt;
+#17 0x555dddebe99f &lt;unknown&gt;
+#18 0x555dddf17008 &lt;unknown&gt;
+#19 0x555dddf171d7 &lt;unknown&gt;
+#20 0x555dddf29124 &lt;unknown&gt;
+#21 0x7f0f4faa3609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 11:24:59.582" endtime="20240103 11:24:59.826"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240103 11:24:59.826" endtime="20240103 11:24:59.826"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240103 11:24:59.826" endtime="20240103 11:24:59.826"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20240103 11:24:59.826" endtime="20240103 11:24:59.826"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Window Handles: ${handles}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240103 11:24:59.826" endtime="20240103 11:24:59.826"/>
+</kw>
+<status status="FAIL" starttime="20240103 11:24:59.580" endtime="20240103 11:24:59.826"/>
+</kw>
+<status status="FAIL" starttime="20240103 11:24:53.575" endtime="20240103 11:24:59.827">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression /html/body/div[2]/div/div/div[2]/div/div[1]} because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '/html/body/div[2]/div/div/div[2]/div/div[1]}' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x555dddf29f83 &lt;unknown&gt;
+#1 0x555dddbe2cf7 &lt;unknown&gt;
+#2 0x555dddbe92a3 &lt;unknown&gt;
+#3 0x555dddbeb798 &lt;unknown&gt;
+#4 0x555dddbeb8ec &lt;unknown&gt;
+#5 0x555dddc326c7 &lt;unknown&gt;
+#6 0x555dddc32aa1 &lt;unknown&gt;
+#7 0x555dddc7dda1 &lt;unknown&gt;
+#8 0x555dddc5c0dd &lt;unknown&gt;
+#9 0x555dddc7b006 &lt;unknown&gt;
+#10 0x555dddc5be53 &lt;unknown&gt;
+#11 0x555dddc23dd4 &lt;unknown&gt;
+#12 0x555dddc251de &lt;unknown&gt;
+#13 0x555dddeee531 &lt;unknown&gt;
+#14 0x555dddef2455 &lt;unknown&gt;
+#15 0x555dddedaf55 &lt;unknown&gt;
+#16 0x555dddef30ef &lt;unknown&gt;
+#17 0x555dddebe99f &lt;unknown&gt;
+#18 0x555dddf17008 &lt;unknown&gt;
+#19 0x555dddf171d7 &lt;unknown&gt;
+#20 0x555dddf29124 &lt;unknown&gt;
+#21 0x7f0f4faa3609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 11:24:53.455" endtime="20240103 11:24:59.828"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

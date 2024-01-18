@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 17:52:43.238" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="74">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 17:52:43.364" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg timestamp="20240111 17:52:43.928" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240111 17:52:43.364" endtime="20240111 17:52:50.992"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 17:52:50.994" endtime="20240111 17:52:51.117"/>
+</kw>
+<status status="PASS" starttime="20240111 17:52:43.363" endtime="20240111 17:52:51.118"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="78">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:52:51.122" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:52:51.121" endtime="20240111 17:52:51.326"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:52:54.327" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:52:51.326" endtime="20240111 17:52:54.327"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:52:54.332" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:52:54.329" endtime="20240111 17:52:54.373"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240111 17:52:54.374" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240111 17:52:54.373" endtime="20240111 17:52:54.464"/>
+</kw>
+<status status="PASS" starttime="20240111 17:52:54.328" endtime="20240111 17:52:54.464"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:52:57.465" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:52:54.464" endtime="20240111 17:52:57.465"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:52:57.468" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:52:57.467" endtime="20240111 17:52:57.588"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240111 17:52:57.589" level="INFO">Clicking element '//*[@class="auto-complete__value-container auto-complete__value-container--is-multi css-1hwfws3"]'.</msg>
+<status status="PASS" starttime="20240111 17:52:57.588" endtime="20240111 17:52:57.656"/>
+</kw>
+<status status="PASS" starttime="20240111 17:52:57.466" endtime="20240111 17:52:57.656"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:00.657" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:52:57.656" endtime="20240111 17:53:00.657"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:53:00.661" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:53:00.659" endtime="20240111 17:53:00.758"/>
+</kw>
+<status status="PASS" starttime="20240111 17:53:00.658" endtime="20240111 17:53:00.758"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:03.760" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:00.759" endtime="20240111 17:53:03.760"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:53:03.766" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:53:03.764" endtime="20240111 17:53:03.850"/>
+</kw>
+<status status="PASS" starttime="20240111 17:53:03.762" endtime="20240111 17:53:03.851"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:09.856" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:03.854" endtime="20240111 17:53:09.856"/>
+</kw>
+<kw name="Perform Action for Widgets Progress bar">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:53:09.860" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:53:09.858" endtime="20240111 17:53:09.901"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="startStopButton"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 17:53:09.903" level="INFO">Clicking button '//*[@id="startStopButton"]'.</msg>
+<status status="PASS" starttime="20240111 17:53:09.901" endtime="20240111 17:53:09.971"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:13.972" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:09.971" endtime="20240111 17:53:13.972"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@id="startStopButton"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 17:53:13.975" level="INFO">Clicking button '//*[@id="startStopButton"]'.</msg>
+<status status="PASS" starttime="20240111 17:53:13.973" endtime="20240111 17:53:14.165"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${TEXT}</var>
+<arg>${PROGRESS}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240111 17:53:14.222" level="INFO">${TEXT} = 41%</msg>
+<status status="PASS" starttime="20240111 17:53:14.165" endtime="20240111 17:53:14.222"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${TEXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240111 17:53:14.223" level="INFO">41%</msg>
+<status status="PASS" starttime="20240111 17:53:14.223" endtime="20240111 17:53:14.223"/>
+</kw>
+<status status="PASS" starttime="20240111 17:53:09.857" endtime="20240111 17:53:14.224"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:19.225" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:14.224" endtime="20240111 17:53:19.225"/>
+</kw>
+<kw name="Perform Action for Widgets Tool tips">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-6')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:53:19.228" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-6')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:53:19.226" endtime="20240111 17:53:19.299"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>toolTipButton</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240111 17:53:19.303" level="INFO">Simulating Mouse Over on element 'toolTipButton'.</msg>
+<status status="PASS" starttime="20240111 17:53:19.300" endtime="20240111 17:53:19.669"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>texFieldToolTopContainer</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240111 17:53:19.672" level="INFO">Simulating Mouse Over on element 'texFieldToolTopContainer'.</msg>
+<status status="PASS" starttime="20240111 17:53:19.669" endtime="20240111 17:53:20.035"/>
+</kw>
+<status status="PASS" starttime="20240111 17:53:19.225" endtime="20240111 17:53:20.035"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:23.037" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:20.036" endtime="20240111 17:53:23.037"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-7')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:53:23.041" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-7')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:53:23.040" endtime="20240111 17:53:23.115"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU1}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240111 17:53:23.122" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[1]/a'.</msg>
+<status status="PASS" starttime="20240111 17:53:23.118" endtime="20240111 17:53:23.437"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:24.439" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240111 17:53:23.438" endtime="20240111 17:53:24.439"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU2}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240111 17:53:24.441" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[2]/a'.</msg>
+<status status="PASS" starttime="20240111 17:53:24.440" endtime="20240111 17:53:24.724"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:26.726" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:24.725" endtime="20240111 17:53:26.726"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU3}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240111 17:53:26.726" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[3]/a'.</msg>
+<status status="PASS" starttime="20240111 17:53:26.726" endtime="20240111 17:53:26.999"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:28.001" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240111 17:53:27.000" endtime="20240111 17:53:28.002"/>
+</kw>
+<status status="PASS" starttime="20240111 17:53:23.038" endtime="20240111 17:53:28.002"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:31.003" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:28.002" endtime="20240111 17:53:31.004"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-8')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:53:31.007" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-8')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:53:31.005" endtime="20240111 17:53:31.070"/>
+</kw>
+<status status="PASS" starttime="20240111 17:53:31.004" endtime="20240111 17:53:31.070"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:53:34.071" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:53:31.070" endtime="20240111 17:53:34.071"/>
+</kw>
+<status status="PASS" starttime="20240111 17:52:51.121" endtime="20240111 17:53:34.072"/>
+</test>
+<status status="PASS" starttime="20240111 17:52:43.239" endtime="20240111 17:53:34.074"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 17:52:43.928" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

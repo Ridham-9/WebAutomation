@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 17:50:38.119" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="54">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 17:50:38.252" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 17:50:38.251" endtime="20240103 17:50:43.462"/>
+</kw>
+<status status="PASS" starttime="20240103 17:50:38.250" endtime="20240103 17:50:43.462"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 17:50:43.464" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 17:50:43.463" endtime="20240103 17:50:43.533"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 17:50:43.534" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 17:50:43.534" endtime="20240103 17:50:43.552"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 17:50:43.554" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 17:50:43.552" endtime="20240103 17:50:43.647"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240103 17:50:43.647" endtime="20240103 17:50:43.662"/>
+</kw>
+<status status="PASS" starttime="20240103 17:50:43.463" endtime="20240103 17:50:43.662"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 17:50:46.663" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 17:50:43.663" endtime="20240103 17:50:46.664"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FORM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 17:50:46.669" level="INFO">Clicking element 'Xpath:(//div[@class="element-group"])[1]'.</msg>
+<status status="PASS" starttime="20240103 17:50:46.666" endtime="20240103 17:50:46.886"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 17:50:46.887" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 17:50:46.886" endtime="20240103 17:50:46.936"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${FORM}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<msg timestamp="20240103 17:50:52.262" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-94.png"&gt;&lt;img src="selenium-screenshot-94.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 17:50:52.262" level="FAIL">Element 'Xpath:(//div[@class="element-group"])[1]' still visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20240103 17:50:46.936" endtime="20240103 17:50:52.272"/>
+</kw>
+<status status="FAIL" starttime="20240103 17:50:46.664" endtime="20240103 17:50:52.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:50:52.272" endtime="20240103 17:50:52.272"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<status status="NOT RUN" starttime="20240103 17:50:52.272" endtime="20240103 17:50:52.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:50:52.272" endtime="20240103 17:50:52.272"/>
+</kw>
+<kw name="Open Widgets">
+<status status="NOT RUN" starttime="20240103 17:50:52.272" endtime="20240103 17:50:52.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:50:52.272" endtime="20240103 17:50:52.273"/>
+</kw>
+<kw name="Open Interactions">
+<status status="NOT RUN" starttime="20240103 17:50:52.273" endtime="20240103 17:50:52.273"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 17:50:52.273" endtime="20240103 17:50:52.273"/>
+</kw>
+<kw name="Open Book Store">
+<status status="NOT RUN" starttime="20240103 17:50:52.273" endtime="20240103 17:50:52.273"/>
+</kw>
+<status status="FAIL" starttime="20240103 17:50:38.250" endtime="20240103 17:50:52.273">Element 'Xpath:(//div[@class="element-group"])[1]' still visible after 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240103 17:50:38.120" endtime="20240103 17:50:52.274"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 11:59:30.948" rpa="false" schemaversion="4">
+<suite id="s1" name="Abc" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/abc.robot">
+<test id="s1-t1" name="Launch Browser" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 11:59:31.073" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240117 11:59:31.072" endtime="20240117 11:59:47.942"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 11:59:47.943" endtime="20240117 11:59:48.047"/>
+</kw>
+<status status="PASS" starttime="20240117 11:59:31.072" endtime="20240117 11:59:48.047"/>
+</test>
+<test id="s1-t2" name="Perform Action for Element Brokenlink" line="14">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-6').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 11:59:48.049" level="INFO">Executing JavaScript:
+document.querySelector('#item-6').click()
+Without any arguments.</msg>
+<msg timestamp="20240117 11:59:48.258" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240117 11:59:48.259" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56025c84bf83 &lt;unknown&gt;
+#1 0x56025c504cf7 &lt;unknown&gt;
+#2 0x56025c50b2a3 &lt;unknown&gt;
+#3 0x56025c50dbb4 &lt;unknown&gt;
+#4 0x56025c59dba3 &lt;unknown&gt;
+#5 0x56025c57e0b2 &lt;unknown&gt;
+#6 0x56025c59d006 &lt;unknown&gt;
+#7 0x56025c57de53 &lt;unknown&gt;
+#8 0x56025c545dd4 &lt;unknown&gt;
+#9 0x56025c5471de &lt;unknown&gt;
+#10 0x56025c810531 &lt;unknown&gt;
+#11 0x56025c814455 &lt;unknown&gt;
+#12 0x56025c7fcf55 &lt;unknown&gt;
+#13 0x56025c8150ef &lt;unknown&gt;
+#14 0x56025c7e099f &lt;unknown&gt;
+#15 0x56025c839008 &lt;unknown&gt;
+#16 0x56025c8391d7 &lt;unknown&gt;
+#17 0x56025c84b124 &lt;unknown&gt;
+#18 0x7f6ac3d3b609 start_thread
+</msg>
+<status status="FAIL" starttime="20240117 11:59:48.048" endtime="20240117 11:59:48.259"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.evaluate(//a[contains(text(), 'Click Here for Valid Link')])</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240117 11:59:48.259" endtime="20240117 11:59:48.260"/>
+</kw>
+<status status="FAIL" starttime="20240117 11:59:48.048" endtime="20240117 11:59:48.260">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56025c84bf83 &lt;unknown&gt;
+#1 0x56025c504cf7 &lt;unknown&gt;
+#2 0x56025c50b2a3 &lt;unknown&gt;
+#3 0x56025c50dbb4 &lt;unknown&gt;
+#4 0x56025c59dba3 &lt;unknown&gt;
+#5 0x56025c57e0b2 &lt;unknown&gt;
+#6 0x56025c59d006 &lt;unknown&gt;
+#7 0x56025c57de53 &lt;unknown&gt;
+#8 0x56025c545dd4 &lt;unknown&gt;
+#9 0x56025c5471de &lt;unknown&gt;
+#10 0x56025c810531 &lt;unknown&gt;
+#11 0x56025c814455 &lt;unknown&gt;
+#12 0x56025c7fcf55 &lt;unknown&gt;
+#13 0x56025c8150ef &lt;unknown&gt;
+#14 0x56025c7e099f &lt;unknown&gt;
+#15 0x56025c839008 &lt;unknown&gt;
+#16 0x56025c8391d7 &lt;unknown&gt;
+#17 0x56025c84b124 &lt;unknown&gt;
+#18 0x7f6ac3d3b609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240117 11:59:30.949" endtime="20240117 11:59:48.261"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Abc">Abc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 18:40:57.405" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="13">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 18:40:57.532" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 18:40:57.531" endtime="20240105 18:41:02.182"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 18:41:02.184" endtime="20240105 18:41:02.309"/>
+</kw>
+<status status="PASS" starttime="20240105 18:40:57.530" endtime="20240105 18:41:02.309"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="17">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card')[3].click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:41:02.318" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card')[3].click()
+Without any arguments.</msg>
+<msg timestamp="20240105 18:41:02.474" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240105 18:41:02.474" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55936248ef83 &lt;unknown&gt;
+#1 0x559362147cf7 &lt;unknown&gt;
+#2 0x55936214e2a3 &lt;unknown&gt;
+#3 0x559362150bb4 &lt;unknown&gt;
+#4 0x5593621e0ba3 &lt;unknown&gt;
+#5 0x5593621c10b2 &lt;unknown&gt;
+#6 0x5593621e0006 &lt;unknown&gt;
+#7 0x5593621c0e53 &lt;unknown&gt;
+#8 0x559362188dd4 &lt;unknown&gt;
+#9 0x55936218a1de &lt;unknown&gt;
+#10 0x559362453531 &lt;unknown&gt;
+#11 0x559362457455 &lt;unknown&gt;
+#12 0x55936243ff55 &lt;unknown&gt;
+#13 0x5593624580ef &lt;unknown&gt;
+#14 0x55936242399f &lt;unknown&gt;
+#15 0x55936247c008 &lt;unknown&gt;
+#16 0x55936247c1d7 &lt;unknown&gt;
+#17 0x55936248e124 &lt;unknown&gt;
+#18 0x7f2619fb8609 start_thread
+</msg>
+<status status="FAIL" starttime="20240105 18:41:02.314" endtime="20240105 18:41:02.476"/>
+</kw>
+<status status="FAIL" starttime="20240105 18:41:02.312" endtime="20240105 18:41:02.476">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55936248ef83 &lt;unknown&gt;
+#1 0x559362147cf7 &lt;unknown&gt;
+#2 0x55936214e2a3 &lt;unknown&gt;
+#3 0x559362150bb4 &lt;unknown&gt;
+#4 0x5593621e0ba3 &lt;unknown&gt;
+#5 0x5593621c10b2 &lt;unknown&gt;
+#6 0x5593621e0006 &lt;unknown&gt;
+#7 0x5593621c0e53 &lt;unknown&gt;
+#8 0x559362188dd4 &lt;unknown&gt;
+#9 0x55936218a1de &lt;unknown&gt;
+#10 0x559362453531 &lt;unknown&gt;
+#11 0x559362457455 &lt;unknown&gt;
+#12 0x55936243ff55 &lt;unknown&gt;
+#13 0x5593624580ef &lt;unknown&gt;
+#14 0x55936242399f &lt;unknown&gt;
+#15 0x55936247c008 &lt;unknown&gt;
+#16 0x55936247c1d7 &lt;unknown&gt;
+#17 0x55936248e124 &lt;unknown&gt;
+#18 0x7f2619fb8609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240105 18:40:57.406" endtime="20240105 18:41:02.477"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240105 18:40:57.406" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot' on line 9: Creating keyword 'Open Elements Section' failed: User keyword cannot be empty.</msg>
+</errors>
+</robot>

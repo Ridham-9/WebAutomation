@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 10:27:51.426" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="93">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 10:27:51.588" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240117 10:27:51.587" endtime="20240117 10:28:02.876"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 10:28:02.877" endtime="20240117 10:28:02.981"/>
+</kw>
+<status status="PASS" starttime="20240117 10:27:51.586" endtime="20240117 10:28:02.981"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="97">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 10:28:02.983" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 10:28:02.983" endtime="20240117 10:28:03.059"/>
+</kw>
+<kw name="Perform Action for Element Link">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-5').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 10:28:03.060" level="INFO">Executing JavaScript:
+document.querySelector('#item-5').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 10:28:03.060" endtime="20240117 10:28:03.089"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>dynamicLink</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240117 10:28:03.090" level="INFO">Clicking link 'dynamicLink'.</msg>
+<status status="PASS" starttime="20240117 10:28:03.089" endtime="20240117 10:28:03.200"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240117 10:28:03.225" level="INFO">${title} = DEMOQA</msg>
+<status status="PASS" starttime="20240117 10:28:03.201" endtime="20240117 10:28:03.225"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${title}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240117 10:28:03.226" level="INFO">E</msg>
+<status status="PASS" starttime="20240117 10:28:03.225" endtime="20240117 10:28:03.226"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>moved</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240117 10:28:03.226" level="INFO">Clicking link 'moved'.</msg>
+<status status="PASS" starttime="20240117 10:28:03.226" endtime="20240117 10:28:03.304"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>linkResponse</arg>
+<arg>Link has responded with staus 301 and status text Moved Permanently</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20240117 10:28:03.304" endtime="20240117 10:28:03.564"/>
+</kw>
+<status status="PASS" starttime="20240117 10:28:03.059" endtime="20240117 10:28:03.564"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 10:28:08.566" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240117 10:28:03.565" endtime="20240117 10:28:08.566"/>
+</kw>
+<status status="PASS" starttime="20240117 10:28:02.982" endtime="20240117 10:28:08.567"/>
+</test>
+<status status="PASS" starttime="20240117 10:27:51.427" endtime="20240117 10:28:08.570"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

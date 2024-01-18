@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 11:03:37.469" rpa="false" schemaversion="4">
+<suite id="s1" name="Alerts" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Alerts.robot">
+<test id="s1-t1" name="Launch Browser" line="43">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240112 11:03:37.615" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240112 11:03:37.615" endtime="20240112 11:03:43.882"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240112 11:03:43.884" endtime="20240112 11:03:44.010"/>
+</kw>
+<status status="PASS" starttime="20240112 11:03:37.614" endtime="20240112 11:03:44.011"/>
+</test>
+<test id="s1-t2" name="Open Alerts,Frames Section" line="47">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:03:44.013" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:03:44.012" endtime="20240112 11:03:44.148"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240112 11:03:47.150" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240112 11:03:44.149" endtime="20240112 11:03:47.150"/>
+</kw>
+<kw name="Perform Action for Browser Window">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:03:47.155" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:03:47.153" endtime="20240112 11:03:47.256"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWTAB}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:47.258" level="INFO">Clicking button 'Xpath://*[@id="tabButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:03:47.256" endtime="20240112 11:03:47.359"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20240112 11:03:47.369" level="INFO">${handles} = ['AED6090F6D2CD4DBEFEDAEAFB99ED66E', 'D7406EF371C9971C4A574807C72301C0']</msg>
+<status status="PASS" starttime="20240112 11:03:47.360" endtime="20240112 11:03:47.370"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240112 11:03:47.370" endtime="20240112 11:03:47.453"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${window_titles}</var>
+<arg>sampleHeading</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:47.544" level="INFO">${window_titles} = This is a sample page</msg>
+<status status="PASS" starttime="20240112 11:03:47.453" endtime="20240112 11:03:47.544"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240112 11:03:47.544" endtime="20240112 11:03:47.556"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'New Tab Title' in $window_titles</arg>
+<arg>Log</arg>
+<arg>New tab is open</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>New tab is not open</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>New tab is not open</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240112 11:03:47.558" level="INFO">New tab is not open</msg>
+<status status="PASS" starttime="20240112 11:03:47.557" endtime="20240112 11:03:47.558"/>
+</kw>
+<status status="PASS" starttime="20240112 11:03:47.556" endtime="20240112 11:03:47.558"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWWINDOW}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:47.560" level="INFO">Clicking button 'Xpath://*[@id="windowButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:03:47.558" endtime="20240112 11:03:47.739"/>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<var>${window_titles}</var>
+<doc>Returns and logs titles of all windows of the selected browser.</doc>
+<msg timestamp="20240112 11:03:47.904" level="INFO">Altogether 3 items.
+1: DEMOQA
+2: undefined
+3: undefined</msg>
+<msg timestamp="20240112 11:03:47.904" level="INFO">${window_titles} = ['DEMOQA', 'undefined', 'undefined']</msg>
+<status status="PASS" starttime="20240112 11:03:47.740" endtime="20240112 11:03:47.904"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'New Window Title' in $window_titles</arg>
+<arg>Log</arg>
+<arg>New window is open</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>New window is not open</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>New window is not open</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240112 11:03:47.905" level="INFO">New window is not open</msg>
+<status status="PASS" starttime="20240112 11:03:47.905" endtime="20240112 11:03:47.905"/>
+</kw>
+<status status="PASS" starttime="20240112 11:03:47.904" endtime="20240112 11:03:47.906"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWWINDOWMSG}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:47.907" level="INFO">Clicking button 'Xpath://*[@id="messageWindowButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:03:47.906" endtime="20240112 11:03:48.043"/>
+</kw>
+<status status="PASS" starttime="20240112 11:03:47.151" endtime="20240112 11:03:48.043"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240112 11:03:51.044" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240112 11:03:48.044" endtime="20240112 11:03:51.044"/>
+</kw>
+<kw name="Perform Action for Alerts">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:03:51.046" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:03:51.045" endtime="20240112 11:03:51.072"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ALERT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:51.073" level="INFO">Clicking button 'Xpath://*[@id="alertButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:03:51.073" endtime="20240112 11:03:51.163"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>You clicked a button</arg>
+<arg>ACCEPT</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240112 11:03:51.163" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240112 11:03:51.163" endtime="20240112 11:03:51.177"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${TIMERALERT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:51.183" level="INFO">Clicking button 'Xpath://*[@id="timerAlertButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:03:51.178" endtime="20240112 11:03:51.265"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>This alert appeared after 5 seconds</arg>
+<arg>ACCEPT</arg>
+<arg>6s</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240112 11:03:51.265" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:06</msg>
+<status status="PASS" starttime="20240112 11:03:51.265" endtime="20240112 11:03:56.477"/>
+</kw>
+<status status="PASS" starttime="20240112 11:03:51.045" endtime="20240112 11:03:56.477"/>
+</kw>
+<status status="PASS" starttime="20240112 11:03:44.011" endtime="20240112 11:03:56.478"/>
+</test>
+<status status="PASS" starttime="20240112 11:03:37.470" endtime="20240112 11:03:56.479"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Alerts">Alerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

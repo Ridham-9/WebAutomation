@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 11:32:36.224" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="40">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 11:32:36.348" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 11:32:36.347" endtime="20240105 11:32:41.896"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 11:32:41.898" endtime="20240105 11:32:42.012"/>
+</kw>
+<status status="PASS" starttime="20240105 11:32:36.346" endtime="20240105 11:32:42.013"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="44">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:32:42.017" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:32:42.015" endtime="20240105 11:32:42.106"/>
+</kw>
+<kw name="Perform Action for Element Textbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-0').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:32:42.108" level="INFO">Executing JavaScript:
+document.querySelector('#item-0').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:32:42.108" endtime="20240105 11:32:42.134"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240105 11:32:42.135" endtime="20240105 11:32:42.157"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:32:42.158" level="INFO">Typing text 'Ridham' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240105 11:32:42.158" endtime="20240105 11:32:42.307"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>"abc123@gmail.com"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:32:42.308" level="INFO">Typing text '"abc123@gmail.com"' into text field 'userEmail'.</msg>
+<status status="PASS" starttime="20240105 11:32:42.307" endtime="20240105 11:32:42.449"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>currentAddress</arg>
+<arg>"Ahmedabad"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:32:42.450" level="INFO">Typing text '"Ahmedabad"' into text field 'currentAddress'.</msg>
+<status status="PASS" starttime="20240105 11:32:42.450" endtime="20240105 11:32:42.717"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>permanentAddress</arg>
+<arg>"Bhavnagar"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:32:42.717" level="INFO">Typing text '"Bhavnagar"' into text field 'permanentAddress'.</msg>
+<status status="PASS" starttime="20240105 11:32:42.717" endtime="20240105 11:32:43.049"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#submit').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:32:43.050" level="INFO">Executing JavaScript:
+document.querySelector('#submit').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:32:43.049" endtime="20240105 11:32:43.063"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Expected Text on Next Page</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<msg timestamp="20240105 11:32:48.329" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240105 11:32:48.329" level="FAIL">Text 'Expected Text on Next Page' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20240105 11:32:43.063" endtime="20240105 11:32:48.330"/>
+</kw>
+<status status="FAIL" starttime="20240105 11:32:42.107" endtime="20240105 11:32:48.330"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 11:32:48.330" endtime="20240105 11:32:48.330"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<status status="NOT RUN" starttime="20240105 11:32:48.330" endtime="20240105 11:32:48.330"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 11:32:48.330" endtime="20240105 11:32:48.330"/>
+</kw>
+<status status="FAIL" starttime="20240105 11:32:42.014" endtime="20240105 11:32:48.331">Text 'Expected Text on Next Page' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240105 11:32:36.225" endtime="20240105 11:32:48.331"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 11:08:25.483" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="29">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 11:08:25.626" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240109 11:08:25.625" endtime="20240109 11:08:37.433"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 11:08:37.436" endtime="20240109 11:08:37.554"/>
+</kw>
+<status status="PASS" starttime="20240109 11:08:25.624" endtime="20240109 11:08:37.555"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="33">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:08:37.557" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:08:37.557" endtime="20240109 11:08:37.664"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:08:40.665" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:08:37.664" endtime="20240109 11:08:40.666"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:08:40.670" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:08:40.668" endtime="20240109 11:08:40.782"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW}</var>
+<arg>${list1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:08:40.783" level="INFO">${NEW} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:08:40.783" endtime="20240109 11:08:40.783"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list1}</var>
+<arg>${list2}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:08:40.784" level="INFO">${list1} = Xpath://*[@class="vertical-list-container mt-4"]/div[2]</msg>
+<status status="PASS" starttime="20240109 11:08:40.784" endtime="20240109 11:08:40.784"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list2}</var>
+<arg>${NEW}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:08:40.785" level="INFO">${list2} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:08:40.784" endtime="20240109 11:08:40.785"/>
+</kw>
+<status status="PASS" starttime="20240109 11:08:40.666" endtime="20240109 11:08:40.785"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:08:43.786" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:08:40.785" endtime="20240109 11:08:43.786"/>
+</kw>
+<kw name="Perform Action for Resizable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:08:43.797" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:08:43.794" endtime="20240109 11:08:43.878"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('${RESIZE1}')[0].style.height = '368px';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:08:43.881" level="INFO">Executing JavaScript:
+document.querySelectorAll('Xpath://*[@id="resizableBoxWithRestriction"]')[0].style.height = '368px';
+Without any arguments.</msg>
+<msg timestamp="20240109 11:08:44.127" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240109 11:08:44.127" level="FAIL">InvalidElementStateException: Message: invalid element state: Failed to execute 'querySelectorAll' on 'Document': 'Xpath://*[@id="resizableBoxWithRestriction"]' is not a valid selector.
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d147e09f83 &lt;unknown&gt;
+#1 0x55d147ac2cf7 &lt;unknown&gt;
+#2 0x55d147ac92a3 &lt;unknown&gt;
+#3 0x55d147acbbb4 &lt;unknown&gt;
+#4 0x55d147b5bba3 &lt;unknown&gt;
+#5 0x55d147b3c0b2 &lt;unknown&gt;
+#6 0x55d147b5b006 &lt;unknown&gt;
+#7 0x55d147b3be53 &lt;unknown&gt;
+#8 0x55d147b03dd4 &lt;unknown&gt;
+#9 0x55d147b051de &lt;unknown&gt;
+#10 0x55d147dce531 &lt;unknown&gt;
+#11 0x55d147dd2455 &lt;unknown&gt;
+#12 0x55d147dbaf55 &lt;unknown&gt;
+#13 0x55d147dd30ef &lt;unknown&gt;
+#14 0x55d147d9e99f &lt;unknown&gt;
+#15 0x55d147df7008 &lt;unknown&gt;
+#16 0x55d147df71d7 &lt;unknown&gt;
+#17 0x55d147e09124 &lt;unknown&gt;
+#18 0x7f34f7a7d609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 11:08:43.879" endtime="20240109 11:08:44.155"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('${RESIZE1}')[0].style.width = '421px';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240109 11:08:44.155" endtime="20240109 11:08:44.155"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:08:43.787" endtime="20240109 11:08:44.156"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:08:37.555" endtime="20240109 11:08:44.157">InvalidElementStateException: Message: invalid element state: Failed to execute 'querySelectorAll' on 'Document': 'Xpath://*[@id="resizableBoxWithRestriction"]' is not a valid selector.
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d147e09f83 &lt;unknown&gt;
+#1 0x55d147ac2cf7 &lt;unknown&gt;
+#2 0x55d147ac92a3 &lt;unknown&gt;
+#3 0x55d147acbbb4 &lt;unknown&gt;
+#4 0x55d147b5bba3 &lt;unknown&gt;
+#5 0x55d147b3c0b2 &lt;unknown&gt;
+#6 0x55d147b5b006 &lt;unknown&gt;
+#7 0x55d147b3be53 &lt;unknown&gt;
+#8 0x55d147b03dd4 &lt;unknown&gt;
+#9 0x55d147b051de &lt;unknown&gt;
+#10 0x55d147dce531 &lt;unknown&gt;
+#11 0x55d147dd2455 &lt;unknown&gt;
+#12 0x55d147dbaf55 &lt;unknown&gt;
+#13 0x55d147dd30ef &lt;unknown&gt;
+#14 0x55d147d9e99f &lt;unknown&gt;
+#15 0x55d147df7008 &lt;unknown&gt;
+#16 0x55d147df71d7 &lt;unknown&gt;
+#17 0x55d147e09124 &lt;unknown&gt;
+#18 0x7f34f7a7d609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240109 11:08:25.483" endtime="20240109 11:08:44.158"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

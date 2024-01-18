@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 18:11:02.977" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 18:11:03.103" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 18:11:03.102" endtime="20231226 18:11:05.893"/>
+</kw>
+<status status="PASS" starttime="20231226 18:11:03.101" endtime="20231226 18:11:05.893"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="14">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:11:05.895" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231226 18:11:05.894" endtime="20231226 18:11:06.023"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:11:06.024" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231226 18:11:06.060" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231226 18:11:06.115" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231226 18:11:06.023" endtime="20231226 18:11:06.115"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:11:06.116" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231226 18:11:06.116" endtime="20231226 18:11:06.208"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231226 18:11:06.208" level="INFO">Successfully logged in!</msg>
+<status status="PASS" starttime="20231226 18:11:06.208" endtime="20231226 18:11:06.208"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:11:06.209" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231226 18:11:06.208" endtime="20231226 18:11:06.300"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:11:06.301" level="INFO">Clicking button 'add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20231226 18:11:06.300" endtime="20231226 18:11:06.363"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>shopping_cart_container</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:11:06.364" level="INFO">Clicking button 'shopping_cart_container'.</msg>
+<msg timestamp="20231226 18:11:06.559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231226 18:11:06.559" level="FAIL">Button with locator 'shopping_cart_container' not found.</msg>
+<status status="FAIL" starttime="20231226 18:11:06.363" endtime="20231226 18:11:06.631"/>
+</kw>
+<status status="FAIL" starttime="20231226 18:11:05.894" endtime="20231226 18:11:06.632">Button with locator 'shopping_cart_container' not found.</status>
+</test>
+<status status="FAIL" starttime="20231226 18:11:02.978" endtime="20231226 18:11:06.636"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

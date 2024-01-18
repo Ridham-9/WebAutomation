@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 11:26:48.126" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="39">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 11:26:48.249" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 11:26:48.248" endtime="20240105 11:26:55.463"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 11:26:55.464" endtime="20240105 11:26:55.568"/>
+</kw>
+<status status="PASS" starttime="20240105 11:26:48.248" endtime="20240105 11:26:55.569"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="43">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:26:55.571" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:26:55.570" endtime="20240105 11:26:55.640"/>
+</kw>
+<kw name="Perform Action for Element Textbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-0').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:26:55.642" level="INFO">Executing JavaScript:
+document.querySelector('#item-0').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:26:55.642" endtime="20240105 11:26:55.669"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240105 11:26:55.669" endtime="20240105 11:26:55.689"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:26:55.691" level="INFO">Typing text 'Ridham' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240105 11:26:55.690" endtime="20240105 11:26:55.839"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>"abc123@gmail.com"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:26:55.840" level="INFO">Typing text '"abc123@gmail.com"' into text field 'userEmail'.</msg>
+<status status="PASS" starttime="20240105 11:26:55.840" endtime="20240105 11:26:55.974"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>currentAddress</arg>
+<arg>"Ahmedabad"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:26:55.975" level="INFO">Typing text '"Ahmedabad"' into text field 'currentAddress'.</msg>
+<status status="PASS" starttime="20240105 11:26:55.975" endtime="20240105 11:26:56.129"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>permanentAddress</arg>
+<arg>"Bhavnagar"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 11:26:56.130" level="INFO">Typing text '"Bhavnagar"' into text field 'permanentAddress'.</msg>
+<status status="PASS" starttime="20240105 11:26:56.129" endtime="20240105 11:26:56.398"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>submit</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240105 11:26:56.398" endtime="20240105 11:26:56.437"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240105 11:26:56.438" level="INFO">Clicking element 'submit'.</msg>
+<msg timestamp="20240105 11:26:57.766" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240105 11:26:57.767" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="submit" type="button" class="btn btn-primary"&gt;...&lt;/button&gt; is not clickable at point (906, 584). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x560295d80f83 &lt;unknown&gt;
+#1 0x560295a39cf7 &lt;unknown&gt;
+#2 0x560295a91d92 &lt;unknown&gt;
+#3 0x560295a8f7f4 &lt;unknown&gt;
+#4 0x560295a8c894 &lt;unknown&gt;
+#5 0x560295a8b4b9 &lt;unknown&gt;
+#6 0x560295a7d313 &lt;unknown&gt;
+#7 0x560295ab30b2 &lt;unknown&gt;
+#8 0x560295a7cb49 &lt;unknown&gt;
+#9 0x560295ab34ce &lt;unknown&gt;
+#10 0x560295ad2006 &lt;unknown&gt;
+#11 0x560295ab2e53 &lt;unknown&gt;
+#12 0x560295a7add4 &lt;unknown&gt;
+#13 0x560295a7c1de &lt;unknown&gt;
+#14 0x560295d45531 &lt;unknown&gt;
+#15 0x560295d49455 &lt;unknown&gt;
+#16 0x560295d31f55 &lt;unknown&gt;
+#17 0x560295d4a0ef &lt;unknown&gt;
+#18 0x560295d1599f &lt;unknown&gt;
+#19 0x560295d6e008 &lt;unknown&gt;
+#20 0x560295d6e1d7 &lt;unknown&gt;
+#21 0x560295d80124 &lt;unknown&gt;
+#22 0x7ff872213609 start_thread
+</msg>
+<status status="FAIL" starttime="20240105 11:26:56.437" endtime="20240105 11:26:57.768"/>
+</kw>
+<status status="FAIL" starttime="20240105 11:26:55.641" endtime="20240105 11:26:57.769"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 11:26:57.769" endtime="20240105 11:26:57.769"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<status status="NOT RUN" starttime="20240105 11:26:57.769" endtime="20240105 11:26:57.769"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 11:26:57.770" endtime="20240105 11:26:57.770"/>
+</kw>
+<status status="FAIL" starttime="20240105 11:26:55.570" endtime="20240105 11:26:57.776">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="submit" type="button" class="btn btn-primary"&gt;...&lt;/button&gt; is not clickable at point (906, 584). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x560295d80f83 &lt;unknown&gt;
+#1 0x560295a39cf7 &lt;unknown&gt;
+#2 0x560295a91d92 &lt;unknown&gt;
+#3 0x560295a8f7f4 &lt;unknown&gt;
+#4 0x560295a8c894 &lt;unknown&gt;
+#5 0x560295a8b4b9 &lt;unknown&gt;
+#6 0x560295a7d313 &lt;unknown&gt;
+#7 0x560295ab30b2 &lt;unknown&gt;
+#8 0x560295a7cb49 &lt;unknown&gt;
+#9 0x560295ab34ce &lt;unknown&gt;
+#10 0x560295ad2006 &lt;unknown&gt;
+#11 0x560295ab2e53 &lt;unknown&gt;
+#12 0x560295a7add4 &lt;unknown&gt;
+#13 0x560295a7c1de &lt;unknown&gt;
+#14 0x560295d45531 &lt;unknown&gt;
+#15 0x560295d49455 &lt;unknown&gt;
+#16 0x560295d31f55 &lt;unknown&gt;
+#17 0x560295d4a0ef &lt;unknown&gt;
+#18 0x560295d1599f &lt;unknown&gt;
+#19 0x560295d6e008 &lt;unknown&gt;
+#20 0x560295d6e1d7 &lt;unknown&gt;
+#21 0x560295d80124 &lt;unknown&gt;
+#22 0x7ff872213609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240105 11:26:48.127" endtime="20240105 11:26:57.784"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

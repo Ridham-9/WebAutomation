@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 17:25:08.757" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Exercise1/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Valid Login" line="14">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 17:25:08.963" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20240111 17:25:09.521" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240111 17:25:08.962" endtime="20240111 17:25:49.736"/>
+</kw>
+<status status="PASS" starttime="20240111 17:25:08.962" endtime="20240111 17:25:49.736"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:25:49.740" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<msg timestamp="20240111 17:25:50.000" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240111 17:25:50.000" level="FAIL">Element with locator 'user-name' not found.</msg>
+<status status="FAIL" starttime="20240111 17:25:49.738" endtime="20240111 17:25:50.050"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.051" endtime="20240111 17:25:50.051"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.052" endtime="20240111 17:25:50.052"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.053" endtime="20240111 17:25:50.053"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.053" endtime="20240111 17:25:50.054"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>logout_sidebar_link</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.054" endtime="20240111 17:25:50.054"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.055" endtime="20240111 17:25:50.055"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>continue-shopping</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.056" endtime="20240111 17:25:50.056"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>remove-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.057" endtime="20240111 17:25:50.057"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.058" endtime="20240111 17:25:50.058"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>logout_sidebar_link</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.058" endtime="20240111 17:25:50.059"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.059" endtime="20240111 17:25:50.059"/>
+</kw>
+<status status="FAIL" starttime="20240111 17:25:08.961" endtime="20240111 17:25:50.060">Element with locator 'user-name' not found.</status>
+</test>
+<test id="s1-t2" name="Ivalid Login" line="29">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:25:50.065" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<msg timestamp="20240111 17:25:50.225" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240111 17:25:50.226" level="FAIL">Element with locator 'user-name' not found.</msg>
+<status status="FAIL" starttime="20240111 17:25:50.064" endtime="20240111 17:25:50.226"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>wejf</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:25:50.226" endtime="20240111 17:25:50.226"/>
+</kw>
+<kw name="Element Should Be Selected">
+<var>${elePresent}</var>
+<arg>${ERROR}</arg>
+<status status="NOT RUN" starttime="20240111 17:25:50.230" endtime="20240111 17:25:50.230"/>
+</kw>
+<status status="FAIL" starttime="20240111 17:25:50.062" endtime="20240111 17:25:50.230">Element with locator 'user-name' not found.</status>
+</test>
+<status status="FAIL" starttime="20240111 17:25:08.758" endtime="20240111 17:25:50.231"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 17:25:09.521" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

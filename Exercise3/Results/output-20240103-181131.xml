@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 18:11:31.531" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="52">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 18:11:31.657" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 18:11:31.656" endtime="20240103 18:11:37.914"/>
+</kw>
+<status status="PASS" starttime="20240103 18:11:31.656" endtime="20240103 18:11:37.915"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:11:37.919" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:11:37.917" endtime="20240103 18:11:38.033"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:11:38.034" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:11:38.033" endtime="20240103 18:11:38.059"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 18:11:38.061" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 18:11:38.059" endtime="20240103 18:11:38.155"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>(div.card.mt-4.top-card')</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20240103 18:11:38.155" endtime="20240103 18:11:38.171"/>
+</kw>
+<status status="PASS" starttime="20240103 18:11:37.916" endtime="20240103 18:11:38.171"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:11:41.172" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:11:38.172" endtime="20240103 18:11:41.172"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FORM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 18:11:41.174" level="INFO">Clicking element 'Xpath:(//div[@class="element-group"])[1]'.</msg>
+<status status="PASS" starttime="20240103 18:11:41.173" endtime="20240103 18:11:41.271"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:11:41.272" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:11:41.271" endtime="20240103 18:11:41.337"/>
+</kw>
+<status status="PASS" starttime="20240103 18:11:41.173" endtime="20240103 18:11:41.337"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:11:51.338" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 18:11:41.337" endtime="20240103 18:11:51.338"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:11:51.342" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:11:51.340" endtime="20240103 18:11:51.374"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:11:51.376" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:11:51.374" endtime="20240103 18:11:51.457"/>
+</kw>
+<status status="PASS" starttime="20240103 18:11:51.339" endtime="20240103 18:11:51.457"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:12:01.459" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 18:11:51.458" endtime="20240103 18:12:01.459"/>
+</kw>
+<kw name="Open Widgets">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:12:01.463" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:12:01.461" endtime="20240103 18:12:01.494"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:12:01.497" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:12:01.495" endtime="20240103 18:12:01.547"/>
+</kw>
+<status status="PASS" starttime="20240103 18:12:01.460" endtime="20240103 18:12:01.547"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:12:11.548" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 18:12:01.548" endtime="20240103 18:12:11.549"/>
+</kw>
+<kw name="Open Interactions">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:12:11.553" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:12:11.551" endtime="20240103 18:12:11.579"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:12:11.582" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:12:11.580" endtime="20240103 18:12:11.664"/>
+</kw>
+<status status="PASS" starttime="20240103 18:12:11.550" endtime="20240103 18:12:11.665"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:12:21.667" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 18:12:11.666" endtime="20240103 18:12:21.668"/>
+</kw>
+<kw name="Open Book Store">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[5].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:12:21.673" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[5].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:12:21.672" endtime="20240103 18:12:21.684"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[5].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:12:21.685" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[5].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:12:21.685" endtime="20240103 18:12:21.739"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240103 18:12:21.740" level="INFO">Typing text 'abcxyz' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240103 18:12:21.739" endtime="20240103 18:12:21.899"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240103 18:12:21.900" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20240103 18:12:21.957" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240103 18:12:22.062" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240103 18:12:21.899" endtime="20240103 18:12:22.062"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:12:25.062" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:12:22.062" endtime="20240103 18:12:25.063"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#login').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:12:25.065" level="INFO">Executing JavaScript:
+document.querySelector('#login').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:12:25.063" endtime="20240103 18:12:25.085"/>
+</kw>
+<status status="PASS" starttime="20240103 18:12:21.670" endtime="20240103 18:12:25.086"/>
+</kw>
+<status status="PASS" starttime="20240103 18:11:31.655" endtime="20240103 18:12:25.086"/>
+</test>
+<status status="PASS" starttime="20240103 18:11:31.532" endtime="20240103 18:12:25.088"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

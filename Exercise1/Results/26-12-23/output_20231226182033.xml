@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 18:20:34.401" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 18:20:34.726" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 18:20:34.726" endtime="20231226 18:20:40.685"/>
+</kw>
+<status status="PASS" starttime="20231226 18:20:34.725" endtime="20231226 18:20:40.685"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="14">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:20:40.688" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231226 18:20:40.687" endtime="20231226 18:20:40.806"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:20:40.807" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231226 18:20:40.849" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231226 18:20:40.905" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231226 18:20:40.806" endtime="20231226 18:20:40.906"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:20:40.907" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231226 18:20:40.906" endtime="20231226 18:20:40.988"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231226 18:20:40.989" level="INFO">Successfully logged in!</msg>
+<status status="PASS" starttime="20231226 18:20:40.989" endtime="20231226 18:20:40.989"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:20:40.990" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231226 18:20:40.989" endtime="20231226 18:20:41.064"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:20:41.065" level="INFO">Clicking button 'add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20231226 18:20:41.065" endtime="20231226 18:20:41.147"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class=shopping_cart_container</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:20:41.148" level="INFO">Clicking button 'class=shopping_cart_container'.</msg>
+<msg timestamp="20231226 18:20:41.282" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231226 18:20:41.282" level="FAIL">Button with locator 'class=shopping_cart_container' not found.</msg>
+<status status="FAIL" starttime="20231226 18:20:41.147" endtime="20231226 18:20:41.283"/>
+</kw>
+<status status="FAIL" starttime="20231226 18:20:40.686" endtime="20231226 18:20:41.284">Button with locator 'class=shopping_cart_container' not found.</status>
+</test>
+<status status="FAIL" starttime="20231226 18:20:34.402" endtime="20231226 18:20:41.286"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

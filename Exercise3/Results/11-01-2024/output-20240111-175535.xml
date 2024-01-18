@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 17:55:35.479" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="51">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 17:55:35.603" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg timestamp="20240111 17:55:35.757" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240111 17:55:35.602" endtime="20240111 17:55:41.820"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 17:55:41.822" endtime="20240111 17:55:41.951"/>
+</kw>
+<status status="PASS" starttime="20240111 17:55:35.602" endtime="20240111 17:55:41.952"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="55">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:55:41.963" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:55:41.960" endtime="20240111 17:55:42.122"/>
+</kw>
+<kw name="Perform Action for Element Textbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-0').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:55:42.124" level="INFO">Executing JavaScript:
+document.querySelector('#item-0').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:55:42.123" endtime="20240111 17:55:42.148"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240111 17:55:42.148" endtime="20240111 17:55:42.168"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>ridham</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:55:42.168" level="INFO">Typing text 'ridham' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240111 17:55:42.168" endtime="20240111 17:55:42.345"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>abc123@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:55:42.346" level="INFO">Typing text 'abc123@gmail.com' into text field 'userEmail'.</msg>
+<status status="PASS" starttime="20240111 17:55:42.346" endtime="20240111 17:55:42.838"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>currentAddress</arg>
+<arg>Ahmedabad</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:55:42.839" level="INFO">Typing text 'Ahmedabad' into text field 'currentAddress'.</msg>
+<status status="PASS" starttime="20240111 17:55:42.838" endtime="20240111 17:55:43.048"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>permanentAddress</arg>
+<arg>Bhavnagar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240111 17:55:43.049" level="INFO">Typing text 'Bhavnagar' into text field 'permanentAddress'.</msg>
+<status status="PASS" starttime="20240111 17:55:43.048" endtime="20240111 17:55:43.303"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#submit').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:55:43.304" level="INFO">Executing JavaScript:
+document.querySelector('#submit').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:55:43.303" endtime="20240111 17:55:43.314"/>
+</kw>
+<status status="PASS" starttime="20240111 17:55:42.123" endtime="20240111 17:55:43.314"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:55:48.315" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240111 17:55:43.314" endtime="20240111 17:55:48.316"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-1').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:55:48.319" level="INFO">Executing JavaScript:
+document.querySelector('#item-1').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:55:48.318" endtime="20240111 17:55:48.411"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Xpath://*[@class="rct-collapse rct-collapse-btn"][1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 17:55:48.412" level="INFO">Clicking button 'Xpath://*[@class="rct-collapse rct-collapse-btn"][1]'.</msg>
+<status status="PASS" starttime="20240111 17:55:48.411" endtime="20240111 17:55:48.497"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 17:55:51.498" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 17:55:48.498" endtime="20240111 17:55:51.499"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('tree-node-documents').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:55:51.501" level="INFO">Executing JavaScript:
+document.getElementById('tree-node-documents').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 17:55:51.499" endtime="20240111 17:55:51.547"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll(.rct-collapse rct-collapse-btn)[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 17:55:51.550" level="INFO">Executing JavaScript:
+document.querySelectorAll(.rct-collapse rct-collapse-btn)[3].click();
+Without any arguments.</msg>
+<msg timestamp="20240111 17:55:51.836" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240111 17:55:51.836" level="FAIL">JavascriptException: Message: javascript error: Unexpected token '.'
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x564444adcf83 &lt;unknown&gt;
+#1 0x564444795cf7 &lt;unknown&gt;
+#2 0x56444479c2a3 &lt;unknown&gt;
+#3 0x56444479ebb4 &lt;unknown&gt;
+#4 0x56444482eba3 &lt;unknown&gt;
+#5 0x56444480f0b2 &lt;unknown&gt;
+#6 0x56444482e006 &lt;unknown&gt;
+#7 0x56444480ee53 &lt;unknown&gt;
+#8 0x5644447d6dd4 &lt;unknown&gt;
+#9 0x5644447d81de &lt;unknown&gt;
+#10 0x564444aa1531 &lt;unknown&gt;
+#11 0x564444aa5455 &lt;unknown&gt;
+#12 0x564444a8df55 &lt;unknown&gt;
+#13 0x564444aa60ef &lt;unknown&gt;
+#14 0x564444a7199f &lt;unknown&gt;
+#15 0x564444aca008 &lt;unknown&gt;
+#16 0x564444aca1d7 &lt;unknown&gt;
+#17 0x564444adc124 &lt;unknown&gt;
+#18 0x7f30305ba609 start_thread
+</msg>
+<status status="FAIL" starttime="20240111 17:55:51.548" endtime="20240111 17:55:51.860"/>
+</kw>
+<status status="FAIL" starttime="20240111 17:55:48.317" endtime="20240111 17:55:51.860"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240111 17:55:51.861" endtime="20240111 17:55:51.861"/>
+</kw>
+<kw name="Perform Action for Element RadioButton">
+<status status="NOT RUN" starttime="20240111 17:55:51.862" endtime="20240111 17:55:51.862"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240111 17:55:51.862" endtime="20240111 17:55:51.863"/>
+</kw>
+<kw name="Perform Action for Element WebTable">
+<status status="NOT RUN" starttime="20240111 17:55:51.863" endtime="20240111 17:55:51.864"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240111 17:55:51.864" endtime="20240111 17:55:51.865"/>
+</kw>
+<kw name="Perform Action for Element Brokenlink">
+<status status="NOT RUN" starttime="20240111 17:55:51.866" endtime="20240111 17:55:51.866"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240111 17:55:51.866" endtime="20240111 17:55:51.867"/>
+</kw>
+<kw name="Perform Action for Element Download/Upload">
+<status status="NOT RUN" starttime="20240111 17:55:51.867" endtime="20240111 17:55:51.868"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240111 17:55:51.868" endtime="20240111 17:55:51.869"/>
+</kw>
+<kw name="Perform Action for Element Dynamic Properties">
+<status status="NOT RUN" starttime="20240111 17:55:51.869" endtime="20240111 17:55:51.870"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240111 17:55:51.870" endtime="20240111 17:55:51.871"/>
+</kw>
+<status status="FAIL" starttime="20240111 17:55:41.958" endtime="20240111 17:55:51.874">JavascriptException: Message: javascript error: Unexpected token '.'
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x564444adcf83 &lt;unknown&gt;
+#1 0x564444795cf7 &lt;unknown&gt;
+#2 0x56444479c2a3 &lt;unknown&gt;
+#3 0x56444479ebb4 &lt;unknown&gt;
+#4 0x56444482eba3 &lt;unknown&gt;
+#5 0x56444480f0b2 &lt;unknown&gt;
+#6 0x56444482e006 &lt;unknown&gt;
+#7 0x56444480ee53 &lt;unknown&gt;
+#8 0x5644447d6dd4 &lt;unknown&gt;
+#9 0x5644447d81de &lt;unknown&gt;
+#10 0x564444aa1531 &lt;unknown&gt;
+#11 0x564444aa5455 &lt;unknown&gt;
+#12 0x564444a8df55 &lt;unknown&gt;
+#13 0x564444aa60ef &lt;unknown&gt;
+#14 0x564444a7199f &lt;unknown&gt;
+#15 0x564444aca008 &lt;unknown&gt;
+#16 0x564444aca1d7 &lt;unknown&gt;
+#17 0x564444adc124 &lt;unknown&gt;
+#18 0x7f30305ba609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240111 17:55:35.480" endtime="20240111 17:55:51.880"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 17:55:35.757" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

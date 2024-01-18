@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 15:48:52.349" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="74">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 15:48:52.475" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 15:48:52.474" endtime="20240116 15:49:06.610"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 15:49:06.611" endtime="20240116 15:49:06.719"/>
+</kw>
+<status status="PASS" starttime="20240116 15:48:52.473" endtime="20240116 15:49:06.720"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="78">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 15:49:06.723" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 15:49:06.722" endtime="20240116 15:49:06.801"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 15:49:09.802" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 15:49:06.801" endtime="20240116 15:49:09.802"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-8')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 15:49:09.806" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-8')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 15:49:09.805" endtime="20240116 15:49:09.936"/>
+</kw>
+<kw name="Open Context Menu" library="SeleniumLibrary">
+<arg>css-tlfecz-indicatorContainer</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<msg timestamp="20240116 15:49:10.236" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 15:49:10.236" level="FAIL">Element with locator 'css-tlfecz-indicatorContainer' not found.</msg>
+<status status="FAIL" starttime="20240116 15:49:09.936" endtime="20240116 15:49:10.237"/>
+</kw>
+<status status="FAIL" starttime="20240116 15:49:09.803" endtime="20240116 15:49:10.237"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 15:49:10.238" endtime="20240116 15:49:10.238"/>
+</kw>
+<status status="FAIL" starttime="20240116 15:49:06.720" endtime="20240116 15:49:10.238">Element with locator 'css-tlfecz-indicatorContainer' not found.</status>
+</test>
+<status status="FAIL" starttime="20240116 15:48:52.349" endtime="20240116 15:49:10.239"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 15:42:51.772" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="40">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 15:42:51.912" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 15:42:51.912" endtime="20240103 15:42:59.921"/>
+</kw>
+<status status="PASS" starttime="20240103 15:42:51.911" endtime="20240103 15:42:59.921"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:42:59.923" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:42:59.922" endtime="20240103 15:43:00.007"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:43:00.008" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:43:00.008" endtime="20240103 15:43:00.045"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 15:43:00.046" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 15:43:00.045" endtime="20240103 15:43:00.136"/>
+</kw>
+<status status="PASS" starttime="20240103 15:42:59.922" endtime="20240103 15:43:00.136"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<arg>Execute JavaScript</arg>
+<arg>document.querySelector('#item-1').click();</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 15:43:00.138" level="INFO">Clicking element 'Xpath//*[@id="app"]/div/div/div[2]/div[1]/div/div/div[2]/span/div' with Execute JavaScript.</msg>
+<msg timestamp="20240103 15:43:00.309" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-84.png"&gt;&lt;img src="selenium-screenshot-84.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 15:43:00.309" level="FAIL">ValueError: 'EXECUTE JAVASCRIPT' modifier does not match to Selenium Keys</msg>
+<status status="FAIL" starttime="20240103 15:43:00.137" endtime="20240103 15:43:00.310"/>
+</kw>
+<status status="FAIL" starttime="20240103 15:43:00.136" endtime="20240103 15:43:00.310"/>
+</kw>
+<status status="FAIL" starttime="20240103 15:42:51.911" endtime="20240103 15:43:00.310">ValueError: 'EXECUTE JAVASCRIPT' modifier does not match to Selenium Keys</status>
+</test>
+<status status="FAIL" starttime="20240103 15:42:51.774" endtime="20240103 15:43:00.311"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

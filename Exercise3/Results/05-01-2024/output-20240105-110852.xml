@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 11:08:52.886" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="29">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 11:08:53.014" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 11:08:53.013" endtime="20240105 11:08:58.660"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 11:08:58.662" endtime="20240105 11:08:58.780"/>
+</kw>
+<status status="PASS" starttime="20240105 11:08:53.012" endtime="20240105 11:08:58.781"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="33">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:08:58.784" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:08:58.783" endtime="20240105 11:08:58.858"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<var>${element_to_click}</var>
+<arg>Get User Input</arg>
+<arg>Please enter the element to click (e.g., TEXTBOX, CHECKBOX):</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Get User Input">
+<arg>Please enter the element to click (e.g., TEXTBOX, CHECKBOX):</arg>
+<doc>Get user input using Python's input() function</doc>
+<kw name="Evaluate" library="BuiltIn">
+<var>${user_input}</var>
+<arg>input('${prompt}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240105 11:10:27.279" level="INFO">Please enter the element to click (e.g., TEXTBOX, CHECKBOX):</msg>
+<msg timestamp="20240105 11:10:27.280" level="INFO">${user_input} = 3</msg>
+<status status="PASS" starttime="20240105 11:08:58.859" endtime="20240105 11:10:27.280"/>
+</kw>
+<status status="PASS" starttime="20240105 11:08:58.859" endtime="20240105 11:10:27.281"/>
+</kw>
+<msg timestamp="20240105 11:10:27.281" level="INFO">${element_to_click} = 3</msg>
+<status status="PASS" starttime="20240105 11:08:58.858" endtime="20240105 11:10:27.281"/>
+</kw>
+<kw name="Click Element and Verify">
+<arg>${element_to_click}</arg>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.alert('Click on the specified element manually and press OK.')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 11:10:27.286" level="INFO">Executing JavaScript:
+window.alert('Click on the specified element manually and press OK.')
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 11:10:27.284" endtime="20240105 11:10:27.324"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${CLICKED}</var>
+<arg>${locator}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240105 11:10:27.324" level="INFO">${CLICKED} = 3</msg>
+<status status="PASS" starttime="20240105 11:10:27.324" endtime="20240105 11:10:27.324"/>
+</kw>
+<status status="PASS" starttime="20240105 11:10:27.282" endtime="20240105 11:10:27.325"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${element_to_click}' == 'TEXTBOX'</arg>
+<arg>Perform Action for Element X</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240105 11:10:27.325" endtime="20240105 11:10:27.326"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${element_to_click}' == 'CHECKBOX'</arg>
+<arg>Perform Action for Element Y</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240105 11:10:27.327" endtime="20240105 11:10:27.328"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 11:10:30.330" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240105 11:10:27.329" endtime="20240105 11:10:30.330"/>
+</kw>
+<status status="PASS" starttime="20240105 11:08:58.782" endtime="20240105 11:10:30.330"/>
+</test>
+<status status="PASS" starttime="20240105 11:08:52.886" endtime="20240105 11:10:30.332"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

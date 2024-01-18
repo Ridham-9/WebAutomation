@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 15:02:26.767" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="31">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 15:02:26.902" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<msg timestamp="20231228 15:02:26.904" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231228 15:02:26.904" level="FAIL">TokenError: ('EOF in multi-line statement', (2, 0))</msg>
+<status status="FAIL" starttime="20231228 15:02:26.901" endtime="20231228 15:02:26.905"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:02:26.900" endtime="20231228 15:02:26.905"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.905" endtime="20231228 15:02:26.905"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.905" endtime="20231228 15:02:26.905"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.906" endtime="20231228 15:02:26.906"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.906" endtime="20231228 15:02:26.906"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.906" endtime="20231228 15:02:26.906"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.906" endtime="20231228 15:02:26.906"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.906" endtime="20231228 15:02:26.906"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>${QA_DATA1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.906" endtime="20231228 15:02:26.906"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.906" endtime="20231228 15:02:26.906"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${DATA_LIST}</var>
+<arg>${DATA of Automation tools/frameworks}.split(${SPACE})</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.907" endtime="20231228 15:02:26.907"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA_LIST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231228 15:02:26.907" endtime="20231228 15:02:26.907"/>
+</kw>
+<kw name="Append To CSV File">
+<arg>${CSV_file}</arg>
+<arg>${DATA_LIST}</arg>
+<arg>fieldnames=${header}</arg>
+<status status="NOT RUN" starttime="20231228 15:02:26.907" endtime="20231228 15:02:26.907"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:02:26.899" endtime="20231228 15:02:26.907">TokenError: ('EOF in multi-line statement', (2, 0))</status>
+</test>
+<status status="FAIL" starttime="20231228 15:02:26.768" endtime="20231228 15:02:26.908"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

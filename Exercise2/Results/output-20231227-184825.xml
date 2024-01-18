@@ -1,0 +1,1908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231227 18:48:25.299" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="29">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231227 18:48:25.424" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231227 18:48:25.423" endtime="20231227 18:48:31.611"/>
+</kw>
+<status status="PASS" starttime="20231227 18:48:25.422" endtime="20231227 18:48:31.612"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 18:48:31.616" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231227 18:48:31.613" endtime="20231227 18:48:31.740"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231227 18:48:31.741" endtime="20231227 18:48:31.797"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 18:48:31.798" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231227 18:48:31.797" endtime="20231227 18:48:31.856"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231227 18:48:31.858" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231227 18:48:31.857" endtime="20231227 18:48:31.979"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231227 18:48:31.994" level="INFO">${handles} = ['2C3E610A1B3CD6CACAB2C82E10DB9577', 'C9ECD954A3A63EF5FFD6E067B12E2AE0']</msg>
+<status status="PASS" starttime="20231227 18:48:31.980" endtime="20231227 18:48:31.994"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231227 18:48:31.994" endtime="20231227 18:48:32.110"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231227 18:48:32.111" endtime="20231227 18:48:33.755"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>${QA_DATA1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231227 18:48:33.798" level="INFO">${DATA of Automation tools/frameworks} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231227 18:48:33.755" endtime="20231227 18:48:33.798"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231227 18:48:33.799" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231227 18:48:33.799" endtime="20231227 18:48:33.799"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${DATA_LIST}</var>
+<arg>${DATA of Automation tools/frameworks}.split(${SPACE})</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231227 18:48:33.800" level="INFO">${DATA_LIST} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG.split( )</msg>
+<status status="PASS" starttime="20231227 18:48:33.799" endtime="20231227 18:48:33.800"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA_LIST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231227 18:48:33.800" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG.split( )</msg>
+<status status="PASS" starttime="20231227 18:48:33.800" endtime="20231227 18:48:33.800"/>
+</kw>
+<kw name="Create CSV">
+<arg>${CSV_file}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.801" level="INFO">${header} = ['div']</msg>
+<status status="PASS" starttime="20231227 18:48:33.801" endtime="20231227 18:48:33.801"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.802" level="INFO">${header} = ['div']</msg>
+<status status="PASS" starttime="20231227 18:48:33.801" endtime="20231227 18:48:33.802"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.802" level="INFO">${header} = [['div']]</msg>
+<status status="PASS" starttime="20231227 18:48:33.802" endtime="20231227 18:48:33.802"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.803" level="INFO">${header} = [['div']]</msg>
+<status status="PASS" starttime="20231227 18:48:33.802" endtime="20231227 18:48:33.803"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.803" level="INFO">${header} = [[['div']]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.803" endtime="20231227 18:48:33.803"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.804" level="INFO">${header} = [[['div']]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.803" endtime="20231227 18:48:33.804"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.805" level="INFO">${header} = [[[['div']]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.805" endtime="20231227 18:48:33.805"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.806" level="INFO">${header} = [[[['div']]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.805" endtime="20231227 18:48:33.806"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.808" level="INFO">${header} = [[[[['div']]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.807" endtime="20231227 18:48:33.808"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.809" level="INFO">${header} = [[[[['div']]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.808" endtime="20231227 18:48:33.809"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.811" level="INFO">${header} = [[[[[['div']]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.811" endtime="20231227 18:48:33.811"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.812" level="INFO">${header} = [[[[[['div']]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.811" endtime="20231227 18:48:33.812"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.814" level="INFO">${header} = [[[[[[['div']]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.813" endtime="20231227 18:48:33.814"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.814" level="INFO">${header} = [[[[[[['div']]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.814" endtime="20231227 18:48:33.815"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.816" level="INFO">${header} = [[[[[[[['div']]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.816" endtime="20231227 18:48:33.816"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.817" level="INFO">${header} = [[[[[[[['div']]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.817" endtime="20231227 18:48:33.817"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.819" level="INFO">${header} = [[[[[[[[['div']]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.818" endtime="20231227 18:48:33.819"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.820" level="INFO">${header} = [[[[[[[[['div']]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.819" endtime="20231227 18:48:33.820"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.822" level="INFO">${header} = [[[[[[[[[['div']]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.821" endtime="20231227 18:48:33.822"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.824" level="INFO">${header} = [[[[[[[[[['div']]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.822" endtime="20231227 18:48:33.824"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.825" level="INFO">${header} = [[[[[[[[[[['div']]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.825" endtime="20231227 18:48:33.825"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.826" level="INFO">${header} = [[[[[[[[[[['div']]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.826" endtime="20231227 18:48:33.827"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.828" level="INFO">${header} = [[[[[[[[[[[['div']]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.827" endtime="20231227 18:48:33.828"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.829" level="INFO">${header} = [[[[[[[[[[[['div']]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.828" endtime="20231227 18:48:33.829"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.830" level="INFO">${header} = [[[[[[[[[[[[['div']]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.830" endtime="20231227 18:48:33.830"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.831" level="INFO">${header} = [[[[[[[[[[[[['div']]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.830" endtime="20231227 18:48:33.831"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.841" level="INFO">${header} = [[[[[[[[[[[[[['div']]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.832" endtime="20231227 18:48:33.841"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.842" level="INFO">${header} = [[[[[[[[[[[[[['div']]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.841" endtime="20231227 18:48:33.842"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.843" level="INFO">${header} = [[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.843" endtime="20231227 18:48:33.843"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.844" level="INFO">${header} = [[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.843" endtime="20231227 18:48:33.844"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.862" level="INFO">${header} = [[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.861" endtime="20231227 18:48:33.863"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.863" level="INFO">${header} = [[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.863" endtime="20231227 18:48:33.864"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.869" level="INFO">${header} = [[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.864" endtime="20231227 18:48:33.869"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.870" level="INFO">${header} = [[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.870" endtime="20231227 18:48:33.870"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.876" level="INFO">${header} = [[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.876" endtime="20231227 18:48:33.876"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.877" level="INFO">${header} = [[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.876" endtime="20231227 18:48:33.877"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.878" level="INFO">${header} = [[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.878" endtime="20231227 18:48:33.878"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.880" level="INFO">${header} = [[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.879" endtime="20231227 18:48:33.880"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.881" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.881" endtime="20231227 18:48:33.881"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.882" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.881" endtime="20231227 18:48:33.882"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.884" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.883" endtime="20231227 18:48:33.884"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.885" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.884" endtime="20231227 18:48:33.885"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.886" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.886" endtime="20231227 18:48:33.887"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.888" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.887" endtime="20231227 18:48:33.888"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.891" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.889" endtime="20231227 18:48:33.891"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.892" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.891" endtime="20231227 18:48:33.892"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.893" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.893" endtime="20231227 18:48:33.893"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.894" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.893" endtime="20231227 18:48:33.894"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.896" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.895" endtime="20231227 18:48:33.896"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.897" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.896" endtime="20231227 18:48:33.897"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.898" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.898" endtime="20231227 18:48:33.898"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.899" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.898" endtime="20231227 18:48:33.900"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.901" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.900" endtime="20231227 18:48:33.901"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.902" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.901" endtime="20231227 18:48:33.902"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.904" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.903" endtime="20231227 18:48:33.904"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.905" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.904" endtime="20231227 18:48:33.905"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.906" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.906" endtime="20231227 18:48:33.906"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.907" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.907" endtime="20231227 18:48:33.908"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.909" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.909" endtime="20231227 18:48:33.909"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.910" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.909" endtime="20231227 18:48:33.911"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.912" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.911" endtime="20231227 18:48:33.912"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.913" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.912" endtime="20231227 18:48:33.913"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.915" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.915" endtime="20231227 18:48:33.915"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.917" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.915" endtime="20231227 18:48:33.917"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.918" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.918" endtime="20231227 18:48:33.918"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.920" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.919" endtime="20231227 18:48:33.920"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.922" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.921" endtime="20231227 18:48:33.922"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.924" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.922" endtime="20231227 18:48:33.924"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.925" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.925" endtime="20231227 18:48:33.926"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.927" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.926" endtime="20231227 18:48:33.927"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.928" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.928" endtime="20231227 18:48:33.928"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.929" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.928" endtime="20231227 18:48:33.929"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.930" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.930" endtime="20231227 18:48:33.930"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.931" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.930" endtime="20231227 18:48:33.931"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.932" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.931" endtime="20231227 18:48:33.932"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.932" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.932" endtime="20231227 18:48:33.933"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.933" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.933" endtime="20231227 18:48:33.933"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.934" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.933" endtime="20231227 18:48:33.934"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.934" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.934" endtime="20231227 18:48:33.934"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.935" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.934" endtime="20231227 18:48:33.935"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.936" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.935" endtime="20231227 18:48:33.936"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.936" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.936" endtime="20231227 18:48:33.936"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.937" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.937" endtime="20231227 18:48:33.937"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.938" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.937" endtime="20231227 18:48:33.938"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.940" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.939" endtime="20231227 18:48:33.940"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.941" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.940" endtime="20231227 18:48:33.941"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.942" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.942" endtime="20231227 18:48:33.942"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.943" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.942" endtime="20231227 18:48:33.943"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.943" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.943" endtime="20231227 18:48:33.943"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.944" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.943" endtime="20231227 18:48:33.944"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.945" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.944" endtime="20231227 18:48:33.945"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.946" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.945" endtime="20231227 18:48:33.946"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.946" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.946" endtime="20231227 18:48:33.946"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.947" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.946" endtime="20231227 18:48:33.947"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.948" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.947" endtime="20231227 18:48:33.948"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.948" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.948" endtime="20231227 18:48:33.948"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.949" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.949" endtime="20231227 18:48:33.949"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.950" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.949" endtime="20231227 18:48:33.950"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.950" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.950" endtime="20231227 18:48:33.950"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.951" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.950" endtime="20231227 18:48:33.951"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.952" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.951" endtime="20231227 18:48:33.952"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.952" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.952" endtime="20231227 18:48:33.952"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.953" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.953" endtime="20231227 18:48:33.953"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.954" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.953" endtime="20231227 18:48:33.954"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.955" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.954" endtime="20231227 18:48:33.955"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.956" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.955" endtime="20231227 18:48:33.956"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.958" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.958" endtime="20231227 18:48:33.958"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.959" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.958" endtime="20231227 18:48:33.959"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.960" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.960" endtime="20231227 18:48:33.960"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.961" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.960" endtime="20231227 18:48:33.961"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.961" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.961" endtime="20231227 18:48:33.961"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.962" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.961" endtime="20231227 18:48:33.962"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.963" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.963" endtime="20231227 18:48:33.963"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.964" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.963" endtime="20231227 18:48:33.964"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.964" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.964" endtime="20231227 18:48:33.964"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.965" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.964" endtime="20231227 18:48:33.965"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.966" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.966" endtime="20231227 18:48:33.966"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.967" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.966" endtime="20231227 18:48:33.967"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.968" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.968" endtime="20231227 18:48:33.968"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.969" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.968" endtime="20231227 18:48:33.969"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.970" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.969" endtime="20231227 18:48:33.970"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.970" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.970" endtime="20231227 18:48:33.970"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.971" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.971" endtime="20231227 18:48:33.972"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.973" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.972" endtime="20231227 18:48:33.974"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.975" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.975" endtime="20231227 18:48:33.975"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.976" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.975" endtime="20231227 18:48:33.976"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.977" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.977" endtime="20231227 18:48:33.977"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.978" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.977" endtime="20231227 18:48:33.978"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.979" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.979" endtime="20231227 18:48:33.979"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.980" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.979" endtime="20231227 18:48:33.980"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.981" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.980" endtime="20231227 18:48:33.981"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.981" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.981" endtime="20231227 18:48:33.981"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.982" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.982" endtime="20231227 18:48:33.982"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.983" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.982" endtime="20231227 18:48:33.983"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.984" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.984" endtime="20231227 18:48:33.984"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.985" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.984" endtime="20231227 18:48:33.985"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.986" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.986" endtime="20231227 18:48:33.986"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.987" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.986" endtime="20231227 18:48:33.987"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.988" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.987" endtime="20231227 18:48:33.988"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.989" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.988" endtime="20231227 18:48:33.989"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.991" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.990" endtime="20231227 18:48:33.991"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.992" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.991" endtime="20231227 18:48:33.992"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.993" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.992" endtime="20231227 18:48:33.993"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.994" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.993" endtime="20231227 18:48:33.994"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.995" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.995" endtime="20231227 18:48:33.995"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:33.997" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.995" endtime="20231227 18:48:33.997"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:33.998" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.997" endtime="20231227 18:48:33.998"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.000" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:33.998" endtime="20231227 18:48:34.000"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.001" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.000" endtime="20231227 18:48:34.001"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.002" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.001" endtime="20231227 18:48:34.002"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.003" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.003" endtime="20231227 18:48:34.003"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.004" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.003" endtime="20231227 18:48:34.004"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.005" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.005" endtime="20231227 18:48:34.005"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.007" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.005" endtime="20231227 18:48:34.007"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.008" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.007" endtime="20231227 18:48:34.008"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.009" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.008" endtime="20231227 18:48:34.009"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.009" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.009" endtime="20231227 18:48:34.009"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.010" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.009" endtime="20231227 18:48:34.010"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.011" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.011" endtime="20231227 18:48:34.011"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.012" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.011" endtime="20231227 18:48:34.012"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.013" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.013" endtime="20231227 18:48:34.013"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.015" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.013" endtime="20231227 18:48:34.016"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.017" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.016" endtime="20231227 18:48:34.017"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.019" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.017" endtime="20231227 18:48:34.019"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.021" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.020" endtime="20231227 18:48:34.021"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.022" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.021" endtime="20231227 18:48:34.022"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.023" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.023" endtime="20231227 18:48:34.023"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.024" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.023" endtime="20231227 18:48:34.024"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.025" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.025" endtime="20231227 18:48:34.025"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.026" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.025" endtime="20231227 18:48:34.026"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.029" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.027" endtime="20231227 18:48:34.029"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.030" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.029" endtime="20231227 18:48:34.030"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.030" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.030" endtime="20231227 18:48:34.031"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.032" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.031" endtime="20231227 18:48:34.032"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.033" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.032" endtime="20231227 18:48:34.033"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.034" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.033" endtime="20231227 18:48:34.034"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.035" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.034" endtime="20231227 18:48:34.035"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.036" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.035" endtime="20231227 18:48:34.036"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.037" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.036" endtime="20231227 18:48:34.037"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.038" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.037" endtime="20231227 18:48:34.038"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.039" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.038" endtime="20231227 18:48:34.039"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.040" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.039" endtime="20231227 18:48:34.040"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.041" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.041" endtime="20231227 18:48:34.041"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.042" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.041" endtime="20231227 18:48:34.043"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.043" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.043" endtime="20231227 18:48:34.044"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.046" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.044" endtime="20231227 18:48:34.046"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.047" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.047" endtime="20231227 18:48:34.047"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.065" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.048" endtime="20231227 18:48:34.065"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.066" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.066" endtime="20231227 18:48:34.066"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.067" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.066" endtime="20231227 18:48:34.067"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.068" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.068" endtime="20231227 18:48:34.068"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.069" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.068" endtime="20231227 18:48:34.069"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.069" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.069" endtime="20231227 18:48:34.069"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.070" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]</msg>
+<status status="PASS" starttime="20231227 18:48:34.070" endtime="20231227 18:48:34.071"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.071" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]...</msg>
+<status status="PASS" starttime="20231227 18:48:34.071" endtime="20231227 18:48:34.071"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.073" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]...</msg>
+<status status="PASS" starttime="20231227 18:48:34.071" endtime="20231227 18:48:34.073"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231227 18:48:34.074" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]...</msg>
+<status status="PASS" starttime="20231227 18:48:34.074" endtime="20231227 18:48:34.074"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${header}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20231227 18:48:34.075" level="INFO">${header} = [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[['div']]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]...</msg>
+<status status="PASS" starttime="20231227 18:48:34.074" endtime="20231227 18:48:34.075"/>
+</kw>
+<kw name="Create CSV">
+<arg>${file_path}</arg>
+<arg>${header}</arg>
+<msg timestamp="20231227 18:48:34.075" level="FAIL">Maximum limit of started keywords and control structures exceeded.</msg>
+<status status="FAIL" starttime="20231227 18:48:34.075" endtime="20231227 18:48:34.075"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.073" endtime="20231227 18:48:34.076"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.071" endtime="20231227 18:48:34.076"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.069" endtime="20231227 18:48:34.076"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.067" endtime="20231227 18:48:34.076"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.065" endtime="20231227 18:48:34.076"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.046" endtime="20231227 18:48:34.076"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.043" endtime="20231227 18:48:34.076"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.040" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.038" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.036" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.034" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.032" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.030" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.027" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.024" endtime="20231227 18:48:34.077"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.022" endtime="20231227 18:48:34.078"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.020" endtime="20231227 18:48:34.078"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.016" endtime="20231227 18:48:34.078"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.012" endtime="20231227 18:48:34.078"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.010" endtime="20231227 18:48:34.078"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.009" endtime="20231227 18:48:34.078"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.007" endtime="20231227 18:48:34.078"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.004" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.002" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:34.000" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.997" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.994" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.992" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.989" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.987" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.985" endtime="20231227 18:48:34.079"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.983" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.982" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.980" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.978" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.976" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.974" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.971" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.969" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.967" endtime="20231227 18:48:34.080"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.965" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.964" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.962" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.961" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.959" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.957" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.954" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.953" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.951" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.950" endtime="20231227 18:48:34.081"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.948" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.947" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.946" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.944" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.943" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.941" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.938" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.937" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.935" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.934" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.933" endtime="20231227 18:48:34.082"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.931" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.929" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.927" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.924" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.920" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.917" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.913" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.911" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.908" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.905" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.902" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.900" endtime="20231227 18:48:34.083"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.897" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.894" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.892" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.888" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.885" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.882" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.880" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.877" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.870" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.864" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.844" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.842" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.831" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.829" endtime="20231227 18:48:34.084"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.827" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.824" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.820" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.818" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.815" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.813" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.810" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.806" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.804" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.803" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.802" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:33.800" endtime="20231227 18:48:34.085"/>
+</kw>
+<kw name="Append To CSV">
+<arg>${CSV_file}</arg>
+<arg>${DATA_LIST}</arg>
+<arg>fieldnames=${header}</arg>
+<status status="NOT RUN" starttime="20231227 18:48:34.085" endtime="20231227 18:48:34.085"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:48:25.421" endtime="20231227 18:48:34.086">Maximum limit of started keywords and control structures exceeded.</status>
+</test>
+<status status="FAIL" starttime="20231227 18:48:25.300" endtime="20231227 18:48:34.086"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231227 18:48:25.420" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot' on line 3: Importing library 'CSVLibrary' failed: ModuleNotFoundError: No module named 'CSVLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/ridham/.local/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/ridham/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>

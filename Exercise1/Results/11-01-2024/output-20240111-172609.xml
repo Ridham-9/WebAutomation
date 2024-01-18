@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 17:26:09.946" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Exercise1/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Ivalid Login" line="29">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 17:26:10.094" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20240111 17:26:10.396" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<msg timestamp="20240111 17:26:18.095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240111 17:26:18.097" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x564e15e40f83 &lt;unknown&gt;
+#1 0x564e15af9cf7 &lt;unknown&gt;
+#2 0x564e15af16ea &lt;unknown&gt;
+#3 0x564e15ae05a1 &lt;unknown&gt;
+#4 0x564e15ae1d40 &lt;unknown&gt;
+#5 0x564e15ae0854 &lt;unknown&gt;
+#6 0x564e15adf586 &lt;unknown&gt;
+#7 0x564e15adf44a &lt;unknown&gt;
+#8 0x564e15add7e1 &lt;unknown&gt;
+#9 0x564e15ade01a &lt;unknown&gt;
+#10 0x564e15afcbbe &lt;unknown&gt;
+#11 0x564e15b927a5 &lt;unknown&gt;
+#12 0x564e15b730b2 &lt;unknown&gt;
+#13 0x564e15b92006 &lt;unknown&gt;
+#14 0x564e15b72e53 &lt;unknown&gt;
+#15 0x564e15b3add4 &lt;unknown&gt;
+#16 0x564e15b3c1de &lt;unknown&gt;
+#17 0x564e15e05531 &lt;unknown&gt;
+#18 0x564e15e09455 &lt;unknown&gt;
+#19 0x564e15df1f55 &lt;unknown&gt;
+#20 0x564e15e0a0ef &lt;unknown&gt;
+#21 0x564e15dd599f &lt;unknown&gt;
+#22 0x564e15e2e008 &lt;unknown&gt;
+#23 0x564e15e2e1d7 &lt;unknown&gt;
+#24 0x564e15e40124 &lt;unknown&gt;
+#25 0x7f5cd11be609 start_thread
+</msg>
+<status status="FAIL" starttime="20240111 17:26:10.093" endtime="20240111 17:26:18.205"/>
+</kw>
+<status status="FAIL" starttime="20240111 17:26:10.093" endtime="20240111 17:26:18.206"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:26:18.207" endtime="20240111 17:26:18.208"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>wejf</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240111 17:26:18.208" endtime="20240111 17:26:18.209"/>
+</kw>
+<kw name="Element Should Be Selected">
+<var>${elePresent}</var>
+<arg>${ERROR}</arg>
+<status status="NOT RUN" starttime="20240111 17:26:18.228" endtime="20240111 17:26:18.228"/>
+</kw>
+<status status="FAIL" starttime="20240111 17:26:10.092" endtime="20240111 17:26:18.229">WebDriverException: Message: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x564e15e40f83 &lt;unknown&gt;
+#1 0x564e15af9cf7 &lt;unknown&gt;
+#2 0x564e15af16ea &lt;unknown&gt;
+#3 0x564e15ae05a1 &lt;unknown&gt;
+#4 0x564e15ae1d40 &lt;unknown&gt;
+#5 0x564e15ae0854 &lt;unknown&gt;
+#6 0x564e15adf586 &lt;unknown&gt;
+#7 0x564e15adf44a &lt;unknown&gt;
+#8 0x564e15add7e1 &lt;unknown&gt;
+#9 0x564e15ade01a &lt;unknown&gt;
+#10 0x564e15afcbbe &lt;unknown&gt;
+#11 0x564e15b927a5 &lt;unknown&gt;
+#12 0x564e15b730b2 &lt;unknown&gt;
+#13 0x564e15b92006 &lt;unknown&gt;
+#14 0x564e15b72e53 &lt;unknown&gt;
+#15 0x564e15b3add4 &lt;unknown&gt;
+#16 0x564e15b3c1de &lt;unknown&gt;
+#17 0x564e15e05531 &lt;unknown&gt;
+#18 0x564e15e09455 &lt;unknown&gt;
+#19 0x564e15df1f55 &lt;unknown&gt;
+#20 0x564e15e0a0ef &lt;unknown&gt;
+#21 0x564e15dd599f &lt;unknown&gt;
+#22 0x564e15e2e008 &lt;unknown&gt;
+#23 0x564e15e2e1d7 &lt;unknown&gt;
+#24 0x564e15e40124 &lt;unknown&gt;
+#25 0x7f5cd11be609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240111 17:26:09.947" endtime="20240111 17:26:18.233"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 17:26:10.396" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

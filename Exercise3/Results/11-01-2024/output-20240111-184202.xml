@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 18:42:02.618" rpa="false" schemaversion="4">
+<suite id="s1" name="Alerts" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Alerts.robot">
+<test id="s1-t1" name="Launch Browser" line="19">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 18:42:02.738" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg timestamp="20240111 18:42:02.910" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240111 18:42:02.738" endtime="20240111 18:42:11.384"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 18:42:11.386" endtime="20240111 18:42:11.506"/>
+</kw>
+<status status="PASS" starttime="20240111 18:42:02.737" endtime="20240111 18:42:11.507"/>
+</test>
+<test id="s1-t2" name="Open Alerts,Frames Section" line="23">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 18:42:11.512" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 18:42:11.509" endtime="20240111 18:42:11.596"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 18:42:14.598" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 18:42:11.597" endtime="20240111 18:42:14.599"/>
+</kw>
+<kw name="Perform Action for Browser Window">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 18:42:14.604" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 18:42:14.602" endtime="20240111 18:42:14.675"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWTAB}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 18:42:14.677" level="INFO">Clicking button 'Xpath://*[@id="tabButton"]'.</msg>
+<status status="PASS" starttime="20240111 18:42:14.676" endtime="20240111 18:42:14.828"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20240111 18:42:14.834" level="INFO">${handles} = ['C75B0B5D399AC11C94C66FC700156C81', 'C3ED8323F2D5559601B94D06A4103E20']</msg>
+<status status="PASS" starttime="20240111 18:42:14.828" endtime="20240111 18:42:14.834"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240111 18:42:14.835" endtime="20240111 18:42:14.916"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${window_titles}</var>
+<arg>sampleHeading</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240111 18:42:15.084" level="INFO">${window_titles} = This is a sample page</msg>
+<status status="PASS" starttime="20240111 18:42:14.916" endtime="20240111 18:42:15.084"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240111 18:42:15.084" endtime="20240111 18:42:15.113"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'New Tab Title' in $window_titles</arg>
+<arg>Log</arg>
+<arg>New tab is open</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>New tab is not open</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>New tab is not open</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240111 18:42:15.115" level="INFO">New tab is not open</msg>
+<status status="PASS" starttime="20240111 18:42:15.114" endtime="20240111 18:42:15.115"/>
+</kw>
+<status status="PASS" starttime="20240111 18:42:15.114" endtime="20240111 18:42:15.115"/>
+</kw>
+<status status="PASS" starttime="20240111 18:42:14.600" endtime="20240111 18:42:15.115"/>
+</kw>
+<status status="PASS" starttime="20240111 18:42:11.508" endtime="20240111 18:42:15.116"/>
+</test>
+<status status="PASS" starttime="20240111 18:42:02.619" endtime="20240111 18:42:15.118"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Alerts">Alerts</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 18:42:02.910" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

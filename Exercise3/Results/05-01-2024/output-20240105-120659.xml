@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 12:06:59.465" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="41">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 12:06:59.592" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 12:06:59.591" endtime="20240105 12:07:11.483"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 12:07:11.485" endtime="20240105 12:07:11.598"/>
+</kw>
+<status status="PASS" starttime="20240105 12:06:59.590" endtime="20240105 12:07:11.599"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="45">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 12:07:11.602" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 12:07:11.601" endtime="20240105 12:07:11.686"/>
+</kw>
+<kw name="Perform Action for Element Textbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-0').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 12:07:11.689" level="INFO">Executing JavaScript:
+document.querySelector('#item-0').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 12:07:11.688" endtime="20240105 12:07:11.718"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240105 12:07:11.718" endtime="20240105 12:07:11.733"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>ridham</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 12:07:11.734" level="INFO">Typing text 'ridham' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240105 12:07:11.733" endtime="20240105 12:07:11.888"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>abc123@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 12:07:11.889" level="INFO">Typing text 'abc123@gmail.com' into text field 'userEmail'.</msg>
+<status status="PASS" starttime="20240105 12:07:11.888" endtime="20240105 12:07:12.007"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>currentAddress</arg>
+<arg>Ahmedabad</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 12:07:12.009" level="INFO">Typing text 'Ahmedabad' into text field 'currentAddress'.</msg>
+<status status="PASS" starttime="20240105 12:07:12.008" endtime="20240105 12:07:12.165"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>permanentAddress</arg>
+<arg>Bhavnagar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 12:07:12.166" level="INFO">Typing text 'Bhavnagar' into text field 'permanentAddress'.</msg>
+<status status="PASS" starttime="20240105 12:07:12.165" endtime="20240105 12:07:12.469"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#submit').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 12:07:12.470" level="INFO">Executing JavaScript:
+document.querySelector('#submit').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 12:07:12.470" endtime="20240105 12:07:12.476"/>
+</kw>
+<status status="PASS" starttime="20240105 12:07:11.687" endtime="20240105 12:07:12.476"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 12:07:20.477" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20240105 12:07:12.477" endtime="20240105 12:07:20.478"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-1').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 12:07:20.481" level="INFO">Executing JavaScript:
+document.querySelector('#item-1').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 12:07:20.479" endtime="20240105 12:07:20.571"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@class="rct-collapse rct-collapse-btn"][1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240105 12:07:20.572" level="INFO">Clicking element 'Xpath://*[@class="rct-collapse rct-collapse-btn"][1]'.</msg>
+<status status="PASS" starttime="20240105 12:07:20.571" endtime="20240105 12:07:20.647"/>
+</kw>
+<status status="PASS" starttime="20240105 12:07:20.478" endtime="20240105 12:07:20.647"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 12:07:28.648" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20240105 12:07:20.647" endtime="20240105 12:07:28.648"/>
+</kw>
+<kw name="Perform Action for Element RadioButton">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 12:07:28.651" level="INFO">Executing JavaScript:
+document.querySelector('#item-2').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 12:07:28.650" endtime="20240105 12:07:28.743"/>
+</kw>
+<kw name="driver.findElement(By.id(&quot;yesRadio&quot;)).click();">
+<msg timestamp="20240105 12:07:28.762" level="FAIL">No keyword with name 'driver.findElement(By.id("yesRadio")).click();' found.</msg>
+<status status="FAIL" starttime="20240105 12:07:28.761" endtime="20240105 12:07:28.762"/>
+</kw>
+<status status="FAIL" starttime="20240105 12:07:28.649" endtime="20240105 12:07:28.762"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 12:07:28.763" endtime="20240105 12:07:28.763"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 12:07:28.766" endtime="20240105 12:07:28.766"/>
+</kw>
+<status status="FAIL" starttime="20240105 12:07:11.600" endtime="20240105 12:07:28.767">No keyword with name 'driver.findElement(By.id("yesRadio")).click();' found.</status>
+</test>
+<status status="FAIL" starttime="20240105 12:06:59.466" endtime="20240105 12:07:28.769"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240105 12:06:59.588" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot' on line 3: Importing library 'Selenium2library' failed: ModuleNotFoundError: No module named 'Selenium2library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/ridham/.local/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/ridham/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>

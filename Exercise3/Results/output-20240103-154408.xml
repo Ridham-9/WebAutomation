@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 15:44:08.049" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="42">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 15:44:08.211" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 15:44:08.210" endtime="20240103 15:44:14.644"/>
+</kw>
+<status status="PASS" starttime="20240103 15:44:08.210" endtime="20240103 15:44:14.645"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:44:14.659" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:44:14.656" endtime="20240103 15:44:14.773"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:44:14.773" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:44:14.773" endtime="20240103 15:44:14.802"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 15:44:14.803" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 15:44:14.802" endtime="20240103 15:44:14.935"/>
+</kw>
+<status status="PASS" starttime="20240103 15:44:14.646" endtime="20240103 15:44:14.935"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:44:14.937" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<msg timestamp="20240103 15:44:15.622" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-85.png"&gt;&lt;img src="selenium-screenshot-85.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 15:44:15.622" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56350ffd8f83 &lt;unknown&gt;
+#1 0x56350fc91cf7 &lt;unknown&gt;
+#2 0x56350fc982a3 &lt;unknown&gt;
+#3 0x56350fc9abb4 &lt;unknown&gt;
+#4 0x56350fd2aba3 &lt;unknown&gt;
+#5 0x56350fd0b0b2 &lt;unknown&gt;
+#6 0x56350fd2a006 &lt;unknown&gt;
+#7 0x56350fd0ae53 &lt;unknown&gt;
+#8 0x56350fcd2dd4 &lt;unknown&gt;
+#9 0x56350fcd41de &lt;unknown&gt;
+#10 0x56350ff9d531 &lt;unknown&gt;
+#11 0x56350ffa1455 &lt;unknown&gt;
+#12 0x56350ff89f55 &lt;unknown&gt;
+#13 0x56350ffa20ef &lt;unknown&gt;
+#14 0x56350ff6d99f &lt;unknown&gt;
+#15 0x56350ffc6008 &lt;unknown&gt;
+#16 0x56350ffc61d7 &lt;unknown&gt;
+#17 0x56350ffd8124 &lt;unknown&gt;
+#18 0x7f0979d63609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 15:44:14.936" endtime="20240103 15:44:15.772"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-1').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240103 15:44:15.773" endtime="20240103 15:44:15.773"/>
+</kw>
+<status status="FAIL" starttime="20240103 15:44:14.936" endtime="20240103 15:44:15.773"/>
+</kw>
+<status status="FAIL" starttime="20240103 15:44:08.209" endtime="20240103 15:44:15.775">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56350ffd8f83 &lt;unknown&gt;
+#1 0x56350fc91cf7 &lt;unknown&gt;
+#2 0x56350fc982a3 &lt;unknown&gt;
+#3 0x56350fc9abb4 &lt;unknown&gt;
+#4 0x56350fd2aba3 &lt;unknown&gt;
+#5 0x56350fd0b0b2 &lt;unknown&gt;
+#6 0x56350fd2a006 &lt;unknown&gt;
+#7 0x56350fd0ae53 &lt;unknown&gt;
+#8 0x56350fcd2dd4 &lt;unknown&gt;
+#9 0x56350fcd41de &lt;unknown&gt;
+#10 0x56350ff9d531 &lt;unknown&gt;
+#11 0x56350ffa1455 &lt;unknown&gt;
+#12 0x56350ff89f55 &lt;unknown&gt;
+#13 0x56350ffa20ef &lt;unknown&gt;
+#14 0x56350ff6d99f &lt;unknown&gt;
+#15 0x56350ffc6008 &lt;unknown&gt;
+#16 0x56350ffc61d7 &lt;unknown&gt;
+#17 0x56350ffd8124 &lt;unknown&gt;
+#18 0x7f0979d63609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 15:44:08.050" endtime="20240103 15:44:15.782"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

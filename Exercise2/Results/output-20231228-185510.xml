@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 18:55:10.927" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="44">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 18:55:11.071" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231228 18:55:11.070" endtime="20231228 18:55:17.183"/>
+</kw>
+<status status="PASS" starttime="20231228 18:55:11.070" endtime="20231228 18:55:17.183"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:17.185" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231228 18:55:17.184" endtime="20231228 18:55:17.242"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231228 18:55:17.242" endtime="20231228 18:55:17.281"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:17.282" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231228 18:55:17.281" endtime="20231228 18:55:17.330"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:17.330" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231228 18:55:17.330" endtime="20231228 18:55:17.439"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231228 18:55:17.464" level="INFO">${handles} = ['EEF7BD0F808F42DE114B3C05F6235D79', 'D5CDFE3BE211A4A79651CAB07EC15590']</msg>
+<status status="PASS" starttime="20231228 18:55:17.440" endtime="20231228 18:55:17.464"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231228 18:55:17.464" endtime="20231228 18:55:17.604"/>
+</kw>
+<kw name="Create and Append to CSV">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>5</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA}[${i}]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 18:55:17.606" endtime="20231228 18:55:19.696"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA}</var>
+<arg>${QA_DATA}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:19.724" level="INFO">${DATA} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 18:55:19.696" endtime="20231228 18:55:19.724"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 18:55:19.724" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 18:55:19.724" endtime="20231228 18:55:19.724"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231228 18:55:19.725" level="INFO" html="true">Created file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test1.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test1.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.724" endtime="20231228 18:55:19.725"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<arg>${DATA}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231228 18:55:19.725" level="INFO" html="true">Appended to file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test1.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test1.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.725" endtime="20231228 18:55:19.725"/>
+</kw>
+<status status="PASS" starttime="20231228 18:55:17.605" endtime="20231228 18:55:19.725"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA}[${i}]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 18:55:19.726" endtime="20231228 18:55:19.749"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA}</var>
+<arg>${QA_DATA}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:19.785" level="INFO">${DATA} = Languages
+Python, Java, C, C++</msg>
+<status status="PASS" starttime="20231228 18:55:19.749" endtime="20231228 18:55:19.785"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 18:55:19.785" level="INFO">Languages
+Python, Java, C, C++</msg>
+<status status="PASS" starttime="20231228 18:55:19.785" endtime="20231228 18:55:19.786"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231228 18:55:19.786" level="INFO" html="true">Created file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test2.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test2.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.786" endtime="20231228 18:55:19.786"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<arg>${DATA}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231228 18:55:19.787" level="INFO" html="true">Appended to file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test2.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test2.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.786" endtime="20231228 18:55:19.787"/>
+</kw>
+<status status="PASS" starttime="20231228 18:55:19.726" endtime="20231228 18:55:19.787"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA}[${i}]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 18:55:19.788" endtime="20231228 18:55:19.812"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA}</var>
+<arg>${QA_DATA}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:19.834" level="INFO">${DATA} = Test coverage tools
+GCov, Lcov, Application Optimizer Tool</msg>
+<status status="PASS" starttime="20231228 18:55:19.813" endtime="20231228 18:55:19.834"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 18:55:19.835" level="INFO">Test coverage tools
+GCov, Lcov, Application Optimizer Tool</msg>
+<status status="PASS" starttime="20231228 18:55:19.835" endtime="20231228 18:55:19.835"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231228 18:55:19.835" level="INFO" html="true">Created file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test3.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test3.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.835" endtime="20231228 18:55:19.835"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<arg>${DATA}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231228 18:55:19.836" level="INFO" html="true">Appended to file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test3.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test3.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.836" endtime="20231228 18:55:19.836"/>
+</kw>
+<status status="PASS" starttime="20231228 18:55:19.787" endtime="20231228 18:55:19.836"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA}[${i}]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 18:55:19.836" endtime="20231228 18:55:19.856"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA}</var>
+<arg>${QA_DATA}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:19.879" level="INFO">${DATA} = CI/CD DevOps tools
+Jenkins, GitHub, BitBucket</msg>
+<status status="PASS" starttime="20231228 18:55:19.856" endtime="20231228 18:55:19.879"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 18:55:19.879" level="INFO">CI/CD DevOps tools
+Jenkins, GitHub, BitBucket</msg>
+<status status="PASS" starttime="20231228 18:55:19.879" endtime="20231228 18:55:19.879"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231228 18:55:19.880" level="INFO" html="true">Created file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test4.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test4.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.880" endtime="20231228 18:55:19.880"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<arg>${DATA}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231228 18:55:19.880" level="INFO" html="true">Appended to file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test4.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test4.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.880" endtime="20231228 18:55:19.881"/>
+</kw>
+<status status="PASS" starttime="20231228 18:55:19.836" endtime="20231228 18:55:19.881"/>
+</iter>
+<iter>
+<var name="${i}">4</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA}[${i}]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 18:55:19.881" endtime="20231228 18:55:19.900"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA}</var>
+<arg>${QA_DATA}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:55:19.921" level="INFO">${DATA} = Load testing
+Load testing using JMeter, Locust</msg>
+<status status="PASS" starttime="20231228 18:55:19.900" endtime="20231228 18:55:19.921"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 18:55:19.921" level="INFO">Load testing
+Load testing using JMeter, Locust</msg>
+<status status="PASS" starttime="20231228 18:55:19.921" endtime="20231228 18:55:19.921"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231228 18:55:19.922" level="INFO" html="true">Created file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test5.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test5.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.921" endtime="20231228 18:55:19.922"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<arg>${DATA}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20231228 18:55:19.922" level="INFO" html="true">Appended to file '&lt;a href="file:///home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test5.csv"&gt;/home/ridham/PycharmProjects/webAutomation/Exercise2/Output/test5.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20231228 18:55:19.922" endtime="20231228 18:55:19.922"/>
+</kw>
+<status status="PASS" starttime="20231228 18:55:19.881" endtime="20231228 18:55:19.922"/>
+</iter>
+<status status="PASS" starttime="20231228 18:55:17.605" endtime="20231228 18:55:19.922"/>
+</for>
+<status status="PASS" starttime="20231228 18:55:17.604" endtime="20231228 18:55:19.922"/>
+</kw>
+<status status="PASS" starttime="20231228 18:55:11.069" endtime="20231228 18:55:19.923"/>
+</test>
+<status status="PASS" starttime="20231228 18:55:10.928" endtime="20231228 18:55:19.923"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

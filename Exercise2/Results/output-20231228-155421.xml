@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 15:54:21.620" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="32">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 15:54:21.757" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231228 15:54:21.756" endtime="20231228 15:54:32.565"/>
+</kw>
+<status status="PASS" starttime="20231228 15:54:21.756" endtime="20231228 15:54:32.566"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:54:32.568" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231228 15:54:32.566" endtime="20231228 15:54:32.631"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231228 15:54:32.631" endtime="20231228 15:54:32.668"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:54:32.669" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231228 15:54:32.669" endtime="20231228 15:54:32.727"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231228 15:54:32.728" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231228 15:54:32.727" endtime="20231228 15:54:32.845"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231228 15:54:32.861" level="INFO">${handles} = ['B27ED9F83B68D4FDEABF1AA4EA77C32E', '77F69C7286705806E5AC151E2FE66253']</msg>
+<status status="PASS" starttime="20231228 15:54:32.845" endtime="20231228 15:54:32.861"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231228 15:54:32.862" endtime="20231228 15:54:32.956"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 15:54:32.956" endtime="20231228 15:54:34.891"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>${QA_DATA1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 15:54:34.923" level="INFO">${DATA of Automation tools/frameworks} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 15:54:34.891" endtime="20231228 15:54:34.923"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 15:54:34.923" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 15:54:34.923" endtime="20231228 15:54:34.923"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${DATA_LIST}</var>
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231228 15:54:34.924" level="INFO">${DATA_LIST} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 15:54:34.924" endtime="20231228 15:54:34.924"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA_LIST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 15:54:34.924" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 15:54:34.924" endtime="20231228 15:54:34.924"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${NAME}</arg>
+<arg>${header}</arg>
+<kw name="Create List" library="BuiltIn">
+<var>${header}</var>
+<arg>${fieldnames}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20231228 15:54:34.925" level="INFO">${header} = ['div']</msg>
+<status status="PASS" starttime="20231228 15:54:34.925" endtime="20231228 15:54:34.925"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${FILE_NAME}</arg>
+<arg>${header}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231228 15:54:34.926" level="FAIL">TypeError: write() argument must be str, not list</msg>
+<status status="FAIL" starttime="20231228 15:54:34.925" endtime="20231228 15:54:34.926"/>
+</kw>
+<kw name="Convert List To Comma Seperated String">
+<var>${header_string}</var>
+<arg>${header}</arg>
+<status status="NOT RUN" starttime="20231228 15:54:34.930" endtime="20231228 15:54:34.931"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:54:34.924" endtime="20231228 15:54:34.931"/>
+</kw>
+<kw name="Append To CSV File">
+<arg>${NAME}</arg>
+<arg>${DATA_LIST}</arg>
+<status status="NOT RUN" starttime="20231228 15:54:34.931" endtime="20231228 15:54:34.931"/>
+</kw>
+<status status="FAIL" starttime="20231228 15:54:21.755" endtime="20231228 15:54:34.931">TypeError: write() argument must be str, not list</status>
+</test>
+<status status="FAIL" starttime="20231228 15:54:21.620" endtime="20231228 15:54:34.932"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

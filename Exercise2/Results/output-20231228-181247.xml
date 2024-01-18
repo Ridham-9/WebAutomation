@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 18:12:47.117" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="42">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 18:12:47.256" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231228 18:12:47.255" endtime="20231228 18:12:53.723"/>
+</kw>
+<status status="PASS" starttime="20231228 18:12:47.255" endtime="20231228 18:12:53.724"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:12:53.732" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231228 18:12:53.726" endtime="20231228 18:12:53.859"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231228 18:12:53.859" endtime="20231228 18:12:53.938"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 18:12:53.939" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231228 18:12:53.938" endtime="20231228 18:12:54.022"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231228 18:12:54.024" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231228 18:12:54.022" endtime="20231228 18:12:54.156"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231228 18:12:54.170" level="INFO">${handles} = ['1C261E8287C8ADF076E1D9F6D6F19348', '096EA70C4441C61CBD30B9280A01E799']</msg>
+<status status="PASS" starttime="20231228 18:12:54.157" endtime="20231228 18:12:54.170"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231228 18:12:54.171" endtime="20231228 18:12:54.325"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>6</value>
+<iter>
+<var name="${i}">1</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA}${i}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231228 18:13:24.625" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231228 18:13:24.626" level="FAIL">Element '['DATA1 DATA2 DATA3 DATA4 DATA5 DATA6']1' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20231228 18:12:54.326" endtime="20231228 18:13:24.626"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>${QA_DATA}${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231228 18:13:24.627" endtime="20231228 18:13:24.627"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231228 18:13:24.627" endtime="20231228 18:13:24.627"/>
+</kw>
+<kw name="Create New CSV">
+<arg>${FILE_NAME}${i}</arg>
+<status status="NOT RUN" starttime="20231228 18:13:24.627" endtime="20231228 18:13:24.627"/>
+</kw>
+<kw name="Append To CSV File">
+<arg>${FILE_NAME}${i}</arg>
+<arg>${DATA of Automation tools/frameworks}</arg>
+<status status="NOT RUN" starttime="20231228 18:13:24.627" endtime="20231228 18:13:24.627"/>
+</kw>
+<status status="FAIL" starttime="20231228 18:12:54.326" endtime="20231228 18:13:24.627"/>
+</iter>
+<status status="FAIL" starttime="20231228 18:12:54.325" endtime="20231228 18:13:24.627"/>
+</for>
+<status status="FAIL" starttime="20231228 18:12:47.254" endtime="20231228 18:13:24.628">Element '['DATA1 DATA2 DATA3 DATA4 DATA5 DATA6']1' not visible after 30 seconds.</status>
+</test>
+<status status="FAIL" starttime="20231228 18:12:47.117" endtime="20231228 18:13:24.629"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

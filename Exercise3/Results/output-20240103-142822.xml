@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 14:28:22.714" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="31">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 14:28:22.840" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 14:28:22.839" endtime="20240103 14:28:28.489"/>
+</kw>
+<status status="PASS" starttime="20240103 14:28:22.839" endtime="20240103 14:28:28.490"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 14:28:28.496" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 14:28:28.494" endtime="20240103 14:28:28.651"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240103 14:28:58.890" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 14:28:58.890" level="FAIL">Element 'btn btn-light active' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20240103 14:28:28.651" endtime="20240103 14:28:58.890"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240103 14:28:58.890" endtime="20240103 14:28:58.891"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:28:28.492" endtime="20240103 14:28:58.891"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:28:22.838" endtime="20240103 14:28:58.891">Element 'btn btn-light active' not visible after 30 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240103 14:28:22.715" endtime="20240103 14:28:58.892"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

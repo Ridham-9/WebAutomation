@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231227 10:52:46.334" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", false</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231227 10:52:46.461" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20231227 10:52:46.463" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231227 10:52:46.463" level="FAIL">TokenError: ('EOF in multi-line statement', (2, 0))</msg>
+<status status="FAIL" starttime="20231227 10:52:46.460" endtime="20231227 10:52:46.587"/>
+</kw>
+<status status="FAIL" starttime="20231227 10:52:46.459" endtime="20231227 10:52:46.588">TokenError: ('EOF in multi-line statement', (2, 0))</status>
+</test>
+<test id="s1-t2" name="Valid Login" line="12">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231227 10:52:46.595" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<msg timestamp="20231227 10:52:46.596" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231227 10:52:46.596" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20231227 10:52:46.592" endtime="20231227 10:52:46.679"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.680" endtime="20231227 10:52:46.680"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.681" endtime="20231227 10:52:46.681"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.682" endtime="20231227 10:52:46.682"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.682" endtime="20231227 10:52:46.683"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css=.shopping_cart_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.683" endtime="20231227 10:52:46.683"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>continue-shopping</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.684" endtime="20231227 10:52:46.684"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>remove-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.684" endtime="20231227 10:52:46.684"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>react-burger-menu-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.685" endtime="20231227 10:52:46.685"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>logout_sidebar_link</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.686" endtime="20231227 10:52:46.686"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 10:52:46.686" endtime="20231227 10:52:46.687"/>
+</kw>
+<status status="FAIL" starttime="20231227 10:52:46.590" endtime="20231227 10:52:46.688">No browser is open.</status>
+</test>
+<status status="FAIL" starttime="20231227 10:52:46.335" endtime="20231227 10:52:46.691"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

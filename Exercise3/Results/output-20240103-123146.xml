@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 12:31:46.709" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="30">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 12:31:46.840" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 12:31:46.839" endtime="20240103 12:31:52.527"/>
+</kw>
+<status status="PASS" starttime="20240103 12:31:46.839" endtime="20240103 12:31:52.528"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 12:31:52.534" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 12:31:52.532" endtime="20240103 12:31:52.674"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 12:31:52.675" level="INFO">Clicking element 'Xpath://*[@id="item-7" and @class="btn btn-light active"]'.</msg>
+<msg timestamp="20240103 12:31:52.797" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 12:31:52.797" level="FAIL">Element with locator 'Xpath://*[@id="item-7" and @class="btn btn-light active"]' not found.</msg>
+<status status="FAIL" starttime="20240103 12:31:52.674" endtime="20240103 12:31:52.798"/>
+</kw>
+<status status="FAIL" starttime="20240103 12:31:52.530" endtime="20240103 12:31:52.798"/>
+</kw>
+<status status="FAIL" starttime="20240103 12:31:46.838" endtime="20240103 12:31:52.798">Element with locator 'Xpath://*[@id="item-7" and @class="btn btn-light active"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240103 12:31:46.710" endtime="20240103 12:31:52.799"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 11:08:33.140" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="90">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 11:08:33.271" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240117 11:08:33.270" endtime="20240117 11:08:48.869"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 11:08:48.870" endtime="20240117 11:08:48.975"/>
+</kw>
+<status status="PASS" starttime="20240117 11:08:33.269" endtime="20240117 11:08:48.976"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="94">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 11:08:48.977" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 11:08:48.977" endtime="20240117 11:08:49.062"/>
+</kw>
+<kw name="Perform Action for Element Brokenlink">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-6').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 11:08:49.064" level="INFO">Executing JavaScript:
+document.querySelector('#item-6').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 11:08:49.063" endtime="20240117 11:08:49.089"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240117 11:08:49.089" endtime="20240117 11:08:49.137"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240117 11:08:49.138" level="INFO">Clicking link '//a[text()='Click Here for Valid Link']'.</msg>
+<msg timestamp="20240117 11:08:50.422" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240117 11:08:50.422" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="http://demoqa.com"&gt;...&lt;/a&gt; is not clickable at point (427, 539). Other element would receive the click: &lt;iframe frameborder="0" src="https://0181fad6fe8655826d3951a0d714f3a9.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5608bbdbbf83 &lt;unknown&gt;
+#1 0x5608bba74cf7 &lt;unknown&gt;
+#2 0x5608bbaccd92 &lt;unknown&gt;
+#3 0x5608bbaca7f4 &lt;unknown&gt;
+#4 0x5608bbac7894 &lt;unknown&gt;
+#5 0x5608bbac64b9 &lt;unknown&gt;
+#6 0x5608bbab8313 &lt;unknown&gt;
+#7 0x5608bbaee0b2 &lt;unknown&gt;
+#8 0x5608bbab7b49 &lt;unknown&gt;
+#9 0x5608bbaee4ce &lt;unknown&gt;
+#10 0x5608bbb0d006 &lt;unknown&gt;
+#11 0x5608bbaede53 &lt;unknown&gt;
+#12 0x5608bbab5dd4 &lt;unknown&gt;
+#13 0x5608bbab71de &lt;unknown&gt;
+#14 0x5608bbd80531 &lt;unknown&gt;
+#15 0x5608bbd84455 &lt;unknown&gt;
+#16 0x5608bbd6cf55 &lt;unknown&gt;
+#17 0x5608bbd850ef &lt;unknown&gt;
+#18 0x5608bbd5099f &lt;unknown&gt;
+#19 0x5608bbda9008 &lt;unknown&gt;
+#20 0x5608bbda91d7 &lt;unknown&gt;
+#21 0x5608bbdbb124 &lt;unknown&gt;
+#22 0x7f1c496f6609 start_thread
+</msg>
+<status status="FAIL" starttime="20240117 11:08:49.138" endtime="20240117 11:08:50.434"/>
+</kw>
+<status status="FAIL" starttime="20240117 11:08:49.062" endtime="20240117 11:08:50.434"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240117 11:08:50.434" endtime="20240117 11:08:50.435"/>
+</kw>
+<status status="FAIL" starttime="20240117 11:08:48.976" endtime="20240117 11:08:50.435">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="http://demoqa.com"&gt;...&lt;/a&gt; is not clickable at point (427, 539). Other element would receive the click: &lt;iframe frameborder="0" src="https://0181fad6fe8655826d3951a0d714f3a9.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5608bbdbbf83 &lt;unknown&gt;
+#1 0x5608bba74cf7 &lt;unknown&gt;
+#2 0x5608bbaccd92 &lt;unknown&gt;
+#3 0x5608bbaca7f4 &lt;unknown&gt;
+#4 0x5608bbac7894 &lt;unknown&gt;
+#5 0x5608bbac64b9 &lt;unknown&gt;
+#6 0x5608bbab8313 &lt;unknown&gt;
+#7 0x5608bbaee0b2 &lt;unknown&gt;
+#8 0x5608bbab7b49 &lt;unknown&gt;
+#9 0x5608bbaee4ce &lt;unknown&gt;
+#10 0x5608bbb0d006 &lt;unknown&gt;
+#11 0x5608bbaede53 &lt;unknown&gt;
+#12 0x5608bbab5dd4 &lt;unknown&gt;
+#13 0x5608bbab71de &lt;unknown&gt;
+#14 0x5608bbd80531 &lt;unknown&gt;
+#15 0x5608bbd84455 &lt;unknown&gt;
+#16 0x5608bbd6cf55 &lt;unknown&gt;
+#17 0x5608bbd850ef &lt;unknown&gt;
+#18 0x5608bbd5099f &lt;unknown&gt;
+#19 0x5608bbda9008 &lt;unknown&gt;
+#20 0x5608bbda91d7 &lt;unknown&gt;
+#21 0x5608bbdbb124 &lt;unknown&gt;
+#22 0x7f1c496f6609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240117 11:08:33.140" endtime="20240117 11:08:50.436"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

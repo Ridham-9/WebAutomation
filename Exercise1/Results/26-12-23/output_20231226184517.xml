@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 18:45:17.267" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 18:45:17.388" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 18:45:17.387" endtime="20231226 18:45:21.797"/>
+</kw>
+<status status="PASS" starttime="20231226 18:45:17.387" endtime="20231226 18:45:21.798"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="12">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:45:21.800" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231226 18:45:21.799" endtime="20231226 18:45:21.921"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:45:21.923" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231226 18:45:21.960" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231226 18:45:22.019" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231226 18:45:21.921" endtime="20231226 18:45:22.019"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:45:22.020" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231226 18:45:22.019" endtime="20231226 18:45:22.111"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231226 18:45:22.111" level="INFO">Successfully logged in!</msg>
+<status status="PASS" starttime="20231226 18:45:22.111" endtime="20231226 18:45:22.111"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:45:22.112" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231226 18:45:22.112" endtime="20231226 18:45:22.178"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:45:22.179" level="INFO">Clicking button 'add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20231226 18:45:22.178" endtime="20231226 18:45:22.241"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//*[@class="shopping_cart_link"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:45:22.242" level="INFO">Clicking button 'xpath=//*[@class="shopping_cart_link"]'.</msg>
+<msg timestamp="20231226 18:45:22.459" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231226 18:45:22.460" level="FAIL">Button with locator 'xpath=//*[@class="shopping_cart_link"]' not found.</msg>
+<status status="FAIL" starttime="20231226 18:45:22.242" endtime="20231226 18:45:22.548"/>
+</kw>
+<status status="FAIL" starttime="20231226 18:45:21.799" endtime="20231226 18:45:22.550">Button with locator 'xpath=//*[@class="shopping_cart_link"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20231226 18:45:17.268" endtime="20231226 18:45:22.554"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

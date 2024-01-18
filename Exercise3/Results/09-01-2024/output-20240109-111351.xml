@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 11:13:51.473" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="29">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 11:13:51.595" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240109 11:13:51.594" endtime="20240109 11:14:02.672"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 11:14:02.674" endtime="20240109 11:14:02.783"/>
+</kw>
+<status status="PASS" starttime="20240109 11:13:51.593" endtime="20240109 11:14:02.784"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="33">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:14:02.786" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:14:02.785" endtime="20240109 11:14:02.864"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:14:05.865" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:14:02.865" endtime="20240109 11:14:05.866"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:14:05.869" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:14:05.868" endtime="20240109 11:14:05.927"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW}</var>
+<arg>${list1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:14:05.928" level="INFO">${NEW} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:14:05.928" endtime="20240109 11:14:05.928"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list1}</var>
+<arg>${list2}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:14:05.929" level="INFO">${list1} = Xpath://*[@class="vertical-list-container mt-4"]/div[2]</msg>
+<status status="PASS" starttime="20240109 11:14:05.928" endtime="20240109 11:14:05.929"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list2}</var>
+<arg>${NEW}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:14:05.929" level="INFO">${list2} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:14:05.929" endtime="20240109 11:14:05.929"/>
+</kw>
+<status status="PASS" starttime="20240109 11:14:05.866" endtime="20240109 11:14:05.929"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:14:08.930" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:14:05.929" endtime="20240109 11:14:08.931"/>
+</kw>
+<kw name="Perform Action for Resizable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:14:08.937" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:14:08.935" endtime="20240109 11:14:09.038"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#${RESIZE1}')[0].style.height = '368px';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:14:09.040" level="INFO">Executing JavaScript:
+document.querySelector('#resizableBoxWithRestriction')[0].style.height = '368px';
+Without any arguments.</msg>
+<msg timestamp="20240109 11:14:09.274" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240109 11:14:09.274" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'style')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5601cf826f83 &lt;unknown&gt;
+#1 0x5601cf4dfcf7 &lt;unknown&gt;
+#2 0x5601cf4e62a3 &lt;unknown&gt;
+#3 0x5601cf4e8bb4 &lt;unknown&gt;
+#4 0x5601cf578ba3 &lt;unknown&gt;
+#5 0x5601cf5590b2 &lt;unknown&gt;
+#6 0x5601cf578006 &lt;unknown&gt;
+#7 0x5601cf558e53 &lt;unknown&gt;
+#8 0x5601cf520dd4 &lt;unknown&gt;
+#9 0x5601cf5221de &lt;unknown&gt;
+#10 0x5601cf7eb531 &lt;unknown&gt;
+#11 0x5601cf7ef455 &lt;unknown&gt;
+#12 0x5601cf7d7f55 &lt;unknown&gt;
+#13 0x5601cf7f00ef &lt;unknown&gt;
+#14 0x5601cf7bb99f &lt;unknown&gt;
+#15 0x5601cf814008 &lt;unknown&gt;
+#16 0x5601cf8141d7 &lt;unknown&gt;
+#17 0x5601cf826124 &lt;unknown&gt;
+#18 0x7ff06eec4609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 11:14:09.038" endtime="20240109 11:14:09.275"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#${RESIZE1}')[0].style.width = '421px';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240109 11:14:09.275" endtime="20240109 11:14:09.275"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:14:08.932" endtime="20240109 11:14:09.275"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:14:02.785" endtime="20240109 11:14:09.275">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'style')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5601cf826f83 &lt;unknown&gt;
+#1 0x5601cf4dfcf7 &lt;unknown&gt;
+#2 0x5601cf4e62a3 &lt;unknown&gt;
+#3 0x5601cf4e8bb4 &lt;unknown&gt;
+#4 0x5601cf578ba3 &lt;unknown&gt;
+#5 0x5601cf5590b2 &lt;unknown&gt;
+#6 0x5601cf578006 &lt;unknown&gt;
+#7 0x5601cf558e53 &lt;unknown&gt;
+#8 0x5601cf520dd4 &lt;unknown&gt;
+#9 0x5601cf5221de &lt;unknown&gt;
+#10 0x5601cf7eb531 &lt;unknown&gt;
+#11 0x5601cf7ef455 &lt;unknown&gt;
+#12 0x5601cf7d7f55 &lt;unknown&gt;
+#13 0x5601cf7f00ef &lt;unknown&gt;
+#14 0x5601cf7bb99f &lt;unknown&gt;
+#15 0x5601cf814008 &lt;unknown&gt;
+#16 0x5601cf8141d7 &lt;unknown&gt;
+#17 0x5601cf826124 &lt;unknown&gt;
+#18 0x7ff06eec4609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240109 11:13:51.473" endtime="20240109 11:14:09.276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

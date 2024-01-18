@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 17:48:14.313" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="23">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 17:48:14.452" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 17:48:14.451" endtime="20240108 17:48:19.634"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 17:48:19.635" endtime="20240108 17:48:19.746"/>
+</kw>
+<kw name="Open Interaction Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:48:19.748" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 17:48:19.747" endtime="20240108 17:48:19.847"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 17:48:22.848" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 17:48:19.848" endtime="20240108 17:48:22.848"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll(('#tab-content') and ('.list-group-item list-group-item-action')[1]).click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:48:22.849" level="INFO">Executing JavaScript:
+document.querySelectorAll(('#tab-content') and ('.list-group-item list-group-item-action')[1]).click();
+Without any arguments.</msg>
+<msg timestamp="20240108 17:48:23.153" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 17:48:23.153" level="FAIL">JavascriptException: Message: javascript error: missing ) after argument list
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x562ee9790f83 &lt;unknown&gt;
+#1 0x562ee9449cf7 &lt;unknown&gt;
+#2 0x562ee94502a3 &lt;unknown&gt;
+#3 0x562ee9452bb4 &lt;unknown&gt;
+#4 0x562ee94e2ba3 &lt;unknown&gt;
+#5 0x562ee94c30b2 &lt;unknown&gt;
+#6 0x562ee94e2006 &lt;unknown&gt;
+#7 0x562ee94c2e53 &lt;unknown&gt;
+#8 0x562ee948add4 &lt;unknown&gt;
+#9 0x562ee948c1de &lt;unknown&gt;
+#10 0x562ee9755531 &lt;unknown&gt;
+#11 0x562ee9759455 &lt;unknown&gt;
+#12 0x562ee9741f55 &lt;unknown&gt;
+#13 0x562ee975a0ef &lt;unknown&gt;
+#14 0x562ee972599f &lt;unknown&gt;
+#15 0x562ee977e008 &lt;unknown&gt;
+#16 0x562ee977e1d7 &lt;unknown&gt;
+#17 0x562ee9790124 &lt;unknown&gt;
+#18 0x7f2034cf2609 start_thread
+</msg>
+<status status="FAIL" starttime="20240108 17:48:22.849" endtime="20240108 17:48:23.371"/>
+</kw>
+<status status="FAIL" starttime="20240108 17:48:22.848" endtime="20240108 17:48:23.371"/>
+</kw>
+<status status="FAIL" starttime="20240108 17:48:19.747" endtime="20240108 17:48:23.371"/>
+</kw>
+<status status="FAIL" starttime="20240108 17:48:14.450" endtime="20240108 17:48:23.372">JavascriptException: Message: javascript error: missing ) after argument list
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x562ee9790f83 &lt;unknown&gt;
+#1 0x562ee9449cf7 &lt;unknown&gt;
+#2 0x562ee94502a3 &lt;unknown&gt;
+#3 0x562ee9452bb4 &lt;unknown&gt;
+#4 0x562ee94e2ba3 &lt;unknown&gt;
+#5 0x562ee94c30b2 &lt;unknown&gt;
+#6 0x562ee94e2006 &lt;unknown&gt;
+#7 0x562ee94c2e53 &lt;unknown&gt;
+#8 0x562ee948add4 &lt;unknown&gt;
+#9 0x562ee948c1de &lt;unknown&gt;
+#10 0x562ee9755531 &lt;unknown&gt;
+#11 0x562ee9759455 &lt;unknown&gt;
+#12 0x562ee9741f55 &lt;unknown&gt;
+#13 0x562ee975a0ef &lt;unknown&gt;
+#14 0x562ee972599f &lt;unknown&gt;
+#15 0x562ee977e008 &lt;unknown&gt;
+#16 0x562ee977e1d7 &lt;unknown&gt;
+#17 0x562ee9790124 &lt;unknown&gt;
+#18 0x7f2034cf2609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240108 17:48:14.313" endtime="20240108 17:48:23.376"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

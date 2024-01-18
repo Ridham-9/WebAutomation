@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 10:56:43.110" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="40">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 10:56:43.259" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 10:56:43.259" endtime="20240108 10:56:49.740"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 10:56:49.740" endtime="20240108 10:56:49.846"/>
+</kw>
+<status status="PASS" starttime="20240108 10:56:43.258" endtime="20240108 10:56:49.848"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="44">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:56:49.854" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:56:49.853" endtime="20240108 10:56:49.931"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 10:56:52.932" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 10:56:49.931" endtime="20240108 10:56:52.932"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 10:56:52.944" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 10:56:52.937" endtime="20240108 10:56:53.062"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 10:56:53.063" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<msg timestamp="20240108 10:56:53.332" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 10:56:53.332" level="FAIL">Element with locator 'Xpath://*[@id="section1Heading"]' not found.</msg>
+<status status="FAIL" starttime="20240108 10:56:53.062" endtime="20240108 10:56:53.436"/>
+</kw>
+<status status="FAIL" starttime="20240108 10:56:52.935" endtime="20240108 10:56:53.437"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:56:53.437" endtime="20240108 10:56:53.437"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<status status="NOT RUN" starttime="20240108 10:56:53.438" endtime="20240108 10:56:53.438"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:56:53.439" endtime="20240108 10:56:53.439"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<status status="NOT RUN" starttime="20240108 10:56:53.440" endtime="20240108 10:56:53.440"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:56:53.440" endtime="20240108 10:56:53.441"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<status status="NOT RUN" starttime="20240108 10:56:53.442" endtime="20240108 10:56:53.442"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:56:53.443" endtime="20240108 10:56:53.444"/>
+</kw>
+<kw name="Perform Action for Widgets Progress bar">
+<status status="NOT RUN" starttime="20240108 10:56:53.444" endtime="20240108 10:56:53.445"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 10:56:53.447" endtime="20240108 10:56:53.447"/>
+</kw>
+<status status="FAIL" starttime="20240108 10:56:49.851" endtime="20240108 10:56:53.449">Element with locator 'Xpath://*[@id="section1Heading"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240108 10:56:43.111" endtime="20240108 10:56:53.453"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

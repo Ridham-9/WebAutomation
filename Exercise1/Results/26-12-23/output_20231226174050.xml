@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 17:40:50.335" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 17:40:50.488" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 17:40:50.487" endtime="20231226 17:40:55.898"/>
+</kw>
+<status status="PASS" starttime="20231226 17:40:50.486" endtime="20231226 17:40:55.901"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="14">
+<kw name="Input Text">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<kw name="Input Text">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<msg timestamp="20231226 17:40:55.972" level="FAIL">Maximum limit of started keywords and control structures exceeded.</msg>
+<status status="FAIL" starttime="20231226 17:40:55.971" endtime="20231226 17:40:55.972"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.971" endtime="20231226 17:40:55.972"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.970" endtime="20231226 17:40:55.973"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.970" endtime="20231226 17:40:55.973"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.970" endtime="20231226 17:40:55.973"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.969" endtime="20231226 17:40:55.974"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.969" endtime="20231226 17:40:55.974"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.969" endtime="20231226 17:40:55.974"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.968" endtime="20231226 17:40:55.975"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.967" endtime="20231226 17:40:55.975"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.966" endtime="20231226 17:40:55.975"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.966" endtime="20231226 17:40:55.975"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.965" endtime="20231226 17:40:55.975"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.964" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.963" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.963" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.963" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.962" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.962" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.961" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.961" endtime="20231226 17:40:55.976"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.961" endtime="20231226 17:40:55.977"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.960" endtime="20231226 17:40:55.977"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.960" endtime="20231226 17:40:55.977"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.959" endtime="20231226 17:40:55.977"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.959" endtime="20231226 17:40:55.977"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.958" endtime="20231226 17:40:55.977"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.958" endtime="20231226 17:40:55.977"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.958" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.957" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.956" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.956" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.956" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.955" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.954" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.954" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.953" endtime="20231226 17:40:55.978"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.953" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.952" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.951" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.949" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.949" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.947" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.946" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.946" endtime="20231226 17:40:55.979"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.945" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.945" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.944" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.944" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.944" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.943" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.943" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.942" endtime="20231226 17:40:55.980"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.942" endtime="20231226 17:40:55.981"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.942" endtime="20231226 17:40:55.981"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.941" endtime="20231226 17:40:55.981"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.941" endtime="20231226 17:40:55.981"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.940" endtime="20231226 17:40:55.982"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.940" endtime="20231226 17:40:55.982"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.940" endtime="20231226 17:40:55.982"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.939" endtime="20231226 17:40:55.983"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.939" endtime="20231226 17:40:55.983"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.938" endtime="20231226 17:40:55.983"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.938" endtime="20231226 17:40:55.983"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.938" endtime="20231226 17:40:55.984"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.937" endtime="20231226 17:40:55.984"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.937" endtime="20231226 17:40:55.984"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.936" endtime="20231226 17:40:55.984"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.936" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.936" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.935" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.934" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.933" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.933" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.932" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.931" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.930" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.928" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.928" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.927" endtime="20231226 17:40:55.985"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.926" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.926" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.924" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.923" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.920" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.919" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.918" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.917" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.916" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.915" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.914" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.913" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.912" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.911" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.910" endtime="20231226 17:40:55.986"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.909" endtime="20231226 17:40:55.987"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.908" endtime="20231226 17:40:55.987"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.906" endtime="20231226 17:40:55.987"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.905" endtime="20231226 17:40:55.987"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.904" endtime="20231226 17:40:55.987"/>
+</kw>
+<kw name="Input Password">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" starttime="20231226 17:40:55.987" endtime="20231226 17:40:55.987"/>
+</kw>
+<kw name="Click Button">
+<arg>login-button</arg>
+<status status="NOT RUN" starttime="20231226 17:40:55.987" endtime="20231226 17:40:55.987"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231226 17:40:55.987" endtime="20231226 17:40:55.988"/>
+</kw>
+<status status="FAIL" starttime="20231226 17:40:55.902" endtime="20231226 17:40:55.988">Maximum limit of started keywords and control structures exceeded.</status>
+</test>
+<status status="FAIL" starttime="20231226 17:40:50.336" endtime="20231226 17:40:55.989"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

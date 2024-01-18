@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 19:03:26.531" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="88">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 19:03:26.681" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 19:03:26.679" endtime="20240116 19:03:32.146"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 19:03:32.146" endtime="20240116 19:03:32.253"/>
+</kw>
+<status status="PASS" starttime="20240116 19:03:26.679" endtime="20240116 19:03:32.253"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="92">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 19:03:32.255" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 19:03:32.254" endtime="20240116 19:03:32.376"/>
+</kw>
+<kw name="Perform Action for Element Link">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-5').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 19:03:32.380" level="INFO">Executing JavaScript:
+document.querySelector('#item-5').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 19:03:32.380" endtime="20240116 19:03:32.424"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>dynamicLink</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240116 19:03:32.426" level="INFO">Clicking link 'dynamicLink'.</msg>
+<status status="PASS" starttime="20240116 19:03:32.424" endtime="20240116 19:03:32.628"/>
+</kw>
+<kw name="Switch To Window">
+<arg>1</arg>
+<msg timestamp="20240116 19:03:32.634" level="FAIL">No keyword with name 'Switch To Window' found. Did you mean:
+    SeleniumLibrary.Switch Window</msg>
+<status status="FAIL" starttime="20240116 19:03:32.634" endtime="20240116 19:03:32.634"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20240116 19:03:32.634" endtime="20240116 19:03:32.634"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20240116 19:03:32.634" endtime="20240116 19:03:32.634"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>moved</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 19:03:32.634" endtime="20240116 19:03:32.634"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>linkResponse</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240116 19:03:32.634" endtime="20240116 19:03:32.634"/>
+</kw>
+<status status="FAIL" starttime="20240116 19:03:32.378" endtime="20240116 19:03:32.635"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 19:03:32.636" endtime="20240116 19:03:32.636"/>
+</kw>
+<status status="FAIL" starttime="20240116 19:03:32.254" endtime="20240116 19:03:32.637">No keyword with name 'Switch To Window' found. Did you mean:
+    SeleniumLibrary.Switch Window</status>
+</test>
+<status status="FAIL" starttime="20240116 19:03:26.531" endtime="20240116 19:03:32.637"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

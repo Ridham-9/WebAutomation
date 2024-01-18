@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 10:36:08.972" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="92">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 10:36:09.097" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240117 10:36:09.096" endtime="20240117 10:36:23.648"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 10:36:23.649" endtime="20240117 10:36:23.756"/>
+</kw>
+<status status="PASS" starttime="20240117 10:36:09.095" endtime="20240117 10:36:23.757"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="96">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 10:36:23.766" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 10:36:23.763" endtime="20240117 10:36:23.874"/>
+</kw>
+<kw name="Perform Action for Element Link">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-5').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 10:36:23.876" level="INFO">Executing JavaScript:
+document.querySelector('#item-5').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 10:36:23.875" endtime="20240117 10:36:23.901"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>dynamicLink</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240117 10:36:23.902" level="INFO">Clicking link 'dynamicLink'.</msg>
+<status status="PASS" starttime="20240117 10:36:23.901" endtime="20240117 10:36:23.990"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20240117 10:36:24.002" level="INFO">${handles} = ['33C03DDD151F2E977901F89DCB794663', 'B7AC6CD48C5DB444538273DECD8326FB']</msg>
+<status status="PASS" starttime="20240117 10:36:23.990" endtime="20240117 10:36:24.002"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240117 10:36:24.007" level="INFO">${title} = DEMOQA</msg>
+<status status="PASS" starttime="20240117 10:36:24.002" endtime="20240117 10:36:24.007"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${title}</arg>
+<arg>DEMOQ</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20240117 10:36:24.007" level="FAIL">DEMOQA != DEMOQ</msg>
+<status status="FAIL" starttime="20240117 10:36:24.007" endtime="20240117 10:36:24.008"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240117 10:36:24.008" endtime="20240117 10:36:24.008"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>moved</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240117 10:36:24.008" endtime="20240117 10:36:24.008"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>linkResponse</arg>
+<arg>Link has responded with staus 301 and status text Moved Permanently</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20240117 10:36:24.008" endtime="20240117 10:36:24.008"/>
+</kw>
+<status status="FAIL" starttime="20240117 10:36:23.875" endtime="20240117 10:36:24.008"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240117 10:36:24.008" endtime="20240117 10:36:24.008"/>
+</kw>
+<status status="FAIL" starttime="20240117 10:36:23.760" endtime="20240117 10:36:24.009">DEMOQA != DEMOQ</status>
+</test>
+<status status="FAIL" starttime="20240117 10:36:08.973" endtime="20240117 10:36:24.009"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

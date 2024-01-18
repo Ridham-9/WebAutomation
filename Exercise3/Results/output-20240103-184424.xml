@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 18:44:24.734" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="53">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 18:44:24.856" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 18:44:24.856" endtime="20240103 18:44:31.288"/>
+</kw>
+<status status="PASS" starttime="20240103 18:44:24.855" endtime="20240103 18:44:31.288"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:44:31.291" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:44:31.290" endtime="20240103 18:44:31.441"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:44:31.443" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:44:31.442" endtime="20240103 18:44:31.484"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 18:44:31.486" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 18:44:31.484" endtime="20240103 18:44:31.591"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:44:34.592" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:44:31.591" endtime="20240103 18:44:34.592"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<msg timestamp="20240103 18:44:34.592" level="FAIL">Keyword 'SeleniumLibrary.Go Back' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20240103 18:44:34.592" endtime="20240103 18:44:34.592"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:44:31.289" endtime="20240103 18:44:34.593"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:44:34.593" endtime="20240103 18:44:34.593"/>
+</kw>
+<kw name="Open Form Section">
+<status status="NOT RUN" starttime="20240103 18:44:34.593" endtime="20240103 18:44:34.593"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:44:34.593" endtime="20240103 18:44:34.594"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<status status="NOT RUN" starttime="20240103 18:44:34.594" endtime="20240103 18:44:34.594"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:44:34.594" endtime="20240103 18:44:34.594"/>
+</kw>
+<kw name="Open Widgets">
+<status status="NOT RUN" starttime="20240103 18:44:34.594" endtime="20240103 18:44:34.594"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:44:34.594" endtime="20240103 18:44:34.594"/>
+</kw>
+<kw name="Open Interactions">
+<status status="NOT RUN" starttime="20240103 18:44:34.595" endtime="20240103 18:44:34.595"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:44:34.595" endtime="20240103 18:44:34.595"/>
+</kw>
+<kw name="Open Book Store">
+<status status="NOT RUN" starttime="20240103 18:44:34.595" endtime="20240103 18:44:34.595"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:44:24.855" endtime="20240103 18:44:34.595">Keyword 'SeleniumLibrary.Go Back' expected 0 arguments, got 1.</status>
+</test>
+<status status="FAIL" starttime="20240103 18:44:24.735" endtime="20240103 18:44:34.596"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

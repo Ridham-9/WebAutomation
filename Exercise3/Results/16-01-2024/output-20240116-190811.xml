@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 19:08:11.483" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="90">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 19:08:11.692" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 19:08:11.691" endtime="20240116 19:08:23.170"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 19:08:23.172" endtime="20240116 19:08:23.277"/>
+</kw>
+<status status="PASS" starttime="20240116 19:08:11.690" endtime="20240116 19:08:23.278"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="94">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 19:08:23.279" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 19:08:23.279" endtime="20240116 19:08:23.397"/>
+</kw>
+<kw name="Perform Action for Element Link">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-5').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 19:08:23.399" level="INFO">Executing JavaScript:
+document.querySelector('#item-5').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 19:08:23.398" endtime="20240116 19:08:23.458"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>dynamicLink</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240116 19:08:23.460" level="INFO">Clicking link 'dynamicLink'.</msg>
+<status status="PASS" starttime="20240116 19:08:23.458" endtime="20240116 19:08:23.564"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20240116 19:08:23.589" level="INFO">${handles} = ['5FEC69CFEAF4F163980FF27E9314CC8F', '3E3E48BBCF1B274197B83E1F4823B171']</msg>
+<status status="PASS" starttime="20240116 19:08:23.564" endtime="20240116 19:08:23.589"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240116 19:08:23.589" endtime="20240116 19:08:23.653"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240116 19:08:24.776" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 19:08:24.776" level="FAIL">WebDriverException: Message: no such execution context
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55a4762fff83 &lt;unknown&gt;
+#1 0x55a475fb8b2b &lt;unknown&gt;
+#2 0x55a475f9eff6 &lt;unknown&gt;
+#3 0x55a475f9c821 &lt;unknown&gt;
+#4 0x55a475f9d18a &lt;unknown&gt;
+#5 0x55a475faea22 &lt;unknown&gt;
+#6 0x55a475fc67c1 &lt;unknown&gt;
+#7 0x55a475fcc6bb &lt;unknown&gt;
+#8 0x55a475f9d92d &lt;unknown&gt;
+#9 0x55a475fc6459 &lt;unknown&gt;
+#10 0x55a476050f1a &lt;unknown&gt;
+#11 0x55a476031e53 &lt;unknown&gt;
+#12 0x55a475ff9dd4 &lt;unknown&gt;
+#13 0x55a475ffb1de &lt;unknown&gt;
+#14 0x55a4762c4531 &lt;unknown&gt;
+#15 0x55a4762c8455 &lt;unknown&gt;
+#16 0x55a4762b0f55 &lt;unknown&gt;
+#17 0x55a4762c90ef &lt;unknown&gt;
+#18 0x55a47629499f &lt;unknown&gt;
+#19 0x55a4762ed008 &lt;unknown&gt;
+#20 0x55a4762ed1d7 &lt;unknown&gt;
+#21 0x55a4762ff124 &lt;unknown&gt;
+#22 0x7fcd80693609 start_thread
+</msg>
+<status status="FAIL" starttime="20240116 19:08:23.653" endtime="20240116 19:08:24.796"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${title}</arg>
+<arg>DEMOQA</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20240116 19:08:24.796" endtime="20240116 19:08:24.796"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 19:08:24.796" endtime="20240116 19:08:24.796"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 19:08:24.796" endtime="20240116 19:08:24.796"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>moved</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 19:08:24.796" endtime="20240116 19:08:24.797"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>linkResponse</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240116 19:08:24.797" endtime="20240116 19:08:24.797"/>
+</kw>
+<status status="FAIL" starttime="20240116 19:08:23.397" endtime="20240116 19:08:24.797"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 19:08:24.797" endtime="20240116 19:08:24.797"/>
+</kw>
+<status status="FAIL" starttime="20240116 19:08:23.278" endtime="20240116 19:08:24.797">WebDriverException: Message: no such execution context
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55a4762fff83 &lt;unknown&gt;
+#1 0x55a475fb8b2b &lt;unknown&gt;
+#2 0x55a475f9eff6 &lt;unknown&gt;
+#3 0x55a475f9c821 &lt;unknown&gt;
+#4 0x55a475f9d18a &lt;unknown&gt;
+#5 0x55a475faea22 &lt;unknown&gt;
+#6 0x55a475fc67c1 &lt;unknown&gt;
+#7 0x55a475fcc6bb &lt;unknown&gt;
+#8 0x55a475f9d92d &lt;unknown&gt;
+#9 0x55a475fc6459 &lt;unknown&gt;
+#10 0x55a476050f1a &lt;unknown&gt;
+#11 0x55a476031e53 &lt;unknown&gt;
+#12 0x55a475ff9dd4 &lt;unknown&gt;
+#13 0x55a475ffb1de &lt;unknown&gt;
+#14 0x55a4762c4531 &lt;unknown&gt;
+#15 0x55a4762c8455 &lt;unknown&gt;
+#16 0x55a4762b0f55 &lt;unknown&gt;
+#17 0x55a4762c90ef &lt;unknown&gt;
+#18 0x55a47629499f &lt;unknown&gt;
+#19 0x55a4762ed008 &lt;unknown&gt;
+#20 0x55a4762ed1d7 &lt;unknown&gt;
+#21 0x55a4762ff124 &lt;unknown&gt;
+#22 0x7fcd80693609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240116 19:08:11.484" endtime="20240116 19:08:24.798"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

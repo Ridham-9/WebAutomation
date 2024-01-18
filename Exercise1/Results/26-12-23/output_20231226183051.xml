@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 18:30:51.732" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="9">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 18:30:51.855" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 18:30:51.854" endtime="20231226 18:30:56.414"/>
+</kw>
+<status status="PASS" starttime="20231226 18:30:51.853" endtime="20231226 18:30:56.414"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="12">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:30:56.417" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231226 18:30:56.416" endtime="20231226 18:30:56.548"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:30:56.548" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231226 18:30:56.586" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231226 18:30:56.647" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231226 18:30:56.548" endtime="20231226 18:30:56.647"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:30:56.648" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231226 18:30:56.647" endtime="20231226 18:30:56.840"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231226 18:30:56.840" level="INFO">Successfully logged in!</msg>
+<status status="PASS" starttime="20231226 18:30:56.840" endtime="20231226 18:30:56.840"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:30:56.841" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231226 18:30:56.840" endtime="20231226 18:30:56.966"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:30:56.968" level="INFO">Clicking button 'add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20231226 18:30:56.967" endtime="20231226 18:30:57.033"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>shopping_cart_container</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:30:57.034" level="INFO">Clicking button 'shopping_cart_container'.</msg>
+<msg timestamp="20231226 18:30:57.194" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231226 18:30:57.194" level="FAIL">Button with locator 'shopping_cart_container' not found.</msg>
+<status status="FAIL" starttime="20231226 18:30:57.033" endtime="20231226 18:30:57.379"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>continue-shopping</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231226 18:30:57.380" endtime="20231226 18:30:57.380"/>
+</kw>
+<status status="FAIL" starttime="20231226 18:30:56.415" endtime="20231226 18:30:57.381">Button with locator 'shopping_cart_container' not found.</status>
+</test>
+<status status="FAIL" starttime="20231226 18:30:51.733" endtime="20231226 18:30:57.384"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

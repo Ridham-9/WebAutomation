@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 15:46:23.505" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="42">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 15:46:23.629" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 15:46:23.628" endtime="20240103 15:46:29.206"/>
+</kw>
+<status status="PASS" starttime="20240103 15:46:23.628" endtime="20240103 15:46:29.206"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:46:29.208" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:46:29.208" endtime="20240103 15:46:29.299"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:46:29.299" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:46:29.299" endtime="20240103 15:46:29.318"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 15:46:29.319" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 15:46:29.318" endtime="20240103 15:46:29.395"/>
+</kw>
+<status status="PASS" starttime="20240103 15:46:29.207" endtime="20240103 15:46:29.395"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.element-group').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:46:29.397" level="INFO">Executing JavaScript:
+document.querySelector('div.element-group').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:46:29.396" endtime="20240103 15:46:29.403"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-1').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 15:46:29.404" level="INFO">Executing JavaScript:
+document.querySelector('#item-1').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 15:46:29.403" endtime="20240103 15:46:29.431"/>
+</kw>
+<status status="PASS" starttime="20240103 15:46:29.396" endtime="20240103 15:46:29.432"/>
+</kw>
+<status status="PASS" starttime="20240103 15:46:23.627" endtime="20240103 15:46:29.432"/>
+</test>
+<status status="PASS" starttime="20240103 15:46:23.506" endtime="20240103 15:46:29.433"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

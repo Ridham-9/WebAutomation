@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 16:24:28.688" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="53">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 16:24:28.821" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 16:24:28.820" endtime="20240103 16:24:41.103"/>
+</kw>
+<status status="PASS" starttime="20240103 16:24:28.819" endtime="20240103 16:24:41.104"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.107" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.106" endtime="20240103 16:24:41.259"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.260" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.259" endtime="20240103 16:24:41.317"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 16:24:41.318" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 16:24:41.318" endtime="20240103 16:24:41.401"/>
+</kw>
+<status status="PASS" starttime="20240103 16:24:41.105" endtime="20240103 16:24:41.402"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.403" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.402" endtime="20240103 16:24:41.413"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.414" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.413" endtime="20240103 16:24:41.459"/>
+</kw>
+<status status="PASS" starttime="20240103 16:24:41.402" endtime="20240103 16:24:41.459"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.461" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.460" endtime="20240103 16:24:41.466"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.467" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.466" endtime="20240103 16:24:41.498"/>
+</kw>
+<status status="PASS" starttime="20240103 16:24:41.459" endtime="20240103 16:24:41.499"/>
+</kw>
+<kw name="Open Widgets">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.500" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.499" endtime="20240103 16:24:41.512"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.513" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.512" endtime="20240103 16:24:41.532"/>
+</kw>
+<status status="PASS" starttime="20240103 16:24:41.499" endtime="20240103 16:24:41.532"/>
+</kw>
+<kw name="Open Interactions">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.533" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.533" endtime="20240103 16:24:41.541"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.543" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.541" endtime="20240103 16:24:41.568"/>
+</kw>
+<status status="PASS" starttime="20240103 16:24:41.532" endtime="20240103 16:24:41.568"/>
+</kw>
+<kw name="Open Book Store">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.element-group')[5].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.569" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.element-group')[5].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.568" endtime="20240103 16:24:41.580"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[5].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 16:24:41.581" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[5].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 16:24:41.581" endtime="20240103 16:24:41.615"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240103 16:24:41.616" level="INFO">Typing text 'abcxyz' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240103 16:24:41.615" endtime="20240103 16:24:41.900"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password-wrapper</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240103 16:24:41.901" level="INFO">Typing password into text field 'password-wrapper'.</msg>
+<msg timestamp="20240103 16:24:42.168" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-88.png"&gt;&lt;img src="selenium-screenshot-88.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 16:24:42.168" level="FAIL">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5592705fdf83 &lt;unknown&gt;
+#1 0x5592702b6b2b &lt;unknown&gt;
+#2 0x5592702fc237 &lt;unknown&gt;
+#3 0x5592703300b2 &lt;unknown&gt;
+#4 0x5592702f9b49 &lt;unknown&gt;
+#5 0x5592703304ce &lt;unknown&gt;
+#6 0x55927034f006 &lt;unknown&gt;
+#7 0x55927032fe53 &lt;unknown&gt;
+#8 0x5592702f7dd4 &lt;unknown&gt;
+#9 0x5592702f91de &lt;unknown&gt;
+#10 0x5592705c2531 &lt;unknown&gt;
+#11 0x5592705c6455 &lt;unknown&gt;
+#12 0x5592705aef55 &lt;unknown&gt;
+#13 0x5592705c70ef &lt;unknown&gt;
+#14 0x55927059299f &lt;unknown&gt;
+#15 0x5592705eb008 &lt;unknown&gt;
+#16 0x5592705eb1d7 &lt;unknown&gt;
+#17 0x5592705fd124 &lt;unknown&gt;
+#18 0x7f2fba018609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 16:24:41.900" endtime="20240103 16:24:42.203"/>
+</kw>
+<status status="FAIL" starttime="20240103 16:24:41.568" endtime="20240103 16:24:42.203"/>
+</kw>
+<status status="FAIL" starttime="20240103 16:24:28.818" endtime="20240103 16:24:42.204">InvalidElementStateException: Message: invalid element state
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5592705fdf83 &lt;unknown&gt;
+#1 0x5592702b6b2b &lt;unknown&gt;
+#2 0x5592702fc237 &lt;unknown&gt;
+#3 0x5592703300b2 &lt;unknown&gt;
+#4 0x5592702f9b49 &lt;unknown&gt;
+#5 0x5592703304ce &lt;unknown&gt;
+#6 0x55927034f006 &lt;unknown&gt;
+#7 0x55927032fe53 &lt;unknown&gt;
+#8 0x5592702f7dd4 &lt;unknown&gt;
+#9 0x5592702f91de &lt;unknown&gt;
+#10 0x5592705c2531 &lt;unknown&gt;
+#11 0x5592705c6455 &lt;unknown&gt;
+#12 0x5592705aef55 &lt;unknown&gt;
+#13 0x5592705c70ef &lt;unknown&gt;
+#14 0x55927059299f &lt;unknown&gt;
+#15 0x5592705eb008 &lt;unknown&gt;
+#16 0x5592705eb1d7 &lt;unknown&gt;
+#17 0x5592705fd124 &lt;unknown&gt;
+#18 0x7f2fba018609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 16:24:28.688" endtime="20240103 16:24:42.206"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

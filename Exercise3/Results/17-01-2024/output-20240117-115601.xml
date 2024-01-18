@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 11:56:01.270" rpa="false" schemaversion="4">
+<suite id="s1" name="Abc" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/abc.robot">
+<test id="s1-t1" name="Launch Browser" line="10">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 11:56:01.392" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240117 11:56:01.391" endtime="20240117 11:56:20.372"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 11:56:20.373" endtime="20240117 11:56:20.479"/>
+</kw>
+<status status="PASS" starttime="20240117 11:56:01.391" endtime="20240117 11:56:20.480"/>
+</test>
+<test id="s1-t2" name="Perform Action for Element Brokenlink" line="14">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-6').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 11:56:20.481" level="INFO">Executing JavaScript:
+document.querySelector('#item-6').click()
+Without any arguments.</msg>
+<msg timestamp="20240117 11:56:20.730" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240117 11:56:20.730" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55f0d7a39f83 &lt;unknown&gt;
+#1 0x55f0d76f2cf7 &lt;unknown&gt;
+#2 0x55f0d76f92a3 &lt;unknown&gt;
+#3 0x55f0d76fbbb4 &lt;unknown&gt;
+#4 0x55f0d778bba3 &lt;unknown&gt;
+#5 0x55f0d776c0b2 &lt;unknown&gt;
+#6 0x55f0d778b006 &lt;unknown&gt;
+#7 0x55f0d776be53 &lt;unknown&gt;
+#8 0x55f0d7733dd4 &lt;unknown&gt;
+#9 0x55f0d77351de &lt;unknown&gt;
+#10 0x55f0d79fe531 &lt;unknown&gt;
+#11 0x55f0d7a02455 &lt;unknown&gt;
+#12 0x55f0d79eaf55 &lt;unknown&gt;
+#13 0x55f0d7a030ef &lt;unknown&gt;
+#14 0x55f0d79ce99f &lt;unknown&gt;
+#15 0x55f0d7a27008 &lt;unknown&gt;
+#16 0x55f0d7a271d7 &lt;unknown&gt;
+#17 0x55f0d7a39124 &lt;unknown&gt;
+#18 0x7f99f2567609 start_thread
+</msg>
+<status status="FAIL" starttime="20240117 11:56:20.481" endtime="20240117 11:56:20.731"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20240117 11:56:20.731" endtime="20240117 11:56:20.731"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240117 11:56:20.731" endtime="20240117 11:56:20.731"/>
+</kw>
+<status status="FAIL" starttime="20240117 11:56:20.480" endtime="20240117 11:56:20.731">JavascriptException: Message: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55f0d7a39f83 &lt;unknown&gt;
+#1 0x55f0d76f2cf7 &lt;unknown&gt;
+#2 0x55f0d76f92a3 &lt;unknown&gt;
+#3 0x55f0d76fbbb4 &lt;unknown&gt;
+#4 0x55f0d778bba3 &lt;unknown&gt;
+#5 0x55f0d776c0b2 &lt;unknown&gt;
+#6 0x55f0d778b006 &lt;unknown&gt;
+#7 0x55f0d776be53 &lt;unknown&gt;
+#8 0x55f0d7733dd4 &lt;unknown&gt;
+#9 0x55f0d77351de &lt;unknown&gt;
+#10 0x55f0d79fe531 &lt;unknown&gt;
+#11 0x55f0d7a02455 &lt;unknown&gt;
+#12 0x55f0d79eaf55 &lt;unknown&gt;
+#13 0x55f0d7a030ef &lt;unknown&gt;
+#14 0x55f0d79ce99f &lt;unknown&gt;
+#15 0x55f0d7a27008 &lt;unknown&gt;
+#16 0x55f0d7a271d7 &lt;unknown&gt;
+#17 0x55f0d7a39124 &lt;unknown&gt;
+#18 0x7f99f2567609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240117 11:56:01.271" endtime="20240117 11:56:20.732"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Abc">Abc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

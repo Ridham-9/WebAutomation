@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 18:14:27.064" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="23">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 18:14:27.196" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 18:14:27.195" endtime="20240108 18:14:32.787"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 18:14:32.787" endtime="20240108 18:14:32.910"/>
+</kw>
+<kw name="Open Interaction Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 18:14:32.923" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 18:14:32.917" endtime="20240108 18:14:33.043"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 18:14:36.044" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 18:14:33.043" endtime="20240108 18:14:36.044"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${list1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 18:14:36.045" level="INFO">Clicking element 'Xpath://*[@class="vertical-list-container mt-4"]/div[1]'.</msg>
+<msg timestamp="20240108 18:14:36.205" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 18:14:36.207" level="FAIL">Element with locator 'Xpath://*[@class="vertical-list-container mt-4"]/div[1]' not found.</msg>
+<status status="FAIL" starttime="20240108 18:14:36.044" endtime="20240108 18:14:36.329"/>
+</kw>
+<status status="FAIL" starttime="20240108 18:14:36.044" endtime="20240108 18:14:36.330"/>
+</kw>
+<status status="FAIL" starttime="20240108 18:14:32.912" endtime="20240108 18:14:36.330"/>
+</kw>
+<status status="FAIL" starttime="20240108 18:14:27.194" endtime="20240108 18:14:36.331">Element with locator 'Xpath://*[@class="vertical-list-container mt-4"]/div[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240108 18:14:27.065" endtime="20240108 18:14:36.334"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

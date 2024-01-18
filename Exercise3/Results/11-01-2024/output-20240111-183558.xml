@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240111 18:35:58.346" rpa="false" schemaversion="4">
+<suite id="s1" name="Alerts" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Alerts.robot">
+<test id="s1-t1" name="Launch Browser" line="16">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240111 18:35:58.475" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<msg timestamp="20240111 18:35:58.621" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240111 18:35:58.474" endtime="20240111 18:36:03.999"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240111 18:36:03.999" endtime="20240111 18:36:04.106"/>
+</kw>
+<status status="PASS" starttime="20240111 18:35:58.473" endtime="20240111 18:36:04.107"/>
+</test>
+<test id="s1-t2" name="Open Alerts,Frames Section" line="20">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 18:36:04.108" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 18:36:04.108" endtime="20240111 18:36:04.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240111 18:36:07.184" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240111 18:36:04.184" endtime="20240111 18:36:07.184"/>
+</kw>
+<kw name="Perform Action for Browser Window">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240111 18:36:07.186" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240111 18:36:07.185" endtime="20240111 18:36:07.218"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWTAB}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240111 18:36:07.219" level="INFO">Clicking button 'Xpath://*[@id="tabButton"]'.</msg>
+<status status="PASS" starttime="20240111 18:36:07.218" endtime="20240111 18:36:07.320"/>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<var>${window_titles}</var>
+<doc>Returns and logs titles of all windows of the selected browser.</doc>
+<msg timestamp="20240111 18:36:07.501" level="INFO">Altogether 2 items.
+1: DEMOQA
+2: undefined</msg>
+<msg timestamp="20240111 18:36:07.501" level="INFO">${window_titles} = ['DEMOQA', 'undefined']</msg>
+<status status="PASS" starttime="20240111 18:36:07.320" endtime="20240111 18:36:07.501"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'New Tab Title' in $window_titles</arg>
+<arg>Log</arg>
+<arg>New tab is open</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>New tab is not open</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>New tab is not open</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240111 18:36:07.503" level="INFO">New tab is not open</msg>
+<status status="PASS" starttime="20240111 18:36:07.502" endtime="20240111 18:36:07.503"/>
+</kw>
+<status status="PASS" starttime="20240111 18:36:07.501" endtime="20240111 18:36:07.503"/>
+</kw>
+<status status="PASS" starttime="20240111 18:36:07.185" endtime="20240111 18:36:07.503"/>
+</kw>
+<status status="PASS" starttime="20240111 18:36:04.107" endtime="20240111 18:36:07.503"/>
+</test>
+<status status="PASS" starttime="20240111 18:35:58.347" endtime="20240111 18:36:07.504"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Alerts">Alerts</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240111 18:35:58.621" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Connection reset by peer (os error 104)); using driver found in the cache</msg>
+</errors>
+</robot>

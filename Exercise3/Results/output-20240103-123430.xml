@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 12:34:30.522" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="30">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 12:34:30.645" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 12:34:30.644" endtime="20240103 12:34:36.140"/>
+</kw>
+<status status="PASS" starttime="20240103 12:34:30.644" endtime="20240103 12:34:36.141"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 12:34:36.147" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 12:34:36.145" endtime="20240103 12:34:36.287"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 12:34:36.289" level="INFO">Clicking element 'Xpath:/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[8]'.</msg>
+<msg timestamp="20240103 12:34:37.653" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 12:34:37.653" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;li class="btn btn-light " id="item-7"&gt;...&lt;/li&gt; is not clickable at point (130, 523). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5622f17d4f83 &lt;unknown&gt;
+#1 0x5622f148dcf7 &lt;unknown&gt;
+#2 0x5622f14e5d92 &lt;unknown&gt;
+#3 0x5622f14e37f4 &lt;unknown&gt;
+#4 0x5622f14e0894 &lt;unknown&gt;
+#5 0x5622f14df4b9 &lt;unknown&gt;
+#6 0x5622f14d1313 &lt;unknown&gt;
+#7 0x5622f15070b2 &lt;unknown&gt;
+#8 0x5622f14d0b49 &lt;unknown&gt;
+#9 0x5622f15074ce &lt;unknown&gt;
+#10 0x5622f1526006 &lt;unknown&gt;
+#11 0x5622f1506e53 &lt;unknown&gt;
+#12 0x5622f14cedd4 &lt;unknown&gt;
+#13 0x5622f14d01de &lt;unknown&gt;
+#14 0x5622f1799531 &lt;unknown&gt;
+#15 0x5622f179d455 &lt;unknown&gt;
+#16 0x5622f1785f55 &lt;unknown&gt;
+#17 0x5622f179e0ef &lt;unknown&gt;
+#18 0x5622f176999f &lt;unknown&gt;
+#19 0x5622f17c2008 &lt;unknown&gt;
+#20 0x5622f17c21d7 &lt;unknown&gt;
+#21 0x5622f17d4124 &lt;unknown&gt;
+#22 0x7f39a34b0609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 12:34:36.287" endtime="20240103 12:34:37.654"/>
+</kw>
+<status status="FAIL" starttime="20240103 12:34:36.143" endtime="20240103 12:34:37.654"/>
+</kw>
+<status status="FAIL" starttime="20240103 12:34:30.643" endtime="20240103 12:34:37.654">ElementClickInterceptedException: Message: element click intercepted: Element &lt;li class="btn btn-light " id="item-7"&gt;...&lt;/li&gt; is not clickable at point (130, 523). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5622f17d4f83 &lt;unknown&gt;
+#1 0x5622f148dcf7 &lt;unknown&gt;
+#2 0x5622f14e5d92 &lt;unknown&gt;
+#3 0x5622f14e37f4 &lt;unknown&gt;
+#4 0x5622f14e0894 &lt;unknown&gt;
+#5 0x5622f14df4b9 &lt;unknown&gt;
+#6 0x5622f14d1313 &lt;unknown&gt;
+#7 0x5622f15070b2 &lt;unknown&gt;
+#8 0x5622f14d0b49 &lt;unknown&gt;
+#9 0x5622f15074ce &lt;unknown&gt;
+#10 0x5622f1526006 &lt;unknown&gt;
+#11 0x5622f1506e53 &lt;unknown&gt;
+#12 0x5622f14cedd4 &lt;unknown&gt;
+#13 0x5622f14d01de &lt;unknown&gt;
+#14 0x5622f1799531 &lt;unknown&gt;
+#15 0x5622f179d455 &lt;unknown&gt;
+#16 0x5622f1785f55 &lt;unknown&gt;
+#17 0x5622f179e0ef &lt;unknown&gt;
+#18 0x5622f176999f &lt;unknown&gt;
+#19 0x5622f17c2008 &lt;unknown&gt;
+#20 0x5622f17c21d7 &lt;unknown&gt;
+#21 0x5622f17d4124 &lt;unknown&gt;
+#22 0x7f39a34b0609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 12:34:30.523" endtime="20240103 12:34:37.655"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

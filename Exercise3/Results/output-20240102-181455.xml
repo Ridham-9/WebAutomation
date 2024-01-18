@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240102 18:14:55.801" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="20">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240102 18:14:55.933" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240102 18:14:55.932" endtime="20240102 18:15:02.186"/>
+</kw>
+<status status="PASS" starttime="20240102 18:14:55.932" endtime="20240102 18:15:02.187"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<arg>timeput=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20240102 18:15:02.191" level="FAIL">ValueError: Argument 'timeout' got value 'timeput=10' that cannot be converted to timedelta or None.</msg>
+<status status="FAIL" starttime="20240102 18:15:02.188" endtime="20240102 18:15:02.192"/>
+</kw>
+<kw name="Wait Until Element Does Not Contain" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<arg>overlay</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` does not contain ``text``.</doc>
+<status status="NOT RUN" starttime="20240102 18:15:02.192" endtime="20240102 18:15:02.192"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240102 18:15:02.192" endtime="20240102 18:15:02.192"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:15:02.187" endtime="20240102 18:15:02.192"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:14:55.931" endtime="20240102 18:15:02.194">ValueError: Argument 'timeout' got value 'timeput=10' that cannot be converted to timedelta or None.</status>
+</test>
+<status status="FAIL" starttime="20240102 18:14:55.802" endtime="20240102 18:15:02.195"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

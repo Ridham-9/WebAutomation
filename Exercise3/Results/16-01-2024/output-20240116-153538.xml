@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 15:35:38.555" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="69">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 15:35:38.682" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 15:35:38.681" endtime="20240116 15:35:59.754"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 15:35:59.755" endtime="20240116 15:35:59.858"/>
+</kw>
+<status status="PASS" starttime="20240116 15:35:38.680" endtime="20240116 15:35:59.859"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="73">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 15:35:59.861" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 15:35:59.861" endtime="20240116 15:35:59.942"/>
+</kw>
+<kw name="Perform Action for Element Buttons">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-4').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 15:35:59.945" level="INFO">Executing JavaScript:
+document.querySelector('#item-4').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 15:35:59.945" endtime="20240116 15:35:59.972"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>doubleClickBtn</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20240116 15:35:59.974" level="INFO">Double clicking element 'doubleClickBtn'.</msg>
+<status status="PASS" starttime="20240116 15:35:59.972" endtime="20240116 15:36:00.742"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>doubleClickMessage</arg>
+<arg>You have done a double click</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<msg timestamp="20240116 15:36:11.222" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 15:36:11.222" level="FAIL">Element with locator 'doubleClickMessage' not found.</msg>
+<status status="FAIL" starttime="20240116 15:36:00.742" endtime="20240116 15:36:11.241"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>rightClickBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 15:36:11.242" endtime="20240116 15:36:11.242"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>rightClickMessage</arg>
+<arg>You have done a right click</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20240116 15:36:11.242" endtime="20240116 15:36:11.242"/>
+</kw>
+<status status="FAIL" starttime="20240116 15:35:59.942" endtime="20240116 15:36:11.242"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 15:36:11.243" endtime="20240116 15:36:11.243"/>
+</kw>
+<status status="FAIL" starttime="20240116 15:35:59.860" endtime="20240116 15:36:11.243">Element with locator 'doubleClickMessage' not found.</status>
+</test>
+<status status="FAIL" starttime="20240116 15:35:38.555" endtime="20240116 15:36:11.245"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

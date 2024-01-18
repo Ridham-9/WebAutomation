@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 19:04:48.324" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="44">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 19:04:48.466" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231228 19:04:48.465" endtime="20231228 19:04:59.419"/>
+</kw>
+<status status="PASS" starttime="20231228 19:04:48.464" endtime="20231228 19:04:59.419"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 19:04:59.421" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231228 19:04:59.419" endtime="20231228 19:04:59.496"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231228 19:04:59.497" endtime="20231228 19:04:59.556"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231228 19:04:59.557" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231228 19:04:59.556" endtime="20231228 19:04:59.626"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231228 19:04:59.628" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231228 19:04:59.627" endtime="20231228 19:04:59.785"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231228 19:04:59.812" level="INFO">${handles} = ['09D215D2F2A9A989C0BBB43E35DBA3AF', '19537FB18D6CACC37CC74AFE73F346A8']</msg>
+<status status="PASS" starttime="20231228 19:04:59.785" endtime="20231228 19:04:59.812"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231228 19:04:59.812" endtime="20231228 19:04:59.936"/>
+</kw>
+<kw name="Create and Append to CSV">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>0</value>
+<value>6</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA}[${i}]</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231228 19:04:59.938" endtime="20231228 19:05:01.613"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA}</var>
+<arg>${QA_DATA}[${i}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231228 19:05:01.664" level="INFO">${DATA} = Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 19:05:01.614" endtime="20231228 19:05:01.664"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231228 19:05:01.664" level="INFO">Automation tools/frameworks
+Selenium, Appium, Robot Framework, PyTest, Jenkins, TestNG</msg>
+<status status="PASS" starttime="20231228 19:05:01.664" endtime="20231228 19:05:01.664"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20231228 19:05:01.666" level="FAIL">Variable '${FILE_NAME}' not found.</msg>
+<status status="FAIL" starttime="20231228 19:05:01.665" endtime="20231228 19:05:01.666"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${FILE_NAME}[${i}]</arg>
+<arg>${DATA}</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="NOT RUN" starttime="20231228 19:05:01.666" endtime="20231228 19:05:01.666"/>
+</kw>
+<status status="FAIL" starttime="20231228 19:04:59.937" endtime="20231228 19:05:01.667"/>
+</iter>
+<status status="FAIL" starttime="20231228 19:04:59.937" endtime="20231228 19:05:01.667"/>
+</for>
+<status status="FAIL" starttime="20231228 19:04:59.937" endtime="20231228 19:05:01.667"/>
+</kw>
+<status status="FAIL" starttime="20231228 19:04:48.463" endtime="20231228 19:05:01.668">Variable '${FILE_NAME}' not found.</status>
+</test>
+<status status="FAIL" starttime="20231228 19:04:48.325" endtime="20231228 19:05:01.671"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231228 19:04:48.462" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot' on line 13: Setting variable '@{FILE_NAME}' failed: Resolving variable '${(%d.%m.%Y %H:%M)}' failed: Variable '${(}' not found.</msg>
+</errors>
+</robot>

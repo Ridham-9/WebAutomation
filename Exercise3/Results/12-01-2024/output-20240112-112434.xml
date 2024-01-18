@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 11:24:34.584" rpa="false" schemaversion="4">
+<suite id="s1" name="Alerts" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Alerts.robot">
+<test id="s1-t1" name="Launch Browser" line="52">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240112 11:24:34.706" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240112 11:24:34.705" endtime="20240112 11:24:56.167"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240112 11:24:56.168" endtime="20240112 11:24:56.277"/>
+</kw>
+<status status="PASS" starttime="20240112 11:24:34.705" endtime="20240112 11:24:56.277"/>
+</test>
+<test id="s1-t2" name="Open Alerts,Frames Section" line="56">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:24:56.278" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:24:56.278" endtime="20240112 11:24:56.363"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240112 11:24:59.364" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240112 11:24:56.364" endtime="20240112 11:24:59.365"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240112 11:25:02.367" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240112 11:24:59.366" endtime="20240112 11:25:02.368"/>
+</kw>
+<kw name="Perform Action for Alerts">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:25:02.372" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:25:02.370" endtime="20240112 11:25:02.467"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ALERT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:25:02.469" level="INFO">Clicking button 'Xpath://*[@id="alertButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:25:02.467" endtime="20240112 11:25:02.584"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>You clicked a button</arg>
+<arg>ACCEPT</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240112 11:25:02.584" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240112 11:25:02.584" endtime="20240112 11:25:02.600"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${TIMERALERT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:25:02.601" level="INFO">Clicking button 'Xpath://*[@id="timerAlertButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:25:02.600" endtime="20240112 11:25:02.689"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>This alert appeared after 5 seconds</arg>
+<arg>ACCEPT</arg>
+<arg>6s</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240112 11:25:02.690" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:06</msg>
+<status status="PASS" starttime="20240112 11:25:02.689" endtime="20240112 11:25:07.908"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CONFIRMBUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:25:07.912" level="INFO">Clicking button 'Xpath://*[@id="confirmButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:25:07.909" endtime="20240112 11:25:08.132"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Do you confirm action?</arg>
+<arg>DISMISS</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240112 11:25:08.133" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240112 11:25:08.132" endtime="20240112 11:25:08.158"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${confirmresult}</var>
+<arg>confirmResult</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240112 11:25:08.217" level="INFO">${confirmresult} = You selected Cancel</msg>
+<status status="PASS" starttime="20240112 11:25:08.158" endtime="20240112 11:25:08.217"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${confirmresult}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240112 11:25:08.218" level="INFO">You selected Cancel</msg>
+<status status="PASS" starttime="20240112 11:25:08.217" endtime="20240112 11:25:08.218"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${PROMPTBUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:25:08.219" level="INFO">Clicking button 'Xpath://*[@id="promtButton"]'.</msg>
+<msg timestamp="20240112 11:25:09.620" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240112 11:25:09.620" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="promtButton" type="button" class="btn btn-primary"&gt;...&lt;/button&gt; is not clickable at point (702, 551). Other element would receive the click: &lt;iframe frameborder="0" src="https://9e4662fcb8a60f2092eb0eda8d81509b.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5573c382af83 &lt;unknown&gt;
+#1 0x5573c34e3cf7 &lt;unknown&gt;
+#2 0x5573c353bd92 &lt;unknown&gt;
+#3 0x5573c35397f4 &lt;unknown&gt;
+#4 0x5573c3536894 &lt;unknown&gt;
+#5 0x5573c35354b9 &lt;unknown&gt;
+#6 0x5573c3527313 &lt;unknown&gt;
+#7 0x5573c355d0b2 &lt;unknown&gt;
+#8 0x5573c3526b49 &lt;unknown&gt;
+#9 0x5573c355d4ce &lt;unknown&gt;
+#10 0x5573c357c006 &lt;unknown&gt;
+#11 0x5573c355ce53 &lt;unknown&gt;
+#12 0x5573c3524dd4 &lt;unknown&gt;
+#13 0x5573c35261de &lt;unknown&gt;
+#14 0x5573c37ef531 &lt;unknown&gt;
+#15 0x5573c37f3455 &lt;unknown&gt;
+#16 0x5573c37dbf55 &lt;unknown&gt;
+#17 0x5573c37f40ef &lt;unknown&gt;
+#18 0x5573c37bf99f &lt;unknown&gt;
+#19 0x5573c3818008 &lt;unknown&gt;
+#20 0x5573c38181d7 &lt;unknown&gt;
+#21 0x5573c382a124 &lt;unknown&gt;
+#22 0x7ff9d7be1609 start_thread
+</msg>
+<status status="FAIL" starttime="20240112 11:25:08.218" endtime="20240112 11:25:09.638"/>
+</kw>
+<kw name="Input Text Into Alert" library="SeleniumLibrary">
+<arg>Ridham</arg>
+<arg>ACCEPT</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="NOT RUN" starttime="20240112 11:25:09.639" endtime="20240112 11:25:09.639"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${promtresult}</var>
+<arg>promptResult</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240112 11:25:09.639" endtime="20240112 11:25:09.639"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${promtresult}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240112 11:25:09.640" endtime="20240112 11:25:09.640"/>
+</kw>
+<status status="FAIL" starttime="20240112 11:25:02.369" endtime="20240112 11:25:09.640"/>
+</kw>
+<status status="FAIL" starttime="20240112 11:24:56.277" endtime="20240112 11:25:09.641">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button id="promtButton" type="button" class="btn btn-primary"&gt;...&lt;/button&gt; is not clickable at point (702, 551). Other element would receive the click: &lt;iframe frameborder="0" src="https://9e4662fcb8a60f2092eb0eda8d81509b.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5573c382af83 &lt;unknown&gt;
+#1 0x5573c34e3cf7 &lt;unknown&gt;
+#2 0x5573c353bd92 &lt;unknown&gt;
+#3 0x5573c35397f4 &lt;unknown&gt;
+#4 0x5573c3536894 &lt;unknown&gt;
+#5 0x5573c35354b9 &lt;unknown&gt;
+#6 0x5573c3527313 &lt;unknown&gt;
+#7 0x5573c355d0b2 &lt;unknown&gt;
+#8 0x5573c3526b49 &lt;unknown&gt;
+#9 0x5573c355d4ce &lt;unknown&gt;
+#10 0x5573c357c006 &lt;unknown&gt;
+#11 0x5573c355ce53 &lt;unknown&gt;
+#12 0x5573c3524dd4 &lt;unknown&gt;
+#13 0x5573c35261de &lt;unknown&gt;
+#14 0x5573c37ef531 &lt;unknown&gt;
+#15 0x5573c37f3455 &lt;unknown&gt;
+#16 0x5573c37dbf55 &lt;unknown&gt;
+#17 0x5573c37f40ef &lt;unknown&gt;
+#18 0x5573c37bf99f &lt;unknown&gt;
+#19 0x5573c3818008 &lt;unknown&gt;
+#20 0x5573c38181d7 &lt;unknown&gt;
+#21 0x5573c382a124 &lt;unknown&gt;
+#22 0x7ff9d7be1609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240112 11:24:34.585" endtime="20240112 11:25:09.643"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Alerts">Alerts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 11:19:23.553" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="21">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 11:19:23.678" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 11:19:23.677" endtime="20240103 11:19:38.091"/>
+</kw>
+<status status="PASS" starttime="20240103 11:19:23.677" endtime="20240103 11:19:38.091"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${maindiv}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20240103 11:19:38.246" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ded098df83 &lt;unknown&gt;
+#1 0x55ded0646cf7 &lt;unknown&gt;
+#2 0x55ded061a728 &lt;unknown&gt;
+#3 0x55ded06c769f &lt;unknown&gt;
+#4 0x55ded06de719 &lt;unknown&gt;
+#5 0x55ded06bfe53 &lt;unknown&gt;
+#6 0x55ded0687dd4 &lt;unknown&gt;
+#7 0x55ded06891de &lt;unknown&gt;
+#8 0x55ded0952531 &lt;unknown&gt;
+#9 0x55ded0956455 &lt;unknown&gt;
+#10 0x55ded093ef55 &lt;unknown&gt;
+#11 0x55ded09570ef &lt;unknown&gt;
+#12 0x55ded092299f &lt;unknown&gt;
+#13 0x55ded097b008 &lt;unknown&gt;
+#14 0x55ded097b1d7 &lt;unknown&gt;
+#15 0x55ded098d124 &lt;unknown&gt;
+#16 0x7f27b5689609 start_thread
+</msg>
+<msg timestamp="20240103 11:19:38.246" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ded098df83 &lt;unknown&gt;
+#1 0x55ded0646cf7 &lt;unknown&gt;
+#2 0x55ded061a728 &lt;unknown&gt;
+#3 0x55ded06c769f &lt;unknown&gt;
+#4 0x55ded06de719 &lt;unknown&gt;
+#5 0x55ded06bfe53 &lt;unknown&gt;
+#6 0x55ded0687dd4 &lt;unknown&gt;
+#7 0x55ded06891de &lt;unknown&gt;
+#8 0x55ded0952531 &lt;unknown&gt;
+#9 0x55ded0956455 &lt;unknown&gt;
+#10 0x55ded093ef55 &lt;unknown&gt;
+#11 0x55ded09570ef &lt;unknown&gt;
+#12 0x55ded092299f &lt;unknown&gt;
+#13 0x55ded097b008 &lt;unknown&gt;
+#14 0x55ded097b1d7 &lt;unknown&gt;
+#15 0x55ded098d124 &lt;unknown&gt;
+#16 0x7f27b5689609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 11:19:38.093" endtime="20240103 11:19:38.267"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240103 11:19:38.267" endtime="20240103 11:19:38.268"/>
+</kw>
+<status status="FAIL" starttime="20240103 11:19:38.092" endtime="20240103 11:19:38.268"/>
+</kw>
+<status status="FAIL" starttime="20240103 11:19:23.676" endtime="20240103 11:19:38.269">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ded098df83 &lt;unknown&gt;
+#1 0x55ded0646cf7 &lt;unknown&gt;
+#2 0x55ded061a728 &lt;unknown&gt;
+#3 0x55ded06c769f &lt;unknown&gt;
+#4 0x55ded06de719 &lt;unknown&gt;
+#5 0x55ded06bfe53 &lt;unknown&gt;
+#6 0x55ded0687dd4 &lt;unknown&gt;
+#7 0x55ded06891de &lt;unknown&gt;
+#8 0x55ded0952531 &lt;unknown&gt;
+#9 0x55ded0956455 &lt;unknown&gt;
+#10 0x55ded093ef55 &lt;unknown&gt;
+#11 0x55ded09570ef &lt;unknown&gt;
+#12 0x55ded092299f &lt;unknown&gt;
+#13 0x55ded097b008 &lt;unknown&gt;
+#14 0x55ded097b1d7 &lt;unknown&gt;
+#15 0x55ded098d124 &lt;unknown&gt;
+#16 0x7f27b5689609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 11:19:23.554" endtime="20240103 11:19:38.271"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240103 11:19:38.246" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ded098df83 &lt;unknown&gt;
+#1 0x55ded0646cf7 &lt;unknown&gt;
+#2 0x55ded061a728 &lt;unknown&gt;
+#3 0x55ded06c769f &lt;unknown&gt;
+#4 0x55ded06de719 &lt;unknown&gt;
+#5 0x55ded06bfe53 &lt;unknown&gt;
+#6 0x55ded0687dd4 &lt;unknown&gt;
+#7 0x55ded06891de &lt;unknown&gt;
+#8 0x55ded0952531 &lt;unknown&gt;
+#9 0x55ded0956455 &lt;unknown&gt;
+#10 0x55ded093ef55 &lt;unknown&gt;
+#11 0x55ded09570ef &lt;unknown&gt;
+#12 0x55ded092299f &lt;unknown&gt;
+#13 0x55ded097b008 &lt;unknown&gt;
+#14 0x55ded097b1d7 &lt;unknown&gt;
+#15 0x55ded098d124 &lt;unknown&gt;
+#16 0x7f27b5689609 start_thread
+</msg>
+</errors>
+</robot>

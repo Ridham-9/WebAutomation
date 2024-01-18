@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 18:06:10.205" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 18:06:10.335" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 18:06:10.334" endtime="20231226 18:06:14.737"/>
+</kw>
+<status status="PASS" starttime="20231226 18:06:10.334" endtime="20231226 18:06:14.738"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="14">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:06:14.746" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231226 18:06:14.742" endtime="20231226 18:06:14.973"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:06:14.974" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231226 18:06:15.020" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231226 18:06:15.074" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231226 18:06:14.973" endtime="20231226 18:06:15.075"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:06:15.076" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231226 18:06:15.075" endtime="20231226 18:06:15.163"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231226 18:06:15.164" level="INFO">Successfully logged in!</msg>
+<status status="PASS" starttime="20231226 18:06:15.163" endtime="20231226 18:06:15.164"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:06:15.165" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231226 18:06:15.164" endtime="20231226 18:06:15.283"/>
+</kw>
+<status status="PASS" starttime="20231226 18:06:14.740" endtime="20231226 18:06:15.283"/>
+</test>
+<status status="PASS" starttime="20231226 18:06:10.205" endtime="20231226 18:06:15.284"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

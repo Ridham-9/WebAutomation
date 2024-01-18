@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 10:45:29.863" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="19">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 10:45:29.988" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 10:45:29.988" endtime="20240103 10:45:37.024"/>
+</kw>
+<status status="PASS" starttime="20240103 10:45:29.987" endtime="20240103 10:45:37.025"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${maindiv}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240103 10:45:37.028" endtime="20240103 10:45:37.157"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240103 10:45:37.158" level="INFO">Clicking button 'Xpath://*[@id="app"]/div/div/div[2]/div/div[1]'.</msg>
+<msg timestamp="20240103 10:45:37.335" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 10:45:37.336" level="FAIL">Button with locator 'Xpath://*[@id="app"]/div/div/div[2]/div/div[1]' not found.</msg>
+<status status="FAIL" starttime="20240103 10:45:37.157" endtime="20240103 10:45:37.337"/>
+</kw>
+<status status="FAIL" starttime="20240103 10:45:37.026" endtime="20240103 10:45:37.337"/>
+</kw>
+<status status="FAIL" starttime="20240103 10:45:29.986" endtime="20240103 10:45:37.337">Button with locator 'Xpath://*[@id="app"]/div/div/div[2]/div/div[1]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240103 10:45:29.865" endtime="20240103 10:45:37.338"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

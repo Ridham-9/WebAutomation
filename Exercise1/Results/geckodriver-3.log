@@ -1,0 +1,25 @@
+1703592084138	geckodriver	INFO	Listening on 127.0.0.1:38173
+1703592084637	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... te" "--remote-debugging-port" "43305" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilebWPQ6O"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1703592086252	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1703592086640	Marionette	INFO	Listening on port 37481
+WebDriver BiDi listening on ws://127.0.0.1:43305
+Read port: 37481
+1703592087076	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:43305/devtools/browser/5cb5e3b7-bb4c-4aac-ba90-7354a87f7c4c
+console.error: "update.locale" " file doesn't exist in either the application or GRE directories"
+1703592116866	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-02-08-20-06-04.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+JavaScript warning: https://www.saucedemo.com/static/js/2.9b02e67e.chunk.js, line 2: Script terminated by timeout at:
+get@https://www.saucedemo.com/static/js/2.9b02e67e.chunk.js:2:118291
+r/936/n/7429/value/<@https://www.saucedemo.com/static/js/2.9b02e67e.chunk.js:2:51414
+
+1703592726990	Marionette	INFO	Stopped listening on port 37481

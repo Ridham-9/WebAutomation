@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 18:55:04.076" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="20">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20240108 18:55:04.209" endtime="20240108 18:55:04.210"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20240108 18:55:04.210" endtime="20240108 18:55:04.210"/>
+</kw>
+<status status="PASS" starttime="20240108 18:55:04.209" endtime="20240108 18:55:04.210"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="24">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240108 18:55:04.211" endtime="20240108 18:55:04.211"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 18:55:04.211" endtime="20240108 18:55:04.211"/>
+</kw>
+<kw name="Perform Action for Resizable">
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${css}</var>
+<arg>${RESIZE1}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240108 18:55:04.212" endtime="20240108 18:55:04.212"/>
+</kw>
+<status status="PASS" starttime="20240108 18:55:04.212" endtime="20240108 18:55:04.212"/>
+</kw>
+<status status="PASS" starttime="20240108 18:55:04.211" endtime="20240108 18:55:04.212"/>
+</test>
+<status status="PASS" starttime="20240108 18:55:04.077" endtime="20240108 18:55:04.213"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

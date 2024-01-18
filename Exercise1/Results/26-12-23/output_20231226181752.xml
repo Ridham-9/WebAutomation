@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231226 18:17:52.494" rpa="false" schemaversion="4">
+<suite id="s1" name="LaunchBrowser" source="/home/ridham/PycharmProjects/webAutomation/Tests/LaunchBrowser.robot">
+<test id="s1-t1" name="Launch Browser" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231226 18:17:52.619" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231226 18:17:52.618" endtime="20231226 18:17:55.608"/>
+</kw>
+<status status="PASS" starttime="20231226 18:17:52.618" endtime="20231226 18:17:55.609"/>
+</test>
+<test id="s1-t2" name="Valid Login" line="14">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:17:55.611" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20231226 18:17:55.610" endtime="20231226 18:17:55.737"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231226 18:17:55.738" level="INFO">Typing password into text field 'password'.</msg>
+<msg timestamp="20231226 18:17:55.774" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231226 18:17:55.834" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231226 18:17:55.738" endtime="20231226 18:17:55.835"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:17:55.836" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20231226 18:17:55.835" endtime="20231226 18:17:55.923"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully logged in!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231226 18:17:55.924" level="INFO">Successfully logged in!</msg>
+<status status="PASS" starttime="20231226 18:17:55.924" endtime="20231226 18:17:55.924"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-onesie</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:17:55.925" level="INFO">Clicking button 'add-to-cart-sauce-labs-onesie'.</msg>
+<status status="PASS" starttime="20231226 18:17:55.924" endtime="20231226 18:17:56.024"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>add-to-cart-sauce-labs-bike-light</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:17:56.025" level="INFO">Clicking button 'add-to-cart-sauce-labs-bike-light'.</msg>
+<status status="PASS" starttime="20231226 18:17:56.025" endtime="20231226 18:17:56.095"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id="shopping_cart_container"</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231226 18:17:56.096" level="INFO">Clicking button 'id="shopping_cart_container"'.</msg>
+<msg timestamp="20231226 18:17:56.268" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231226 18:17:56.268" level="FAIL">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x562eb310af83 &lt;unknown&gt;
+#1 0x562eb2dc3cf7 &lt;unknown&gt;
+#2 0x562eb2dca2a3 &lt;unknown&gt;
+#3 0x562eb2dcc798 &lt;unknown&gt;
+#4 0x562eb2dcc8ec &lt;unknown&gt;
+#5 0x562eb2e136c7 &lt;unknown&gt;
+#6 0x562eb2e13aa1 &lt;unknown&gt;
+#7 0x562eb2e5eda1 &lt;unknown&gt;
+#8 0x562eb2e3d0dd &lt;unknown&gt;
+#9 0x562eb2e5c006 &lt;unknown&gt;
+#10 0x562eb2e3ce53 &lt;unknown&gt;
+#11 0x562eb2e04dd4 &lt;unknown&gt;
+#12 0x562eb2e061de &lt;unknown&gt;
+#13 0x562eb30cf531 &lt;unknown&gt;
+#14 0x562eb30d3455 &lt;unknown&gt;
+#15 0x562eb30bbf55 &lt;unknown&gt;
+#16 0x562eb30d40ef &lt;unknown&gt;
+#17 0x562eb309f99f &lt;unknown&gt;
+#18 0x562eb30f8008 &lt;unknown&gt;
+#19 0x562eb30f81d7 &lt;unknown&gt;
+#20 0x562eb310a124 &lt;unknown&gt;
+#21 0x7fe7c5706609 start_thread
+</msg>
+<status status="FAIL" starttime="20231226 18:17:56.095" endtime="20231226 18:17:56.329"/>
+</kw>
+<status status="FAIL" starttime="20231226 18:17:55.609" endtime="20231226 18:17:56.330">InvalidSelectorException: Message: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x562eb310af83 &lt;unknown&gt;
+#1 0x562eb2dc3cf7 &lt;unknown&gt;
+#2 0x562eb2dca2a3 &lt;unknown&gt;
+#3 0x562eb2dcc798 &lt;unknown&gt;
+#4 0x562eb2dcc8ec &lt;unknown&gt;
+#5 0x562eb2e136c7 &lt;unknown&gt;
+#6 0x562eb2e13aa1 &lt;unknown&gt;
+#7 0x562eb2e5eda1 &lt;unknown&gt;
+#8 0x562eb2e3d0dd &lt;unknown&gt;
+#9 0x562eb2e5c006 &lt;unknown&gt;
+#10 0x562eb2e3ce53 &lt;unknown&gt;
+#11 0x562eb2e04dd4 &lt;unknown&gt;
+#12 0x562eb2e061de &lt;unknown&gt;
+#13 0x562eb30cf531 &lt;unknown&gt;
+#14 0x562eb30d3455 &lt;unknown&gt;
+#15 0x562eb30bbf55 &lt;unknown&gt;
+#16 0x562eb30d40ef &lt;unknown&gt;
+#17 0x562eb309f99f &lt;unknown&gt;
+#18 0x562eb30f8008 &lt;unknown&gt;
+#19 0x562eb30f81d7 &lt;unknown&gt;
+#20 0x562eb310a124 &lt;unknown&gt;
+#21 0x7fe7c5706609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20231226 18:17:52.495" endtime="20231226 18:17:56.333"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="LaunchBrowser">LaunchBrowser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240102 18:13:25.691" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="19">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240102 18:13:25.816" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240102 18:13:25.815" endtime="20240102 18:13:31.242"/>
+</kw>
+<status status="PASS" starttime="20240102 18:13:25.815" endtime="20240102 18:13:31.242"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240102 18:13:31.243" endtime="20240102 18:13:31.299"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240102 18:13:31.300" level="INFO">Clicking element '//*[@id="app"]/div/div/div[2]/div/div[1]'.</msg>
+<msg timestamp="20240102 18:13:32.610" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240102 18:13:32.611" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card mt-4 top-card"&gt;...&lt;/div&gt; is not clickable at point (105, 495). Other element would receive the click: &lt;div id="adplus-anchor" data-google-query-id="CKb0r8PdvoMDFZuEZgIdIF8CGg"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d775919f83 &lt;unknown&gt;
+#1 0x55d7755d2cf7 &lt;unknown&gt;
+#2 0x55d77562ad92 &lt;unknown&gt;
+#3 0x55d7756287f4 &lt;unknown&gt;
+#4 0x55d775625894 &lt;unknown&gt;
+#5 0x55d7756244b9 &lt;unknown&gt;
+#6 0x55d775616313 &lt;unknown&gt;
+#7 0x55d77564c0b2 &lt;unknown&gt;
+#8 0x55d775615b49 &lt;unknown&gt;
+#9 0x55d77564c4ce &lt;unknown&gt;
+#10 0x55d77566b006 &lt;unknown&gt;
+#11 0x55d77564be53 &lt;unknown&gt;
+#12 0x55d775613dd4 &lt;unknown&gt;
+#13 0x55d7756151de &lt;unknown&gt;
+#14 0x55d7758de531 &lt;unknown&gt;
+#15 0x55d7758e2455 &lt;unknown&gt;
+#16 0x55d7758caf55 &lt;unknown&gt;
+#17 0x55d7758e30ef &lt;unknown&gt;
+#18 0x55d7758ae99f &lt;unknown&gt;
+#19 0x55d775907008 &lt;unknown&gt;
+#20 0x55d7759071d7 &lt;unknown&gt;
+#21 0x55d775919124 &lt;unknown&gt;
+#22 0x7faf9b0ad609 start_thread
+</msg>
+<status status="FAIL" starttime="20240102 18:13:31.300" endtime="20240102 18:13:32.612"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:13:31.243" endtime="20240102 18:13:32.612"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:13:25.814" endtime="20240102 18:13:32.612">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card mt-4 top-card"&gt;...&lt;/div&gt; is not clickable at point (105, 495). Other element would receive the click: &lt;div id="adplus-anchor" data-google-query-id="CKb0r8PdvoMDFZuEZgIdIF8CGg"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55d775919f83 &lt;unknown&gt;
+#1 0x55d7755d2cf7 &lt;unknown&gt;
+#2 0x55d77562ad92 &lt;unknown&gt;
+#3 0x55d7756287f4 &lt;unknown&gt;
+#4 0x55d775625894 &lt;unknown&gt;
+#5 0x55d7756244b9 &lt;unknown&gt;
+#6 0x55d775616313 &lt;unknown&gt;
+#7 0x55d77564c0b2 &lt;unknown&gt;
+#8 0x55d775615b49 &lt;unknown&gt;
+#9 0x55d77564c4ce &lt;unknown&gt;
+#10 0x55d77566b006 &lt;unknown&gt;
+#11 0x55d77564be53 &lt;unknown&gt;
+#12 0x55d775613dd4 &lt;unknown&gt;
+#13 0x55d7756151de &lt;unknown&gt;
+#14 0x55d7758de531 &lt;unknown&gt;
+#15 0x55d7758e2455 &lt;unknown&gt;
+#16 0x55d7758caf55 &lt;unknown&gt;
+#17 0x55d7758e30ef &lt;unknown&gt;
+#18 0x55d7758ae99f &lt;unknown&gt;
+#19 0x55d775907008 &lt;unknown&gt;
+#20 0x55d7759071d7 &lt;unknown&gt;
+#21 0x55d775919124 &lt;unknown&gt;
+#22 0x7faf9b0ad609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240102 18:13:25.692" endtime="20240102 18:13:32.613"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

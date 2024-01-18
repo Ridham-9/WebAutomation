@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240116 18:37:34.261" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="81">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240116 18:37:34.387" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240116 18:37:34.386" endtime="20240116 18:37:40.237"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240116 18:37:40.237" endtime="20240116 18:37:40.343"/>
+</kw>
+<status status="PASS" starttime="20240116 18:37:34.386" endtime="20240116 18:37:40.344"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="85">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 18:37:40.346" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 18:37:40.345" endtime="20240116 18:37:40.455"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-1').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 18:37:40.457" level="INFO">Executing JavaScript:
+document.querySelector('#item-1').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 18:37:40.456" endtime="20240116 18:37:40.491"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Xpath://*[@class="rct-collapse rct-collapse-btn"][1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240116 18:37:40.492" level="INFO">Clicking button 'Xpath://*[@class="rct-collapse rct-collapse-btn"][1]'.</msg>
+<status status="PASS" starttime="20240116 18:37:40.491" endtime="20240116 18:37:40.567"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 18:37:43.568" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 18:37:40.567" endtime="20240116 18:37:43.568"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('tree-node-documents').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 18:37:43.570" level="INFO">Executing JavaScript:
+document.getElementById('tree-node-documents').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 18:37:43.569" endtime="20240116 18:37:43.649"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SUBDOCUMENTS}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240116 18:37:43.651" level="INFO">Clicking button '//*[@id="tree-node"]/ol/li/ol/li[2]/span/button'.</msg>
+<status status="PASS" starttime="20240116 18:37:43.650" endtime="20240116 18:37:43.743"/>
+</kw>
+<status status="PASS" starttime="20240116 18:37:40.456" endtime="20240116 18:37:43.743"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 18:37:48.748" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 18:37:43.746" endtime="20240116 18:37:48.749"/>
+</kw>
+<kw name="Perform Action for Element RadioButton">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-2').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 18:37:48.756" level="INFO">Executing JavaScript:
+document.querySelector('#item-2').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 18:37:48.753" endtime="20240116 18:37:48.846"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 18:37:51.848" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240116 18:37:48.847" endtime="20240116 18:37:51.848"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('yesRadio').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240116 18:37:51.850" level="INFO">Executing JavaScript:
+document.getElementById('yesRadio').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240116 18:37:51.849" endtime="20240116 18:37:51.880"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${YESMSG}</arg>
+<arg>You have selected Yes</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20240116 18:37:51.880" endtime="20240116 18:37:51.991"/>
+</kw>
+<status status="PASS" starttime="20240116 18:37:48.750" endtime="20240116 18:37:51.991"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240116 18:37:56.993" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240116 18:37:51.992" endtime="20240116 18:37:56.993"/>
+</kw>
+<kw name="Perform Action for Element WebTable">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>item-3</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240116 18:37:57.000" level="INFO">Clicking element 'item-3'.</msg>
+<msg timestamp="20240116 18:37:58.404" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 18:37:58.404" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;li class="btn btn-light " id="item-3"&gt;...&lt;/li&gt; is not clickable at point (169, 565). Other element would receive the click: &lt;div id="adplus-anchor" data-google-query-id="CIToxYT94YMDFTuarAIdbbYN1g"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ceca1f2f83 &lt;unknown&gt;
+#1 0x55cec9eabcf7 &lt;unknown&gt;
+#2 0x55cec9f03d92 &lt;unknown&gt;
+#3 0x55cec9f017f4 &lt;unknown&gt;
+#4 0x55cec9efe894 &lt;unknown&gt;
+#5 0x55cec9efd4b9 &lt;unknown&gt;
+#6 0x55cec9eef313 &lt;unknown&gt;
+#7 0x55cec9f250b2 &lt;unknown&gt;
+#8 0x55cec9eeeb49 &lt;unknown&gt;
+#9 0x55cec9f254ce &lt;unknown&gt;
+#10 0x55cec9f44006 &lt;unknown&gt;
+#11 0x55cec9f24e53 &lt;unknown&gt;
+#12 0x55cec9eecdd4 &lt;unknown&gt;
+#13 0x55cec9eee1de &lt;unknown&gt;
+#14 0x55ceca1b7531 &lt;unknown&gt;
+#15 0x55ceca1bb455 &lt;unknown&gt;
+#16 0x55ceca1a3f55 &lt;unknown&gt;
+#17 0x55ceca1bc0ef &lt;unknown&gt;
+#18 0x55ceca18799f &lt;unknown&gt;
+#19 0x55ceca1e0008 &lt;unknown&gt;
+#20 0x55ceca1e01d7 &lt;unknown&gt;
+#21 0x55ceca1f2124 &lt;unknown&gt;
+#22 0x7fd4fcbaf609 start_thread
+</msg>
+<status status="FAIL" starttime="20240116 18:37:56.998" endtime="20240116 18:37:58.596"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>edit-record-2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.596" endtime="20240116 18:37:58.597"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.597" endtime="20240116 18:37:58.598"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.598" endtime="20240116 18:37:58.598"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>abcxyz@yahoo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.599" endtime="20240116 18:37:58.600"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.600" endtime="20240116 18:37:58.600"/>
+</kw>
+<status status="FAIL" starttime="20240116 18:37:56.996" endtime="20240116 18:37:58.601"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.603" endtime="20240116 18:37:58.603"/>
+</kw>
+<kw name="Perform Action for Element Buttons">
+<status status="NOT RUN" starttime="20240116 18:37:58.604" endtime="20240116 18:37:58.604"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.605" endtime="20240116 18:37:58.606"/>
+</kw>
+<kw name="Perform Action for Element Download/Upload">
+<status status="NOT RUN" starttime="20240116 18:37:58.607" endtime="20240116 18:37:58.607"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.608" endtime="20240116 18:37:58.608"/>
+</kw>
+<kw name="Perform Action for Element Dynamic Properties">
+<status status="NOT RUN" starttime="20240116 18:37:58.609" endtime="20240116 18:37:58.609"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 18:37:58.610" endtime="20240116 18:37:58.610"/>
+</kw>
+<status status="FAIL" starttime="20240116 18:37:40.344" endtime="20240116 18:37:58.611">ElementClickInterceptedException: Message: element click intercepted: Element &lt;li class="btn btn-light " id="item-3"&gt;...&lt;/li&gt; is not clickable at point (169, 565). Other element would receive the click: &lt;div id="adplus-anchor" data-google-query-id="CIToxYT94YMDFTuarAIdbbYN1g"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ceca1f2f83 &lt;unknown&gt;
+#1 0x55cec9eabcf7 &lt;unknown&gt;
+#2 0x55cec9f03d92 &lt;unknown&gt;
+#3 0x55cec9f017f4 &lt;unknown&gt;
+#4 0x55cec9efe894 &lt;unknown&gt;
+#5 0x55cec9efd4b9 &lt;unknown&gt;
+#6 0x55cec9eef313 &lt;unknown&gt;
+#7 0x55cec9f250b2 &lt;unknown&gt;
+#8 0x55cec9eeeb49 &lt;unknown&gt;
+#9 0x55cec9f254ce &lt;unknown&gt;
+#10 0x55cec9f44006 &lt;unknown&gt;
+#11 0x55cec9f24e53 &lt;unknown&gt;
+#12 0x55cec9eecdd4 &lt;unknown&gt;
+#13 0x55cec9eee1de &lt;unknown&gt;
+#14 0x55ceca1b7531 &lt;unknown&gt;
+#15 0x55ceca1bb455 &lt;unknown&gt;
+#16 0x55ceca1a3f55 &lt;unknown&gt;
+#17 0x55ceca1bc0ef &lt;unknown&gt;
+#18 0x55ceca18799f &lt;unknown&gt;
+#19 0x55ceca1e0008 &lt;unknown&gt;
+#20 0x55ceca1e01d7 &lt;unknown&gt;
+#21 0x55ceca1f2124 &lt;unknown&gt;
+#22 0x7fd4fcbaf609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240116 18:37:34.262" endtime="20240116 18:37:58.622"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

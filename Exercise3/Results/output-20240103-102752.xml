@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 10:27:52.905" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="18">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 10:27:53.044" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 10:27:53.043" endtime="20240103 10:28:02.309"/>
+</kw>
+<status status="PASS" starttime="20240103 10:27:53.043" endtime="20240103 10:28:02.309"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240103 10:28:12.729" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 10:28:12.730" level="FAIL">Element 'Xpath://*[@id="app"]/div/div/div[2]/div/div[1]/div/div[2]/svg' not visible after 10 seconds.</msg>
+<status status="FAIL" starttime="20240103 10:28:02.312" endtime="20240103 10:28:12.752"/>
+</kw>
+<kw name="Wait Until Element Does Not Contain" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<arg>overlay</arg>
+<arg>timeout=${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` does not contain ``text``.</doc>
+<status status="NOT RUN" starttime="20240103 10:28:12.753" endtime="20240103 10:28:12.754"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240103 10:28:12.754" endtime="20240103 10:28:12.755"/>
+</kw>
+<status status="FAIL" starttime="20240103 10:28:02.312" endtime="20240103 10:28:12.756"/>
+</kw>
+<status status="FAIL" starttime="20240103 10:27:53.042" endtime="20240103 10:28:12.758">Element 'Xpath://*[@id="app"]/div/div/div[2]/div/div[1]/div/div[2]/svg' not visible after 10 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240103 10:27:52.907" endtime="20240103 10:28:12.762"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

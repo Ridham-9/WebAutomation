@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 17:36:44.474" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="18">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 17:36:44.607" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 17:36:44.606" endtime="20240108 17:36:50.589"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 17:36:50.590" endtime="20240108 17:36:50.694"/>
+</kw>
+<status status="PASS" starttime="20240108 17:36:44.605" endtime="20240108 17:36:50.694"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="22">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:36:50.698" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 17:36:50.696" endtime="20240108 17:36:50.775"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 17:36:53.776" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 17:36:50.775" endtime="20240108 17:36:53.777"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#tab-content and .list-group-item list-group-item-action')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 17:36:53.784" level="INFO">Executing JavaScript:
+document.querySelectorAll('#tab-content and .list-group-item list-group-item-action')[1].click();
+Without any arguments.</msg>
+<msg timestamp="20240108 17:36:54.069" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 17:36:54.069" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56479cf5af83 &lt;unknown&gt;
+#1 0x56479cc13cf7 &lt;unknown&gt;
+#2 0x56479cc1a2a3 &lt;unknown&gt;
+#3 0x56479cc1cbb4 &lt;unknown&gt;
+#4 0x56479ccacba3 &lt;unknown&gt;
+#5 0x56479cc8d0b2 &lt;unknown&gt;
+#6 0x56479ccac006 &lt;unknown&gt;
+#7 0x56479cc8ce53 &lt;unknown&gt;
+#8 0x56479cc54dd4 &lt;unknown&gt;
+#9 0x56479cc561de &lt;unknown&gt;
+#10 0x56479cf1f531 &lt;unknown&gt;
+#11 0x56479cf23455 &lt;unknown&gt;
+#12 0x56479cf0bf55 &lt;unknown&gt;
+#13 0x56479cf240ef &lt;unknown&gt;
+#14 0x56479ceef99f &lt;unknown&gt;
+#15 0x56479cf48008 &lt;unknown&gt;
+#16 0x56479cf481d7 &lt;unknown&gt;
+#17 0x56479cf5a124 &lt;unknown&gt;
+#18 0x7f04297a0609 start_thread
+</msg>
+<status status="FAIL" starttime="20240108 17:36:53.782" endtime="20240108 17:36:54.073"/>
+</kw>
+<status status="FAIL" starttime="20240108 17:36:53.780" endtime="20240108 17:36:54.074"/>
+</kw>
+<status status="FAIL" starttime="20240108 17:36:50.695" endtime="20240108 17:36:54.079">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56479cf5af83 &lt;unknown&gt;
+#1 0x56479cc13cf7 &lt;unknown&gt;
+#2 0x56479cc1a2a3 &lt;unknown&gt;
+#3 0x56479cc1cbb4 &lt;unknown&gt;
+#4 0x56479ccacba3 &lt;unknown&gt;
+#5 0x56479cc8d0b2 &lt;unknown&gt;
+#6 0x56479ccac006 &lt;unknown&gt;
+#7 0x56479cc8ce53 &lt;unknown&gt;
+#8 0x56479cc54dd4 &lt;unknown&gt;
+#9 0x56479cc561de &lt;unknown&gt;
+#10 0x56479cf1f531 &lt;unknown&gt;
+#11 0x56479cf23455 &lt;unknown&gt;
+#12 0x56479cf0bf55 &lt;unknown&gt;
+#13 0x56479cf240ef &lt;unknown&gt;
+#14 0x56479ceef99f &lt;unknown&gt;
+#15 0x56479cf48008 &lt;unknown&gt;
+#16 0x56479cf481d7 &lt;unknown&gt;
+#17 0x56479cf5a124 &lt;unknown&gt;
+#18 0x7f04297a0609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240108 17:36:44.475" endtime="20240108 17:36:54.103"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240108 17:36:44.475" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot' on line 12: Creating keyword 'Perform Action for Selectable' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20240108 17:36:44.475" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot' on line 13: Creating keyword 'Perform Action for Resizable' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20240108 17:36:44.475" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot' on line 14: Creating keyword 'Perform Action for Droppable' failed: User keyword cannot be empty.</msg>
+<msg timestamp="20240108 17:36:44.475" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot' on line 15: Creating keyword 'Perform Action for Dragabble' failed: User keyword cannot be empty.</msg>
+</errors>
+</robot>

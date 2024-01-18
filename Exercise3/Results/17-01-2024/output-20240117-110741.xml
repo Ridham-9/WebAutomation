@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 11:07:41.776" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="90">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 11:07:41.901" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240117 11:07:41.900" endtime="20240117 11:08:00.843"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 11:08:00.843" endtime="20240117 11:08:00.948"/>
+</kw>
+<status status="PASS" starttime="20240117 11:07:41.899" endtime="20240117 11:08:00.949"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="94">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 11:08:00.951" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 11:08:00.951" endtime="20240117 11:08:01.032"/>
+</kw>
+<kw name="Perform Action for Element Brokenlink">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-6').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 11:08:01.033" level="INFO">Executing JavaScript:
+document.querySelector('#item-6').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 11:08:01.033" endtime="20240117 11:08:01.063"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240117 11:08:01.063" endtime="20240117 11:08:01.184"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${VALIDLINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20240117 11:08:01.191" level="INFO">Clicking link '//a[text()='Click Here for Broken Link']'.</msg>
+<msg timestamp="20240117 11:08:02.613" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240117 11:08:02.613" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (436, 609)
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x562c77bbef83 &lt;unknown&gt;
+#1 0x562c77877cf7 &lt;unknown&gt;
+#2 0x562c778cfd92 &lt;unknown&gt;
+#3 0x562c778cd7f4 &lt;unknown&gt;
+#4 0x562c778ca894 &lt;unknown&gt;
+#5 0x562c778c94b9 &lt;unknown&gt;
+#6 0x562c778bb313 &lt;unknown&gt;
+#7 0x562c778f10b2 &lt;unknown&gt;
+#8 0x562c778bab49 &lt;unknown&gt;
+#9 0x562c778f14ce &lt;unknown&gt;
+#10 0x562c77910006 &lt;unknown&gt;
+#11 0x562c778f0e53 &lt;unknown&gt;
+#12 0x562c778b8dd4 &lt;unknown&gt;
+#13 0x562c778ba1de &lt;unknown&gt;
+#14 0x562c77b83531 &lt;unknown&gt;
+#15 0x562c77b87455 &lt;unknown&gt;
+#16 0x562c77b6ff55 &lt;unknown&gt;
+#17 0x562c77b880ef &lt;unknown&gt;
+#18 0x562c77b5399f &lt;unknown&gt;
+#19 0x562c77bac008 &lt;unknown&gt;
+#20 0x562c77bac1d7 &lt;unknown&gt;
+#21 0x562c77bbe124 &lt;unknown&gt;
+#22 0x7f971c10e609 start_thread
+</msg>
+<status status="FAIL" starttime="20240117 11:08:01.186" endtime="20240117 11:08:02.614"/>
+</kw>
+<status status="FAIL" starttime="20240117 11:08:01.032" endtime="20240117 11:08:02.614"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240117 11:08:02.615" endtime="20240117 11:08:02.615"/>
+</kw>
+<status status="FAIL" starttime="20240117 11:08:00.949" endtime="20240117 11:08:02.615">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (436, 609)
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x562c77bbef83 &lt;unknown&gt;
+#1 0x562c77877cf7 &lt;unknown&gt;
+#2 0x562c778cfd92 &lt;unknown&gt;
+#3 0x562c778cd7f4 &lt;unknown&gt;
+#4 0x562c778ca894 &lt;unknown&gt;
+#5 0x562c778c94b9 &lt;unknown&gt;
+#6 0x562c778bb313 &lt;unknown&gt;
+#7 0x562c778f10b2 &lt;unknown&gt;
+#8 0x562c778bab49 &lt;unknown&gt;
+#9 0x562c778f14ce &lt;unknown&gt;
+#10 0x562c77910006 &lt;unknown&gt;
+#11 0x562c778f0e53 &lt;unknown&gt;
+#12 0x562c778b8dd4 &lt;unknown&gt;
+#13 0x562c778ba1de &lt;unknown&gt;
+#14 0x562c77b83531 &lt;unknown&gt;
+#15 0x562c77b87455 &lt;unknown&gt;
+#16 0x562c77b6ff55 &lt;unknown&gt;
+#17 0x562c77b880ef &lt;unknown&gt;
+#18 0x562c77b5399f &lt;unknown&gt;
+#19 0x562c77bac008 &lt;unknown&gt;
+#20 0x562c77bac1d7 &lt;unknown&gt;
+#21 0x562c77bbe124 &lt;unknown&gt;
+#22 0x7f971c10e609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240117 11:07:41.777" endtime="20240117 11:08:02.616"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

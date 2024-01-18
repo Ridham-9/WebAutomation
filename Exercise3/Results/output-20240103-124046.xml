@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 12:40:46.535" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="31">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 12:40:46.674" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 12:40:46.673" endtime="20240103 12:40:52.986"/>
+</kw>
+<status status="PASS" starttime="20240103 12:40:46.673" endtime="20240103 12:40:52.986"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 12:40:52.992" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 12:40:52.988" endtime="20240103 12:40:53.072"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240103 12:40:53.073" endtime="20240103 12:40:53.118"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240103 12:40:53.119" level="INFO">Clicking button 'Xpath:/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[8]'.</msg>
+<msg timestamp="20240103 12:40:53.257" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 12:40:53.258" level="FAIL">Button with locator 'Xpath:/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[8]' not found.</msg>
+<status status="FAIL" starttime="20240103 12:40:53.118" endtime="20240103 12:40:53.259"/>
+</kw>
+<status status="FAIL" starttime="20240103 12:40:52.987" endtime="20240103 12:40:53.259"/>
+</kw>
+<status status="FAIL" starttime="20240103 12:40:46.672" endtime="20240103 12:40:53.259">Button with locator 'Xpath:/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[8]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240103 12:40:46.536" endtime="20240103 12:40:53.260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

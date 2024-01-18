@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 12:05:48.256" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="47">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 12:05:48.379" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 12:05:48.378" endtime="20240108 12:05:57.429"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 12:05:57.430" endtime="20240108 12:05:57.533"/>
+</kw>
+<status status="PASS" starttime="20240108 12:05:48.377" endtime="20240108 12:05:57.534"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="51">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:05:57.535" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:05:57.535" endtime="20240108 12:05:57.613"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:06:00.614" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:05:57.613" endtime="20240108 12:06:00.614"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:06:00.619" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:06:00.617" endtime="20240108 12:06:00.721"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:06:00.723" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240108 12:06:00.721" endtime="20240108 12:06:00.789"/>
+</kw>
+<status status="PASS" starttime="20240108 12:06:00.615" endtime="20240108 12:06:00.790"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:06:03.790" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:06:00.790" endtime="20240108 12:06:03.791"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:06:03.797" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:06:03.794" endtime="20240108 12:06:03.899"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:06:03.901" level="INFO">Clicking element '//*[@class="auto-complete__value-container auto-complete__value-container--is-multi css-1hwfws3"]'.</msg>
+<status status="PASS" starttime="20240108 12:06:03.899" endtime="20240108 12:06:03.985"/>
+</kw>
+<status status="PASS" starttime="20240108 12:06:03.793" endtime="20240108 12:06:03.985"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:06:06.986" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:06:03.985" endtime="20240108 12:06:06.987"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:06:06.992" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:06:06.990" endtime="20240108 12:06:07.079"/>
+</kw>
+<status status="PASS" starttime="20240108 12:06:06.988" endtime="20240108 12:06:07.079"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:06:10.081" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:06:07.080" endtime="20240108 12:06:10.082"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:06:10.084" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:06:10.083" endtime="20240108 12:06:10.131"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SLIDER}</arg>
+<arg>set variable</arg>
+<arg>"Value" = 85</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:06:10.134" level="INFO">Clicking element '//*[@class="range-slider range-slider--primary"]' with set variable.</msg>
+<msg timestamp="20240108 12:06:10.379" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 12:06:10.380" level="FAIL">ValueError: 'SET VARIABLE' modifier does not match to Selenium Keys</msg>
+<status status="FAIL" starttime="20240108 12:06:10.132" endtime="20240108 12:06:10.403"/>
+</kw>
+<status status="FAIL" starttime="20240108 12:06:10.083" endtime="20240108 12:06:10.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:06:10.403" endtime="20240108 12:06:10.403"/>
+</kw>
+<kw name="Perform Action for Widgets Progress bar">
+<status status="NOT RUN" starttime="20240108 12:06:10.403" endtime="20240108 12:06:10.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:06:10.403" endtime="20240108 12:06:10.403"/>
+</kw>
+<kw name="Perform Action for Widgets Tabs">
+<status status="NOT RUN" starttime="20240108 12:06:10.404" endtime="20240108 12:06:10.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:06:10.404" endtime="20240108 12:06:10.404"/>
+</kw>
+<kw name="Perform Action for Widgets Tool tips">
+<status status="NOT RUN" starttime="20240108 12:06:10.404" endtime="20240108 12:06:10.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:06:10.404" endtime="20240108 12:06:10.404"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<status status="NOT RUN" starttime="20240108 12:06:10.404" endtime="20240108 12:06:10.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:06:10.404" endtime="20240108 12:06:10.404"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<status status="NOT RUN" starttime="20240108 12:06:10.405" endtime="20240108 12:06:10.405"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:06:10.405" endtime="20240108 12:06:10.405"/>
+</kw>
+<status status="FAIL" starttime="20240108 12:05:57.534" endtime="20240108 12:06:10.405">ValueError: 'SET VARIABLE' modifier does not match to Selenium Keys</status>
+</test>
+<status status="FAIL" starttime="20240108 12:05:48.256" endtime="20240108 12:06:10.406"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

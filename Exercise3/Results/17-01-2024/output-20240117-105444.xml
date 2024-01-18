@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240117 10:54:44.362" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="90">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 10:54:44.506" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240117 10:54:44.505" endtime="20240117 10:55:19.994"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 10:55:19.996" endtime="20240117 10:55:20.147"/>
+</kw>
+<status status="PASS" starttime="20240117 10:54:44.503" endtime="20240117 10:55:20.151"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="94">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 10:55:20.155" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 10:55:20.154" endtime="20240117 10:55:20.261"/>
+</kw>
+<kw name="Perform Action for Element Brokenlink">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-6').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 10:55:20.264" level="INFO">Executing JavaScript:
+document.querySelector('#item-6').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 10:55:20.263" endtime="20240117 10:55:20.290"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>Click Here for Broken Link</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<msg timestamp="20240117 10:55:25.518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240117 10:55:25.518" level="FAIL">Element with locator 'Click Here for Broken Link' not found.</msg>
+<status status="FAIL" starttime="20240117 10:55:20.291" endtime="20240117 10:55:25.519"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Click Here for Broken Link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240117 10:55:25.519" endtime="20240117 10:55:25.520"/>
+</kw>
+<status status="FAIL" starttime="20240117 10:55:20.262" endtime="20240117 10:55:25.520"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240117 10:55:25.520" endtime="20240117 10:55:25.520"/>
+</kw>
+<status status="FAIL" starttime="20240117 10:55:20.153" endtime="20240117 10:55:25.521">Element with locator 'Click Here for Broken Link' not found.</status>
+</test>
+<status status="FAIL" starttime="20240117 10:54:44.363" endtime="20240117 10:55:25.522"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

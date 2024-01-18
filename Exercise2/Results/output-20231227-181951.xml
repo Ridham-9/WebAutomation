@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231227 18:19:51.230" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="19">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231227 18:19:52.040" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231227 18:19:52.040" endtime="20231227 18:20:03.123"/>
+</kw>
+<status status="PASS" starttime="20231227 18:19:52.039" endtime="20231227 18:20:03.124"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 18:20:03.128" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231227 18:20:03.125" endtime="20231227 18:20:03.225"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231227 18:20:03.226" endtime="20231227 18:20:03.474"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 18:20:03.477" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<msg timestamp="20231227 18:20:04.204" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231227 18:20:04.204" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5622fb929f83 &lt;unknown&gt;
+#1 0x5622fb5e2b2b &lt;unknown&gt;
+#2 0x5622fb634171 &lt;unknown&gt;
+#3 0x5622fb626313 &lt;unknown&gt;
+#4 0x5622fb65c0b2 &lt;unknown&gt;
+#5 0x5622fb625b49 &lt;unknown&gt;
+#6 0x5622fb65c4ce &lt;unknown&gt;
+#7 0x5622fb67b006 &lt;unknown&gt;
+#8 0x5622fb65be53 &lt;unknown&gt;
+#9 0x5622fb623dd4 &lt;unknown&gt;
+#10 0x5622fb6251de &lt;unknown&gt;
+#11 0x5622fb8ee531 &lt;unknown&gt;
+#12 0x5622fb8f2455 &lt;unknown&gt;
+#13 0x5622fb8daf55 &lt;unknown&gt;
+#14 0x5622fb8f30ef &lt;unknown&gt;
+#15 0x5622fb8be99f &lt;unknown&gt;
+#16 0x5622fb917008 &lt;unknown&gt;
+#17 0x5622fb9171d7 &lt;unknown&gt;
+#18 0x5622fb929124 &lt;unknown&gt;
+#19 0x7fc372a10609 start_thread
+</msg>
+<status status="FAIL" starttime="20231227 18:20:03.475" endtime="20231227 18:20:04.378"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 18:20:04.379" endtime="20231227 18:20:04.379"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="NOT RUN" starttime="20231227 18:20:04.380" endtime="20231227 18:20:04.380"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 18:20:04.381" endtime="20231227 18:20:04.382"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>Xpath://*[@data-id="db3418e"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 18:20:04.383" endtime="20231227 18:20:04.383"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA of Automation tools/frameworks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231227 18:20:04.384" endtime="20231227 18:20:04.384"/>
+</kw>
+<kw>
+<var>${DATA_LIST}=</var>
+<var>${DATA of Automation tools/frameworks}</var>
+<var>${SPACE}</var>
+<status status="NOT RUN" starttime="20231227 18:20:04.385" endtime="20231227 18:20:04.386"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${DATA_LIST}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231227 18:20:04.386" endtime="20231227 18:20:04.387"/>
+</kw>
+<kw name="Create CSV">
+<arg>${CSV File}</arg>
+<status status="NOT RUN" starttime="20231227 18:20:04.432" endtime="20231227 18:20:04.432"/>
+</kw>
+<kw name="Append To CSV">
+<arg>${CSV File}</arg>
+<arg>${DATA_LIST}</arg>
+<arg>fieldnames=column1,column2,column3</arg>
+<status status="NOT RUN" starttime="20231227 18:20:04.468" endtime="20231227 18:20:04.469"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:19:52.039" endtime="20231227 18:20:04.470">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5622fb929f83 &lt;unknown&gt;
+#1 0x5622fb5e2b2b &lt;unknown&gt;
+#2 0x5622fb634171 &lt;unknown&gt;
+#3 0x5622fb626313 &lt;unknown&gt;
+#4 0x5622fb65c0b2 &lt;unknown&gt;
+#5 0x5622fb625b49 &lt;unknown&gt;
+#6 0x5622fb65c4ce &lt;unknown&gt;
+#7 0x5622fb67b006 &lt;unknown&gt;
+#8 0x5622fb65be53 &lt;unknown&gt;
+#9 0x5622fb623dd4 &lt;unknown&gt;
+#10 0x5622fb6251de &lt;unknown&gt;
+#11 0x5622fb8ee531 &lt;unknown&gt;
+#12 0x5622fb8f2455 &lt;unknown&gt;
+#13 0x5622fb8daf55 &lt;unknown&gt;
+#14 0x5622fb8f30ef &lt;unknown&gt;
+#15 0x5622fb8be99f &lt;unknown&gt;
+#16 0x5622fb917008 &lt;unknown&gt;
+#17 0x5622fb9171d7 &lt;unknown&gt;
+#18 0x5622fb929124 &lt;unknown&gt;
+#19 0x7fc372a10609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20231227 18:19:51.237" endtime="20231227 18:20:04.504"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

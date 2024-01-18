@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240104 17:57:25.905" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="29">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240104 17:57:26.044" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240104 17:57:26.043" endtime="20240104 17:57:33.202"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 17:57:33.204" endtime="20240104 17:57:33.339"/>
+</kw>
+<status status="PASS" starttime="20240104 17:57:26.042" endtime="20240104 17:57:33.339"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="33">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240104 17:57:33.343" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240104 17:57:33.342" endtime="20240104 17:57:33.418"/>
+</kw>
+<kw name="Click Element and Verify">
+<var>${clicked_locator}</var>
+<arg>${TEXTBOX}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240104 17:57:33.420" level="INFO">Clicking element '//*[@id="item-0"][1]'.</msg>
+<status status="PASS" starttime="20240104 17:57:33.419" endtime="20240104 17:57:33.497"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${element_locator}</var>
+<arg>${locator}</arg>
+<arg>@xpath</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20240104 17:57:33.547" level="INFO">${element_locator} = None</msg>
+<status status="PASS" starttime="20240104 17:57:33.497" endtime="20240104 17:57:33.547"/>
+</kw>
+<msg timestamp="20240104 17:57:33.547" level="INFO">${clicked_locator} = None</msg>
+<status status="PASS" starttime="20240104 17:57:33.418" endtime="20240104 17:57:33.547"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == '${TEXTBOX}'</arg>
+<arg>Perform Action for Element X</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240104 17:57:33.547" endtime="20240104 17:57:33.548"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == '${CHECKBOX}'</arg>
+<arg>Perform Action for Element Y</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240104 17:57:33.548" endtime="20240104 17:57:33.548"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240104 17:57:36.549" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240104 17:57:33.549" endtime="20240104 17:57:36.549"/>
+</kw>
+<status status="PASS" starttime="20240104 17:57:33.341" endtime="20240104 17:57:36.550"/>
+</test>
+<status status="PASS" starttime="20240104 17:57:25.906" endtime="20240104 17:57:36.552"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

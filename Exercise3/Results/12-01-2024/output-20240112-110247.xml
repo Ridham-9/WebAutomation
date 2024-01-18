@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240112 11:02:47.400" rpa="false" schemaversion="4">
+<suite id="s1" name="Alerts" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Alerts.robot">
+<test id="s1-t1" name="Launch Browser" line="43">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240112 11:02:47.525" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240112 11:02:47.525" endtime="20240112 11:02:55.607"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240112 11:02:55.608" endtime="20240112 11:02:55.713"/>
+</kw>
+<status status="PASS" starttime="20240112 11:02:47.524" endtime="20240112 11:02:55.713"/>
+</test>
+<test id="s1-t2" name="Open Alerts,Frames Section" line="47">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:02:55.716" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:02:55.715" endtime="20240112 11:02:55.793"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240112 11:02:58.793" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240112 11:02:55.793" endtime="20240112 11:02:58.794"/>
+</kw>
+<kw name="Perform Action for Browser Window">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:02:58.797" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:02:58.795" endtime="20240112 11:02:58.873"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWTAB}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:02:58.882" level="INFO">Clicking button 'Xpath://*[@id="tabButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:02:58.873" endtime="20240112 11:02:59.032"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20240112 11:02:59.044" level="INFO">${handles} = ['7B20491EAE11B7864B9C46A33CD520F3', 'D741D65CDA69F207C68538118755F98E']</msg>
+<status status="PASS" starttime="20240112 11:02:59.032" endtime="20240112 11:02:59.044"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240112 11:02:59.045" endtime="20240112 11:02:59.107"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${window_titles}</var>
+<arg>sampleHeading</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240112 11:02:59.241" level="INFO">${window_titles} = This is a sample page</msg>
+<status status="PASS" starttime="20240112 11:02:59.107" endtime="20240112 11:02:59.241"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240112 11:02:59.241" endtime="20240112 11:02:59.253"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'New Tab Title' in $window_titles</arg>
+<arg>Log</arg>
+<arg>New tab is open</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>New tab is not open</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>New tab is not open</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240112 11:02:59.255" level="INFO">New tab is not open</msg>
+<status status="PASS" starttime="20240112 11:02:59.254" endtime="20240112 11:02:59.255"/>
+</kw>
+<status status="PASS" starttime="20240112 11:02:59.253" endtime="20240112 11:02:59.255"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWWINDOW}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:02:59.257" level="INFO">Clicking button 'Xpath://*[@id="windowButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:02:59.256" endtime="20240112 11:02:59.426"/>
+</kw>
+<kw name="Get Window Titles" library="SeleniumLibrary">
+<var>${window_titles}</var>
+<doc>Returns and logs titles of all windows of the selected browser.</doc>
+<msg timestamp="20240112 11:02:59.599" level="INFO">Altogether 3 items.
+1: DEMOQA
+2: undefined
+3: undefined</msg>
+<msg timestamp="20240112 11:02:59.600" level="INFO">${window_titles} = ['DEMOQA', 'undefined', 'undefined']</msg>
+<status status="PASS" starttime="20240112 11:02:59.426" endtime="20240112 11:02:59.600"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'New Window Title' in $window_titles</arg>
+<arg>Log</arg>
+<arg>New window is open</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>New window is not open</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log" library="BuiltIn">
+<arg>New window is not open</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240112 11:02:59.601" level="INFO">New window is not open</msg>
+<status status="PASS" starttime="20240112 11:02:59.601" endtime="20240112 11:02:59.601"/>
+</kw>
+<status status="PASS" starttime="20240112 11:02:59.600" endtime="20240112 11:02:59.601"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NEWWINDOWMSG}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:02:59.602" level="INFO">Clicking button 'Xpath://*[@id="messageWindowButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:02:59.602" endtime="20240112 11:02:59.730"/>
+</kw>
+<status status="PASS" starttime="20240112 11:02:58.794" endtime="20240112 11:02:59.730"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240112 11:03:02.731" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240112 11:02:59.730" endtime="20240112 11:03:02.731"/>
+</kw>
+<kw name="Perform Action for Alerts">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240112 11:03:02.732" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240112 11:03:02.732" endtime="20240112 11:03:02.749"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ALERT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:02.750" level="INFO">Clicking button 'Xpath://*[@id="alertButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:03:02.749" endtime="20240112 11:03:02.833"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>You clicked a button</arg>
+<arg>ACCEPT</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240112 11:03:02.834" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20240112 11:03:02.834" endtime="20240112 11:03:02.850"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${TIMERALERT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240112 11:03:02.851" level="INFO">Clicking button 'Xpath://*[@id="timerAlertButton"]'.</msg>
+<status status="PASS" starttime="20240112 11:03:02.850" endtime="20240112 11:03:02.938"/>
+</kw>
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>This alert appeared after 5 seconds</arg>
+<arg>ACCEPT</arg>
+<arg>5s</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20240112 11:03:02.938" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:05</msg>
+<msg timestamp="20240112 11:03:08.083" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: This alert appeared after 5 seconds
+Message: unexpected alert open: {Alert text : This alert appeared after 5 seconds}
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5582c435ef83 &lt;unknown&gt;
+#1 0x5582c4017cf7 &lt;unknown&gt;
+#2 0x5582c40b06d7 &lt;unknown&gt;
+#3 0x5582c4090e53 &lt;unknown&gt;
+#4 0x5582c4058dd4 &lt;unknown&gt;
+#5 0x5582c405a1de &lt;unknown&gt;
+#6 0x5582c4323531 &lt;unknown&gt;
+#7 0x5582c4327455 &lt;unknown&gt;
+#8 0x5582c430ff55 &lt;unknown&gt;
+#9 0x5582c43280ef &lt;unknown&gt;
+#10 0x5582c42f399f &lt;unknown&gt;
+#11 0x5582c434c008 &lt;unknown&gt;
+#12 0x5582c434c1d7 &lt;unknown&gt;
+#13 0x5582c435e124 &lt;unknown&gt;
+#14 0x7f5c9b7a4609 start_thread
+</msg>
+<msg timestamp="20240112 11:03:08.085" level="FAIL">Alert not found in 5 seconds.</msg>
+<status status="FAIL" starttime="20240112 11:03:02.938" endtime="20240112 11:03:08.098"/>
+</kw>
+<status status="FAIL" starttime="20240112 11:03:02.731" endtime="20240112 11:03:08.098"/>
+</kw>
+<status status="FAIL" starttime="20240112 11:02:55.714" endtime="20240112 11:03:08.099">Alert not found in 5 seconds.</status>
+</test>
+<status status="FAIL" starttime="20240112 11:02:47.401" endtime="20240112 11:03:08.104"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Alerts">Alerts</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240112 11:03:08.083" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: This alert appeared after 5 seconds
+Message: unexpected alert open: {Alert text : This alert appeared after 5 seconds}
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5582c435ef83 &lt;unknown&gt;
+#1 0x5582c4017cf7 &lt;unknown&gt;
+#2 0x5582c40b06d7 &lt;unknown&gt;
+#3 0x5582c4090e53 &lt;unknown&gt;
+#4 0x5582c4058dd4 &lt;unknown&gt;
+#5 0x5582c405a1de &lt;unknown&gt;
+#6 0x5582c4323531 &lt;unknown&gt;
+#7 0x5582c4327455 &lt;unknown&gt;
+#8 0x5582c430ff55 &lt;unknown&gt;
+#9 0x5582c43280ef &lt;unknown&gt;
+#10 0x5582c42f399f &lt;unknown&gt;
+#11 0x5582c434c008 &lt;unknown&gt;
+#12 0x5582c434c1d7 &lt;unknown&gt;
+#13 0x5582c435e124 &lt;unknown&gt;
+#14 0x7f5c9b7a4609 start_thread
+</msg>
+</errors>
+</robot>

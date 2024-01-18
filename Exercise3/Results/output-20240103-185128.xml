@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 18:51:28.206" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="63">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 18:51:28.329" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 18:51:28.329" endtime="20240103 18:51:33.776"/>
+</kw>
+<status status="PASS" starttime="20240103 18:51:28.328" endtime="20240103 18:51:33.778"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:51:33.791" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:51:33.789" endtime="20240103 18:51:33.929"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-7').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:51:33.930" level="INFO">Executing JavaScript:
+document.querySelector('#item-7').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:51:33.929" endtime="20240103 18:51:33.951"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 18:51:33.952" level="INFO">Clicking element 'Xpath://*[@id="downloadButton"]'.</msg>
+<status status="PASS" starttime="20240103 18:51:33.951" endtime="20240103 18:51:34.036"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:51:37.037" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:51:34.036" endtime="20240103 18:51:37.037"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:51:37.038" endtime="20240103 18:51:37.095"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:51:37.096" endtime="20240103 18:51:37.173"/>
+</kw>
+<status status="PASS" starttime="20240103 18:51:33.780" endtime="20240103 18:51:37.174"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:51:47.175" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 18:51:37.174" endtime="20240103 18:51:47.175"/>
+</kw>
+<kw name="Open Form Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:51:47.176" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:51:47.175" endtime="20240103 18:51:47.211"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:51:47.212" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:51:47.211" endtime="20240103 18:51:47.249"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:51:47.249" endtime="20240103 18:51:47.259"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:51:47.260" endtime="20240103 18:51:47.272"/>
+</kw>
+<status status="PASS" starttime="20240103 18:51:47.175" endtime="20240103 18:51:47.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:51:57.273" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 18:51:47.272" endtime="20240103 18:51:57.273"/>
+</kw>
+<kw name="Open Alerts, Frame &amp; Windows">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:51:57.277" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:51:57.275" endtime="20240103 18:51:57.335"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:51:57.336" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:51:57.336" endtime="20240103 18:51:57.357"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:51:57.358" endtime="20240103 18:51:57.374"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:51:57.374" endtime="20240103 18:51:57.387"/>
+</kw>
+<status status="PASS" starttime="20240103 18:51:57.274" endtime="20240103 18:51:57.387"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:52:07.388" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240103 18:51:57.387" endtime="20240103 18:52:07.388"/>
+</kw>
+<kw name="Open Widgets">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:52:07.391" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:52:07.390" endtime="20240103 18:52:07.451"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:52:07.453" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-4')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 18:52:07.452" endtime="20240103 18:52:07.474"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:52:07.475" endtime="20240103 18:52:07.482"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20240103 18:52:07.483" endtime="20240103 18:52:07.494"/>
+</kw>
+<status status="PASS" starttime="20240103 18:52:07.389" endtime="20240103 18:52:07.494"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240103 18:52:10.495" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240103 18:52:07.494" endtime="20240103 18:52:10.495"/>
+</kw>
+<kw name="Open Interactions">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 18:52:10.501" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<msg timestamp="20240103 18:52:10.570" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x557829f72f83 &lt;unknown&gt;
+#1 0x557829c2bcf7 &lt;unknown&gt;
+#2 0x557829bff728 &lt;unknown&gt;
+#3 0x557829cac69f &lt;unknown&gt;
+#4 0x557829cc3719 &lt;unknown&gt;
+#5 0x557829ca4e53 &lt;unknown&gt;
+#6 0x557829c6cdd4 &lt;unknown&gt;
+#7 0x557829c6e1de &lt;unknown&gt;
+#8 0x557829f37531 &lt;unknown&gt;
+#9 0x557829f3b455 &lt;unknown&gt;
+#10 0x557829f23f55 &lt;unknown&gt;
+#11 0x557829f3c0ef &lt;unknown&gt;
+#12 0x557829f0799f &lt;unknown&gt;
+#13 0x557829f60008 &lt;unknown&gt;
+#14 0x557829f601d7 &lt;unknown&gt;
+#15 0x557829f72124 &lt;unknown&gt;
+#16 0x7f646274f609 start_thread
+</msg>
+<msg timestamp="20240103 18:52:10.572" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x557829f72f83 &lt;unknown&gt;
+#1 0x557829c2bcf7 &lt;unknown&gt;
+#2 0x557829bff728 &lt;unknown&gt;
+#3 0x557829cac69f &lt;unknown&gt;
+#4 0x557829cc3719 &lt;unknown&gt;
+#5 0x557829ca4e53 &lt;unknown&gt;
+#6 0x557829c6cdd4 &lt;unknown&gt;
+#7 0x557829c6e1de &lt;unknown&gt;
+#8 0x557829f37531 &lt;unknown&gt;
+#9 0x557829f3b455 &lt;unknown&gt;
+#10 0x557829f23f55 &lt;unknown&gt;
+#11 0x557829f3c0ef &lt;unknown&gt;
+#12 0x557829f0799f &lt;unknown&gt;
+#13 0x557829f60008 &lt;unknown&gt;
+#14 0x557829f601d7 &lt;unknown&gt;
+#15 0x557829f72124 &lt;unknown&gt;
+#16 0x7f646274f609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 18:52:10.498" endtime="20240103 18:52:10.576"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-4')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240103 18:52:10.577" endtime="20240103 18:52:10.577"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20240103 18:52:10.577" endtime="20240103 18:52:10.578"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="NOT RUN" starttime="20240103 18:52:10.578" endtime="20240103 18:52:10.578"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:52:10.496" endtime="20240103 18:52:10.578"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240103 18:52:10.579" endtime="20240103 18:52:10.579"/>
+</kw>
+<kw name="Open Book Store">
+<status status="NOT RUN" starttime="20240103 18:52:10.579" endtime="20240103 18:52:10.579"/>
+</kw>
+<status status="FAIL" starttime="20240103 18:51:28.328" endtime="20240103 18:52:10.580">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x557829f72f83 &lt;unknown&gt;
+#1 0x557829c2bcf7 &lt;unknown&gt;
+#2 0x557829bff728 &lt;unknown&gt;
+#3 0x557829cac69f &lt;unknown&gt;
+#4 0x557829cc3719 &lt;unknown&gt;
+#5 0x557829ca4e53 &lt;unknown&gt;
+#6 0x557829c6cdd4 &lt;unknown&gt;
+#7 0x557829c6e1de &lt;unknown&gt;
+#8 0x557829f37531 &lt;unknown&gt;
+#9 0x557829f3b455 &lt;unknown&gt;
+#10 0x557829f23f55 &lt;unknown&gt;
+#11 0x557829f3c0ef &lt;unknown&gt;
+#12 0x557829f0799f &lt;unknown&gt;
+#13 0x557829f60008 &lt;unknown&gt;
+#14 0x557829f601d7 &lt;unknown&gt;
+#15 0x557829f72124 &lt;unknown&gt;
+#16 0x7f646274f609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 18:51:28.207" endtime="20240103 18:52:10.583"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240103 18:52:10.570" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x557829f72f83 &lt;unknown&gt;
+#1 0x557829c2bcf7 &lt;unknown&gt;
+#2 0x557829bff728 &lt;unknown&gt;
+#3 0x557829cac69f &lt;unknown&gt;
+#4 0x557829cc3719 &lt;unknown&gt;
+#5 0x557829ca4e53 &lt;unknown&gt;
+#6 0x557829c6cdd4 &lt;unknown&gt;
+#7 0x557829c6e1de &lt;unknown&gt;
+#8 0x557829f37531 &lt;unknown&gt;
+#9 0x557829f3b455 &lt;unknown&gt;
+#10 0x557829f23f55 &lt;unknown&gt;
+#11 0x557829f3c0ef &lt;unknown&gt;
+#12 0x557829f0799f &lt;unknown&gt;
+#13 0x557829f60008 &lt;unknown&gt;
+#14 0x557829f601d7 &lt;unknown&gt;
+#15 0x557829f72124 &lt;unknown&gt;
+#16 0x7f646274f609 start_thread
+</msg>
+</errors>
+</robot>

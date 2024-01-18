@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 11:40:22.970" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="31">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 11:40:23.094" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240109 11:40:23.093" endtime="20240109 11:40:28.798"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 11:40:28.800" endtime="20240109 11:40:28.917"/>
+</kw>
+<status status="PASS" starttime="20240109 11:40:23.093" endtime="20240109 11:40:28.918"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="35">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:40:28.920" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:40:28.920" endtime="20240109 11:40:29.007"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:40:32.009" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:40:29.007" endtime="20240109 11:40:32.010"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:40:32.014" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:40:32.012" endtime="20240109 11:40:32.143"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW}</var>
+<arg>${list1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:40:32.144" level="INFO">${NEW} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:40:32.143" endtime="20240109 11:40:32.144"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list1}</var>
+<arg>${list2}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:40:32.144" level="INFO">${list1} = Xpath://*[@class="vertical-list-container mt-4"]/div[2]</msg>
+<status status="PASS" starttime="20240109 11:40:32.144" endtime="20240109 11:40:32.144"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list2}</var>
+<arg>${NEW}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:40:32.145" level="INFO">${list2} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:40:32.145" endtime="20240109 11:40:32.145"/>
+</kw>
+<status status="PASS" starttime="20240109 11:40:32.011" endtime="20240109 11:40:32.145"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:40:35.146" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:40:32.146" endtime="20240109 11:40:35.147"/>
+</kw>
+<kw name="Perform Action for Resizable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:40:35.152" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:40:35.150" endtime="20240109 11:40:35.242"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RESIZE1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 11:40:35.245" endtime="20240109 11:40:35.305"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${RESIZE1}</var>
+<arg>Change Style Attribute</arg>
+<arg>${RESIZE1}</arg>
+<arg>width</arg>
+<arg>421px</arg>
+<arg>Change Style Attribute</arg>
+<arg>${RESIZE1}</arg>
+<arg>height</arg>
+<arg>368px</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:40:35.305" level="INFO">${RESIZE1} = ['Change Style Attribute', 'resizableBoxWithRestriction', 'width', '421px', 'Change Style Attribute', 'resizableBoxWithRestriction', 'height', '368px']</msg>
+<status status="PASS" starttime="20240109 11:40:35.305" endtime="20240109 11:40:35.305"/>
+</kw>
+<status status="PASS" starttime="20240109 11:40:35.148" endtime="20240109 11:40:35.305"/>
+</kw>
+<status status="PASS" starttime="20240109 11:40:28.919" endtime="20240109 11:40:35.306"/>
+</test>
+<status status="PASS" starttime="20240109 11:40:22.971" endtime="20240109 11:40:35.306"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

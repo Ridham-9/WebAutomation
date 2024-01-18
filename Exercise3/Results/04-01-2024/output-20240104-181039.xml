@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240104 18:10:39.419" rpa="false" schemaversion="4">
+<suite id="s1" name="Details2" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details2.robot">
+<test id="s1-t1" name="Launch Browser" line="34">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240104 18:10:39.543" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240104 18:10:39.542" endtime="20240104 18:10:48.860"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240104 18:10:48.863" endtime="20240104 18:10:48.987"/>
+</kw>
+<status status="PASS" starttime="20240104 18:10:39.541" endtime="20240104 18:10:48.988"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="38">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240104 18:10:48.991" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240104 18:10:48.990" endtime="20240104 18:10:49.072"/>
+</kw>
+<kw name="Click Element and Verify">
+<var>${clicked_locator}</var>
+<arg>${CLICKED}</arg>
+<kw name="Input">
+<arg>${locator}</arg>
+<arg>Click manually and press enter</arg>
+<msg timestamp="20240104 18:10:49.080" level="FAIL">No keyword with name 'Input' found. Did you mean:
+    SeleniumLibrary.Input Text</msg>
+<status status="FAIL" starttime="20240104 18:10:49.079" endtime="20240104 18:10:49.080"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${CLICKED}</var>
+<arg>${locator}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20240104 18:10:49.080" endtime="20240104 18:10:49.080"/>
+</kw>
+<status status="FAIL" starttime="20240104 18:10:49.074" endtime="20240104 18:10:49.080"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == Get Last Clicked Locator</arg>
+<arg>Perform Action for Element X</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240104 18:10:49.081" endtime="20240104 18:10:49.081"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${clicked_locator}' == Get Last Clicked Locator</arg>
+<arg>Perform Action for Element Y</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20240104 18:10:49.081" endtime="20240104 18:10:49.081"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240104 18:10:49.081" endtime="20240104 18:10:49.081"/>
+</kw>
+<status status="FAIL" starttime="20240104 18:10:48.989" endtime="20240104 18:10:49.082">No keyword with name 'Input' found. Did you mean:
+    SeleniumLibrary.Input Text</status>
+</test>
+<status status="FAIL" starttime="20240104 18:10:39.420" endtime="20240104 18:10:49.083"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Details2">Details2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 14:49:24.193" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="31">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 14:49:24.328" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 14:49:24.327" endtime="20240103 14:49:29.567"/>
+</kw>
+<status status="PASS" starttime="20240103 14:49:24.327" endtime="20240103 14:49:29.567"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 14:49:29.569" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 14:49:29.568" endtime="20240103 14:49:29.689"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240103 14:49:29.690" endtime="20240103 14:49:29.723"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${UPLOAD/DOWNLOAD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240103 14:49:29.723" level="INFO">Clicking element 'Xpath:/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[5]'.</msg>
+<msg timestamp="20240103 14:49:31.083" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 14:49:31.084" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;li class="btn btn-light " id="item-4"&gt;...&lt;/li&gt; is not clickable at point (130, 524). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55e68599ff83 &lt;unknown&gt;
+#1 0x55e685658cf7 &lt;unknown&gt;
+#2 0x55e6856b0d92 &lt;unknown&gt;
+#3 0x55e6856ae7f4 &lt;unknown&gt;
+#4 0x55e6856ab894 &lt;unknown&gt;
+#5 0x55e6856aa4b9 &lt;unknown&gt;
+#6 0x55e68569c313 &lt;unknown&gt;
+#7 0x55e6856d20b2 &lt;unknown&gt;
+#8 0x55e68569bb49 &lt;unknown&gt;
+#9 0x55e6856d24ce &lt;unknown&gt;
+#10 0x55e6856f1006 &lt;unknown&gt;
+#11 0x55e6856d1e53 &lt;unknown&gt;
+#12 0x55e685699dd4 &lt;unknown&gt;
+#13 0x55e68569b1de &lt;unknown&gt;
+#14 0x55e685964531 &lt;unknown&gt;
+#15 0x55e685968455 &lt;unknown&gt;
+#16 0x55e685950f55 &lt;unknown&gt;
+#17 0x55e6859690ef &lt;unknown&gt;
+#18 0x55e68593499f &lt;unknown&gt;
+#19 0x55e68598d008 &lt;unknown&gt;
+#20 0x55e68598d1d7 &lt;unknown&gt;
+#21 0x55e68599f124 &lt;unknown&gt;
+#22 0x7f575aeb2609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 14:49:29.723" endtime="20240103 14:49:31.085"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:49:29.567" endtime="20240103 14:49:31.085"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:49:24.326" endtime="20240103 14:49:31.086">ElementClickInterceptedException: Message: element click intercepted: Element &lt;li class="btn btn-light " id="item-4"&gt;...&lt;/li&gt; is not clickable at point (130, 524). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55e68599ff83 &lt;unknown&gt;
+#1 0x55e685658cf7 &lt;unknown&gt;
+#2 0x55e6856b0d92 &lt;unknown&gt;
+#3 0x55e6856ae7f4 &lt;unknown&gt;
+#4 0x55e6856ab894 &lt;unknown&gt;
+#5 0x55e6856aa4b9 &lt;unknown&gt;
+#6 0x55e68569c313 &lt;unknown&gt;
+#7 0x55e6856d20b2 &lt;unknown&gt;
+#8 0x55e68569bb49 &lt;unknown&gt;
+#9 0x55e6856d24ce &lt;unknown&gt;
+#10 0x55e6856f1006 &lt;unknown&gt;
+#11 0x55e6856d1e53 &lt;unknown&gt;
+#12 0x55e685699dd4 &lt;unknown&gt;
+#13 0x55e68569b1de &lt;unknown&gt;
+#14 0x55e685964531 &lt;unknown&gt;
+#15 0x55e685968455 &lt;unknown&gt;
+#16 0x55e685950f55 &lt;unknown&gt;
+#17 0x55e6859690ef &lt;unknown&gt;
+#18 0x55e68593499f &lt;unknown&gt;
+#19 0x55e68598d008 &lt;unknown&gt;
+#20 0x55e68598d1d7 &lt;unknown&gt;
+#21 0x55e68599f124 &lt;unknown&gt;
+#22 0x7f575aeb2609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 14:49:24.194" endtime="20240103 14:49:31.086"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

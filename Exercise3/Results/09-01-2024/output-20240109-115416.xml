@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240109 11:54:16.978" rpa="false" schemaversion="4">
+<suite id="s1" name="Interactions" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Interactions.robot">
+<test id="s1-t1" name="Launch Browser" line="35">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240109 11:54:17.139" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240109 11:54:17.138" endtime="20240109 11:54:39.467"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240109 11:54:39.468" endtime="20240109 11:54:39.576"/>
+</kw>
+<status status="PASS" starttime="20240109 11:54:17.137" endtime="20240109 11:54:39.578"/>
+</test>
+<test id="s1-t2" name="Open Interaction Section" line="39">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:54:39.584" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:54:39.582" endtime="20240109 11:54:39.653"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:54:42.654" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:54:39.653" endtime="20240109 11:54:42.655"/>
+</kw>
+<kw name="Perform Action for Sortable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[4].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:54:42.656" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[4].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:54:42.656" endtime="20240109 11:54:42.688"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW}</var>
+<arg>${list1}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:54:42.688" level="INFO">${NEW} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:54:42.688" endtime="20240109 11:54:42.688"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list1}</var>
+<arg>${list2}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:54:42.689" level="INFO">${list1} = Xpath://*[@class="vertical-list-container mt-4"]/div[2]</msg>
+<status status="PASS" starttime="20240109 11:54:42.688" endtime="20240109 11:54:42.689"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${list2}</var>
+<arg>${NEW}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240109 11:54:42.689" level="INFO">${list2} = Xpath://*[@class="vertical-list-container mt-4"]/div[1]</msg>
+<status status="PASS" starttime="20240109 11:54:42.689" endtime="20240109 11:54:42.689"/>
+</kw>
+<status status="PASS" starttime="20240109 11:54:42.655" endtime="20240109 11:54:42.689"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240109 11:54:45.690" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240109 11:54:42.689" endtime="20240109 11:54:45.690"/>
+</kw>
+<kw name="Perform Action for Resizable">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:54:45.693" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240109 11:54:45.692" endtime="20240109 11:54:45.735"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RESIZE1}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 11:54:45.735" endtime="20240109 11:54:45.764"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>var eleh</arg>
+<arg>document.querySelector('#${RESIZE1}')[0];eleh.style.height = '368px';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240109 11:54:45.764" level="INFO">Executing JavaScript:
+var elehdocument.querySelector('#resizableBoxWithRestriction')[0];eleh.style.height = '368px';
+Without any arguments.</msg>
+<msg timestamp="20240109 11:54:45.867" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240109 11:54:45.867" level="FAIL">JavascriptException: Message: javascript error: Unexpected token '.'
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x560c907daf83 &lt;unknown&gt;
+#1 0x560c90493cf7 &lt;unknown&gt;
+#2 0x560c9049a2a3 &lt;unknown&gt;
+#3 0x560c9049cbb4 &lt;unknown&gt;
+#4 0x560c9052cba3 &lt;unknown&gt;
+#5 0x560c9050d0b2 &lt;unknown&gt;
+#6 0x560c9052c006 &lt;unknown&gt;
+#7 0x560c9050ce53 &lt;unknown&gt;
+#8 0x560c904d4dd4 &lt;unknown&gt;
+#9 0x560c904d61de &lt;unknown&gt;
+#10 0x560c9079f531 &lt;unknown&gt;
+#11 0x560c907a3455 &lt;unknown&gt;
+#12 0x560c9078bf55 &lt;unknown&gt;
+#13 0x560c907a40ef &lt;unknown&gt;
+#14 0x560c9076f99f &lt;unknown&gt;
+#15 0x560c907c8008 &lt;unknown&gt;
+#16 0x560c907c81d7 &lt;unknown&gt;
+#17 0x560c907da124 &lt;unknown&gt;
+#18 0x7f6022604609 start_thread
+</msg>
+<status status="FAIL" starttime="20240109 11:54:45.764" endtime="20240109 11:54:45.868"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>var elew</arg>
+<arg>document.querySelector('#${RESIZE1}')[0];elew.style.width = '421px' ;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240109 11:54:45.868" endtime="20240109 11:54:45.868"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:54:45.691" endtime="20240109 11:54:45.868"/>
+</kw>
+<status status="FAIL" starttime="20240109 11:54:39.581" endtime="20240109 11:54:45.869">JavascriptException: Message: javascript error: Unexpected token '.'
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x560c907daf83 &lt;unknown&gt;
+#1 0x560c90493cf7 &lt;unknown&gt;
+#2 0x560c9049a2a3 &lt;unknown&gt;
+#3 0x560c9049cbb4 &lt;unknown&gt;
+#4 0x560c9052cba3 &lt;unknown&gt;
+#5 0x560c9050d0b2 &lt;unknown&gt;
+#6 0x560c9052c006 &lt;unknown&gt;
+#7 0x560c9050ce53 &lt;unknown&gt;
+#8 0x560c904d4dd4 &lt;unknown&gt;
+#9 0x560c904d61de &lt;unknown&gt;
+#10 0x560c9079f531 &lt;unknown&gt;
+#11 0x560c907a3455 &lt;unknown&gt;
+#12 0x560c9078bf55 &lt;unknown&gt;
+#13 0x560c907a40ef &lt;unknown&gt;
+#14 0x560c9076f99f &lt;unknown&gt;
+#15 0x560c907c8008 &lt;unknown&gt;
+#16 0x560c907c81d7 &lt;unknown&gt;
+#17 0x560c907da124 &lt;unknown&gt;
+#18 0x7f6022604609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240109 11:54:16.979" endtime="20240109 11:54:45.869"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Interactions">Interactions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

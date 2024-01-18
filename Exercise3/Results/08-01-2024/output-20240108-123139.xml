@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240108 12:31:39.529" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="57">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240108 12:31:39.663" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240108 12:31:39.663" endtime="20240108 12:32:16.335"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240108 12:32:16.338" endtime="20240108 12:32:16.454"/>
+</kw>
+<status status="PASS" starttime="20240108 12:31:39.662" endtime="20240108 12:32:16.454"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="61">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:32:16.458" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:32:16.456" endtime="20240108 12:32:16.541"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:32:19.542" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:32:16.542" endtime="20240108 12:32:19.543"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:32:19.548" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:32:19.546" endtime="20240108 12:32:19.601"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:32:19.604" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240108 12:32:19.601" endtime="20240108 12:32:19.682"/>
+</kw>
+<status status="PASS" starttime="20240108 12:32:19.544" endtime="20240108 12:32:19.682"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:32:22.683" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:32:19.682" endtime="20240108 12:32:22.683"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:32:22.686" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:32:22.685" endtime="20240108 12:32:22.739"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:32:22.740" level="INFO">Clicking element '//*[@class="auto-complete__value-container auto-complete__value-container--is-multi css-1hwfws3"]'.</msg>
+<status status="PASS" starttime="20240108 12:32:22.739" endtime="20240108 12:32:22.794"/>
+</kw>
+<status status="PASS" starttime="20240108 12:32:22.684" endtime="20240108 12:32:22.794"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:32:25.795" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:32:22.794" endtime="20240108 12:32:25.796"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:32:25.800" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:32:25.799" endtime="20240108 12:32:25.886"/>
+</kw>
+<status status="PASS" starttime="20240108 12:32:25.797" endtime="20240108 12:32:25.886"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240108 12:32:28.888" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240108 12:32:25.887" endtime="20240108 12:32:28.888"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240108 12:32:28.893" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240108 12:32:28.892" endtime="20240108 12:32:28.979"/>
+</kw>
+<kw name="Set Slider">
+<arg>${SLIDER}</arg>
+<arg>66</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${element_slider}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20240108 12:32:29.030" level="INFO">${element_slider} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5eec0e108c026bd4af78fc6ec81e1de9", element="EB39F917FC909C367EC40C31B3284C2E_element_37")&gt;</msg>
+<status status="PASS" starttime="20240108 12:32:28.982" endtime="20240108 12:32:29.030"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>${element_slider}\[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240108 12:32:29.031" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="5eec0e108c026bd4af78fc6ec81e1de9", element="EB39F917FC909C367EC40C31B3284C2E_element_37")&gt;[0]</msg>
+<status status="PASS" starttime="20240108 12:32:29.030" endtime="20240108 12:32:29.031"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<msg timestamp="20240108 12:32:29.193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240108 12:32:29.193" level="FAIL">Element with locator '&lt;selenium.webdriver.remote.webelement.WebElement (session="5eec0e108c026bd4af78fc6ec81e1de9", element="EB39F917FC909C367EC40C31B3284C2E_element_37")&gt;[0]' not found.</msg>
+<status status="FAIL" starttime="20240108 12:32:29.031" endtime="20240108 12:32:29.217"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].value=${value}</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240108 12:32:29.217" endtime="20240108 12:32:29.217"/>
+</kw>
+<status status="FAIL" starttime="20240108 12:32:28.980" endtime="20240108 12:32:29.218"/>
+</kw>
+<status status="FAIL" starttime="20240108 12:32:28.890" endtime="20240108 12:32:29.218"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:32:29.220" endtime="20240108 12:32:29.220"/>
+</kw>
+<kw name="Perform Action for Widgets Progress bar">
+<status status="NOT RUN" starttime="20240108 12:32:29.221" endtime="20240108 12:32:29.221"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:32:29.222" endtime="20240108 12:32:29.223"/>
+</kw>
+<kw name="Perform Action for Widgets Tabs">
+<status status="NOT RUN" starttime="20240108 12:32:29.224" endtime="20240108 12:32:29.224"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:32:29.224" endtime="20240108 12:32:29.224"/>
+</kw>
+<kw name="Perform Action for Widgets Tool tips">
+<status status="NOT RUN" starttime="20240108 12:32:29.225" endtime="20240108 12:32:29.225"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:32:29.226" endtime="20240108 12:32:29.226"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<status status="NOT RUN" starttime="20240108 12:32:29.227" endtime="20240108 12:32:29.227"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:32:29.228" endtime="20240108 12:32:29.228"/>
+</kw>
+<kw name="Perform Action for Widgets Select Menu">
+<status status="NOT RUN" starttime="20240108 12:32:29.228" endtime="20240108 12:32:29.228"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240108 12:32:29.229" endtime="20240108 12:32:29.229"/>
+</kw>
+<status status="FAIL" starttime="20240108 12:32:16.455" endtime="20240108 12:32:29.230">Element with locator '&lt;selenium.webdriver.remote.webelement.WebElement (session="5eec0e108c026bd4af78fc6ec81e1de9", element="EB39F917FC909C367EC40C31B3284C2E_element_37")&gt;[0]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240108 12:31:39.530" endtime="20240108 12:32:29.232"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

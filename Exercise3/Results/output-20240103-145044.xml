@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240103 14:50:44.285" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="32">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240103 14:50:44.435" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240103 14:50:44.434" endtime="20240103 14:50:49.667"/>
+</kw>
+<status status="PASS" starttime="20240103 14:50:44.434" endtime="20240103 14:50:49.668"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 14:50:49.673" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240103 14:50:49.671" endtime="20240103 14:50:49.822"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[5]').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240103 14:50:49.823" level="INFO">Executing JavaScript:
+document.querySelector('/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[5]').click();
+Without any arguments.</msg>
+<msg timestamp="20240103 14:50:50.006" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-69.png"&gt;&lt;img src="selenium-screenshot-69.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240103 14:50:50.007" level="FAIL">InvalidElementStateException: Message: invalid element state: Failed to execute 'querySelector' on 'Document': '/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[5]' is not a valid selector.
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56101c624f83 &lt;unknown&gt;
+#1 0x56101c2ddcf7 &lt;unknown&gt;
+#2 0x56101c2e42a3 &lt;unknown&gt;
+#3 0x56101c2e6bb4 &lt;unknown&gt;
+#4 0x56101c376ba3 &lt;unknown&gt;
+#5 0x56101c3570b2 &lt;unknown&gt;
+#6 0x56101c376006 &lt;unknown&gt;
+#7 0x56101c356e53 &lt;unknown&gt;
+#8 0x56101c31edd4 &lt;unknown&gt;
+#9 0x56101c3201de &lt;unknown&gt;
+#10 0x56101c5e9531 &lt;unknown&gt;
+#11 0x56101c5ed455 &lt;unknown&gt;
+#12 0x56101c5d5f55 &lt;unknown&gt;
+#13 0x56101c5ee0ef &lt;unknown&gt;
+#14 0x56101c5b999f &lt;unknown&gt;
+#15 0x56101c612008 &lt;unknown&gt;
+#16 0x56101c6121d7 &lt;unknown&gt;
+#17 0x56101c624124 &lt;unknown&gt;
+#18 0x7f397606a609 start_thread
+</msg>
+<status status="FAIL" starttime="20240103 14:50:49.823" endtime="20240103 14:50:50.021"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:50:49.670" endtime="20240103 14:50:50.022"/>
+</kw>
+<status status="FAIL" starttime="20240103 14:50:44.433" endtime="20240103 14:50:50.023">InvalidElementStateException: Message: invalid element state: Failed to execute 'querySelector' on 'Document': '/html/body/div[2]/div/div/div[2]/div[1]/div/div/div[1]/div/ul/li[5]' is not a valid selector.
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56101c624f83 &lt;unknown&gt;
+#1 0x56101c2ddcf7 &lt;unknown&gt;
+#2 0x56101c2e42a3 &lt;unknown&gt;
+#3 0x56101c2e6bb4 &lt;unknown&gt;
+#4 0x56101c376ba3 &lt;unknown&gt;
+#5 0x56101c3570b2 &lt;unknown&gt;
+#6 0x56101c376006 &lt;unknown&gt;
+#7 0x56101c356e53 &lt;unknown&gt;
+#8 0x56101c31edd4 &lt;unknown&gt;
+#9 0x56101c3201de &lt;unknown&gt;
+#10 0x56101c5e9531 &lt;unknown&gt;
+#11 0x56101c5ed455 &lt;unknown&gt;
+#12 0x56101c5d5f55 &lt;unknown&gt;
+#13 0x56101c5ee0ef &lt;unknown&gt;
+#14 0x56101c5b999f &lt;unknown&gt;
+#15 0x56101c612008 &lt;unknown&gt;
+#16 0x56101c6121d7 &lt;unknown&gt;
+#17 0x56101c624124 &lt;unknown&gt;
+#18 0x7f397606a609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240103 14:50:44.286" endtime="20240103 14:50:50.026"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

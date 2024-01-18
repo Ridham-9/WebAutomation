@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240102 18:11:10.094" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/details.robot">
+<test id="s1-t1" name="Testcase 1" line="19">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240102 18:11:10.220" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240102 18:11:10.219" endtime="20240102 18:11:15.891"/>
+</kw>
+<status status="PASS" starttime="20240102 18:11:10.219" endtime="20240102 18:11:15.892"/>
+</kw>
+<kw name="Open Elements Section">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240102 18:11:15.893" endtime="20240102 18:11:15.932"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240102 18:11:15.933" level="INFO">Clicking element '//*[@id="app"]/div/div/div[2]/div/div[1]'.</msg>
+<msg timestamp="20240102 18:11:17.159" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240102 18:11:17.160" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card mt-4 top-card"&gt;...&lt;/div&gt; is not clickable at point (105, 495). Other element would receive the click: &lt;div id="adplus-anchor" data-google-query-id="CNP-3ILdvoMDFUxRnQkdZ0oOzQ"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56496a527f83 &lt;unknown&gt;
+#1 0x56496a1e0cf7 &lt;unknown&gt;
+#2 0x56496a238d92 &lt;unknown&gt;
+#3 0x56496a2367f4 &lt;unknown&gt;
+#4 0x56496a233894 &lt;unknown&gt;
+#5 0x56496a2324b9 &lt;unknown&gt;
+#6 0x56496a224313 &lt;unknown&gt;
+#7 0x56496a25a0b2 &lt;unknown&gt;
+#8 0x56496a223b49 &lt;unknown&gt;
+#9 0x56496a25a4ce &lt;unknown&gt;
+#10 0x56496a279006 &lt;unknown&gt;
+#11 0x56496a259e53 &lt;unknown&gt;
+#12 0x56496a221dd4 &lt;unknown&gt;
+#13 0x56496a2231de &lt;unknown&gt;
+#14 0x56496a4ec531 &lt;unknown&gt;
+#15 0x56496a4f0455 &lt;unknown&gt;
+#16 0x56496a4d8f55 &lt;unknown&gt;
+#17 0x56496a4f10ef &lt;unknown&gt;
+#18 0x56496a4bc99f &lt;unknown&gt;
+#19 0x56496a515008 &lt;unknown&gt;
+#20 0x56496a5151d7 &lt;unknown&gt;
+#21 0x56496a527124 &lt;unknown&gt;
+#22 0x7f4265b80609 start_thread
+</msg>
+<status status="FAIL" starttime="20240102 18:11:15.932" endtime="20240102 18:11:17.161"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:11:15.892" endtime="20240102 18:11:17.161"/>
+</kw>
+<status status="FAIL" starttime="20240102 18:11:10.218" endtime="20240102 18:11:17.161">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card mt-4 top-card"&gt;...&lt;/div&gt; is not clickable at point (105, 495). Other element would receive the click: &lt;div id="adplus-anchor" data-google-query-id="CNP-3ILdvoMDFUxRnQkdZ0oOzQ"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56496a527f83 &lt;unknown&gt;
+#1 0x56496a1e0cf7 &lt;unknown&gt;
+#2 0x56496a238d92 &lt;unknown&gt;
+#3 0x56496a2367f4 &lt;unknown&gt;
+#4 0x56496a233894 &lt;unknown&gt;
+#5 0x56496a2324b9 &lt;unknown&gt;
+#6 0x56496a224313 &lt;unknown&gt;
+#7 0x56496a25a0b2 &lt;unknown&gt;
+#8 0x56496a223b49 &lt;unknown&gt;
+#9 0x56496a25a4ce &lt;unknown&gt;
+#10 0x56496a279006 &lt;unknown&gt;
+#11 0x56496a259e53 &lt;unknown&gt;
+#12 0x56496a221dd4 &lt;unknown&gt;
+#13 0x56496a2231de &lt;unknown&gt;
+#14 0x56496a4ec531 &lt;unknown&gt;
+#15 0x56496a4f0455 &lt;unknown&gt;
+#16 0x56496a4d8f55 &lt;unknown&gt;
+#17 0x56496a4f10ef &lt;unknown&gt;
+#18 0x56496a4bc99f &lt;unknown&gt;
+#19 0x56496a515008 &lt;unknown&gt;
+#20 0x56496a5151d7 &lt;unknown&gt;
+#21 0x56496a527124 &lt;unknown&gt;
+#22 0x7f4265b80609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240102 18:11:10.095" endtime="20240102 18:11:17.162"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

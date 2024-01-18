@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240105 18:34:25.824" rpa="false" schemaversion="4">
+<suite id="s1" name="Elements" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Elements.robot">
+<test id="s1-t1" name="Launch Browser" line="51">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240105 18:34:25.991" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240105 18:34:25.990" endtime="20240105 18:34:32.301"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240105 18:34:32.303" endtime="20240105 18:34:32.424"/>
+</kw>
+<status status="PASS" starttime="20240105 18:34:25.989" endtime="20240105 18:34:32.424"/>
+</test>
+<test id="s1-t2" name="Open Elements Section" line="55">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('div.card.mt-4.top-card').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:34:32.427" level="INFO">Executing JavaScript:
+document.querySelector('div.card.mt-4.top-card').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 18:34:32.426" endtime="20240105 18:34:32.542"/>
+</kw>
+<kw name="Perform Action for Element Textbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-0').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:34:32.544" level="INFO">Executing JavaScript:
+document.querySelector('#item-0').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 18:34:32.543" endtime="20240105 18:34:32.620"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240105 18:34:32.621" endtime="20240105 18:34:32.640"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userName</arg>
+<arg>ridham</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 18:34:32.641" level="INFO">Typing text 'ridham' into text field 'userName'.</msg>
+<status status="PASS" starttime="20240105 18:34:32.641" endtime="20240105 18:34:32.793"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>userEmail</arg>
+<arg>abc123@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 18:34:32.794" level="INFO">Typing text 'abc123@gmail.com' into text field 'userEmail'.</msg>
+<status status="PASS" starttime="20240105 18:34:32.794" endtime="20240105 18:34:32.914"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>currentAddress</arg>
+<arg>Ahmedabad</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 18:34:32.915" level="INFO">Typing text 'Ahmedabad' into text field 'currentAddress'.</msg>
+<status status="PASS" starttime="20240105 18:34:32.914" endtime="20240105 18:34:33.300"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>permanentAddress</arg>
+<arg>Bhavnagar</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240105 18:34:33.301" level="INFO">Typing text 'Bhavnagar' into text field 'permanentAddress'.</msg>
+<status status="PASS" starttime="20240105 18:34:33.301" endtime="20240105 18:34:33.644"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#submit').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:34:33.644" level="INFO">Executing JavaScript:
+document.querySelector('#submit').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20240105 18:34:33.644" endtime="20240105 18:34:33.661"/>
+</kw>
+<status status="PASS" starttime="20240105 18:34:32.543" endtime="20240105 18:34:33.661"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240105 18:34:38.662" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240105 18:34:33.662" endtime="20240105 18:34:38.663"/>
+</kw>
+<kw name="Perform Action for Element Checkbox">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('#item-1').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240105 18:34:38.666" level="INFO">Executing JavaScript:
+document.querySelector('#item-1').click()
+Without any arguments.</msg>
+<msg timestamp="20240105 18:34:38.695" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56181fe58f83 &lt;unknown&gt;
+#1 0x56181fb11cf7 &lt;unknown&gt;
+#2 0x56181fae5728 &lt;unknown&gt;
+#3 0x56181fb9269f &lt;unknown&gt;
+#4 0x56181fba9719 &lt;unknown&gt;
+#5 0x56181fb8ae53 &lt;unknown&gt;
+#6 0x56181fb52dd4 &lt;unknown&gt;
+#7 0x56181fb541de &lt;unknown&gt;
+#8 0x56181fe1d531 &lt;unknown&gt;
+#9 0x56181fe21455 &lt;unknown&gt;
+#10 0x56181fe09f55 &lt;unknown&gt;
+#11 0x56181fe220ef &lt;unknown&gt;
+#12 0x56181fded99f &lt;unknown&gt;
+#13 0x56181fe46008 &lt;unknown&gt;
+#14 0x56181fe461d7 &lt;unknown&gt;
+#15 0x56181fe58124 &lt;unknown&gt;
+#16 0x7fa0cbd4e609 start_thread
+</msg>
+<msg timestamp="20240105 18:34:38.696" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56181fe58f83 &lt;unknown&gt;
+#1 0x56181fb11cf7 &lt;unknown&gt;
+#2 0x56181fae5728 &lt;unknown&gt;
+#3 0x56181fb9269f &lt;unknown&gt;
+#4 0x56181fba9719 &lt;unknown&gt;
+#5 0x56181fb8ae53 &lt;unknown&gt;
+#6 0x56181fb52dd4 &lt;unknown&gt;
+#7 0x56181fb541de &lt;unknown&gt;
+#8 0x56181fe1d531 &lt;unknown&gt;
+#9 0x56181fe21455 &lt;unknown&gt;
+#10 0x56181fe09f55 &lt;unknown&gt;
+#11 0x56181fe220ef &lt;unknown&gt;
+#12 0x56181fded99f &lt;unknown&gt;
+#13 0x56181fe46008 &lt;unknown&gt;
+#14 0x56181fe461d7 &lt;unknown&gt;
+#15 0x56181fe58124 &lt;unknown&gt;
+#16 0x7fa0cbd4e609 start_thread
+</msg>
+<status status="FAIL" starttime="20240105 18:34:38.664" endtime="20240105 18:34:38.730"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Xpath://*[@class="rct-collapse rct-collapse-btn"][1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.730" endtime="20240105 18:34:38.731"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.731" endtime="20240105 18:34:38.731"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('tree-node-documents').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.732" endtime="20240105 18:34:38.732"/>
+</kw>
+<status status="FAIL" starttime="20240105 18:34:38.663" endtime="20240105 18:34:38.732"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.733" endtime="20240105 18:34:38.733"/>
+</kw>
+<kw name="Perform Action for Element RadioButton">
+<status status="NOT RUN" starttime="20240105 18:34:38.734" endtime="20240105 18:34:38.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.735" endtime="20240105 18:34:38.736"/>
+</kw>
+<kw name="Perform Action for Element WebTable">
+<status status="NOT RUN" starttime="20240105 18:34:38.737" endtime="20240105 18:34:38.738"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.738" endtime="20240105 18:34:38.739"/>
+</kw>
+<kw name="Perform Action for Element Brokenlink">
+<status status="NOT RUN" starttime="20240105 18:34:38.739" endtime="20240105 18:34:38.740"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.740" endtime="20240105 18:34:38.741"/>
+</kw>
+<kw name="Perform Action for Element Download/Upload">
+<status status="NOT RUN" starttime="20240105 18:34:38.741" endtime="20240105 18:34:38.741"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.742" endtime="20240105 18:34:38.743"/>
+</kw>
+<kw name="Perform Action for Element Dynamic Properties">
+<status status="NOT RUN" starttime="20240105 18:34:38.743" endtime="20240105 18:34:38.744"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240105 18:34:38.744" endtime="20240105 18:34:38.744"/>
+</kw>
+<status status="FAIL" starttime="20240105 18:34:32.425" endtime="20240105 18:34:38.745">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56181fe58f83 &lt;unknown&gt;
+#1 0x56181fb11cf7 &lt;unknown&gt;
+#2 0x56181fae5728 &lt;unknown&gt;
+#3 0x56181fb9269f &lt;unknown&gt;
+#4 0x56181fba9719 &lt;unknown&gt;
+#5 0x56181fb8ae53 &lt;unknown&gt;
+#6 0x56181fb52dd4 &lt;unknown&gt;
+#7 0x56181fb541de &lt;unknown&gt;
+#8 0x56181fe1d531 &lt;unknown&gt;
+#9 0x56181fe21455 &lt;unknown&gt;
+#10 0x56181fe09f55 &lt;unknown&gt;
+#11 0x56181fe220ef &lt;unknown&gt;
+#12 0x56181fded99f &lt;unknown&gt;
+#13 0x56181fe46008 &lt;unknown&gt;
+#14 0x56181fe461d7 &lt;unknown&gt;
+#15 0x56181fe58124 &lt;unknown&gt;
+#16 0x7fa0cbd4e609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240105 18:34:25.825" endtime="20240105 18:34:38.752"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Elements">Elements</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240105 18:34:38.695" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x56181fe58f83 &lt;unknown&gt;
+#1 0x56181fb11cf7 &lt;unknown&gt;
+#2 0x56181fae5728 &lt;unknown&gt;
+#3 0x56181fb9269f &lt;unknown&gt;
+#4 0x56181fba9719 &lt;unknown&gt;
+#5 0x56181fb8ae53 &lt;unknown&gt;
+#6 0x56181fb52dd4 &lt;unknown&gt;
+#7 0x56181fb541de &lt;unknown&gt;
+#8 0x56181fe1d531 &lt;unknown&gt;
+#9 0x56181fe21455 &lt;unknown&gt;
+#10 0x56181fe09f55 &lt;unknown&gt;
+#11 0x56181fe220ef &lt;unknown&gt;
+#12 0x56181fded99f &lt;unknown&gt;
+#13 0x56181fe46008 &lt;unknown&gt;
+#14 0x56181fe461d7 &lt;unknown&gt;
+#15 0x56181fe58124 &lt;unknown&gt;
+#16 0x7fa0cbd4e609 start_thread
+</msg>
+</errors>
+</robot>

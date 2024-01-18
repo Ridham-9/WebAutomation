@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231227 18:25:18.827" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="19">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231227 18:25:18.952" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<status status="PASS" starttime="20231227 18:25:18.951" endtime="20231227 18:25:26.694"/>
+</kw>
+<status status="PASS" starttime="20231227 18:25:18.951" endtime="20231227 18:25:26.696"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MAINMENU}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 18:25:26.702" level="INFO">Clicking element 'class=hamburger'.</msg>
+<status status="PASS" starttime="20231227 18:25:26.697" endtime="20231227 18:25:26.868"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231227 18:25:26.869" endtime="20231227 18:25:26.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OFFERING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231227 18:25:26.915" level="INFO">Clicking element 'id=mega-menu-item-14301'.</msg>
+<status status="PASS" starttime="20231227 18:25:26.914" endtime="20231227 18:25:26.967"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${QA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231227 18:25:26.968" level="INFO">Clicking link 'Xpath://*[@id="mega-menu-item-14162"]/a'.</msg>
+<status status="PASS" starttime="20231227 18:25:26.967" endtime="20231227 18:25:27.075"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20231227 18:25:27.090" level="INFO">${handles} = ['CC6D73D47819DBD019A7AF683B832F56', '487160B7CBB19B60D039FE426EEDA429']</msg>
+<status status="PASS" starttime="20231227 18:25:27.076" endtime="20231227 18:25:27.090"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20231227 18:25:27.091" endtime="20231227 18:25:27.200"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QA_DATA1} ${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231227 18:25:28.976" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231227 18:25:28.977" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@data-id="db3418e"] 30 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@data-id="db3418e"] 30' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x56106b79cf83 &lt;unknown&gt;
+#1 0x56106b455cf7 &lt;unknown&gt;
+#2 0x56106b45c2a3 &lt;unknown&gt;
+#3 0x56106b45e798 &lt;unknown&gt;
+#4 0x56106b45e8ec &lt;unknown&gt;
+#5 0x56106b4a56c7 &lt;unknown&gt;
+#6 0x56106b4a5aa1 &lt;unknown&gt;
+#7 0x56106b4f0da1 &lt;unknown&gt;
+#8 0x56106b4cf0dd &lt;unknown&gt;
+#9 0x56106b4ee006 &lt;unknown&gt;
+#10 0x56106b4cee53 &lt;unknown&gt;
+#11 0x56106b496dd4 &lt;unknown&gt;
+#12 0x56106b4981de &lt;unknown&gt;
+#13 0x56106b761531 &lt;unknown&gt;
+#14 0x56106b765455 &lt;unknown&gt;
+#15 0x56106b74df55 &lt;unknown&gt;
+#16 0x56106b7660ef &lt;unknown&gt;
+#17 0x56106b73199f &lt;unknown&gt;
+#18 0x56106b78a008 &lt;unknown&gt;
+#19 0x56106b78a1d7 &lt;unknown&gt;
+#20 0x56106b79c124 &lt;unknown&gt;
+#21 0x7f506a946609 start_thread
+</msg>
+<status status="FAIL" starttime="20231227 18:25:27.200" endtime="20231227 18:25:28.988"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DATA of Automation tools/frameworks}</var>
+<arg>${QA_DATA1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231227 18:25:28.988" endtime="20231227 18:25:28.988"/>
+</kw>
+<status status="FAIL" starttime="20231227 18:25:18.950" endtime="20231227 18:25:28.989">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@data-id="db3418e"] 30 because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@data-id="db3418e"] 30' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x56106b79cf83 &lt;unknown&gt;
+#1 0x56106b455cf7 &lt;unknown&gt;
+#2 0x56106b45c2a3 &lt;unknown&gt;
+#3 0x56106b45e798 &lt;unknown&gt;
+#4 0x56106b45e8ec &lt;unknown&gt;
+#5 0x56106b4a56c7 &lt;unknown&gt;
+#6 0x56106b4a5aa1 &lt;unknown&gt;
+#7 0x56106b4f0da1 &lt;unknown&gt;
+#8 0x56106b4cf0dd &lt;unknown&gt;
+#9 0x56106b4ee006 &lt;unknown&gt;
+#10 0x56106b4cee53 &lt;unknown&gt;
+#11 0x56106b496dd4 &lt;unknown&gt;
+#12 0x56106b4981de &lt;unknown&gt;
+#13 0x56106b761531 &lt;unknown&gt;
+#14 0x56106b765455 &lt;unknown&gt;
+#15 0x56106b74df55 &lt;unknown&gt;
+#16 0x56106b7660ef &lt;unknown&gt;
+#17 0x56106b73199f &lt;unknown&gt;
+#18 0x56106b78a008 &lt;unknown&gt;
+#19 0x56106b78a1d7 &lt;unknown&gt;
+#20 0x56106b79c124 &lt;unknown&gt;
+#21 0x7f506a946609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20231227 18:25:18.828" endtime="20231227 18:25:28.990"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

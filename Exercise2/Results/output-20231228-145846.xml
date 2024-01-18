@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20231228 14:58:46.104" rpa="false" schemaversion="4">
+<suite id="s1" name="Details" source="/home/ridham/PycharmProjects/webAutomation/Exercise2/Tests/Details.robot">
+<test id="s1-t1" name="Valid Login" line="39">
+<kw name="Launch Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231228 14:58:46.231" level="INFO">Opening browser 'chrome' to base url 'https://www.volansys.com/'.</msg>
+<msg timestamp="20231228 14:58:46.234" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20231228 14:58:46.234" level="FAIL">TokenError: ('EOF in multi-line statement', (2, 0))</msg>
+<status status="FAIL" starttime="20231228 14:58:46.230" endtime="20231228 14:58:46.235"/>
+</kw>
+<status status="FAIL" starttime="20231228 14:58:46.230" endtime="20231228 14:58:46.235"/>
+</kw>
+<kw name="Click QA Link">
+<status status="NOT RUN" starttime="20231228 14:58:46.235" endtime="20231228 14:58:46.235"/>
+</kw>
+<kw name="Switch to QA Window">
+<status status="NOT RUN" starttime="20231228 14:58:46.235" endtime="20231228 14:58:46.235"/>
+</kw>
+<kw name="Wait For QA Data">
+<status status="NOT RUN" starttime="20231228 14:58:46.235" endtime="20231228 14:58:46.235"/>
+</kw>
+<kw name="Retrieve and Save Data">
+<status status="NOT RUN" starttime="20231228 14:58:46.236" endtime="20231228 14:58:46.236"/>
+</kw>
+<status status="FAIL" starttime="20231228 14:58:46.229" endtime="20231228 14:58:46.236">TokenError: ('EOF in multi-line statement', (2, 0))</status>
+</test>
+<status status="FAIL" starttime="20231228 14:58:46.105" endtime="20231228 14:58:46.236"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Details">Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
