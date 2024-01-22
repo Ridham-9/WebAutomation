@@ -41,8 +41,6 @@ Perform Action for Element RadioButton
 
 Perform Action for Element WebTable
     Execute JavaScript    document.querySelector('#item-3').click()
-   # Click Element    item-3
- #   Execute JavaScript    document.querySelector('#edit-record-2').click()
     Click Element    edit-record-2
     Sleep    2s
     Clear Element Text    userEmail
