@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 18:29:46.345" rpa="false" schemaversion="4">
+<suite id="s1" name="Hrms" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot">
+<test id="s1-t1" name="Launch Browser" line="17">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 18:29:46.472" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240123 18:29:46.471" endtime="20240123 18:29:50.987"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 18:29:50.987" endtime="20240123 18:29:51.154"/>
+</kw>
+<status status="PASS" starttime="20240123 18:29:46.470" endtime="20240123 18:29:51.155"/>
+</test>
+<test id="s1-t2" name="Authentication" line="21">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 18:29:51.161" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240123 18:29:51.158" endtime="20240123 18:29:51.311"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 18:29:51.312" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240123 18:29:51.347" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240123 18:29:51.401" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240123 18:29:51.311" endtime="20240123 18:29:51.401"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 18:29:51.401" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240123 18:29:51.401" endtime="20240123 18:30:07.130"/>
+</kw>
+<kw name="Wait for OTP Email">
+<var>${otp}</var>
+<msg timestamp="20240123 18:30:07.136" level="FAIL">No keyword with name 'Wait for OTP Email' found.</msg>
+<status status="FAIL" starttime="20240123 18:30:07.136" endtime="20240123 18:30:07.136"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>otp_field</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240123 18:30:07.136" endtime="20240123 18:30:07.137"/>
+</kw>
+<status status="FAIL" starttime="20240123 18:29:51.157" endtime="20240123 18:30:07.137">No keyword with name 'Wait for OTP Email' found.</status>
+</test>
+<test id="s1-t3" name="Wait for OTP Email" line="31">
+<kw name="IMAPLibrary.Get Email Body">
+<var>${otp}</var>
+<arg>${EMAIL_SERVER}</arg>
+<arg>${EMAIL_USERNAME}</arg>
+<arg>${EMAIL_PASSWORD}</arg>
+<arg>${OTP_SUBJECT}</arg>
+<msg timestamp="20240123 18:30:07.146" level="FAIL">No keyword with name 'IMAPLibrary.Get Email Body' found.</msg>
+<status status="FAIL" starttime="20240123 18:30:07.145" endtime="20240123 18:30:07.146"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>OTP received: ${otp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240123 18:30:07.146" endtime="20240123 18:30:07.146"/>
+</kw>
+<error>
+<value>[Return]</value>
+<status status="NOT RUN" starttime="20240123 18:30:07.147" endtime="20240123 18:30:07.147"/>
+</error>
+<status status="FAIL" starttime="20240123 18:30:07.137" endtime="20240123 18:30:07.148">No keyword with name 'IMAPLibrary.Get Email Body' found.</status>
+</test>
+<status status="FAIL" starttime="20240123 18:29:46.346" endtime="20240123 18:30:07.151"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="2" skip="0" id="s1" name="Hrms">Hrms</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240123 18:29:46.469" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot' on line 3: Importing library 'IMAPLibrary' failed: ModuleNotFoundError: No module named 'IMAPLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/ridham/.local/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/ridham/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>
