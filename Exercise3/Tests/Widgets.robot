@@ -79,26 +79,26 @@ Open Widgets Section
     Execute JavaScript    document.querySelectorAll('div.card.mt-4.top-card')[3].click();
     sleep    3s
 
-#    Perform Action for Widgets Accordian
-#    sleep    3s
-#
-#    Perform Action for Widgets Auto Cmplete
-#    sleep    3s
-#
-#    Perform Action for Widgets Date Picker
-#    sleep    3s
-#
-#    Perform Action for Widgets Slider
-#    sleep    6s
-#
-#    Perform Action for Widgets Progress bar
-#    sleep    5s
-#
-#    Perform Action for Widgets Tool tips
-#    sleep    3s
-#
-#    Perform Action for Widgets Menu
-#    sleep    3s
+    Perform Action for Widgets Accordian
+    sleep    3s
+
+    Perform Action for Widgets Auto Cmplete
+    sleep    3s
+
+    Perform Action for Widgets Date Picker
+    sleep    3s
+
+    Perform Action for Widgets Slider
+    sleep    6s
+
+    Perform Action for Widgets Progress bar
+    sleep    5s
+
+    Perform Action for Widgets Tool tips
+    sleep    3s
+
+    Perform Action for Widgets Menu
+    sleep    3s
 
     Perform Action for Widgets Select Menu
     sleep    3s

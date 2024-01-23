@@ -93,21 +93,21 @@ Launch Browser
 
 Open Elements Section
     Execute JavaScript    document.querySelector('div.card.mt-4.top-card').click()
-#    Perform Action for Element Textbox
-#    sleep    5s
-#    Perform Action for Element Checkbox
-#    sleep    5s
-#    Perform Action for Element RadioButton
-#    sleep    5s
-#    Perform Action for Element WebTable
-#    sleep    5s
-#    Perform Action for Element Buttons
-#    sleep    5s
-#    Perform Action for Element Link
-#    sleep    5s
+    Perform Action for Element Textbox
+    sleep    5s
+    Perform Action for Element Checkbox
+    sleep    5s
+    Perform Action for Element RadioButton
+    sleep    5s
+    Perform Action for Element WebTable
+    sleep    5s
+    Perform Action for Element Buttons
+    sleep    5s
+    Perform Action for Element Link
+    sleep    5s
     Perform Action for Element Brokenlink
     sleep    5s
-#    Perform Action for Element Download/Upload
-#    sleep    5s
-#    Perform Action for Element Dynamic Properties
-#    sleep    7s
+    Perform Action for Element Download/Upload
+    sleep    5s
+    Perform Action for Element Dynamic Properties
+    sleep    7s
