@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 10:54:56.641" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="76">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 10:54:56.795" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 10:54:56.794" endtime="20240123 10:55:03.245"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 10:55:03.247" endtime="20240123 10:55:03.366"/>
+</kw>
+<status status="PASS" starttime="20240123 10:54:56.793" endtime="20240123 10:55:03.368"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="80">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 10:55:03.390" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 10:55:03.387" endtime="20240123 10:55:03.541"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 10:55:06.542" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 10:55:03.541" endtime="20240123 10:55:06.542"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 10:55:06.543" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 10:55:06.543" endtime="20240123 10:55:06.595"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 10:55:06.596" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240123 10:55:06.595" endtime="20240123 10:55:06.727"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>section2Heading</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240123 10:55:06.727" endtime="20240123 10:55:07.028"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section2Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 10:55:07.029" level="INFO">Clicking element 'Xpath://*[@id="section2Heading"]'.</msg>
+<status status="PASS" starttime="20240123 10:55:07.028" endtime="20240123 10:55:07.091"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>section3Heading</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240123 10:55:07.092" endtime="20240123 10:55:07.377"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section3Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 10:55:07.383" level="INFO">Clicking element 'Xpath://*[@id="section3Heading"]'.</msg>
+<msg timestamp="20240123 10:55:08.817" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240123 10:55:08.818" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card-header" id="section3Heading"&gt;...&lt;/div&gt; is not clickable at point (643, 578). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55a419105f83 &lt;unknown&gt;
+#1 0x55a418dbecf7 &lt;unknown&gt;
+#2 0x55a418e16d92 &lt;unknown&gt;
+#3 0x55a418e147f4 &lt;unknown&gt;
+#4 0x55a418e11894 &lt;unknown&gt;
+#5 0x55a418e104b9 &lt;unknown&gt;
+#6 0x55a418e02313 &lt;unknown&gt;
+#7 0x55a418e380b2 &lt;unknown&gt;
+#8 0x55a418e01b49 &lt;unknown&gt;
+#9 0x55a418e384ce &lt;unknown&gt;
+#10 0x55a418e57006 &lt;unknown&gt;
+#11 0x55a418e37e53 &lt;unknown&gt;
+#12 0x55a418dffdd4 &lt;unknown&gt;
+#13 0x55a418e011de &lt;unknown&gt;
+#14 0x55a4190ca531 &lt;unknown&gt;
+#15 0x55a4190ce455 &lt;unknown&gt;
+#16 0x55a4190b6f55 &lt;unknown&gt;
+#17 0x55a4190cf0ef &lt;unknown&gt;
+#18 0x55a41909a99f &lt;unknown&gt;
+#19 0x55a4190f3008 &lt;unknown&gt;
+#20 0x55a4190f31d7 &lt;unknown&gt;
+#21 0x55a419105124 &lt;unknown&gt;
+#22 0x7f43b4a4e609 start_thread
+</msg>
+<status status="FAIL" starttime="20240123 10:55:07.378" endtime="20240123 10:55:08.819"/>
+</kw>
+<status status="FAIL" starttime="20240123 10:55:06.542" endtime="20240123 10:55:08.819"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240123 10:55:08.819" endtime="20240123 10:55:08.819"/>
+</kw>
+<status status="FAIL" starttime="20240123 10:55:03.383" endtime="20240123 10:55:08.820">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card-header" id="section3Heading"&gt;...&lt;/div&gt; is not clickable at point (643, 578). Other element would receive the click: &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" width="970" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom;" data-load-complete="true" data-google-container-id="1"&gt;&lt;/iframe&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55a419105f83 &lt;unknown&gt;
+#1 0x55a418dbecf7 &lt;unknown&gt;
+#2 0x55a418e16d92 &lt;unknown&gt;
+#3 0x55a418e147f4 &lt;unknown&gt;
+#4 0x55a418e11894 &lt;unknown&gt;
+#5 0x55a418e104b9 &lt;unknown&gt;
+#6 0x55a418e02313 &lt;unknown&gt;
+#7 0x55a418e380b2 &lt;unknown&gt;
+#8 0x55a418e01b49 &lt;unknown&gt;
+#9 0x55a418e384ce &lt;unknown&gt;
+#10 0x55a418e57006 &lt;unknown&gt;
+#11 0x55a418e37e53 &lt;unknown&gt;
+#12 0x55a418dffdd4 &lt;unknown&gt;
+#13 0x55a418e011de &lt;unknown&gt;
+#14 0x55a4190ca531 &lt;unknown&gt;
+#15 0x55a4190ce455 &lt;unknown&gt;
+#16 0x55a4190b6f55 &lt;unknown&gt;
+#17 0x55a4190cf0ef &lt;unknown&gt;
+#18 0x55a41909a99f &lt;unknown&gt;
+#19 0x55a4190f3008 &lt;unknown&gt;
+#20 0x55a4190f31d7 &lt;unknown&gt;
+#21 0x55a419105124 &lt;unknown&gt;
+#22 0x7f43b4a4e609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240123 10:54:56.642" endtime="20240123 10:55:08.821"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

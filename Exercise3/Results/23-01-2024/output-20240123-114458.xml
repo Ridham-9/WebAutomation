@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 11:44:58.853" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="98">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 11:44:58.975" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 11:44:58.974" endtime="20240123 11:45:04.211"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 11:45:04.214" endtime="20240123 11:45:04.333"/>
+</kw>
+<status status="PASS" starttime="20240123 11:44:58.973" endtime="20240123 11:45:04.334"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="102">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:45:04.336" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:45:04.336" endtime="20240123 11:45:04.410"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:45:07.411" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:45:04.410" endtime="20240123 11:45:07.411"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:45:07.416" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:45:07.414" endtime="20240123 11:45:07.517"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:45:09.519" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:45:07.518" endtime="20240123 11:45:09.519"/>
+</kw>
+<status status="PASS" starttime="20240123 11:45:07.412" endtime="20240123 11:45:09.520"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:45:12.521" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:45:09.520" endtime="20240123 11:45:12.521"/>
+</kw>
+<status status="PASS" starttime="20240123 11:45:04.335" endtime="20240123 11:45:12.522"/>
+</test>
+<status status="PASS" starttime="20240123 11:44:58.854" endtime="20240123 11:45:12.522"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 12:03:49.137" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="103">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 12:03:49.402" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 12:03:49.402" endtime="20240123 12:03:55.731"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 12:03:55.733" endtime="20240123 12:03:55.842"/>
+</kw>
+<status status="PASS" starttime="20240123 12:03:49.401" endtime="20240123 12:03:55.843"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="107">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 12:03:55.846" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 12:03:55.845" endtime="20240123 12:03:55.922"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 12:03:58.924" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 12:03:55.923" endtime="20240123 12:03:58.924"/>
+</kw>
+<kw name="Perform Action for Widgets Slider">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-3')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 12:03:58.932" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-3')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 12:03:58.930" endtime="20240123 12:03:59.015"/>
+</kw>
+<kw name="Set Slider">
+<arg>${SLIDER}</arg>
+<arg>66</arg>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${element_slider}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20240123 12:03:59.036" level="INFO">${element_slider} = &lt;selenium.webdriver.remote.webelement.WebElement (session="abf714d43b02ed8f06bcc084277b027b", element="D6AB62F09F119D2F9588425A43001284_element_42")&gt;</msg>
+<status status="PASS" starttime="20240123 12:03:59.017" endtime="20240123 12:03:59.036"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${element}</var>
+<arg>${element_slider}\[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240123 12:03:59.037" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="abf714d43b02ed8f06bcc084277b027b", element="D6AB62F09F119D2F9588425A43001284_element_42")&gt;[0]</msg>
+<status status="PASS" starttime="20240123 12:03:59.037" endtime="20240123 12:03:59.037"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<msg timestamp="20240123 12:03:59.310" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240123 12:03:59.311" level="FAIL">Element with locator '&lt;selenium.webdriver.remote.webelement.WebElement (session="abf714d43b02ed8f06bcc084277b027b", element="D6AB62F09F119D2F9588425A43001284_element_42")&gt;[0]' not found.</msg>
+<status status="FAIL" starttime="20240123 12:03:59.037" endtime="20240123 12:03:59.422"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].value=${value}</arg>
+<arg>${element}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20240123 12:03:59.422" endtime="20240123 12:03:59.422"/>
+</kw>
+<status status="FAIL" starttime="20240123 12:03:59.016" endtime="20240123 12:03:59.423"/>
+</kw>
+<status status="FAIL" starttime="20240123 12:03:58.925" endtime="20240123 12:03:59.423"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240123 12:03:59.423" endtime="20240123 12:03:59.423"/>
+</kw>
+<status status="FAIL" starttime="20240123 12:03:55.844" endtime="20240123 12:03:59.423">Element with locator '&lt;selenium.webdriver.remote.webelement.WebElement (session="abf714d43b02ed8f06bcc084277b027b", element="D6AB62F09F119D2F9588425A43001284_element_42")&gt;[0]' not found.</status>
+</test>
+<status status="FAIL" starttime="20240123 12:03:49.138" endtime="20240123 12:03:59.424"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

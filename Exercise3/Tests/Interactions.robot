@@ -63,11 +63,11 @@ Launch Browser
 Open Interaction Section
     Execute JavaScript    document.querySelectorAll('div.card.mt-4.top-card')[4].click();
     sleep    3s
-    Perform Action for Sortable
-    sleep    3s
-   # Perform Action for Resizable
-    sleep    3s
-    Perform Action for Droppable
+#    Perform Action for Sortable
+#    sleep    3s
+#    Perform Action for Resizable
+#    sleep    3s
+#    Perform Action for Droppable
 
 
 

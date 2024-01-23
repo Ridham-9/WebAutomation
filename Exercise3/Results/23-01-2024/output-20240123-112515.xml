@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 11:25:15.464" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="87">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 11:25:15.582" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 11:25:15.582" endtime="20240123 11:25:21.388"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 11:25:21.389" endtime="20240123 11:25:21.496"/>
+</kw>
+<status status="PASS" starttime="20240123 11:25:15.581" endtime="20240123 11:25:21.497"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="91">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:25:21.498" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:25:21.498" endtime="20240123 11:25:21.574"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:25:24.575" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:25:21.574" endtime="20240123 11:25:24.575"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:25:24.580" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:25:24.579" endtime="20240123 11:25:24.651"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240123 11:25:24.651" endtime="20240123 11:25:24.682"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:25:24.682" level="INFO">Clicking element '//*[@id="autoCompleteMultipleInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:25:24.682" endtime="20240123 11:25:24.738"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<arg>Blue</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 11:25:24.739" level="INFO">Typing text 'Blue' into text field '//*[@id="autoCompleteMultipleInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:25:24.738" endtime="20240123 11:25:24.942"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240123 11:25:24.943" level="INFO">Sending key(s) ('RETURN',) to //*[@id="autoCompleteMultipleInput"] element.</msg>
+<msg timestamp="20240123 11:25:25.246" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20240123 11:25:25.247" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20240123 11:25:24.942" endtime="20240123 11:25:25.297"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<arg>Yellow</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 11:25:25.300" level="INFO">Typing text 'Yellow' into text field '//*[@id="autoCompleteMultipleInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:25:25.297" endtime="20240123 11:25:25.407"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240123 11:25:25.408" level="INFO">Sending key(s) ('RETURN',) to //*[@id="autoCompleteMultipleInput"] element.</msg>
+<msg timestamp="20240123 11:25:25.695" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20240123 11:25:25.696" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20240123 11:25:25.407" endtime="20240123 11:25:25.727"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SINGLECOLOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:25:25.729" level="INFO">Clicking element '//*[@id="autoCompleteSingleInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:25:25.727" endtime="20240123 11:25:25.813"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SINGLECOLOR}</arg>
+<arg>Red</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 11:25:25.814" level="INFO">Typing text 'Red' into text field '//*[@id="autoCompleteSingleInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:25:25.814" endtime="20240123 11:25:25.891"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SINGLECOLOR}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240123 11:25:25.893" level="INFO">Sending key(s) ('RETURN',) to //*[@id="autoCompleteSingleInput"] element.</msg>
+<msg timestamp="20240123 11:25:26.180" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20240123 11:25:26.181" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20240123 11:25:25.892" endtime="20240123 11:25:26.219"/>
+</kw>
+<status status="PASS" starttime="20240123 11:25:24.576" endtime="20240123 11:25:26.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:25:29.222" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:25:26.220" endtime="20240123 11:25:29.222"/>
+</kw>
+<status status="PASS" starttime="20240123 11:25:21.497" endtime="20240123 11:25:29.223"/>
+</test>
+<status status="PASS" starttime="20240123 11:25:15.465" endtime="20240123 11:25:29.226"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

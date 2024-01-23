@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 11:09:07.528" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="79">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 11:09:07.662" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 11:09:07.661" endtime="20240123 11:09:14.187"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 11:09:14.188" endtime="20240123 11:09:14.292"/>
+</kw>
+<status status="PASS" starttime="20240123 11:09:07.660" endtime="20240123 11:09:14.293"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="83">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:09:14.294" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:09:14.294" endtime="20240123 11:09:14.365"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:09:17.366" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:09:14.366" endtime="20240123 11:09:17.366"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:09:17.367" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:09:17.367" endtime="20240123 11:09:17.390"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:09:17.391" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240123 11:09:17.390" endtime="20240123 11:09:17.471"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:09:19.472" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:09:17.471" endtime="20240123 11:09:19.472"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>section3Heading</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240123 11:09:19.473" endtime="20240123 11:09:19.788"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section2Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:09:19.791" level="INFO">Clicking element 'Xpath://*[@id="section2Heading"]'.</msg>
+<status status="PASS" starttime="20240123 11:09:19.788" endtime="20240123 11:09:19.889"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:09:21.890" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:09:19.889" endtime="20240123 11:09:21.891"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section2Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:09:21.894" level="INFO">Clicking element 'Xpath://*[@id="section2Heading"]'.</msg>
+<status status="PASS" starttime="20240123 11:09:21.892" endtime="20240123 11:09:22.000"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section3Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:09:22.001" level="INFO">Clicking element 'Xpath://*[@id="section3Heading"]'.</msg>
+<msg timestamp="20240123 11:09:23.369" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240123 11:09:23.369" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card-header" id="section3Heading"&gt;...&lt;/div&gt; is not clickable at point (643, 482). Other element would receive the click: &lt;div class="col-12 mt-4 col-md-6"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5623d3a4af83 &lt;unknown&gt;
+#1 0x5623d3703cf7 &lt;unknown&gt;
+#2 0x5623d375bd92 &lt;unknown&gt;
+#3 0x5623d37597f4 &lt;unknown&gt;
+#4 0x5623d3756894 &lt;unknown&gt;
+#5 0x5623d37554b9 &lt;unknown&gt;
+#6 0x5623d3747313 &lt;unknown&gt;
+#7 0x5623d377d0b2 &lt;unknown&gt;
+#8 0x5623d3746b49 &lt;unknown&gt;
+#9 0x5623d377d4ce &lt;unknown&gt;
+#10 0x5623d379c006 &lt;unknown&gt;
+#11 0x5623d377ce53 &lt;unknown&gt;
+#12 0x5623d3744dd4 &lt;unknown&gt;
+#13 0x5623d37461de &lt;unknown&gt;
+#14 0x5623d3a0f531 &lt;unknown&gt;
+#15 0x5623d3a13455 &lt;unknown&gt;
+#16 0x5623d39fbf55 &lt;unknown&gt;
+#17 0x5623d3a140ef &lt;unknown&gt;
+#18 0x5623d39df99f &lt;unknown&gt;
+#19 0x5623d3a38008 &lt;unknown&gt;
+#20 0x5623d3a381d7 &lt;unknown&gt;
+#21 0x5623d3a4a124 &lt;unknown&gt;
+#22 0x7f2d95d07609 start_thread
+</msg>
+<status status="FAIL" starttime="20240123 11:09:22.000" endtime="20240123 11:09:23.370"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240123 11:09:23.370" endtime="20240123 11:09:23.370"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:09:17.366" endtime="20240123 11:09:23.370"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240123 11:09:23.370" endtime="20240123 11:09:23.370"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:09:14.293" endtime="20240123 11:09:23.370">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="card-header" id="section3Heading"&gt;...&lt;/div&gt; is not clickable at point (643, 482). Other element would receive the click: &lt;div class="col-12 mt-4 col-md-6"&gt;...&lt;/div&gt;
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x5623d3a4af83 &lt;unknown&gt;
+#1 0x5623d3703cf7 &lt;unknown&gt;
+#2 0x5623d375bd92 &lt;unknown&gt;
+#3 0x5623d37597f4 &lt;unknown&gt;
+#4 0x5623d3756894 &lt;unknown&gt;
+#5 0x5623d37554b9 &lt;unknown&gt;
+#6 0x5623d3747313 &lt;unknown&gt;
+#7 0x5623d377d0b2 &lt;unknown&gt;
+#8 0x5623d3746b49 &lt;unknown&gt;
+#9 0x5623d377d4ce &lt;unknown&gt;
+#10 0x5623d379c006 &lt;unknown&gt;
+#11 0x5623d377ce53 &lt;unknown&gt;
+#12 0x5623d3744dd4 &lt;unknown&gt;
+#13 0x5623d37461de &lt;unknown&gt;
+#14 0x5623d3a0f531 &lt;unknown&gt;
+#15 0x5623d3a13455 &lt;unknown&gt;
+#16 0x5623d39fbf55 &lt;unknown&gt;
+#17 0x5623d3a140ef &lt;unknown&gt;
+#18 0x5623d39df99f &lt;unknown&gt;
+#19 0x5623d3a38008 &lt;unknown&gt;
+#20 0x5623d3a381d7 &lt;unknown&gt;
+#21 0x5623d3a4a124 &lt;unknown&gt;
+#22 0x7f2d95d07609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240123 11:09:07.530" endtime="20240123 11:09:23.371"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

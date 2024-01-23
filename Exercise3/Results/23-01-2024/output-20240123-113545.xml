@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 11:35:45.978" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="94">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 11:35:46.105" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 11:35:46.104" endtime="20240123 11:35:52.067"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 11:35:52.068" endtime="20240123 11:35:52.181"/>
+</kw>
+<status status="PASS" starttime="20240123 11:35:46.104" endtime="20240123 11:35:52.182"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="98">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:35:52.186" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:35:52.185" endtime="20240123 11:35:52.284"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:35:55.285" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:35:52.284" endtime="20240123 11:35:55.286"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:35:55.292" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:35:55.290" endtime="20240123 11:35:55.381"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240123 11:35:55.382" endtime="20240123 11:35:55.573"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<arg>04/07/2002</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 11:35:55.574" level="INFO">Typing text '04/07/2002' into text field '//*[@id="datePickerMonthYearInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:35:55.573" endtime="20240123 11:35:55.858"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240123 11:35:55.859" level="INFO">Sending key(s) ('RETURN',) to //*[@id="datePickerMonthYearInput"] element.</msg>
+<msg timestamp="20240123 11:35:56.186" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20240123 11:35:56.187" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20240123 11:35:55.858" endtime="20240123 11:35:56.229"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:35:56.507" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240123 11:35:56.507" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@id="dateAndTimePickerInput""] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id="dateAndTimePickerInput""]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55c28bee2f83 &lt;unknown&gt;
+#1 0x55c28bb9bcf7 &lt;unknown&gt;
+#2 0x55c28bba22a3 &lt;unknown&gt;
+#3 0x55c28bba4798 &lt;unknown&gt;
+#4 0x55c28bba48ec &lt;unknown&gt;
+#5 0x55c28bbeb6c7 &lt;unknown&gt;
+#6 0x55c28bbebaa1 &lt;unknown&gt;
+#7 0x55c28bc36da1 &lt;unknown&gt;
+#8 0x55c28bc150dd &lt;unknown&gt;
+#9 0x55c28bc34006 &lt;unknown&gt;
+#10 0x55c28bc14e53 &lt;unknown&gt;
+#11 0x55c28bbdcdd4 &lt;unknown&gt;
+#12 0x55c28bbde1de &lt;unknown&gt;
+#13 0x55c28bea7531 &lt;unknown&gt;
+#14 0x55c28beab455 &lt;unknown&gt;
+#15 0x55c28be93f55 &lt;unknown&gt;
+#16 0x55c28beac0ef &lt;unknown&gt;
+#17 0x55c28be7799f &lt;unknown&gt;
+#18 0x55c28bed0008 &lt;unknown&gt;
+#19 0x55c28bed01d7 &lt;unknown&gt;
+#20 0x55c28bee2124 &lt;unknown&gt;
+#21 0x7f4c572a0609 start_thread
+</msg>
+<status status="FAIL" starttime="20240123 11:35:56.229" endtime="20240123 11:35:56.560"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<arg>October 21, 2020 2:45 PM</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240123 11:35:56.562" endtime="20240123 11:35:56.563"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240123 11:35:56.564" endtime="20240123 11:35:56.564"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:35:55.288" endtime="20240123 11:35:56.565"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240123 11:35:56.566" endtime="20240123 11:35:56.566"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:35:52.184" endtime="20240123 11:35:56.568">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@id="dateAndTimePickerInput""] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id="dateAndTimePickerInput""]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55c28bee2f83 &lt;unknown&gt;
+#1 0x55c28bb9bcf7 &lt;unknown&gt;
+#2 0x55c28bba22a3 &lt;unknown&gt;
+#3 0x55c28bba4798 &lt;unknown&gt;
+#4 0x55c28bba48ec &lt;unknown&gt;
+#5 0x55c28bbeb6c7 &lt;unknown&gt;
+#6 0x55c28bbebaa1 &lt;unknown&gt;
+#7 0x55c28bc36da1 &lt;unknown&gt;
+#8 0x55c28bc150dd &lt;unknown&gt;
+#9 0x55c28bc34006 &lt;unknown&gt;
+#10 0x55c28bc14e53 &lt;unknown&gt;
+#11 0x55c28bbdcdd4 &lt;unknown&gt;
+#12 0x55c28bbde1de &lt;unknown&gt;
+#13 0x55c28bea7531 &lt;unknown&gt;
+#14 0x55c28beab455 &lt;unknown&gt;
+#15 0x55c28be93f55 &lt;unknown&gt;
+#16 0x55c28beac0ef &lt;unknown&gt;
+#17 0x55c28be7799f &lt;unknown&gt;
+#18 0x55c28bed0008 &lt;unknown&gt;
+#19 0x55c28bed01d7 &lt;unknown&gt;
+#20 0x55c28bee2124 &lt;unknown&gt;
+#21 0x7f4c572a0609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240123 11:35:45.980" endtime="20240123 11:35:56.572"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

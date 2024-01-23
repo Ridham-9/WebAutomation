@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 12:24:38.365" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="104">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 12:24:38.486" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 12:24:38.485" endtime="20240123 12:24:44.276"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 12:24:44.278" endtime="20240123 12:24:44.390"/>
+</kw>
+<status status="PASS" starttime="20240123 12:24:38.485" endtime="20240123 12:24:44.390"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="108">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 12:24:44.392" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 12:24:44.391" endtime="20240123 12:24:44.472"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 12:24:47.473" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 12:24:44.472" endtime="20240123 12:24:47.473"/>
+</kw>
+<kw name="Perform Action for Widgets Menu">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-7')[1].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 12:24:47.474" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-7')[1].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 12:24:47.474" endtime="20240123 12:24:47.532"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU1}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240123 12:24:47.533" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[1]/a'.</msg>
+<status status="PASS" starttime="20240123 12:24:47.532" endtime="20240123 12:24:47.815"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 12:24:48.817" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240123 12:24:47.816" endtime="20240123 12:24:48.818"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU2}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240123 12:24:48.820" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[2]/a'.</msg>
+<status status="PASS" starttime="20240123 12:24:48.818" endtime="20240123 12:24:49.114"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 12:24:51.116" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 12:24:49.114" endtime="20240123 12:24:51.116"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MENU3}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240123 12:24:51.118" level="INFO">Simulating Mouse Over on element '//*[@id="nav"]/li[3]/a'.</msg>
+<status status="PASS" starttime="20240123 12:24:51.117" endtime="20240123 12:24:51.473"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 12:24:52.475" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240123 12:24:51.473" endtime="20240123 12:24:52.475"/>
+</kw>
+<status status="PASS" starttime="20240123 12:24:47.473" endtime="20240123 12:24:52.476"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 12:24:55.478" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 12:24:52.477" endtime="20240123 12:24:55.479"/>
+</kw>
+<status status="PASS" starttime="20240123 12:24:44.391" endtime="20240123 12:24:55.480"/>
+</test>
+<status status="PASS" starttime="20240123 12:24:38.366" endtime="20240123 12:24:55.483"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

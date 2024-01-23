@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 11:12:29.095" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="80">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 11:12:29.269" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 11:12:29.268" endtime="20240123 11:12:35.543"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 11:12:35.544" endtime="20240123 11:12:35.648"/>
+</kw>
+<status status="PASS" starttime="20240123 11:12:29.267" endtime="20240123 11:12:35.648"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="84">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:12:35.650" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:12:35.649" endtime="20240123 11:12:35.721"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:12:38.723" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:12:35.722" endtime="20240123 11:12:38.724"/>
+</kw>
+<kw name="Perform Action for Widgets Accordian">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-0')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:12:38.746" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-0')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:12:38.741" endtime="20240123 11:12:38.788"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section1Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:12:38.790" level="INFO">Clicking element 'Xpath://*[@id="section1Heading"]'.</msg>
+<status status="PASS" starttime="20240123 11:12:38.789" endtime="20240123 11:12:38.861"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:12:40.862" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:12:38.861" endtime="20240123 11:12:40.862"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>section3Heading</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240123 11:12:40.863" endtime="20240123 11:12:41.222"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section2Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:12:41.225" level="INFO">Clicking element 'Xpath://*[@id="section2Heading"]'.</msg>
+<status status="PASS" starttime="20240123 11:12:41.222" endtime="20240123 11:12:41.398"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:12:43.399" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:12:41.398" endtime="20240123 11:12:43.400"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section2Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:12:43.403" level="INFO">Clicking element 'Xpath://*[@id="section2Heading"]'.</msg>
+<status status="PASS" starttime="20240123 11:12:43.400" endtime="20240123 11:12:43.597"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:12:46.598" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:12:43.597" endtime="20240123 11:12:46.598"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://*[@id="section3Heading"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:12:46.602" level="INFO">Clicking element 'Xpath://*[@id="section3Heading"]'.</msg>
+<status status="PASS" starttime="20240123 11:12:46.599" endtime="20240123 11:12:46.804"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:12:48.805" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:12:46.804" endtime="20240123 11:12:48.805"/>
+</kw>
+<status status="PASS" starttime="20240123 11:12:38.725" endtime="20240123 11:12:48.805"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:12:51.807" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:12:48.806" endtime="20240123 11:12:51.807"/>
+</kw>
+<kw name="Perform Action for Widgets Auto Cmplete">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-1')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:12:51.811" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-1')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:12:51.809" endtime="20240123 11:12:51.894"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MULTICOLOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:12:51.896" level="INFO">Clicking element '//*[@class="auto-complete__value-container auto-complete__value-container--is-multi css-1hwfws3"]'.</msg>
+<status status="PASS" starttime="20240123 11:12:51.894" endtime="20240123 11:12:51.973"/>
+</kw>
+<status status="PASS" starttime="20240123 11:12:51.808" endtime="20240123 11:12:51.973"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:12:54.974" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:12:51.973" endtime="20240123 11:12:54.974"/>
+</kw>
+<status status="PASS" starttime="20240123 11:12:35.649" endtime="20240123 11:12:54.976"/>
+</test>
+<status status="PASS" starttime="20240123 11:12:29.096" endtime="20240123 11:12:54.980"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

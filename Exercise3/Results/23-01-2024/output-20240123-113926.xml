@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 11:39:26.955" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="97">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 11:39:27.079" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 11:39:27.078" endtime="20240123 11:39:33.828"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 11:39:33.829" endtime="20240123 11:39:33.938"/>
+</kw>
+<status status="PASS" starttime="20240123 11:39:27.077" endtime="20240123 11:39:33.940"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="101">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:39:33.949" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:39:33.947" endtime="20240123 11:39:34.103"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:39:37.105" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:39:34.104" endtime="20240123 11:39:37.105"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:39:37.108" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:39:37.107" endtime="20240123 11:39:37.145"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:39:39.146" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:39:37.145" endtime="20240123 11:39:39.146"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:39:39.150" level="INFO">Clicking element '//*[@id="datePickerMonthYearInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:39:39.146" endtime="20240123 11:39:39.488"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<arg>04/07/2002</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 11:39:39.488" level="INFO">Typing text '04/07/2002' into text field '//*[@id="datePickerMonthYearInput"]'.</msg>
+<status status="PASS" starttime="20240123 11:39:39.488" endtime="20240123 11:39:39.742"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240123 11:39:39.743" level="INFO">Sending key(s) ('RETURN',) to //*[@id="datePickerMonthYearInput"] element.</msg>
+<msg timestamp="20240123 11:39:40.077" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20240123 11:39:40.077" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20240123 11:39:39.742" endtime="20240123 11:39:40.097"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240123 11:39:40.310" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240123 11:39:40.311" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@id="dateAndTimePickerInput""] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id="dateAndTimePickerInput""]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55de40496f83 &lt;unknown&gt;
+#1 0x55de4014fcf7 &lt;unknown&gt;
+#2 0x55de401562a3 &lt;unknown&gt;
+#3 0x55de40158798 &lt;unknown&gt;
+#4 0x55de401588ec &lt;unknown&gt;
+#5 0x55de4019f6c7 &lt;unknown&gt;
+#6 0x55de4019faa1 &lt;unknown&gt;
+#7 0x55de401eada1 &lt;unknown&gt;
+#8 0x55de401c90dd &lt;unknown&gt;
+#9 0x55de401e8006 &lt;unknown&gt;
+#10 0x55de401c8e53 &lt;unknown&gt;
+#11 0x55de40190dd4 &lt;unknown&gt;
+#12 0x55de401921de &lt;unknown&gt;
+#13 0x55de4045b531 &lt;unknown&gt;
+#14 0x55de4045f455 &lt;unknown&gt;
+#15 0x55de40447f55 &lt;unknown&gt;
+#16 0x55de404600ef &lt;unknown&gt;
+#17 0x55de4042b99f &lt;unknown&gt;
+#18 0x55de40484008 &lt;unknown&gt;
+#19 0x55de404841d7 &lt;unknown&gt;
+#20 0x55de40496124 &lt;unknown&gt;
+#21 0x7f055ddbe609 start_thread
+</msg>
+<status status="FAIL" starttime="20240123 11:39:40.097" endtime="20240123 11:39:40.313"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<arg>October 21, 2020 2:45 PM</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240123 11:39:40.313" endtime="20240123 11:39:40.314"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240123 11:39:40.314" endtime="20240123 11:39:40.314"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:39:37.106" endtime="20240123 11:39:40.314"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240123 11:39:40.314" endtime="20240123 11:39:40.315"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:39:33.943" endtime="20240123 11:39:40.315">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //*[@id="dateAndTimePickerInput""] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//*[@id="dateAndTimePickerInput""]' is not a valid XPath expression.
+  (Session info: chrome=120.0.6099.129); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Stacktrace:
+#0 0x55de40496f83 &lt;unknown&gt;
+#1 0x55de4014fcf7 &lt;unknown&gt;
+#2 0x55de401562a3 &lt;unknown&gt;
+#3 0x55de40158798 &lt;unknown&gt;
+#4 0x55de401588ec &lt;unknown&gt;
+#5 0x55de4019f6c7 &lt;unknown&gt;
+#6 0x55de4019faa1 &lt;unknown&gt;
+#7 0x55de401eada1 &lt;unknown&gt;
+#8 0x55de401c90dd &lt;unknown&gt;
+#9 0x55de401e8006 &lt;unknown&gt;
+#10 0x55de401c8e53 &lt;unknown&gt;
+#11 0x55de40190dd4 &lt;unknown&gt;
+#12 0x55de401921de &lt;unknown&gt;
+#13 0x55de4045b531 &lt;unknown&gt;
+#14 0x55de4045f455 &lt;unknown&gt;
+#15 0x55de40447f55 &lt;unknown&gt;
+#16 0x55de404600ef &lt;unknown&gt;
+#17 0x55de4042b99f &lt;unknown&gt;
+#18 0x55de40484008 &lt;unknown&gt;
+#19 0x55de404841d7 &lt;unknown&gt;
+#20 0x55de40496124 &lt;unknown&gt;
+#21 0x7f055ddbe609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240123 11:39:26.955" endtime="20240123 11:39:40.316"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

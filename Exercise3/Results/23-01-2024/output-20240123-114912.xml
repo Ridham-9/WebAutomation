@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240123 11:49:12.379" rpa="false" schemaversion="4">
+<suite id="s1" name="Widgets" source="/home/ridham/PycharmProjects/webAutomation/Exercise3/Tests/Widgets.robot">
+<test id="s1-t1" name="Launch Browser" line="99">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240123 11:49:12.516" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<status status="PASS" starttime="20240123 11:49:12.516" endtime="20240123 11:49:46.986"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 11:49:46.987" endtime="20240123 11:49:47.092"/>
+</kw>
+<status status="PASS" starttime="20240123 11:49:12.515" endtime="20240123 11:49:47.092"/>
+</test>
+<test id="s1-t2" name="Open Widgets Section" line="103">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('div.card.mt-4.top-card')[3].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:49:47.096" level="INFO">Executing JavaScript:
+document.querySelectorAll('div.card.mt-4.top-card')[3].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:49:47.095" endtime="20240123 11:49:47.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:49:50.184" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 11:49:47.183" endtime="20240123 11:49:50.184"/>
+</kw>
+<kw name="Perform Action for Widgets Date Picker">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelectorAll('#item-2')[2].click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:49:50.185" level="INFO">Executing JavaScript:
+document.querySelectorAll('#item-2')[2].click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 11:49:50.185" endtime="20240123 11:49:50.215"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 11:49:52.215" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 11:49:50.215" endtime="20240123 11:49:52.215"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('${DATEPIKCER}').value = '';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 11:49:52.216" level="INFO">Executing JavaScript:
+document.getElementById('//*[@id="datePickerMonthYearInput"]').value = '';
+Without any arguments.</msg>
+<msg timestamp="20240123 11:49:52.347" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240123 11:49:52.347" level="FAIL">JavascriptException: Message: javascript error: Cannot set properties of null (setting 'value')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ccb1afcf83 &lt;unknown&gt;
+#1 0x55ccb17b5cf7 &lt;unknown&gt;
+#2 0x55ccb17bc2a3 &lt;unknown&gt;
+#3 0x55ccb17bebb4 &lt;unknown&gt;
+#4 0x55ccb184eba3 &lt;unknown&gt;
+#5 0x55ccb182f0b2 &lt;unknown&gt;
+#6 0x55ccb184e006 &lt;unknown&gt;
+#7 0x55ccb182ee53 &lt;unknown&gt;
+#8 0x55ccb17f6dd4 &lt;unknown&gt;
+#9 0x55ccb17f81de &lt;unknown&gt;
+#10 0x55ccb1ac1531 &lt;unknown&gt;
+#11 0x55ccb1ac5455 &lt;unknown&gt;
+#12 0x55ccb1aadf55 &lt;unknown&gt;
+#13 0x55ccb1ac60ef &lt;unknown&gt;
+#14 0x55ccb1a9199f &lt;unknown&gt;
+#15 0x55ccb1aea008 &lt;unknown&gt;
+#16 0x55ccb1aea1d7 &lt;unknown&gt;
+#17 0x55ccb1afc124 &lt;unknown&gt;
+#18 0x7fea09915609 start_thread
+</msg>
+<status status="FAIL" starttime="20240123 11:49:52.216" endtime="20240123 11:49:52.361"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<arg>04/07/2002</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240123 11:49:52.361" endtime="20240123 11:49:52.361"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DATEPIKCER}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240123 11:49:52.361" endtime="20240123 11:49:52.361"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240123 11:49:52.361" endtime="20240123 11:49:52.362"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<arg>October 21, 2020 2:45 PM</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240123 11:49:52.362" endtime="20240123 11:49:52.362"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${DATE&amp;TIMEPIKCER}</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240123 11:49:52.362" endtime="20240123 11:49:52.362"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:49:50.184" endtime="20240123 11:49:52.362"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240123 11:49:52.362" endtime="20240123 11:49:52.362"/>
+</kw>
+<status status="FAIL" starttime="20240123 11:49:47.093" endtime="20240123 11:49:52.363">JavascriptException: Message: javascript error: Cannot set properties of null (setting 'value')
+  (Session info: chrome=120.0.6099.129)
+Stacktrace:
+#0 0x55ccb1afcf83 &lt;unknown&gt;
+#1 0x55ccb17b5cf7 &lt;unknown&gt;
+#2 0x55ccb17bc2a3 &lt;unknown&gt;
+#3 0x55ccb17bebb4 &lt;unknown&gt;
+#4 0x55ccb184eba3 &lt;unknown&gt;
+#5 0x55ccb182f0b2 &lt;unknown&gt;
+#6 0x55ccb184e006 &lt;unknown&gt;
+#7 0x55ccb182ee53 &lt;unknown&gt;
+#8 0x55ccb17f6dd4 &lt;unknown&gt;
+#9 0x55ccb17f81de &lt;unknown&gt;
+#10 0x55ccb1ac1531 &lt;unknown&gt;
+#11 0x55ccb1ac5455 &lt;unknown&gt;
+#12 0x55ccb1aadf55 &lt;unknown&gt;
+#13 0x55ccb1ac60ef &lt;unknown&gt;
+#14 0x55ccb1a9199f &lt;unknown&gt;
+#15 0x55ccb1aea008 &lt;unknown&gt;
+#16 0x55ccb1aea1d7 &lt;unknown&gt;
+#17 0x55ccb1afc124 &lt;unknown&gt;
+#18 0x7fea09915609 start_thread
+</status>
+</test>
+<status status="FAIL" starttime="20240123 11:49:12.380" endtime="20240123 11:49:52.363"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Widgets">Widgets</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

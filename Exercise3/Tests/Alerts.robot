@@ -62,6 +62,6 @@ Launch Browser
 Open Alerts,Frames Section
     Execute JavaScript    document.querySelectorAll('div.card.mt-4.top-card')[2].click();
     sleep    3s
-    #Perform Action for Browser Window
+    Perform Action for Browser Window
     Sleep    3s
     Perform Action for Alerts
