@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240124 12:23:51.668" rpa="false" schemaversion="4">
+<suite id="s1" name="Hrms" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot">
+<test id="s1-t1" name="Launch Browser" line="34">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240124 12:23:51.808" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240124 12:23:51.807" endtime="20240124 12:23:54.539"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240124 12:23:54.540" endtime="20240124 12:23:54.644"/>
+</kw>
+<status status="PASS" starttime="20240124 12:23:51.806" endtime="20240124 12:23:54.645"/>
+</test>
+<test id="s1-t2" name="Authentication" line="38">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 12:23:54.652" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240124 12:23:54.649" endtime="20240124 12:23:54.807"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 12:23:54.808" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240124 12:23:54.844" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240124 12:23:54.903" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240124 12:23:54.807" endtime="20240124 12:23:54.903"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 12:23:54.904" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240124 12:23:54.903" endtime="20240124 12:24:12.346"/>
+</kw>
+<kw name="Wait for OTP Email">
+<var>${otp}</var>
+<kw name="Configure">
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=${EMAIL_SERVER}</arg>
+<arg>user=${EMAIL_USERNAME}</arg>
+<arg>password=${EMAIL_PASSWORD}</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" starttime="20240124 12:24:12.347" endtime="20240124 12:24:14.363"/>
+</kw>
+<status status="PASS" starttime="20240124 12:24:12.347" endtime="20240124 12:24:14.363"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${email_index}</var>
+<arg>subject=${OTP_SUBJECT}</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<msg timestamp="20240124 12:24:15.371" level="INFO">${email_index} = 185</msg>
+<status status="PASS" starttime="20240124 12:24:14.364" endtime="20240124 12:24:15.371"/>
+</kw>
+<kw name="Get Email Body" library="ImapLibrary2">
+<var>${otp_body}</var>
+<arg>${email_index}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<msg timestamp="20240124 12:24:15.773" level="INFO">${otp_body} = &lt;table width="100%" cellspacing="0" cellpadding="0" bgcolor="#efefef"&gt;
+
+&lt;tbody&gt;
+
+	&lt;tr&gt;
+
+		&lt;td align="center" class="m_3876159873785085107border-style m_3876159873785085107font-style" style="line...</msg>
+<status status="PASS" starttime="20240124 12:24:15.372" endtime="20240124 12:24:15.773"/>
+</kw>
+<kw name="Parse OTP From Email Body">
+<var>${otp}</var>
+<arg>${otp_body}</arg>
+<kw name="Get Regexp Matches" library="String">
+<var>${otp}</var>
+<arg>${email_body}</arg>
+<arg>([0-9]{6})</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<msg timestamp="20240124 12:24:15.778" level="INFO">${otp} = ['387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378',...</msg>
+<status status="PASS" starttime="20240124 12:24:15.775" endtime="20240124 12:24:15.778"/>
+</kw>
+<msg timestamp="20240124 12:24:15.781" level="INFO">${otp} = 387615</msg>
+<status status="PASS" starttime="20240124 12:24:15.774" endtime="20240124 12:24:15.781"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>OTP received: ${otp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240124 12:24:15.782" level="INFO">OTP received: 387615</msg>
+<status status="PASS" starttime="20240124 12:24:15.781" endtime="20240124 12:24:15.782"/>
+</kw>
+<msg timestamp="20240124 12:24:15.783" level="INFO">${otp} = 387615</msg>
+<status status="PASS" starttime="20240124 12:24:12.346" endtime="20240124 12:24:15.783"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>MfaForm_mfa_token</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 12:24:15.785" level="INFO">Typing text '387615' into text field 'MfaForm_mfa_token'.</msg>
+<status status="PASS" starttime="20240124 12:24:15.783" endtime="20240124 12:24:15.883"/>
+</kw>
+<status status="PASS" starttime="20240124 12:23:54.647" endtime="20240124 12:24:15.884"/>
+</test>
+<status status="PASS" starttime="20240124 12:23:51.669" endtime="20240124 12:24:15.884"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Hrms">Hrms</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240124 12:23:51.805" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot' on line 5: Importing library 'OTP' failed: ModuleNotFoundError: No module named 'pyotp'
+Traceback (most recent call last):
+  File "/home/ridham/.local/lib/python3.8/site-packages/OTP/__init__.py", line 1, in &lt;module&gt;
+    from .otp import OTP
+  File "/home/ridham/.local/lib/python3.8/site-packages/OTP/otp.py", line 1, in &lt;module&gt;
+    import pyotp
+PYTHONPATH:
+  /home/ridham/.local/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/ridham/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>

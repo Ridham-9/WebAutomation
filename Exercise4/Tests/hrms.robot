@@ -1,17 +1,34 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    IMAPLibrary
+Library    ImapLibrary2
+Library    String
+Library    totp.py
+Library    pyotp
 
 *** Variables ***
 ${USERNAME}    //*[@id="LoginForm_username"]
 ${PASSWORD}    //*[@id="LoginForm_password"]
 ${LOGIN}    //*[@id="login-form"]/div[3]/button
-${EMAIL_SERVER}   imap.google.com
+${EMAIL_SERVER}   imap.gmail.com
 ${EMAIL_USERNAME}    ridham.chavda@volansys.com
-${EMAIL_PASSWORD}    Rchavda@#999
-${OTP_SUBJECT}    Your OTP for Login
+${EMAIL_PASSWORD}    eydrhtpydxrzxyoh
+
+${OTP_SUBJECT}    HRMS Authentication OTP
 
 *** Keywords ***
+
+#Get OTP From Email Body
+#    [Arguments]       ${email_body}
+#    ${otp}=           Get Regexp Matches    ${email_body}   ([0-9]{6})
+#    [Return]          ${otp[0]}
+Wait for OTP Email
+    Open Mailbox    host=${EMAIL_SERVER}   user=${EMAIL_USERNAME}   password=${EMAIL_PASSWORD}  ssl=true
+    ${email_index}=    Wait For Email   subject=${OTP_SUBJECT}
+    ${email_body}=      Get Email Body    ${email_index}
+    ${otp}=    Get Regexp Matches    ${email_body}    [0-9]{6}
+    Log               OTP received: ${otp}
+    [Return]          ${otp[0]}
+
 
 *** Test Cases ***
 Launch Browser
@@ -24,14 +41,11 @@ Authentication
     Click Button    ${LOGIN}
      # Wait for OTP email
     ${otp}=  Wait for OTP Email
-
     # Enter OTP and submit
-    Input Text    otp_field  ${otp}
+#    ${totp_result}=  Get Totp    ${EMAIL_PASSWORD}
 
-Wait for OTP Email
-    ${otp}=  IMAPLibrary.Get Email Body  ${EMAIL_SERVER}  ${EMAIL_USERNAME}  ${EMAIL_PASSWORD}  ${OTP_SUBJECT}
-    Log  OTP received: ${otp}
-    [Return]  ${otp}
+    Input Text    MfaForm_mfa_token  ${otp}
+
 
 
 

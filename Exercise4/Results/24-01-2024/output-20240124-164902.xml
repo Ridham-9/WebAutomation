@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240124 16:49:02.256" rpa="false" schemaversion="4">
+<suite id="s1" name="Hrms" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot">
+<test id="s1-t1" name="Launch Browser" line="33">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240124 16:49:02.391" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240124 16:49:02.391" endtime="20240124 16:49:05.248"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240124 16:49:05.249" endtime="20240124 16:49:05.363"/>
+</kw>
+<status status="PASS" starttime="20240124 16:49:02.390" endtime="20240124 16:49:05.364"/>
+</test>
+<test id="s1-t2" name="Authentication" line="37">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 16:49:05.376" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240124 16:49:05.371" endtime="20240124 16:49:05.519"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 16:49:05.520" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240124 16:49:05.559" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240124 16:49:05.614" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240124 16:49:05.519" endtime="20240124 16:49:05.614"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 16:49:05.615" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240124 16:49:05.614" endtime="20240124 16:49:16.045"/>
+</kw>
+<kw name="Wait for OTP Email">
+<var>${otp}</var>
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=${EMAIL_SERVER}</arg>
+<arg>user=${EMAIL_USERNAME}</arg>
+<arg>password=${EMAIL_PASSWORD}</arg>
+<arg>ssl=true</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" starttime="20240124 16:49:16.046" endtime="20240124 16:49:17.502"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${email_index}</var>
+<arg>subject=${OTP_SUBJECT}</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<msg timestamp="20240124 16:49:18.381" level="INFO">${email_index} = 219</msg>
+<status status="PASS" starttime="20240124 16:49:17.503" endtime="20240124 16:49:18.381"/>
+</kw>
+<kw name="Get Email Body" library="ImapLibrary2">
+<var>${otp_body}</var>
+<arg>${email_index}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<msg timestamp="20240124 16:49:18.776" level="INFO">${otp_body} = &lt;table width="100%" cellspacing="0" cellpadding="0" bgcolor="#efefef"&gt;
+
+&lt;tbody&gt;
+
+	&lt;tr&gt;
+
+		&lt;td align="center" class="m_3876159873785085107border-style m_3876159873785085107font-style" style="line...</msg>
+<status status="PASS" starttime="20240124 16:49:18.381" endtime="20240124 16:49:18.776"/>
+</kw>
+<kw name="Get Totp" library="totp">
+<var>${otp}</var>
+<arg>${otp_body}</arg>
+<msg timestamp="20240124 16:49:18.778" level="FAIL">ValueError: string argument should contain only ASCII characters</msg>
+<status status="FAIL" starttime="20240124 16:49:18.777" endtime="20240124 16:49:18.781"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>OTP received: ${otp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240124 16:49:18.781" endtime="20240124 16:49:18.782"/>
+</kw>
+<status status="FAIL" starttime="20240124 16:49:16.046" endtime="20240124 16:49:18.782"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>MfaForm_mfa_token</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 16:49:18.783" endtime="20240124 16:49:18.783"/>
+</kw>
+<status status="FAIL" starttime="20240124 16:49:05.367" endtime="20240124 16:49:18.784">ValueError: string argument should contain only ASCII characters</status>
+</test>
+<status status="FAIL" starttime="20240124 16:49:02.256" endtime="20240124 16:49:18.787"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Hrms">Hrms</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

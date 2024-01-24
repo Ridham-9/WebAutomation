@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240124 14:25:06.800" rpa="false" schemaversion="4">
+<suite id="s1" name="Hrms" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot">
+<test id="s1-t1" name="Launch Browser" line="35">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240124 14:25:06.934" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240124 14:25:06.933" endtime="20240124 14:25:09.686"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240124 14:25:09.687" endtime="20240124 14:25:09.792"/>
+</kw>
+<status status="PASS" starttime="20240124 14:25:06.932" endtime="20240124 14:25:09.793"/>
+</test>
+<test id="s1-t2" name="Authentication" line="39">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 14:25:09.795" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240124 14:25:09.794" endtime="20240124 14:25:09.897"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 14:25:09.898" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240124 14:25:09.935" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240124 14:25:09.995" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240124 14:25:09.897" endtime="20240124 14:25:09.995"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 14:25:09.996" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240124 14:25:09.995" endtime="20240124 14:25:25.503"/>
+</kw>
+<kw name="Wait for OTP Email">
+<var>${otp}</var>
+<kw name="Configure">
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=${EMAIL_SERVER}</arg>
+<arg>user=${EMAIL_USERNAME}</arg>
+<arg>password=${EMAIL_PASSWORD}</arg>
+<arg>ssl=true</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" starttime="20240124 14:25:25.504" endtime="20240124 14:25:27.264"/>
+</kw>
+<status status="PASS" starttime="20240124 14:25:25.504" endtime="20240124 14:25:27.264"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${email_index}</var>
+<arg>subject=${OTP_SUBJECT}</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<msg timestamp="20240124 14:25:28.317" level="INFO">${email_index} = 202</msg>
+<status status="PASS" starttime="20240124 14:25:27.264" endtime="20240124 14:25:28.317"/>
+</kw>
+<kw name="Get Email Body" library="ImapLibrary2">
+<var>${otp_body}</var>
+<arg>${email_index}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<msg timestamp="20240124 14:25:28.785" level="INFO">${otp_body} = &lt;table width="100%" cellspacing="0" cellpadding="0" bgcolor="#efefef"&gt;
+
+&lt;tbody&gt;
+
+	&lt;tr&gt;
+
+		&lt;td align="center" class="m_3876159873785085107border-style m_3876159873785085107font-style" style="line...</msg>
+<status status="PASS" starttime="20240124 14:25:28.317" endtime="20240124 14:25:28.785"/>
+</kw>
+<kw name="Get OTP From Email Body">
+<var>${otp}</var>
+<arg>${otp_body}</arg>
+<kw name="Get Regexp Matches" library="String">
+<var>${otp_matches}</var>
+<arg>${email_body}</arg>
+<arg>\\b\\d{6}\\b</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<msg timestamp="20240124 14:25:28.791" level="INFO">${otp_matches} = ['000000', '575268']</msg>
+<status status="PASS" starttime="20240124 14:25:28.788" endtime="20240124 14:25:28.791"/>
+</kw>
+<kw name="Get From List">
+<var>${otp}</var>
+<arg>${otp_matches}</arg>
+<arg>0</arg>
+<msg timestamp="20240124 14:25:28.808" level="FAIL">No keyword with name 'Get From List' found.</msg>
+<status status="FAIL" starttime="20240124 14:25:28.808" endtime="20240124 14:25:28.808"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:25:28.786" endtime="20240124 14:25:28.809"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>OTP received: ${otp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240124 14:25:28.809" endtime="20240124 14:25:28.809"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:25:25.503" endtime="20240124 14:25:28.810"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>MfaForm_mfa_token</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:25:28.810" endtime="20240124 14:25:28.810"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:25:09.794" endtime="20240124 14:25:28.811">No keyword with name 'Get From List' found.</status>
+</test>
+<status status="FAIL" starttime="20240124 14:25:06.801" endtime="20240124 14:25:28.813"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Hrms">Hrms</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240124 14:25:06.931" level="ERROR">Error in file '/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot' on line 5: Importing library 'OTP' failed: ModuleNotFoundError: No module named 'pyotp'
+Traceback (most recent call last):
+  File "/home/ridham/.local/lib/python3.8/site-packages/OTP/__init__.py", line 1, in &lt;module&gt;
+    from .otp import OTP
+  File "/home/ridham/.local/lib/python3.8/site-packages/OTP/otp.py", line 1, in &lt;module&gt;
+    import pyotp
+PYTHONPATH:
+  /home/ridham/.local/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/ridham/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>

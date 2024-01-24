@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240124 17:45:14.377" rpa="false" schemaversion="4">
+<suite id="s1" name="Hrms" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot">
+<test id="s1-t1" name="Launch Browser" line="33">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240124 17:45:14.527" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240124 17:45:14.526" endtime="20240124 17:45:19.713"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240124 17:45:19.713" endtime="20240124 17:45:19.821"/>
+</kw>
+<status status="PASS" starttime="20240124 17:45:14.525" endtime="20240124 17:45:19.822"/>
+</test>
+<test id="s1-t2" name="Authentication" line="37">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 17:45:19.824" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240124 17:45:19.823" endtime="20240124 17:45:19.942"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 17:45:19.944" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240124 17:45:20.016" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240124 17:45:20.088" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240124 17:45:19.942" endtime="20240124 17:45:20.088"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240124 17:45:20.090" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240124 17:45:20.089" endtime="20240124 17:45:30.777"/>
+</kw>
+<kw name="Get Totp" library="totp">
+<var>${totp_result}</var>
+<arg>eydrhtpydxrzxyoh</arg>
+<msg timestamp="20240124 17:45:30.778" level="INFO">${totp_result} = 278972</msg>
+<status status="PASS" starttime="20240124 17:45:30.778" endtime="20240124 17:45:30.778"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>MfaForm_mfa_token</arg>
+<arg>${totp_result}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240124 17:45:30.779" level="INFO">Typing text '278972' into text field 'MfaForm_mfa_token'.</msg>
+<status status="PASS" starttime="20240124 17:45:30.779" endtime="20240124 17:45:30.894"/>
+</kw>
+<status status="PASS" starttime="20240124 17:45:19.822" endtime="20240124 17:45:30.894"/>
+</test>
+<status status="PASS" starttime="20240124 17:45:14.378" endtime="20240124 17:45:30.895"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Hrms">Hrms</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
