@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240125 12:14:30.462" rpa="false" schemaversion="4">
+<suite id="s1" name="Hrms" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot">
+<test id="s1-t1" name="Launch Browser" line="23">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240125 12:14:30.711" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240125 12:14:30.710" endtime="20240125 12:14:33.712"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240125 12:14:33.713" endtime="20240125 12:14:33.816"/>
+</kw>
+<status status="PASS" starttime="20240125 12:14:30.709" endtime="20240125 12:14:33.816"/>
+</test>
+<test id="s1-t2" name="Authentication" line="27">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240125 12:14:33.819" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240125 12:14:33.818" endtime="20240125 12:14:33.962"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240125 12:14:33.963" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240125 12:14:34.014" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240125 12:14:34.079" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240125 12:14:33.963" endtime="20240125 12:14:34.079"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240125 12:14:34.080" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240125 12:14:34.079" endtime="20240125 12:14:55.456"/>
+</kw>
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=${EMAIL_SERVER}</arg>
+<arg>user=${EMAIL_USERNAME}</arg>
+<arg>password=${EMAIL_PASSWORD}</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<msg timestamp="20240125 12:15:20.482" level="FAIL">gaierror: [Errno -3] Temporary failure in name resolution</msg>
+<status status="FAIL" starttime="20240125 12:14:55.457" endtime="20240125 12:15:20.526"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${LATEST}</var>
+<arg>sender=${SENDER_USERNAME}</arg>
+<arg>status=UNSEEN</arg>
+<arg>timeout=300</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<status status="NOT RUN" starttime="20240125 12:15:20.527" endtime="20240125 12:15:20.527"/>
+</kw>
+<kw name="Get Email Body" library="ImapLibrary2">
+<var>${HTML}</var>
+<arg>${LATEST}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<status status="NOT RUN" starttime="20240125 12:15:20.528" endtime="20240125 12:15:20.528"/>
+</kw>
+<kw name="Get Regexp Matches" library="String">
+<var>${otp}</var>
+<arg>${HTML}</arg>
+<arg>\\d{6}</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<status status="NOT RUN" starttime="20240125 12:15:20.529" endtime="20240125 12:15:20.529"/>
+</kw>
+<kw name="Delete Email" library="ImapLibrary2">
+<arg>${LATEST}</arg>
+<doc>Delete email on given ``email_index``.</doc>
+<status status="NOT RUN" starttime="20240125 12:15:20.530" endtime="20240125 12:15:20.530"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>MfaForm_mfa_token</arg>
+<arg>${otp}[5]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 12:15:20.530" endtime="20240125 12:15:20.530"/>
+</kw>
+<status status="FAIL" starttime="20240125 12:14:33.817" endtime="20240125 12:15:20.531">gaierror: [Errno -3] Temporary failure in name resolution</status>
+</test>
+<status status="FAIL" starttime="20240125 12:14:30.463" endtime="20240125 12:15:20.534"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Hrms">Hrms</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

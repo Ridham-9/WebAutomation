@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240125 11:32:37.359" rpa="false" schemaversion="4">
+<suite id="s1" name="Hrms" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/hrms.robot">
+<test id="s1-t1" name="Launch Browser" line="45">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240125 11:32:37.615" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240125 11:32:37.614" endtime="20240125 11:32:43.928"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240125 11:32:43.931" endtime="20240125 11:32:44.053"/>
+</kw>
+<status status="PASS" starttime="20240125 11:32:37.614" endtime="20240125 11:32:44.054"/>
+</test>
+<test id="s1-t2" name="Authentication" line="49">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240125 11:32:44.058" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240125 11:32:44.056" endtime="20240125 11:32:44.184"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240125 11:32:44.186" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240125 11:32:44.233" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240125 11:32:44.294" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240125 11:32:44.185" endtime="20240125 11:32:44.294"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240125 11:32:44.295" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240125 11:32:44.294" endtime="20240125 11:33:10.694"/>
+</kw>
+<kw name="Get OTP from Email">
+<var>${otp}</var>
+<kw name="Get Mails">
+<var>${mails}</var>
+<arg>${IMAP_FOLDER}</arg>
+<arg>UNSEEN</arg>
+<msg timestamp="20240125 11:33:10.703" level="FAIL">No keyword with name 'Get Mails' found.</msg>
+<status status="FAIL" starttime="20240125 11:33:10.703" endtime="20240125 11:33:10.703"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${latest_mail}</var>
+<arg>${mails[-1]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20240125 11:33:10.704" endtime="20240125 11:33:10.705"/>
+</kw>
+<kw name="Get OTP">
+<var>${otp}</var>
+<arg>${latest_mail}</arg>
+<status status="NOT RUN" starttime="20240125 11:33:10.705" endtime="20240125 11:33:10.705"/>
+</kw>
+<status status="FAIL" starttime="20240125 11:33:10.695" endtime="20240125 11:33:10.705"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>MfaForm_mfa_token</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 11:33:10.705" endtime="20240125 11:33:10.705"/>
+</kw>
+<status status="FAIL" starttime="20240125 11:32:44.055" endtime="20240125 11:33:10.706">No keyword with name 'Get Mails' found.</status>
+</test>
+<status status="FAIL" starttime="20240125 11:32:37.360" endtime="20240125 11:33:10.706"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Hrms">Hrms</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

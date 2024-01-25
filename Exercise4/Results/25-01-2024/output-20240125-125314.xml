@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.10 on linux)" generated="20240125 12:53:14.233" rpa="false" schemaversion="4">
+<suite id="s1" name="Test" source="/home/ridham/PycharmProjects/webAutomation/Exercise4/Tests/test.robot">
+<test id="s1-t1" name="Launch Browser" line="45">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://hrms.volansys.com/</arg>
+<arg>chrome</arg>
+<arg>options=add_experimental_option("detach", True)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240125 12:53:14.552" level="INFO">Opening browser 'chrome' to base url 'https://hrms.volansys.com/'.</msg>
+<status status="PASS" starttime="20240125 12:53:14.552" endtime="20240125 12:53:19.203"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240125 12:53:19.204" endtime="20240125 12:53:19.317"/>
+</kw>
+<status status="PASS" starttime="20240125 12:53:14.551" endtime="20240125 12:53:19.318"/>
+</test>
+<test id="s1-t2" name="Authentication" line="49">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME}</arg>
+<arg>ridham.chavda</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240125 12:53:19.324" level="INFO">Typing text 'ridham.chavda' into text field '//*[@id="LoginForm_username"]'.</msg>
+<status status="PASS" starttime="20240125 12:53:19.322" endtime="20240125 12:53:19.498"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>Ridham@122023</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240125 12:53:19.499" level="INFO">Typing password into text field '//*[@id="LoginForm_password"]'.</msg>
+<msg timestamp="20240125 12:53:19.536" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240125 12:53:19.593" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240125 12:53:19.498" endtime="20240125 12:53:19.593"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240125 12:53:19.594" level="INFO">Clicking button '//*[@id="login-form"]/div[3]/button'.</msg>
+<status status="PASS" starttime="20240125 12:53:19.594" endtime="20240125 12:53:29.962"/>
+</kw>
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=${EMAIL_SERVER}</arg>
+<arg>user=${EMAIL_USERNAME}</arg>
+<arg>password=${EMAIL_PASSWORD}</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" starttime="20240125 12:53:29.963" endtime="20240125 12:53:31.826"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${LATEST}</var>
+<arg>sender=${SENDER_USERNAME}</arg>
+<arg>status=UNSEEN</arg>
+<arg>timeout=300</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<msg timestamp="20240125 12:53:32.681" level="INFO">${LATEST} = 260</msg>
+<status status="PASS" starttime="20240125 12:53:31.827" endtime="20240125 12:53:32.682"/>
+</kw>
+<kw name="Get Email Body" library="ImapLibrary2">
+<var>${HTML}</var>
+<arg>${LATEST}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<msg timestamp="20240125 12:53:33.088" level="INFO">${HTML} = &lt;table width="100%" cellspacing="0" cellpadding="0" bgcolor="#efefef"&gt;
+
+&lt;tbody&gt;
+
+	&lt;tr&gt;
+
+		&lt;td align="center" class="m_3876159873785085107border-style m_3876159873785085107font-style" style="line...</msg>
+<status status="PASS" starttime="20240125 12:53:32.682" endtime="20240125 12:53:33.088"/>
+</kw>
+<kw name="Get Regexp Matches" library="String">
+<var>${otp}</var>
+<arg>${HTML}</arg>
+<arg>\\d{6}</arg>
+<doc>Returns a list of all non-overlapping matches in the given string.</doc>
+<msg timestamp="20240125 12:53:33.091" level="INFO">${otp} = ['387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378', '508510', '387615', '987378',...</msg>
+<status status="PASS" starttime="20240125 12:53:33.089" endtime="20240125 12:53:33.091"/>
+</kw>
+<kw name="{totp_result}=">
+<arg>Get Totp</arg>
+<arg>${HTML}</arg>
+<msg timestamp="20240125 12:53:33.111" level="FAIL">No keyword with name '{totp_result}=' found.</msg>
+<status status="FAIL" starttime="20240125 12:53:33.110" endtime="20240125 12:53:33.111"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>MfaForm_mfa_token</arg>
+<arg>${totp_result}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240125 12:53:33.112" endtime="20240125 12:53:33.112"/>
+</kw>
+<status status="FAIL" starttime="20240125 12:53:19.319" endtime="20240125 12:53:33.113">No keyword with name '{totp_result}=' found.</status>
+</test>
+<status status="FAIL" starttime="20240125 12:53:14.234" endtime="20240125 12:53:33.115"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
