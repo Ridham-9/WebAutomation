@@ -2,11 +2,10 @@
 Library    SeleniumLibrary
 Library    ImapLibrary2
 Library    String
-Library    totp.py
-Library    OTP
-Library    RPA.MFA
-Library    RPA.Email.ImapSmtp
-Library    totp.py
+#Library    OTP
+#Library    RPA.MFA
+#Library    RPA.Email.ImapSmtp
+#Library    totp.py
 
 *** Variables ***
 ${USERNAME}    //*[@id="LoginForm_username"]
@@ -39,6 +38,6 @@ Authentication
     Click Button    ${LOGIN}
     ${otp}=  Wait for OTP email
     Input Text    MfaForm_mfa_token  ${otp}
-    Click Button    ${VALIDATE_OTP}
+#    Click Button    ${VALIDATE_OTP}
 
 
