@@ -2,11 +2,10 @@
 Library    SeleniumLibrary
 Library    ImapLibrary2
 Library    String
-Library    totp.py
-Library    OTP
-Library    RPA.MFA
-Library    RPA.Email.ImapSmtp
-Library    totp.py
+#Library    OTP
+#Library    RPA.MFA
+#Library    RPA.Email.ImapSmtp
+#Library    totp.py
 
 *** Variables ***
 ${USERNAME}    //*[@id="LoginForm_username"]
